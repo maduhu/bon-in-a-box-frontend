@@ -1,0 +1,8 @@
+{
+  "name": "bon-in-a-box-frontend",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap-stylus": "~4.0.5",
+    "jquery": "~2.1.4"
+  }
+}
