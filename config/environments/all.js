@@ -8,7 +8,7 @@ var path = require('path');
 module.exports = function(parent) {
 	parent.set('port', normalizePort(process.env.PORT || '3000'));
 	parent.set('view engine', 'jade');
-	parent.use(favicon(__dirname + '/../../src/public/images/boninabox.ico'));
+	parent.use(favicon(__dirname + '/../../src/public/images/favicon.ico'));
 	parent.use(morgan('dev'));
 	parent.use(compression());
 	parent.use(bodyParser.json());

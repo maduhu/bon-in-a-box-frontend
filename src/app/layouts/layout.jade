@@ -1,9 +1,15 @@
 doctype html
 html
 	head
-		title= title
-		link(rel='stylesheet', href='/stylesheets/style.css')
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title Bon in a Box
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width,initial-scale=1')
+		link(rel='stylesheet', href='/stylesheets/biab.css')
+		link(rel="Shortcut Icon" href='/images/favicon.ico')
 	body
-		include includes/header
-		block content
-		include includes/footer
+		.wrapper
+			include includes/header
+			block content
+			include includes/footer
