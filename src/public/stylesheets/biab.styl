@@ -16,6 +16,7 @@ body
 	background #d0d3d4
 	font-family 'Roboto', Helvetica, sans-serif
 	font-weight 300
+	color #434344
 a
 	-webkit-transition all 0.5s ease-in-out
 	-moz-transition all 0.5s ease-in-out
@@ -41,10 +42,10 @@ header
 		width 100%
 		padding 20px 0
 		background #222222
-nav
-	background rgba(17,26,29,0.8)
-	padding 20px 0
-	position relative
+	nav
+		background rgba(17,26,29,0.8)
+		padding 20px 0
+		position relative
 .icon
 	font-size 44px
 	line-height 10px
@@ -75,6 +76,58 @@ nav
 	width 1000px
 	margin 0 auto
 	
+.divisor
+	border-top 1px #222 solid
+	margin 10px 0
+
+/* GENERALES A TODAS LAS SECCIONES */
+.menu_about
+	display inline-block
+	li
+		text-align center
+		display inline-block
+		margin 5px
+	a
+		background rgba(255,255,255,0.8)
+		padding 10px 20px
+		display block
+		text-transform uppercase
+		color #5D5E5E
+	#active
+		background rgba(255,255,255,1)
+		color #007675
+
+.contenido
+	margin
+	h1
+		font-size 3em
+		font-family 'Oswald'
+		font-weight 700
+	h2
+		font-size 300
+		font-size 2em
+	.col_texto
+		background rgba(255,255,255,0.9)
+		padding 20px 20px 20px 40px
+		max-width 380px
+	
+/* COLORES POR SECCION */
+
+.intro
+	background rgba(255,255,255,0.8)
+	border-top 2px #222 solid
+	padding 20px
+	max-width 1000px
+	h1
+		color #222222
+	h2
+		color #007675
+.componentes
+	h1
+	h2
+		color #F2A034
+
+
 @media (min-width:1200px)
 	.loading
 		bottom 136px
