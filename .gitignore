@@ -3,6 +3,7 @@ bower_components/
 .sass-cache/
 .idea/
 .tmp/
+.DS_Store
 dist/
 src/public/bower_components
 src/app/layouts/final
