@@ -22,27 +22,45 @@ a
 	-o-transition all 0.5s ease-in-out
 	transition all 0.5s ease-in-out
 	color #49aeb7
-	text-decoration none
+	text-decoration none !important
 	&:hover
 		color #007675
-.wrapper
-	margin 0 auto
+li
+	list-style none !important
 .hidden
 	display none
+.backg
+	height 100%
+	background url('/images/bg1.jpg') top center no-repeat
+	-webkit-background-size cover
+	background-size cover
+	position fixed
+	z-index -10
+	width 100%
+	opacity 0.8
+	filteralpha (opacity=80)
+	-webkit-transition all 0.6s ease-in-out
+	-moz-transition all 0.6s ease-in-out
+	-o-transition all 0.6s ease-in-out
+	transition all 0.6s ease-in-out
+}
 
 //header
 header
-	font "Roboto"
-	color white
-	font-size 1em
-	font-weight 700
+	h3
+		font "Roboto"
+		color white
+		font-size 1em
+		font-weight 400
+		display inline-block
+		margin 0
+		padding 14px 0
 	.titlebar
 		width 100%
-		padding 20px 0
 		background #222222
 	nav
 		background rgba(17,26,29,0.8)
-		padding 20px 0
+		padding 5px 0 0
 		position relative
 .icon
 	font-size 44px
@@ -53,22 +71,22 @@ header
 	li
 		margin 5px
 		display none
-		#active
-			display block
-&:hover li
+		font-weight 700
+	.active
+		display block
+	&:hover li
 		display block
 .nav_scrolled
 	position fixed
 	top 0
 header
-nav
 	a
 		color white
 		display block
 .left
-	text-align left
+	float left
 .right
-	text-align right
+	float right
 
 .contenedor
 	width 1000px
@@ -96,7 +114,8 @@ nav
 		color #007675
 
 .contenido
-	margin
+	margin 0 auto
+	width 1000px
 	h1
 		font-size 3em
 		font-family 'Oswald'
