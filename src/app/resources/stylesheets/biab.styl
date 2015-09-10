@@ -1,0 +1,170 @@
+@import unquote('url(https://fonts.googleapis.com/css?family=Oswald:400,700,300)')
+@import unquote('url(https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700,900)')
+
+*
+	-webkit-transition all 0.4s ease
+	-moz-transition all 0.4s ease
+	-ms-transition all 0.4s ease
+	-o-transition all 0.4s ease
+	transition all 0.4s ease
+	//border red 1px solid
+	margin 0px
+	padding 0px
+body
+	background #d0d3d4
+	font-family 'Roboto', Helvetica, sans-serif
+	font-weight 300
+	color #434344
+a
+	-webkit-transition all 0.5s ease-in-out
+	-moz-transition all 0.5s ease-in-out
+	-ms-transition all 0.5s ease-in-out
+	-o-transition all 0.5s ease-in-out
+	transition all 0.5s ease-in-out
+	color #49aeb7
+	text-decoration none
+	&:hover
+		color #007675
+.wrapper
+	margin 0 auto
+.hidden
+	display none
+
+//header
+header
+	font "Roboto"
+	color white
+	font-size 1em
+	font-weight 700
+	.titlebar
+		width 100%
+		padding 20px 0
+		background #222222
+	nav
+		background rgba(17,26,29,0.8)
+		padding 20px 0
+		position relative
+.icon
+	font-size 44px
+	line-height 10px
+.navlang
+	font-size 20px
+	vertical-align top
+	li
+		margin 5px
+		display none
+		#active
+			display block
+&:hover li
+		display block
+.nav_scrolled
+	position fixed
+	top 0
+header
+nav
+	a
+		color white
+		display block
+.left
+	text-align left
+.right
+	text-align right
+
+.contenedor
+	width 1000px
+	margin 0 auto
+
+.divisor
+	border-top 1px #222 solid
+	margin 10px 0
+
+/* GENERALES A TODAS LAS SECCIONES */
+.menu_about
+	display inline-block
+	li
+		text-align center
+		display inline-block
+		margin 5px
+	a
+		background rgba(255,255,255,0.8)
+		padding 10px 20px
+		display block
+		text-transform uppercase
+		color #5D5E5E
+	#active
+		background rgba(255,255,255,1)
+		color #007675
+
+.contenido
+	margin
+	h1
+		font-size 3em
+		font-family 'Oswald'
+		font-weight 700
+	h2
+		font-size 300
+		font-size 2em
+	.col_texto
+		background rgba(255,255,255,0.9)
+		padding 20px 20px 20px 40px
+		max-width 380px
+
+/* COLORES POR SECCION */
+
+.intro
+	background rgba(255,255,255,0.8)
+	border-top 2px #222 solid
+	padding 20px
+	max-width 1000px
+	h1
+		color #222222
+	h2
+		color #007675
+.componentes
+	h1
+	h2
+		color #F2A034
+
+
+@media (min-width:1200px)
+	.loading
+		bottom 136px
+	.visible-large-screen
+		display inline-block !important
+@media (min-width:992px) and (max-width:1199px)
+	.loading
+		bottom 136px
+@media (min-width:1090px)
+	.loading
+		bottom 136px
+@media (min-width:761px) and (max-width:1199px)
+	.loading
+		bottom 136px
+@media (min-width:768px) and (max-width:995px)
+	.loading
+		bottom 136px
+@media (min-width:360px) and (max-width:760px)
+	.loading
+		bottom 0px
+@media (max-width:320px)
+	.loading
+		bottom 0px
+/* Estilos de apoyo */
+.loading2
+	background-image url("/images/loading/loading64w.gif")
+	background-position center center
+	background-repeat no-repeat
+	opacity .5
+	-moz-opacity .5
+	height 200px
+.hiding
+	opacity .5
+	-moz-opacity .5
+.hide-element
+	visibility hidden
+.occult-element
+	display none
+.opacity-element
+	opacity .2
+	-moz-opacity .2
+/* Fin de estilos de apoyo */

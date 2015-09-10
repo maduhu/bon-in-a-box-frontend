@@ -9,9 +9,11 @@
   "unused": true,
   "validthis": true,
   "jasmine": true,
+  "node": true,
   "globals": {
     "angular": false,
     "inject": false,
-    "module": false
+    "module": false,
+    "logger": false
   }
 }
