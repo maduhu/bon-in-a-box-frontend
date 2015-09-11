@@ -1,3 +1,5 @@
+'use strict';
+
 var mn = $("nav");
     mns = "nav_scrolled";
     hdr = $('.titlebar').height();
