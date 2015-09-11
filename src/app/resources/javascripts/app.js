@@ -1,19 +1,39 @@
-$element = $('.backg'),
-classNameOne = 'bg1';
-classNameTwo = 'bg2';
-classNameThree = 'bg3';
-classNameFour = 'bg4';
+var mn = $("nav");
+    mns = "nav_scrolled";
+    hdr = $('.titlebar').height();
 
-$document.scroll(function () {
-    if ($document.scrollTop() >= 300) {
-        $element.addClass(classNameOne);
-    } else if ($document.scrollTop() >= 600 && $document.scrollTop() < 600) ) {
-        $element.addClass(classNameTwo);
-    } else if ($document.scrollTop() >= 900 && $document.scrollTop() < 900)) {
-        $element.addClass(classNameThree);
-    } else if ($document.scrollTop() >= 1200 && $document.scrollTop() < 1200)) {
-        $element.addClass(classNameFour);
-    } else if ($document.scrollTop() >= 1500 && $document.scrollTop() < 1500)) {
-        $element.addClass(classNameFive);
-    } else if ($document.scrollTop() >= 1800 && $document.scrollTop() < 1800)) {
+$(window).scroll(function() {
+  if( $(this).scrollTop() > hdr ) {
+    mn.addClass(mns);
+  } else {
+    mn.removeClass(mns);
+  }
 });
+
+var actualimage = '';
+
+    $(document).scroll(function() {
+        var top = $(document).scrollTop();
+        var bheight = 700;
+        var imgs = new Array();
+        imgs[0] = "/image/bg1.jpg";
+        imgs[1] = "/image/bg2.jpg";
+        imgs[2] = "/image/bg3.jpg";
+        imgs[3] = "/image/bg4.jpg";
+        if (top >= bheight * 0 && top < bheight * 1 && actualimage != imgs[0]) {
+            $('.backg').css('background-image', 'url(' + imgs[0] + ')');
+                actualimage = imgs[0];
+        }
+        else if (top >= bheight * 1 && top < bheight * 2 && actualimage != imgs[1]) {
+            $('.backg').css('background-image', 'url(' + imgs[1] + ')');
+            actualimage = imgs[1];
+        }
+        else if (top >= bheight * 2 && top < bheight * 3 && actualimage != imgs[2]) {
+            $('.backg').css('background-image', 'url(' + imgs[2] + ')');
+            actualimage = imgs[2];
+        }
+        else if (top >= bheight * 3 && top < bheight * 4 && actualimage != imgs[3]) {
+            $('.backg').css('background-image', 'url(' + imgs[3] + ')');
+            actualimage = imgs[3];
+        }
+    });

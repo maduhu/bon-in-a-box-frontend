@@ -7,7 +7,6 @@
 	-ms-transition all 0.4s ease
 	-o-transition all 0.4s ease
 	transition all 0.4s ease
-	//border red 1px solid
 	margin 0px
 	padding 0px
 body
@@ -37,13 +36,10 @@ li
 	position fixed
 	z-index -10
 	width 100%
-	opacity 0.8
-	filteralpha (opacity=80)
 	-webkit-transition all 0.6s ease-in-out
 	-moz-transition all 0.6s ease-in-out
 	-o-transition all 0.6s ease-in-out
 	transition all 0.6s ease-in-out
-}
 
 //header
 header
@@ -54,24 +50,26 @@ header
 		font-weight 400
 		display inline-block
 		margin 0
-		padding 14px 0
+		padding 14px 5px 14px 10px
 	.titlebar
 		width 100%
-		background #222222
+		background #2a2a2a
 	nav
 		background rgba(17,26,29,0.8)
 		padding 5px 0 0
 		position relative
 .icon
-	font-size 44px
+	font-size 40px
 	line-height 10px
+	padding 5px
 .navlang
 	font-size 20px
 	vertical-align top
 	li
 		margin 5px
 		display none
-		font-weight 700
+		font-weight 400
+		letter-spacing 1px
 	.active
 		display block
 	&:hover li
@@ -93,25 +91,28 @@ header
 	margin 0 auto
 
 .divisor
-	border-top 1px #222 solid
-	margin 10px 0
+	border-top 2px #2a2a2a solid
+	margin 20px 0 30px
 
-/* GENERALES A TODAS LAS SECCIONES */
+// GENERALES A TODAS LAS SECCIONES
 .menu_about
-	display inline-block
+	padding-right 40px
 	li
 		text-align center
 		display inline-block
 		margin 5px
 	a
 		background rgba(255,255,255,0.8)
-		padding 10px 20px
+		padding 8px 25px
 		display block
 		text-transform uppercase
+		font-family 'Oswald'
 		color #5D5E5E
+		font-size 1.286em
 	#active
 		background rgba(255,255,255,1)
 		color #007675
+		box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 
 .contenido
 	margin 0 auto
@@ -120,29 +121,65 @@ header
 		font-size 3em
 		font-family 'Oswald'
 		font-weight 700
+		text-transform uppercase
+	h1:nth-child(1)
+		margin-top: 20px
 	h2
-		font-size 300
+		font-family 'Oswald'
 		font-size 2em
 	.col_texto
 		background rgba(255,255,255,0.9)
-		padding 20px 20px 20px 40px
+		padding 30px 35px 20px 55px
 		max-width 380px
-
+		float right
+		min-height 500px
+		margin-top 0
+		font-size 0.929em
+		vertical-align top
+		font-weight 400
+		b
+			color #04adac
+	.colordiv
+		width 10px
+		height 87px
+		background-color: #04adac
+		float right
+		margin-top 30px
+		vertical-align top
+		border none
 /* COLORES POR SECCION */
 
 .intro
 	background rgba(255,255,255,0.8)
-	border-top 2px #222 solid
-	padding 20px
+	border-top 2px #2a2a2a solid
+	padding 0 40px
 	max-width 1000px
+	margin-top 30px
 	h1
-		color #222222
+		color #2a2a2a
+		font-size 5.714em
+		line-height 0.8em
+	h1:nth-child(1)
+		margin-top 30px
 	h2
 		color #007675
+		font-size 2.571em
+		font-weight 300
+		width 50%
+		line-height 1.2em
+	img
+		float right
+		margin-top -50px
+	.col50
+		width 50%
+		height 500px
+		float left
+		margin-right 20px
 .componentes
 	h1
 	h2
 		color #F2A034
+		text-transform uppercase
 
 
 @media (min-width:1200px)
