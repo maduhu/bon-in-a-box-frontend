@@ -58,14 +58,23 @@ header
 		background rgba(17,26,29,0.8)
 		padding 5px 0 0
 		position relative
+		width 100%
 .icon
 	font-size 40px
 	line-height 10px
 	padding 5px
 .hexicon
-	display: inline-block
 	float right
-	margin-top 25px
+.hexicon
+	p
+		color #fff
+		font-size 110px
+		line-height 0
+		margin-top -48px
+		z-index 30
+		position relative
+		margin-left -8px
+		font-family 'biab'
 .hexagon
 	position relative
 	width 95px 
@@ -75,15 +84,6 @@ header
 	border-left solid 3px #2a2a2a
 	border-right solid 3px #2a2a2a
 	z-index 20
-.hexicon
-	p
-		font-family 'biab'
-		color #fff
-		font-size 110px
-		margin-top -126px
-		z-index 30
-		position relative
-		margin-left -8px
 .hexagon:before
 .hexagon:after
 	content ""
@@ -105,6 +105,49 @@ header
 	bottom -33.5876px
 	border-bottom solid 4.2426px #2a2a2a
 	border-left solid 4.2426px #2a2a2a
+	
+.hexiconsm
+	position relative
+	float right
+	margin-top 45px
+	margin-left 10px
+.hexiconsm
+	p
+		font-family 'biab'
+		color #fff
+		font-size 40px
+		line-height 0
+		margin-top -21px
+		z-index 30
+		position relative
+		margin-left -3px
+		
+.hexagonsm
+	position relative
+	width 35px 
+	height 20.21px
+	background-color #2a2a2a
+	margin 10.10px 0
+	z-index 30
+
+.hexagonsm:before
+.hexagonsm:after
+	content ""
+	position absolute
+	width 0
+	border-left 17.5px solid transparent
+	border-right 17.5px solid transparent
+	z-index 30
+
+.hexagonsm:before
+	bottom 100%
+	border-bottom 10.10px solid #2a2a2a
+
+.hexagonsm:after
+	top 100%
+	width 0
+	border-top 10.10px solid #2a2a2a
+  
 .navlang
 	font-size 20px
 	vertical-align top
@@ -137,6 +180,10 @@ header
 	border-top 2px #2a2a2a solid
 	margin 20px 0 30px
 
+.componentes
+	.divisor
+		margin-bottom 0
+		
 // GENERALES A TODAS LAS SECCIONES
 .menu_about
 	padding-right 45px
@@ -153,6 +200,7 @@ header
 		color #5D5E5E
 		font-size 1.286em
 		font-weight 300
+	a:hover	
 	#active
 		background rgba(255,255,255,1)
 		color #007675
@@ -181,7 +229,7 @@ header
 		padding 30px 35px 20px 55px
 		max-width 380px
 		float right
-		min-height 500px
+		height 500px
 		margin-top 0
 		font-size 0.929em
 		vertical-align top
@@ -196,6 +244,12 @@ header
 		margin-top 30px
 		vertical-align top
 		border none
+	.col25
+		width 25%
+		display inline-block
+		vertical-align top
+		margin-top 25px
+		
 /* COLORES POR SECCION */
 
 .intro
@@ -222,7 +276,9 @@ header
 		height 500px
 		float left
 		margin-right 20px
+	
 .componentes
+	margin-top 200px
 	h1
 		color #F2A034
 		text-transform uppercase
@@ -240,7 +296,45 @@ header
 		display: table
 		background-color: #2a2a2a
 		padding 7px
-		margin-top 0
+		margin-top 2px
+		margin-bottom 70px
+	.col_texto
+		height 380px
+	.colordiv
+		height 316px
+		margin-right 38px
+
+.col_iconos
+	float left
+	li
+		width 50px
+		height 50px
+		background-color #2a2a2a
+		-webkit-border-radius 3px
+		-moz-border-radius 3px
+		border-radius 3px
+		margin-right 10px
+		padding 6px 5px
+		display inline-block
+		a
+			font-size 40px
+			color #fff
+			line-height 45px
+			vertical-align middle
+		&:hover
+			background-color: #f1b25e
+	.grande
+		width 110px
+		height 110px
+		background-color #f2a034
+		padding-left 0
+		display block
+		margin-bottom 10px
+		a
+			font-size 110px
+			color #1c2a2c
+
+
 
 @media (min-width:1200px)
 	.loading
