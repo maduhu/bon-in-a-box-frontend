@@ -3,7 +3,28 @@ extends ../../layouts/final/layout
 block content
 	.backg
 		img(id="foto" src='images/bg1.jpg')
-			
+	.contenido.login
+		.icon-ico-32
+		h3 ingreso
+		.divisor
+		.logop
+			a(class="" href="")
+				img(src='images/google.png')
+			a(class="" href="")
+				img(src='images/linkedin.png')
+			a(class="" href="")
+				img(src='images/facebook.png')
+		h4 Ó
+		form(id="", method="", action="")
+			input.input-login(type="text", name="username", placeholder="Email address")
+			input.input-login(type="password", name="password", placeholder="Password")
+			label.checkbox
+				<input type="checkbox" value="remember-me" /> Recordarme
+			button.btn(type="submit") Acceder
+		.clearfix
+		a(class="linkslog" href="") cambio de clave
+		a(class="linkslog" href="") registro
+
 	.contenido.intro.clearfix
 		.col50
 			h1 bon in
@@ -198,3 +219,19 @@ block content
 					a(href="") sitio web
 					a(href="") contacto
 
+	.contenido.forum
+		h4 preguntas comunidad
+		.icon-ico-33.bigico
+		.divisor
+		.cajaf1
+			h5 Preguntas Populares
+			.qcard
+				.clearfix
+					.crop
+						img(src='images/c2.jpg')
+					.name Cesar Gutierrez
+					.date 09 - 09 - 15
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+
+		.cajaf2
+			h5 Consulta con la red Bon in a Box
