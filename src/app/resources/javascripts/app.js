@@ -20,7 +20,7 @@ $(window).scroll(function()  {
          imgs[0] = "/images/bg1.jpg";
          imgs[1] = "/images/bg2.jpg";
          imgs[2] = "/images/bg3.jpg";
-         imgs[3] = "/images/bg4.jpg";
+         imgs[3] = "/images/bg4.jpg";  
      if (top >= bheight * 0 && top < bheight * 1 && actualimage !== imgs[0]) {
          $('.backg').css('background-image', 'url(' + imgs[0] + ')');
          actualimage = imgs[0];
