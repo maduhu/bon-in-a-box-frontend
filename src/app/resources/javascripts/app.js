@@ -12,7 +12,6 @@ $(window).scroll(_.throttle(function(e)  {
     $("#mainnav").removeClass("nav_scrolled");
   }
 
-
   var top = $(document).scrollTop();
   
   if (top >= bheight * 0 && top < bheight * 1 && current !== 1) {

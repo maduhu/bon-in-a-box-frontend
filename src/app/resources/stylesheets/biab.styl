@@ -157,6 +157,12 @@ header
 .componentes
 	.divisor
 		margin-bottom 0
+
+#section2
+	margin-top 80px
+#section3
+#section4
+	margin-top 130px
 		
 // GENERALES A TODAS LAS SECCIONES
 .menu_about
@@ -223,7 +229,21 @@ header
 		display inline-block
 		vertical-align top
 		margin-top 25px
-
+input[type=text]
+input[type=password]
+	width 90%
+	border none
+	border-bottom solid 1px #2a2a2a
+	padding 5px
+input[type=text]
+	margin-bottom 15px
+label
+	color #5d5e5e
+	font-size 12px
+	letter-spacing 2px
+	vertical-align bottom
+	font-weight 300 !important
+	line-height 1.8
 .login
 	width 320px
 	background-color #FFF
@@ -256,21 +276,6 @@ header
 		font-weight 300
 	.logop a
 		margin 10px
-	input[type=text]
-	input[type=password]
-		width 90%
-		border none
-		border-bottom solid 1px #2a2a2a
-		padding 5px
-	input[type=text]
-		margin-bottom 15px
-	label
-		color #5d5e5e
-		font-size 12px
-		letter-spacing 2px
-		vertical-align bottom
-		font-weight 300 !important
-		line-height 1.8
 	.linkslog
 	.btn
 		background none
@@ -338,7 +343,7 @@ header
 		margin-right 20px
 	
 .componentes
-	margin-top 200px
+	margin-top 120px
 	h1
 		color #F2A034
 		text-transform uppercase
@@ -641,13 +646,37 @@ header
 		background-color rgba(255,255,255,0.8)
 		h5
 			color #5e6062
+		form
+			width 95%
+		textarea
+			width 100%
+			border none
+			border-bottom 1px solid #2a2a2a
+			padding 7px
+			height 70px
+		button
+			background none
+			border none
+			float right
+			text-transform uppercase
+			color #49aeb7
+			font-family 'Oswald', sans-serif
+			font-size 17px
+			font-weight 300 !important
+			padding 10px 15px
+			&:hover
+				color #007675
 .qcard
 	padding 10px 0
-	border-bottom 1px solid #adadad
 	border-top 1px solid #adadad
+	margin-bottom 25px
+	scroll auto
 	p
 		color #fff
-	
+	a
+		margin 0 10px 20px
+		padding 5px
+		font-size 1.1em
 .crop
 	margin 10px
 	width 40px
@@ -679,9 +708,21 @@ header
 .date
 	color #adadad
 	font-size 0.9em
+.qcard2
+	width 95%
+	border-bottom 1px solid #2a2a2a
+	padding-bottom 10px
+	margin-bottom 15px
+	.date
+		color #5e6062
+	a
+		float none
+		padding 5px 10px
+		font-size 0.849em
+		color #858c36
+		font-family 'Oswald', sans-serif
+		text-transform uppercase
 		
-			
-			
 @media (min-width:1200px)
 	.loading
 		bottom 136px
