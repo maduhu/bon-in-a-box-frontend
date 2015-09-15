@@ -86,7 +86,7 @@ block content
 		.col_texto
 			| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
 	#section3
-	.contenidog.filter_ui
+	.contenidog.filter_ui.hidden
 		.col_herramientas
 			h4 herramientas
 			aa(class="proponer" title="new tools" href="") proponer
@@ -218,6 +218,14 @@ block content
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					a(href="") sitio web
 					a(href="") contacto
+	.contenido.toolabst.clearfix
+		.smbox.clearfix
+			a(class="" href="")
+				img(src='images/xxx.png')
+		.toolinfo
+			.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+		.respinfo
+		.usercomment
 	#section4
 	.contenido.forum
 		h4 preguntas comunidad
@@ -232,19 +240,82 @@ block content
 					.name Cesar Gutierrez
 					.date 09 - 09 - 15
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-				a(class="ver_mas right" title="Bon in a Box" href="") +
+				a(class="ver_mas right" title="Ir" href="") +
 		.cajaf2
-			h5 Consulta con la red Bon in a Box
-			form(id="" method="" action="" class="clearfix")
-				textarea.input-forum(type="textarea" name="question" placeholder="Pregunta sobre herramientas y monitoreo")
-				button(type="submit") preguntar
-			h5 Últimas Preguntas
-			.qcard2
-				.clearfix
-					.crop
-						img(src='images/c2.jpg')
-					.name Cesar Gutierrez
-					.date 09 - 09 - 15
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-				a(class="ver_mas right" title="Bon in a Box" href="") responder
+			.state1.hidden
+				h5 Consulta con la red 
+					b Bon in a Box
+				form(id="" method="" action="" class="clearfix")
+					textarea.input-forum(type="textarea" name="question" placeholder="Pregunta sobre herramientas y monitoreo")
+					button(type="submit") preguntar
+				h5 Últimas Preguntas
+				.qcard2
+					.clearfix
+						.crop
+							img(src='images/c2.jpg')
+						.name Cesar Gutierrez
+						.date 09 - 09 - 15
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+					a(class="ver_mas right" title="Reply" href="") responder
+			.state2
+				.qcard3
+					.clearfix
+						.crop
+							img(src='images/c2.jpg')
+						.name Cesar Gutierrez
+						.date 09 - 09 - 15
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+					a(class="ver_mas right" title="Reply" href="") responder
+					a(class="ver_mas right" title="Edit" href="") editar
+					a(class="ver_mas right" title="Delete" href="") x
+				form(id="" method="" action="" class="clearfix hidden")
+					textarea.input-forum(type="textarea" name="answer" placeholder="Responder a esta pregunta")
+					button(type="submit") responder
+				.qcard2
+					.qualifier
+						.arrow-up
+						h5 12
+						.arrow-down
+					.answer
+						.clearfix
+							.bestansw
+								p mejor respuesta
+								img(src='images/chulo.png')
+							.crop
+								img(src='images/c2.jpg')
+							.name Cesar Gutierrez
+							.date 09 - 09 - 15
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+						a(class="ver_mas right" title="Reply" href="") comentar
+						a(class="ver_mas right" title="Edit" href="") editar
+						a(class="ver_mas right" title="Delete" href="") x
+					form(id="" method="" action="" class="tacomment hidden")
+						textarea.input-forum(type="textarea" name="comment" placeholder="comentar a esta respuesta")
+						button(type="submit") comentar
+					.answcomment
+						.clearfix
+							.crop
+								img(src='images/c2.jpg')
+							.name Cesar Gutierrez
+							.date 09 - 09 - 15
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+						a(class="ver_mas right" title="Reply" href="") comentar
+						a(class="ver_mas right" title="Edit" href="") editar
+						a(class="ver_mas right" title="Delete" href="") x
+				.qcard2
+					.qualifier
+						.arrow-up
+						h5 10
+						.arrow-down
+					.answer
+						.clearfix
+							.crop
+								img(src='images/c2.jpg')
+							.name Cesar Gutierrez
+							.date 09 - 09 - 15
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+						a(class="ver_mas right" title="Reply" href="") comentar
+						a(class="ver_mas right" title="Edit" href="") editar
+						a(class="ver_mas right" title="Delete" href="") x
+
 
