@@ -290,7 +290,7 @@ block content
 			.calificacion 4.5
 			a(class="ver_mas right" title="Edit" href="") editar
 
-	.contenido.toolabst.w100.clearfix
+	.contenido.formulario.clearfix
 		.smbox.clearfix
 			a(class="" href="")
 				img(src='images/xxx.png')
@@ -322,7 +322,7 @@ block content
 								a(class="" href="")
 									img(src='images/filt2m.png')
 							li
-								a(class=" selected" href="")
+								a(class="selected" href="")
 									img(src='images/filt3m.png')
 							li
 								a(class="" href="")
@@ -331,35 +331,74 @@ block content
 								a(class="" href="")
 									img(src='images/filt5m.png')
 						h3 filtro por temática
-						.iconosformulario
-							ul
-								li
-									a(class="icon-ico-12" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-13" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-14" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-15" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-16" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-17" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-18" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-19" title="Bon in a Box" href="")
-								li
-									a(class="icon-ico-20" title="Bon in a Box" href="")
+					.iconosformulario
+						ul
+							li
+								a(class="icon-ico-12" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-13" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-14" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-15" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-16" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-17" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-18" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-19" title="Bon in a Box" href="")
+							li
+								a(class="icon-ico-20" title="Bon in a Box" href="")
 					textarea.input-forum(type="textarea" name="descrip1" placeholder="texto corto descriptivo (250 caracteres)")
 					textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="texto completo (1800 caracteres)")
-					input(type="text" name="toolname" placeholder="NOMBRE DE LA HERRAMIENTA")
-					input(type="text" name="toolname" placeholder="NOMBRE DE LA HERRAMIENTA")
-					input(type="text" name="toolname" placeholder="NOMBRE DE LA HERRAMIENTA")
-					input(type="text" name="toolname" placeholder="NOMBRE DE LA HERRAMIENTA")
+					h4 IMAGEN DE THUMBNAIL ( 300px de ancho )
+					h5 Esta imagen aparece en el directorio de busqueda, aunque no es requerimiento.
+					button.btn.left(type="") cargar
+					button.btn.left(type="") X
+					.clearfix
+					h4.pt10 IMAGEN QUE MUESTRE LA HERRAMIENTA ( 600px de ancho )
+					button.btn.left(type="") cargar
+					button.btn.left(type="") X
+					input(type="text" name="toolname" placeholder="sitio web")
+					input(type="text" name="toolname" placeholder="mail de contacto")
+					input(type="text" name="toolname" placeholder="país que cubre")
 			.formtool2
 				h3 formulario directorio
-				input(type="text" name="toolname" placeholder="NOMBRE DE LA HERRAMIENTA")
+				.colnumb
+					p 1.
+					p 2.
+					p 3.
+					p 4.
+					p 5.
+					p 6.
+					p 7.
+					p 8.
+				.columnaforma
+					input(type="text" name="toolname" placeholder="NOMBRE responsable")
+					input(type="text" name="toolname" placeholder="SUBTÍTULO / CARGO / EMPRESA")
+					h4 categorías de busqueda
+					.categorias.clearfix
+						ul
+							li
+								a(class="selected" href="")
+									img(src='images/inst.png')
+							li
+								a(class="" href="")
+									img(src='images/inic.png')
+							li
+								a(class="" href="")
+									img(src='images/inves.png')
+					textarea.input-forum.h180(type="textarea" name="descripr" placeholder="TEXTO CORTO DESCRIPTIVO (300 caracteres)")
+					h4 IMAGEN DE THUMBNAIL
+					h5 ( 300px de ancho )
+					button.btn.left(type="") cargar
+					button.btn.left(type="") X
+					.clearfix
+					input(type="text" name="toolname" placeholder="sitio web")
+					input(type="text" name="toolname" placeholder="mail de contacto")
+					input(type="text" name="toolname" placeholder="país")
 				button(type="submit") enviar
 	#section4
 	.contenido.forum
