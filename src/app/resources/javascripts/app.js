@@ -44,3 +44,7 @@ $(window).scroll(_.throttle(function(e)  {
   }
 }, 250));
 
+$(function() {
+    $('.scrollp').perfectScrollbar();
+
+});
