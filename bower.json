@@ -8,5 +8,11 @@
     "lodash": "~3.10.1",
     "masonry": "~3.3.2",
     "perfect-scrollbar": "~0.6.5"
+  },
+  "overrides": {
+  	"masonry": {
+  		"main": ["./dist/masonry.pkgd.js"],
+  		"dependencies": {}
+  	}
   }
 }
