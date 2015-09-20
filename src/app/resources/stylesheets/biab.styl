@@ -117,20 +117,22 @@ footer
 	.bgic
 		margin 0px 0px 0px 120px
 		float right
-		
+.menu_principal
+	>li		
+		position relative
 .navlang
 	font-size 20px
 	margin-top 5px
+	width 40px
 	li
 		margin 5px
-		display none
 		font-weight 400
 		letter-spacing 1px
 		vertical-align middle
+		float left
 	.active
 		display block
 	&:hover li
-		display block
 .nav_scrolled
 	position fixed
 	top 0
@@ -1259,9 +1261,9 @@ button
 			min-height 0px !important
 		.crop2
 			min-height 0px !important
-		.mainnav
-			.icon
-				font-size 30px
+	nav
+		.icon
+			font-size 30px !important
 	body
 		font-size 10px
 		max-width 320px

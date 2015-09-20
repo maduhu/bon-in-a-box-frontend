@@ -4,6 +4,18 @@ var height = document.getElementById('titlebar').offsetHeight;
 var bheight = 500;
 var current = 1;
 
+
+$(function() {
+    $('.scrollp').perfectScrollbar();
+});
+
+$('#res_cards').masonry({
+  // options
+  itemSelector: '.card_herramienta',
+  columnWidth: 230
+});
+
+
 $(window).scroll(_.throttle(function(e)  {
 
   if( $(this).scrollTop() > height ) {
@@ -43,8 +55,3 @@ $(window).scroll(_.throttle(function(e)  {
      }).fadeIn(700);
   }
 }, 250));
-
-$(function() {
-    $('.scrollp').perfectScrollbar();
-
-});
