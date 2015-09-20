@@ -31,6 +31,5 @@ gulp.task('inject', ['scripts', 'styles'], function () {
 		.pipe($.inject(injectStyles, injectOptions))
 		.pipe($.inject(injectScripts, injectOptions))
 		.pipe(wiredep(_.extend({ignorePath: ['../../public']}, conf.wiredep)))
-		.pipe(gulp.dest(path.join(conf.paths.src, '/app/layouts/final')))
-		.pipe($.debug());
+		.pipe(gulp.dest(path.join(conf.paths.src, '/app/layouts/final')));
 });
