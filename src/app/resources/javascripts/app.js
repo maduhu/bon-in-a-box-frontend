@@ -49,7 +49,7 @@ $(function() {
 
 });
 
-var wallopEl = document.querySelector('.Wallop');
+var wallopEl = document.querySelector('.Wallop--slide');
 var wallop = new Wallop(wallopEl);
 
 var paginationDots = Array.prototype.slice.call(document.querySelectorAll('.Wallop-dot'));
