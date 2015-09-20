@@ -6,7 +6,18 @@
     "bootstrap-stylus": "~4.0.5",
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
+<<<<<<< HEAD
     "perfect-scrollbar": "~0.6.5",
     "wallop": "~2.2.1"
+=======
+    "masonry": "~3.3.2",
+    "perfect-scrollbar": "~0.6.5"
+  },
+  "overrides": {
+  	"masonry": {
+  		"main": ["./dist/masonry.pkgd.js"],
+  		"dependencies": {}
+  	}
+>>>>>>> 3c55095ef5d8e1a176dc7cf120aa047164640816
   }
 }
