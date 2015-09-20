@@ -298,23 +298,23 @@ label
 ::-webkit-input-placeholder
 	color #5d5e5e
 	text-transform uppercase
-	font-size 12px
-	letter-spacing 2px
+	font-size 0.786em
+	letter-spacing 1px
 :-moz-placeholder  /* Firefox 18- */
-	color #5d5e5e
+	color #000	
 	text-transform uppercase
-	font-size 12px
-	letter-spacing 2px  
+	font-size 0.786em
+	letter-spacing 1px  
 ::-moz-placeholder   /* Firefox 19+ */
-	color #5d5e5e
+	color #000	
 	text-transform uppercase
-	font-size 12px
-	letter-spacing 2px  
+	font-size 0.786em
+	letter-spacing 1px  
 :-ms-input-placeholder   
 	color #5d5e5e
 	text-transform uppercase
-	font-size 12px
-	letter-spacing 2px
+	font-size 0.786em
+	letter-spacing 1px
 	
 		
 /* COLORES POR SECCION */
@@ -501,8 +501,8 @@ label
 			display inline-block
 	.resultados
 		height 570px
-		overflow-y scroll
 		padding 0 15px 20px
+		position relative
 	.card_herramienta
 		vertical-align top
 		margin 0 15px 15px 0
@@ -572,11 +572,12 @@ label
 	.resultados
 		background-color rgba(28,42,44,0.8)
 		height 570px
-		overflow-y scroll
+		position relative
 		padding 0 15px 20px
 	.card_directory
 		padding 15px
 		background-color #FFF
+		margin-bottom 10px
 		.visual
 			border-bottom solid 1px #111a1d
 			padding-bottom 15px
@@ -683,10 +684,11 @@ label
 			overflow auto
 			height 550px
 			margin-top 10px
+			position relative
 	.respinfo
 	.usercomment
 	.toolinfo
-		width 67%
+		width 64%
 		height 768px
 		background rgba(255,255,255,0.9)
 		box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
@@ -697,7 +699,7 @@ label
 		float left
 		padding 24px 12px 14px
 	.respinfo
-		width 28%
+		width 31%
 		height 497px
 		margin -14px 35px 7px 0
 		vertical-align top
@@ -722,7 +724,7 @@ label
 				max-width 95%
 				max-height 150px
 	.usercomment
-		width 28%
+		width 31%
 		height 263px
 		margin 0
 		margin-right 35px
@@ -779,7 +781,164 @@ label
 			bottom 25px
 			right 15px
 			font-family 'Oswald', sans-serif
+			text-transform uppercase	
+.formulario
+	margin-top 200px
+	.smbox
+		background rgba(255,255,255,0.8)
+		border-top 2px #2a2a2a solid
+		img
+			padding 6px 7px 7px
+			float right
+	form
+		width 100%
+		h3
+			font-size 1.286em
+			margin-top 10px
 			text-transform uppercase
+			vertical-align top
+			display block
+			min-height 0
+			font-weight 400
+		h5
+			font-weight 300
+			color #6d6d6d
+			font-size 0.786em
+			line-height 0
+			margin-left 5px
+		.formtool2
+		.formtool
+			width 64%
+			height 768px
+			background rgba(255,255,255,0.9)
+			box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+			-webkit-border-bottom-right-radius 10px
+			-moz-border-radius-bottomright 10px
+			border-bottom-right-radius 10px
+			margin -14px 0 0 8px
+			float left
+			padding 10px 12px 14px 20px
+			overflow auto
+			.colnumb
+				display inline-block
+				padding 10px
+				width 5%
+				p
+					font-family 'Oswald', sans-serif
+					text-align right
+					color #49aeb7
+					font-size 1em
+					display inline-block
+					&:nth-child(2)
+						margin-top 8px
+					&:nth-child(3)
+						margin-top 132px
+					&:nth-child(4)
+						margin-top 60px
+					&:nth-child(5)
+						margin-top 85px
+					&:nth-child(6)
+						margin-top 45px
+					&:nth-child(7)
+						margin-top 35px
+					&:nth-child(8)
+						margin-top 15px
+					&:nth-child(9)
+						margin-top 15px
+			.columnaforma
+				width 95%
+				display inline-block
+				vertical-align top
+				margin-top 5px
+				.categorias
+					margin-left  10px
+					margin-bottom 15px
+					h3
+						float right
+						margin-top 25px
+						margin-right 15px
+						font-weight 300
+					ul
+						margin 0
+						margin-top 15px
+						padding 0
+						display inline-block
+						li
+							display inline-block
+				.iconosformulario
+					padding-left 10px
+					margin 0
+					margin-bottom 5px
+					li 
+						width 30px
+						height 30px
+						-webkit-border-radius 3px
+						-moz-border-radius 3px
+						border-radius 3px
+						background-color #04adac
+						padding 3px 2px 0
+						margin-right 5px
+						display inline-block
+						a
+							color #1c2a2c
+							font-size 27px
+							padding 0 !important
+							line-height 0
+							vertical-align middle
+		input
+		textarea
+			width 98%
+			margin-top 15px
+		input[type=text]
+			background none
+			margin-top 0
+		.h105
+			height 105px
+			margin-bottom 15px
+		.h180
+			height 180px
+			margin-bottom 15px
+		h4
+			color #5d5e5e
+			text-transform uppercase
+			font-size 0.786em
+			letter-spacing 1px
+			font-weight 300
+			margin 0 0 10px 5px
+		.formtool2
+			width 31%
+			margin -14px 35px 7px 0
+			padding 10px 5px 14px 5px
+			vertical-align top
+			float right
+			h3
+				margin-left 10px
+			.columnaforma
+				width 90%
+				margin-left 10px
+			.colnumb
+				p
+					font-family 'Oswald', sans-serif
+					text-align right
+					color #49aeb7
+					font-size 1em
+					display inline-block
+					&:nth-child(2)
+						margin-top 17px
+					&:nth-child(3)
+						margin-top 6px
+					&:nth-child(4)
+						margin-top 93px
+					&:nth-child(5)
+						margin-top 164px
+					&:nth-child(6)
+						margin-top 44px
+					&:nth-child(7)
+						margin-top 16px
+					&:nth-child(8)
+						margin-top 16px
+.pt10
+	padding-top 10px
 .categorias
 	img
 		opacity 0.5
@@ -809,6 +968,7 @@ label
 		color #1c2a2c
 		top -10px
 		line-height 0
+		z-index 30
 	.divisor
 		margin 0
 	.cajaf1
@@ -832,6 +992,7 @@ label
 	.cajaf2
 		width 67%
 		background-color rgba(255,255,255,0.8)
+		position relative
 		h5
 			color #5e6062
 form
