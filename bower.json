@@ -6,6 +6,7 @@
     "bootstrap-stylus": "~4.0.5",
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
-    "perfect-scrollbar": "~0.6.5"
+    "perfect-scrollbar": "~0.6.5",
+    "wallop": "~2.2.1"
   }
 }
