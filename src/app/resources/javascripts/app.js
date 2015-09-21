@@ -120,3 +120,29 @@ function removeClass(element, className) {
   if (!element) { return; }
   element.className = element.className.replace(className, '');
 }
+
+$('.toggler button').on('click', function(e){
+  $('.toggler li.grande').removeClass('grande');
+  $(this).closest('li').addClass('grande');
+});
+$('.toggler2 button').on('click', function(e){
+  $('.toggler2 li.grande').removeClass('grande');
+  $(this).closest('li').addClass('grande');
+});
+$('.toggler3 button').on('click', function(e){
+  $('.toggler3 li.grande').removeClass('grande');
+  $(this).closest('li').addClass('grande');
+});
+$('.toggler4 button').on('click', function(e){
+  $('.toggler4 li.grande').removeClass('grande');
+  $(this).closest('li').addClass('grande');
+});
+$('.toggler5 button').on('click', function(e){
+  $('.toggler5 li.grande').removeClass('grande');
+  $(this).closest('li').addClass('grande');
+});
+
+$​('#01').live('click', function(){
+    $('div').hide();
+    $('#a').show();
+});
