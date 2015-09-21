@@ -4,15 +4,19 @@ var height = document.getElementById('titlebar').offsetHeight;
 var bheight = 500;
 var current = 1;
 
+$( "smic" ).click(function() {
+  $( this ).switchClass( "bgic", "blue", 1000, "easeInOutQuad" );
+});
 
 $(function() {
     $('.scrollp').perfectScrollbar();
 });
 
-$('#res_cards').masonry({
+$('.resultados_wrapper .resultados').masonry({
   // options
   itemSelector: '.card_herramienta',
-  columnWidth: 230
+  columnWidth: 230,
+  gutter: 10
 });
 
 

@@ -43,9 +43,17 @@ li
 		width 100%
 		height auto
 		-webkit-opacity .99
-
+.wrapper
+	position absolute
+	width 100%
+	-moz-box-sizing content-box
+	-webkit-box-sizing content-box
+	box-sizing content-box
+	overflow hidden
 //header
 header
+	position absolute
+	width 100%
 	h3
 		font "Roboto"
 		color white
@@ -120,19 +128,29 @@ footer
 .menu_principal
 	>li		
 		position relative
+		width 43px
+		min-height 50px
 .navlang
 	font-size 20px
-	margin-top 5px
-	width 40px
+	margin 5px 0 0 7px
+	width 41	px
+	position absolute
 	li
-		margin 5px
+		padding 5px 8px
 		font-weight 400
 		letter-spacing 1px
 		vertical-align middle
 		float left
+		width 41px
+		background rgba(17,26,29,0.8)
+		display none
 	.active
 		display block
+		background rgba(17,26,29,0)
 	&:hover li
+	&:hover.active
+		background rgba(17,26,29,0.8)
+		display block
 .nav_scrolled
 	position fixed
 	top 0
@@ -326,7 +344,7 @@ label
 	border-top 2px #2a2a2a solid
 	padding 0 40px
 	max-width 1000px
-	margin-top 30px
+	margin-top 130px
 	h1
 		color #2a2a2a
 	h1:nth-child(1)
@@ -501,22 +519,26 @@ label
 		padding 27px
 		li
 			display inline-block
-	.resultados
+	.resultados_wrapper
 		height 570px
+		overflow auto
+	.resultados
 		padding 0 15px 20px
+		overflow auto
 		position relative
 	.card_herramienta
 		vertical-align top
-		margin 0 15px 15px 0
 		display inline-block
 		background-color #FFF
 		width 230px
+		float left
 		box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 		-webkit-border-radius 3px
 		-moz-border-radius 3px
 		border-radius 3px
+		margin-bottom 10px
 		img
-			width 230px
+			width 100%
 		.titulos_card
 			background-color #515657
 			padding 15px 10px 0
@@ -542,8 +564,6 @@ label
 			padding 0 10px 15px
 			color #5d5e5e
 			font-weight 300
-	.card_herramienta:nth-child(3n+3)
-		margin-right 0
 
 .col_directorio
 	width 30%
@@ -575,6 +595,7 @@ label
 		background-color rgba(28,42,44,0.8)
 		height 570px
 		position relative
+		overflow auto
 		padding 0 15px 20px
 	.card_directory
 		padding 15px
@@ -1170,6 +1191,7 @@ button
 	.intro
 		width 320px
 		padding 0 15px 10px 0
+		margin-top 130px !important
 		img
 			margin-top 0px
 			position absolute
@@ -1185,9 +1207,13 @@ button
 	.divisor
 		margin	10px 0 !important
 	.contenido
+		-moz-box-sizing content-box
+		-webkit-box-sizing content-box
+		box-sizing content-box
 		margin 0 auto
-		width 320px
+		width 320px !important
 		padding 0 12px
+		overflow hidden
 		box-sizing border-box
 		nth-child(1)
 		background  url("../public/images/bg1_s.jpg") no-repeat left bottom
@@ -1264,6 +1290,20 @@ button
 	nav
 		.icon
 			font-size 30px !important
+	.resultados_wrapper
+		height auto !important
+	.resultados
+		height auto !important
+		.card_herramienta
+			width 275px
+			font-size 140%
+	.col_directorio
+		.card_directory
+			width 275px
+			font-size 140%
+	.forum
+		h4
+			margin 0px
 	body
 		font-size 10px
 		max-width 320px
