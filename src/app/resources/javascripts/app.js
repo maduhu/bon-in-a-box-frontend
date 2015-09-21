@@ -4,20 +4,13 @@ var height = document.getElementById('titlebar').offsetHeight;
 var bheight = 500;
 var current = 1;
 
-$( "smic" ).click(function() {
-  $( this ).switchClass( "bgic", "blue", 1000, "easeInOutQuad" );
-});
-
-$(function() {
-    $('.scrollp').perfectScrollbar();
-});
-
 $('.resultados_wrapper .resultados').masonry({
   // options
   itemSelector: '.card_herramienta',
   columnWidth: 230,
   gutter: 10
 });
+
 
 
 $(window).scroll(_.throttle(function(e)  {
@@ -58,47 +51,45 @@ $(window).scroll(_.throttle(function(e)  {
          $(this).attr("src","/images/bg4.jpg")
      }).fadeIn(700);
   }
-<<<<<<< HEAD
-}, 250));
-=======
 }, 400));
+
+/*scrollbar*/
 
 $(function() {
     $('.scrollp').perfectScrollbar();
-
 });
 
-    var wallopEl = document.querySelector('.Wallop--slide');
-    var wallop = new Wallop(wallopEl);
+/*wallop*/
 
-    var paginationDots = Array.prototype.slice.call(document.querySelectorAll('.menu_about .Wallop-dot'));
-    /*
-    Attach click listener on the dots
-    */
-    paginationDots.forEach(function (dotEl, index) {
-      dotEl.addEventListener('click', function() {
-        wallop.goTo(index);
-      });
-    });
-    /*
-    Listen to wallop change and update classes
-    */
-    wallop.on('change', function(event) {
-      removeClass(document.querySelector('.menu_about .Wallop-dot--current'), 'Wallop-dot--current');
-      addClass(paginationDots[event.detail.currentItemIndex], 'Wallop-dot--current');
-    });
-    // Helpers
-    function addClass(element, className) {
-      if (!element) { return; }
-      element.className = element.className.replace(/\s+$/gi, '') + ' ' + className;
-    }
+var wallopEl = document.querySelector('.Wallop--slide');
+var wallop = new Wallop(wallopEl);
 
-    function removeClass(element, className) {
-      if (!element) { return; }
-      element.className = element.className.replace(className, '');
-    }
+var paginationDots = Array.prototype.slice.call(document.querySelectorAll('.menu_about .Wallop-dot'));
+/*
+Attach click listener on the dots
+*/
+paginationDots.forEach(function (dotEl, index) {
+  dotEl.addEventListener('click', function() {
+    wallop.goTo(index);
+  });
+});
+/*
+Listen to wallop change and update classes
+*/
+wallop.on('change', function(event) {
+  removeClass(document.querySelector('.menu_about .Wallop-dot--current'), 'Wallop-dot--current');
+  addClass(paginationDots[event.detail.currentItemIndex], 'Wallop-dot--current');
+});
+// Helpers
+function addClass(element, className) {
+  if (!element) { return; }
+  element.className = element.className.replace(/\s+$/gi, '') + ' ' + className;
+}
 
-
+function removeClass(element, className) {
+  if (!element) { return; }
+  element.className = element.className.replace(className, '');
+}
 
 var wallopE2 = document.querySelector('.componentes.Wallop--slide');
 var wallop2 = new Wallop(wallopE2);
@@ -129,4 +120,3 @@ function removeClass(element, className) {
   if (!element) { return; }
   element.className = element.className.replace(className, '');
 }
->>>>>>> origin/master
