@@ -19,6 +19,11 @@ a
 		color #007675
 li
 	list-style none !important
+
+button
+	-moz-outline-style none
+	outline-style none
+	
 .hidden
 	display none
 
@@ -261,7 +266,7 @@ header
 	.colordiv
 		width 10px
 		height 87px
-		background-color: #04adac
+		background-color #04adac
 		float right
 		margin-top 30px
 		vertical-align top
@@ -412,16 +417,48 @@ label
 		text-transform uppercase
 		line-height 1.1em
 		width 75%
+	.Wallop-item:nth-child(2)
+		h1
+			color #04adac
+		li
+			&:hover
+				background-color #5bc5c8
+		.grande
+			background-color #04adac
+	.Wallop-item:nth-child(3)
+		h1
+			color #858C36
+		li
+			&:hover
+				background-color #a4aa57
+		.grande
+			background-color #858C36
+	.Wallop-item:nth-child(4)
+		h1
+			color #B872B0
+		li
+			&:hover
+				background-color #cb9ac6
+		.grande
+			background-color #B872B0
+	.Wallop-item:nth-child(5)
+		h1
+			color #F26334
+		li
+			&:hover
+				background-color #f28e6d
+		.grande
+			background-color #F26334
 	h2
 		color #2a2a2a
-		display: table
-		background-color: #FFF
+		display table
+		background-color #FFF
 		padding 0 7px
 		margin-bottom 0
 	h3
 		color #fff
-		display: table
-		background-color: #2a2a2a
+		display table
+		background-color #2a2a2a
 		padding 7px
 		margin-top 2px
 		margin-bottom 70px
@@ -430,9 +467,19 @@ label
 	.colordiv
 		height 316px
 		margin-right 38px
+		background-color #F2A034
+	.cd2
+		background-color #04adac
+	.cd3
+		background-color #858C36
+	.cd4
+		background-color #B872B0
+	.cd5
+		background-color #F26334
 .col_iconos
 	position relative
 	display inline-block
+	width 57%
 	ul
 		position absolute
 		top 180px
@@ -444,25 +491,31 @@ label
 			-moz-border-radius 3px
 			border-radius 3px
 			margin-right 10px
-			padding 6px 5px
 			display inline-block
-			a
+			padding 5px
+			float left
+			margin-top 120px
+			button
+				vertical-align top
 				font-size 40px
 				color #fff
 				line-height 45px
-				vertical-align middle
+				vertical-align top
+				padding 0
 			&:hover
 				background-color: #f1b25e
 		.grande
+			margin-top 0
+			left 0
 			width 110px
 			height 110px
 			background-color #f2a034
-			padding-left 0
-			display block
-			margin-bottom 10px
-			a
+			padding 3px 0 0 5px
+			position absolute
+			button
 				font-size 110px
 				color #1c2a2c
+				padding 0
 .filtros
 	width 100%
 	min-height 103px
@@ -1212,7 +1265,7 @@ button
 		overflow hidden
 		box-sizing border-box
 		nth-child(1)
-		background  url("../public/images/bg1_s.jpg") no-repeat left bottom
+		background  url("/images/bg1_s.jpg") no-repeat left bottom
 		.colordiv
 			margin 0 !important
 			height 216px
