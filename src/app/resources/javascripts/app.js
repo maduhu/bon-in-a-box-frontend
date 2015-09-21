@@ -142,7 +142,3 @@ $('.toggler5 button').on('click', function(e){
   $(this).closest('li').addClass('grande');
 });
 
-$​('#01').live('click', function(){
-    $('div').hide();
-    $('#a').show();
-});
