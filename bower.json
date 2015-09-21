@@ -6,6 +6,7 @@
     "bootstrap-stylus": "~4.0.5",
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
+    "wallop": "~2.2.1",
     "masonry": "~3.3.2",
     "perfect-scrollbar": "~0.6.5"
   },
@@ -13,6 +14,9 @@
   	"masonry": {
   		"main": ["./dist/masonry.pkgd.js"],
   		"dependencies": {}
-  	}
+  	},
+  	"wallop": {
+    	"main": ["./js/Wallop.js", "./css/wallop.css", "./css/wallop--slide.css"]
+    }
   }
 }
