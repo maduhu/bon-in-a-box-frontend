@@ -142,3 +142,163 @@ $('.toggler5 button').on('click', function(e){
   $(this).closest('li').addClass('grande');
 });
 
+
+$('#a1').on('click', function(e){
+  $('div[class^="atoggled"]').addClass('hidden');
+  $(".atoggled-01").removeClass('hidden');
+});
+
+$('#a2').on('click', function(e){
+  $('div[class^="atoggled"]').addClass('hidden');
+  $(".atoggled-02").removeClass('hidden');
+});
+
+$('#a3').on('click', function(e){
+  $('div[class^="atoggled"]').addClass('hidden');
+  $(".atoggled-03").removeClass('hidden');
+});
+
+$('#a4').on('click', function(e){
+  $('div[class^="atoggled"]').addClass('hidden');
+  $(".atoggled-04").removeClass('hidden');
+});
+
+$('#a5').on('click', function(e){
+  $('div[class^="atoggled"]').addClass('hidden');
+  $(".atoggled-05").removeClass('hidden');
+});
+
+
+$('#b1').on('click', function(e){
+  $('div[class^="btoggled"]').addClass('hidden');
+  $(".btoggled-01").removeClass('hidden');
+});
+
+$('#b2').on('click', function(e){
+  $('div[class^="btoggled"]').addClass('hidden');
+  $(".btoggled-02").removeClass('hidden');
+});
+
+$('#b3').on('click', function(e){
+  $('div[class^="btoggled"]').addClass('hidden');
+  $(".btoggled-03").removeClass('hidden');
+});
+
+$('#b4').on('click', function(e){
+  $('div[class^="btoggled"]').addClass('hidden');
+  $(".btoggled-04").removeClass('hidden');
+});
+
+$('#b5').on('click', function(e){
+  $('div[class^="btoggled"]').addClass('hidden');
+  $(".btoggled-05").removeClass('hidden');
+});
+
+$('#b6').on('click', function(e){
+  $('div[class^="btoggled"]').addClass('hidden');
+  $(".btoggled-06").removeClass('hidden');
+});
+
+
+$('#c1').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-01").removeClass('hidden');
+});
+
+$('#c2').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-02").removeClass('hidden');
+});
+
+$('#c3').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-03").removeClass('hidden');
+});
+
+$('#c4').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-04").removeClass('hidden');
+});
+
+$('#c5').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-05").removeClass('hidden');
+});
+
+$('#c6').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-06").removeClass('hidden');
+});
+
+$('#c7').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-07").removeClass('hidden');
+});
+
+$('#c8').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-08").removeClass('hidden');
+});
+
+$('#c9').on('click', function(e){
+  $('div[class^="ctoggled"]').addClass('hidden');
+  $(".ctoggled-09").removeClass('hidden');
+});
+
+
+$('#d1').on('click', function(e){
+  $('div[class^="dtoggled"]').addClass('hidden');
+  $(".dtoggled-01").removeClass('hidden');
+});
+
+$('#d2').on('click', function(e){
+  $('div[class^="dtoggled"]').addClass('hidden');
+  $(".dtoggled-02").removeClass('hidden');
+});
+
+$('#d3').on('click', function(e){
+  $('div[class^="dtoggled"]').addClass('hidden');
+  $(".dtoggled-03").removeClass('hidden');
+});
+
+$('#d4').on('click', function(e){
+  $('div[class^="dtoggled"]').addClass('hidden');
+  $(".dtoggled-04").removeClass('hidden');
+});
+
+
+$('#e1').on('click', function(e){
+  $('div[class^="etoggled"]').addClass('hidden');
+  $(".etoggled-01").removeClass('hidden');
+});
+
+$('#e2').on('click', function(e){
+  $('div[class^="etoggled"]').addClass('hidden');
+  $(".etoggled-02").removeClass('hidden');
+});
+
+$('#e3').on('click', function(e){
+  $('div[class^="etoggled"]').addClass('hidden');
+  $(".etoggled-03").removeClass('hidden');
+});
+
+$('#e4').on('click', function(e){
+  $('div[class^="etoggled"]').addClass('hidden');
+  $(".etoggled-04").removeClass('hidden');
+});
+
+$('#e5').on('click', function(e){
+  $('div[class^="etoggled"]').addClass('hidden');
+  $(".etoggled-05").removeClass('hidden');
+});
+
+$('#e6').on('click', function(e){
+  $('div[class^="etoggled"]').addClass('hidden');
+  $(".etoggled-06").removeClass('hidden');
+});
+
+$('#e7').on('click', function(e){
+  $('div[class^="etoggled"]').addClass('hidden');
+  $(".etoggled-07").removeClass('hidden');
+});
+
