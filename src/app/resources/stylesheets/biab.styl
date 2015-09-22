@@ -540,12 +540,13 @@ label
 		&:hover
 			background-color: #f1b25e
 .card_herramienta
-	a
+	button
 		color #5d5d5d
 		font-size 30px
 		line-height 1
-		font-weight 700
+		font-weight 400
 		padding 5px 15px 10px
+		font-family 'Roboto', sans-serif
 	ul
 		padding 0 10px
 		margin 0
@@ -748,9 +749,11 @@ label
 	.smbox
 		background rgba(255,255,255,0.8)
 		border-top 2px #2a2a2a solid
-		img
-			padding 6px 7px 7px
-			float right
+		.back2
+			padding 0
+			img
+				padding 6px 7px 7px
+				float right
 	.toolinfo
 		h3
 			font-size 2.571em
@@ -906,9 +909,11 @@ label
 	.smbox
 		background rgba(255,255,255,0.8)
 		border-top 2px #2a2a2a solid
-		img
-			padding 6px 7px 7px
-			float right
+		.back
+			padding 0
+			img
+				padding 6px 7px 7px
+				float right
 	form
 		width 100%
 		h3
@@ -952,12 +957,11 @@ label
 					margin-bottom 15px
 					h3
 						float right
-						margin-top 25px
+						margin-top 20px
 						margin-right 15px
 						font-weight 300
 					ul
 						margin 0
-						margin-top 15px
 						padding 0
 						display inline-block
 						li
@@ -991,12 +995,12 @@ label
 			vertical-align super
 		input[type=text]
 			background none
-			margin-top 0
+			margin 0
 		.h105
-			height 105px
+			height 100px
 			margin-bottom 15px
 		.h180
-			height 180px
+			height 170px
 			margin-bottom 15px
 		h4
 			color #5d5e5e
@@ -1005,6 +1009,8 @@ label
 			letter-spacing 1px
 			font-weight 300
 			margin 0 0 10px 5px
+			&:nth-child(1)
+				margin-top 10px
 		.formtool2
 			width 31%
 			margin -14px 35px 7px 0

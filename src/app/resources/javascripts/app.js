@@ -302,3 +302,21 @@ $('#e7').on('click', function(e){
   $(".etoggled-07").removeClass('hidden');
 });
 
+
+$('.proponer').on('click', function(e){
+  $('.filter_ui').addClass('hidden');
+  $('.formulario').removeClass('hidden');
+});
+$('.back').on('click', function(e){
+  $('.formulario').addClass('hidden');
+  $('.filter_ui').removeClass('hidden');
+});
+$('.ver_mas').on('click', function(e){
+  $('.filter_ui').addClass('hidden');
+  $('.toolabst').removeClass('hidden');
+});
+$('.back2').on('click', function(e){
+  $('.toolabst').addClass('hidden');
+  $('.filter_ui').removeClass('hidden');
+});
+
