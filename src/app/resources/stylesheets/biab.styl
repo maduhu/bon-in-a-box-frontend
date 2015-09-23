@@ -943,13 +943,23 @@ label
 			float left
 			padding 10px 0 14px 20px
 			overflow auto
+			text-shadow rgba(0,0,0,.01) 0 0 1px
 			ol
 				padding 10px
-				li
-					list-style decimal
-					color #49aeb7
-					padding 2px
-					margin-left 8px
+				>li
+					counter-increment customlistcounter
+					margin 0 0 0 10px
+					list-style none
+					&:before
+						content counter(customlistcounter) " "
+						font-weight 300
+						color #49aeb7
+						float left
+						width 2em
+						margin 0px 0px 11px -33px
+						text-align center
+						letter-spacing -1px
+						position absolute
 			.columnaforma
 				vertical-align top
 				margin-top 5px
@@ -990,7 +1000,6 @@ label
 		input
 		textarea
 			width 98%
-			margin-top 15px
 			color #424242
 		textarea
 			vertical-align super
@@ -1219,7 +1228,13 @@ button
 	border-top 10px solid #858c36
 	margin-left calc(50% - 10px)
 
-
+.contenido
+	.Wallop-item--current
+		div
+			display block
+		.switch
+			display none
+	
 @media (min-width:1200px)
 	.loading
 		bottom 136px
