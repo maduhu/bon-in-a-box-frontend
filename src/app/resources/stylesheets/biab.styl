@@ -69,6 +69,7 @@ header
 		background rgba(17,26,29,0.8)
 		padding 5px 0 0
 		position relative
+		z-index 1000
 		width 100%
 	h3:nth-child(2)
 		float right
@@ -118,6 +119,10 @@ footer
 	font-size 40px
 	line-height 10px
 	padding 5px
+.menu_principal
+	li:nth-child(3)
+	li:nth-child(4)
+		margin-right 35px
 .hexicon
 	.smic
 		margin 117px 0 0 10px
@@ -156,7 +161,7 @@ footer
 			background url('/images/filt5.png') no-repeat top left
 .navlang
 	font-size 20px
-	margin 5px 0 0 7px
+	margin-top 5px
 	width 41px
 	position absolute
 	li
@@ -617,24 +622,40 @@ label
 		li
 			display inline-block
 	.resultados_wrapper
+		position relative
 		height 570px
-		overflow auto
 	.resultados
-		padding 0 15px 20px
-		overflow auto
+		padding 0 0 20px 15px
 		position relative
 	.card_herramienta
-		vertical-align top
-		display inline-block
+		position relative
 		background-color #FFF
 		width 230px
-		float left
 		box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 		-webkit-border-radius 3px
 		-moz-border-radius 3px
 		border-radius 3px
-		margin-bottom 10px
-		img
+		margin-bottom 15px
+		.crop4
+			width 230px
+			height 190px
+			overflow hidden
+			position relative
+			-webkit-border-top-left-radius: 3px;
+			-webkit-border-top-right-radius: 3px;
+			-moz-border-radius-topleft: 3px;
+			-moz-border-radius-topright: 3px;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+		.crop4 img
+			position absolute
+			left -100%
+			right -100%
+			top -100%
+			bottom -100%
+			margin auto
+			min-height 100%
+			min-width 100%
 			width 100%
 		.titulos_card
 			background-color #515657

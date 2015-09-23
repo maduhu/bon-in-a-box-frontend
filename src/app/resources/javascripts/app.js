@@ -8,7 +8,7 @@ $('.resultados_wrapper .resultados').masonry({
   // options
   itemSelector: '.card_herramienta',
   columnWidth: 230,
-  gutter: 10
+  gutter: 15
 });
 
 
