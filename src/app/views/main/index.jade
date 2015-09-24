@@ -1,5 +1,11 @@
 extends ../../layouts/final/layout
 
+block header
+	include ../../layouts/includes/header
+
+block footer
+	include ../../layouts/includes/footer
+
 block content
 	.backg
 		img(id="foto" src='images/bg1.jpg')
@@ -29,7 +35,7 @@ block content
 		.Wallop-list
 			.intro.clearfix.Wallop-item.Wallop-item--current
 				.col50
-					h1 bon in 
+					h1 bon in
 						br
 						| a box
 					img(src='images/main1.png')
@@ -37,8 +43,8 @@ block content
 					h2 Herramientas de monitoreo para necesidades específicas
 				.colordiv.cd1
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many 
-					b excellent tools, protocols and software 
+					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
+					b excellent tools, protocols and software
 					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
 			.intro.clearfix.Wallop-item
 				.col50
@@ -50,12 +56,12 @@ block content
 					h2.color2 Herramientas de monitoreo para necesidades específicas
 				.colordiv.cd2
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many 
-					b excellent tools, protocols and software 
+					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
+					b excellent tools, protocols and software
 					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 ¿POR QUÉ 
+					h1 ¿POR QUÉ
 						br
 						| SE CREA?
 					img(src='images/main3.png')
@@ -63,12 +69,12 @@ block content
 					h2.color3 Herramientas de monitoreo para necesidades específicas
 				.colordiv.cd3
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many 
-					b excellent tools, protocols and software 
+					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
+					b excellent tools, protocols and software
 					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 ¿CÓMO 
+					h1 ¿CÓMO
 						br
 						| SE USA?
 					img(src='images/main4.png')
@@ -76,12 +82,12 @@ block content
 					h2.color4 Herramientas de monitoreo para necesidades específicas
 				.colordiv.cd4
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many 
-					b excellent tools, protocols and software 
+					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
+					b excellent tools, protocols and software
 					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 ¿QUÉ ES 
+					h1 ¿QUÉ ES
 						br
 						| GEO BON?
 					img(src='images/main5.png')
@@ -89,8 +95,8 @@ block content
 					h2.color5 Herramientas de monitoreo para necesidades específicas
 				.colordiv.cd5
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many 
-					b excellent tools, protocols and software 
+					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
+					b excellent tools, protocols and software
 					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
 		.clearfix
 			ul.menu_about.right.Wallop-pagination
@@ -150,7 +156,7 @@ block content
 				.col_texto
 					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
 			.Wallop-item
-				h1 filtros 
+				h1 filtros
 					br
 					| por tipo
 				.divisor
@@ -670,4 +676,5 @@ block content
 						a(class="ver_mas right" title="Edit" href="") editar
 						a(class="ver_mas right" title="Delete" href="") x
 
-
+block scripts
+	script(src="/javascripts/local/home_slider.js")

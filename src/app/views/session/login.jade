@@ -1,0 +1,31 @@
+extends ../../layouts/final/layout
+
+block header
+	include ../../layouts/includes/header
+
+block footer
+
+block content
+	.backg
+		img(id="foto" src='images/bg1.jpg')
+	.contenido.login
+		.icon-ico-32
+		h3 ingreso
+		.divisor
+		.logop
+			a(class="" href="")
+				img(src='images/google.png')
+			a(class="" href="")
+				img(src='images/linkedin.png')
+			a(class="" href="")
+				img(src='images/facebook.png')
+		h4 Ó
+		form(id="", method="", action="")
+			input.input-login(type="text" name="username" placeholder="Email address")
+			input.input-login(type="password" name="password" placeholder="Password")
+			label.checkbox
+				<input type="checkbox" value="remember-me" /> Recordarme
+			button.btn(type="submit") Acceder
+		.clearfix
+		a(class="linkslog" href="") cambio de clave
+		a(class="linkslog" href="") registro
