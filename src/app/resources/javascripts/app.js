@@ -121,6 +121,13 @@ function removeClass(element, className) {
   element.className = element.className.replace(className, '');
 }
 
+$('a[href*=#]').click(function(event){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    event.preventDefault();
+});
+
 
 $('.toggler button').on('click', function(e){
   $('.toggler li.grande').removeClass('grande');
@@ -143,14 +150,10 @@ $('.toggler5 button').on('click', function(e){
   $(this).closest('li').addClass('grande');
 });
 
-function togglero(activador, activado){
-  $( activador ).click(function() {
-    $(activado).toggle(1000);
-  });
-}
 
-$(".Wallop-item--current button").click(function(){
+$(".Wallop-item button").click(function(){
   var id = this.id;
+  console.log(id)
   $('.Wallop-item--current div[class^="toggled"]').hide();
   $(".toggled-" + id).show();
 })
