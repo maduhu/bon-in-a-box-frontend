@@ -19,6 +19,7 @@
     "$": false,
     "window": false,
     "_": false,
-    "jquery": false
+    "jquery": false,
+    "Wallop": false
   }
 }
