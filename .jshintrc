@@ -15,6 +15,10 @@
     "inject": false,
     "module": false,
     "logger": false,
-    "document": true
+    "document": false,
+    "$": false,
+    "window": false,
+    "_": false,
+    "jquery": false
   }
 }
