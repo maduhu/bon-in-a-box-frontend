@@ -4,7 +4,7 @@ var path = require('path');
 var gulp = require('gulp');
 var conf = require('./config');
 
-var browserSync = require('browser-sync');
+//var browserSync = require('browser-sync');
 
 function isOnlyChange(event) {
 	return event.type === 'changed';
@@ -32,7 +32,7 @@ gulp.task('watch', ['inject'], function () {
 		}
 	});
 
-	//gulp.watch(path.join(conf.paths.src, '/app/**/*.jade'), function(event) {
+	//gulp.watch(path.join(conf.paths.src, '/app/resources/locales/*.json'), function(event) {
 	//	browserSync.reload(event.path);
 	//});
 });
