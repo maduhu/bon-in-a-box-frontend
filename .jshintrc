@@ -14,6 +14,11 @@
     "angular": false,
     "inject": false,
     "module": false,
-    "logger": false
+    "logger": false,
+    "document": false,
+    "$": false,
+    "window": false,
+    "_": false,
+    "jquery": false
   }
 }

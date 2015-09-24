@@ -22,9 +22,9 @@ html
 
 	body
 		.wrapper
-			include ../includes/header
+			block header
 			block content
-			include ../includes/footer
+			block footer
 
 		<!-- build:js(src/public) javascripts/final/vendor.js -->
 		//- bower:js
@@ -37,3 +37,5 @@ html
 		//- js files will be automatically insert here
 		//- endinject
 		<!-- endbuild -->
+
+		block scripts

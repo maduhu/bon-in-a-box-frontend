@@ -64,6 +64,10 @@ module.exports = function(parent, options) {
 					method = 'get';
 					path = '/';
 					break;
+				case 'login':
+					method = 'get';
+					path = '/login';
+					break;
 				default:
 					throw new Error('unrecognized route: ' + name + '.' + key);
 			}
