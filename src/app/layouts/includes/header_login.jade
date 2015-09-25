@@ -1,5 +1,5 @@
 block header
-	header.fixed-element
+	header
 		.titlebar#titlebar
 			.contenedor.clearfix
 				h3
@@ -14,12 +14,13 @@ block header
 						a(class="icon icon-ico-33" title="Forum" href="/#section4")
 					li.right
 						ul.navlang
-							li.right.active
-								a(title="Español" href="") ES
-							li.right
-								a(title="Português" href="") PT
-							li.right
-								a(title="English" href="") EN
+							each language in locales
+								if language === currentLocale
+									li.right.active
+										a(title="#{language}" href="") #{language}
+								else
+									li.right
+										a(title="#{language}" href="") #{language}
 					li.right
 						a(class="icon icon-ico-37" title="Contact" href="mailto:info@geobon.org")
 					li.right

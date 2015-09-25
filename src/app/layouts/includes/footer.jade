@@ -27,10 +27,19 @@ block footer
 							a(href="www.geobon.org", target="_blank") www.geobon.org
 				ul.langft
 					li
-						a(class="current" href="") #{__("footer.spanish")}
+						if currentLocale === 'es'
+							a(class="current" href="") #{__("footer.spanish")}
+						else
+							a(href="") #{__("footer.spanish")}
 					li
-						a(href="") #{__("footer.english")}
+						if currentLocale === 'en'
+							a(class="current" href="") #{__("footer.english")}
+						else
+							a(href="") #{__("footer.english")}
 					li
-						a(href="") #{__("footer.portuguese")}
+						if currentLocale === 'pt'
+							a(class="current" href="") #{__("footer.portuguese")}
+						else
+							a(href="") #{__("footer.portuguese")}
 			small
 				.contenedorsm Copyright © 2015 GEO BON · German Centre for Integrative Biodiversity Research (iDiv) Halle - Jena - Leipzig · iDiv is a research centre of the DFG

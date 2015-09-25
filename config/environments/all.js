@@ -26,12 +26,23 @@ module.exports = function(parent) {
 		require('./development')(parent);
 	}
 
+	var locales = ['es', 'pt', 'en'];
+
+	// Initialize app local variables
+	parent.use(function(req,res,next) {
+		res.locals = {
+			currentLocale: i18n.getLocale(),
+			locales: locales
+		};
+		next();
+	});
+
 	i18n.configure({
 		// setup some locales - other locales default to en silently
-		locales: ['es', 'pt', 'en'],
+		locales: locales,
 
 		// sets a custom cookie name to parse locale settings from
-		cookie: 'boninaboxlocale',
+		cookie: 'locale',
 
 		// where to store json files - defaults to './locales'
 		directory: __dirname + '/../../src/app/resources/locales',
