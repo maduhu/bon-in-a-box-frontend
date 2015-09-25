@@ -56,3 +56,7 @@ $(window).scroll(_.throttle(function(e)  {
 $(function() {
     $('.scrollp').perfectScrollbar();
 });
+
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip({'placement': 'bottom'});
+});
