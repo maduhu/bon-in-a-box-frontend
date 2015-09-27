@@ -31,10 +31,10 @@ module.exports = function(parent) {
 
 	// Initialize app local variables
 	parent.use(function(req,res,next) {
-		if (req.cookies.locale) {
-			res.locals.currentLocale = req.cookies.locale;
+		if ((typeof req.cookies.locale) === 'undefined') {
+			res.locals.currentLocale = i18n.getLocale();
 		} else {
-			res.locals.currentLocale = i18n.getLocale()
+			res.locals.currentLocale = req.cookies.locale;
 		}
 
 		res.locals.locales = locales;
