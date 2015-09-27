@@ -11,12 +11,18 @@
     "perfect-scrollbar": "~0.6.5"
   },
   "overrides": {
-  	"masonry": {
-  		"main": ["./dist/masonry.pkgd.js"],
-  		"dependencies": {}
-  	},
-  	"wallop": {
-    	"main": ["./js/Wallop.js", "./css/wallop.css", "./css/wallop--slide.css"]
+    "masonry": {
+      "main": [
+        "./dist/masonry.pkgd.js"
+      ],
+      "dependencies": {}
+    },
+    "wallop": {
+      "main": [
+        "./js/Wallop.js",
+        "./css/wallop.css",
+        "./css/wallop--slide.css"
+      ]
     }
   }
 }

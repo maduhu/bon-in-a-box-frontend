@@ -11,7 +11,7 @@ block content
 		img(id="foto" src='images/bg1.jpg')
 	.contenido.login
 		.icon-ico-32
-		h3 ingreso
+		h3 #{__("login.title")}
 		.divisor
 		.logop
 			a(class="" href="")
@@ -22,11 +22,11 @@ block content
 				img(src='images/facebook.png')
 		h4 Ó
 		form(id="", method="", action="")
-			input.input-login(type="text" name="username" placeholder="Email address")
-			input.input-login(type="password" name="password" placeholder="Password")
+			input.input-login(type="text" name="username" placeholder="#{__('login.email_address_placeholder')}")
+			input.input-login(type="password" name="password" placeholder="#{__('login.password_placeholder')}")
 			label.checkbox
-				<input type="checkbox" value="remember-me" /> Recordarme
-			button.btn(type="submit") Acceder
+				<input type="checkbox" value="remember-me" /> #{__('login.remember_me')}
+			button.btn(type="submit") #{__('login.sign_in')}
 		.clearfix
-		a(class="linkslog" href="") cambio de clave
-		a(class="linkslog" href="") registro
+		a(class="linkslog" href="") #{__('login.forgot_password')}
+		a(class="linkslog" href="") #{__('login.sign_up')}

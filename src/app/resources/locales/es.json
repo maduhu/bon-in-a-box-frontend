@@ -4,5 +4,13 @@
 	"footer.contact": "Información de contacto",
 	"footer.spanish": "Español",
 	"footer.english": "Ingles",
-	"footer.portuguese": "Portugues"
+	"footer.portuguese": "Portugues",
+	"nav.login": "nav.login",
+	"login.title": "ingresar",
+	"login.email_address_placeholder": "correo electrónico",
+	"login.password_placeholder": "contraseña",
+	"login.remember_me": "recordarme",
+	"login.sign_in": "iniciar sesion",
+	"login.forgot_password": "olvidé la contraseña",
+	"login.sign_up": "registrarme"
 }

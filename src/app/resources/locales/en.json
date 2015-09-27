@@ -5,5 +5,12 @@
 	"footer.contact": "Contact Information",
 	"footer.spanish": "Spanish",
 	"footer.english": "English",
-	"footer.portuguese": "Portuguese"
+	"footer.portuguese": "Portuguese",
+	"login.title": "login",
+	"login.email_address_placeholder": "email adress",
+	"login.password_placeholder": "password",
+	"login.remember_me": "remember me",
+	"login.sign_in": "sign in",
+	"login.sign_up": "sign up",
+	"login.forgot_password": "forgot password"
 }

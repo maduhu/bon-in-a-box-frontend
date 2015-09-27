@@ -13,6 +13,7 @@ module.exports = function(parent) {
 	parent.use(favicon(__dirname + '/../../src/public/images/favicon.ico'));
 	parent.use(morgan('dev'));
 	parent.use(compression());
+	parent.use(cookieParser());
 	parent.use(bodyParser.json());
 	parent.use(bodyParser.urlencoded({ extended: false }));
 	parent.use(require('stylus').middleware(__dirname + '/../../src/public/stylesheets'));
@@ -30,10 +31,13 @@ module.exports = function(parent) {
 
 	// Initialize app local variables
 	parent.use(function(req,res,next) {
-		res.locals = {
-			currentLocale: i18n.getLocale(),
-			locales: locales
-		};
+		if (req.cookies.locale) {
+			res.locals.currentLocale = req.cookies.locale;
+		} else {
+			res.locals.currentLocale = i18n.getLocale()
+		}
+
+		res.locals.locales = locales;
 		next();
 	});
 
@@ -49,8 +53,6 @@ module.exports = function(parent) {
 
 		defaultLocale: 'en'
 	});
-
-	parent.use(cookieParser());
 
 	// i18n init parses req for language headers, cookies, etc.
 	parent.use(i18n.init);

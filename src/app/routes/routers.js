@@ -68,6 +68,10 @@ module.exports = function(parent, options) {
 					method = 'get';
 					path = '/login';
 					break;
+				case 'changeLanguage':
+					method = 'get';
+					path = '/language/:' + '_newlanguage';
+					break;
 				default:
 					throw new Error('unrecognized route: ' + name + '.' + key);
 			}
