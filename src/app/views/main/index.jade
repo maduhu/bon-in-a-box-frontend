@@ -402,6 +402,8 @@ block content
 				button(type="submit") !{__('search.btn')}
 		.col_herramientas
 			h4 !{__('tooldir.title')}
+				button(class="ojo" href="" id="ojo_her")
+					img(src='images/ojo_bl.png')
 			button(class="proponer" data-toggle="tooltip" title="#{__('new.tools')}" href="") !{__('propose.btn')}
 			.divisor
 			nav.categorias
@@ -424,6 +426,7 @@ block content
 					li
 						button(class="mic" data-toggle="tooltip" title="#{__('filter.tax')}" href="")
 							img(src='images/filt5m.png')
+					li.divisor_sombra
 					li
 						button(class="mic" data-toggle="tooltip" title="#{__('search.btn')}" href="")
 							img(src='images/lupa.png')
@@ -603,7 +606,13 @@ block content
 						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 
 		.col_directorio
+<<<<<<< HEAD
 			h4 !{__('directory.title')}
+=======
+			h4 directorio
+				button(class="ojo" href="" id="ojo_dir")
+					img(src='images/ojo.png')
+>>>>>>> 08b90e5de5b493e5e2f350150dd1790aeef709e9
 			.divisor
 			nav.categorias
 				ul
