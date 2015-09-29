@@ -11,7 +11,7 @@ block header
 					li.left
 						a(class="icon icon-ico-32" href="/login" data-toggle="tooltip" title="#{__('nav.login')}")
 					li.left
-						a(class="icon icon-ico-33" title="Forum" href="/#section4")
+						a(class="icon icon-ico-33" href="/#section4" data-toggle="tooltip" title="#{__('nav.forum')}")
 					li.right
 						ul.navlang
 							each language in locales
@@ -22,10 +22,10 @@ block header
 									li.right
 										a(title="#{language}" href="/language/#{language}") #{language}
 					li.right
-						a(class="icon icon-ico-37" title="Contact" href="mailto:info@geobon.org")
+						a(class="icon icon-ico-37" href="mailto:info@geobon.org" data-toggle="tooltip" title="#{__('nav.contact')}")
 					li.right
-						a(class="icon icon-ico-36" title="Tools" href="/#section3")
+						a(class="icon icon-ico-36" href="/#section3" data-toggle="tooltip" title="#{__('nav.tools')}")
 					li.right
-						a(class="icon icon-ico-35" title="Search Filters" href="/#section2")
+						a(class="icon icon-ico-35" href="/#section2" data-toggle="tooltip" title="#{__('nav.filters')}")
 					li.right
-						a(class="icon icon-ico-34" title="Bon in a Box" href="/#section1")
+						a(class="icon icon-ico-34" href="/#section1" data-toggle="tooltip" title="#{__('nav.main')}")
