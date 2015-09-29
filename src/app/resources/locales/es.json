@@ -12,5 +12,6 @@
 	"login.remember_me": "recordarme",
 	"login.sign_in": "iniciar sesion",
 	"login.forgot_password": "olvidé la contraseña",
-	"login.sign_up": "registrarme"
+	"login.sign_up": "registrarme",
+	"login.or": "Ó"
 }

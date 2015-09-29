@@ -60,6 +60,9 @@ module.exports = function(parent) {
 	// load controllers
 	require('./../../src/app/routes/routers')(parent, { verbose: true });
 
+	// Initialize authentication services
+	//require('../authentication.js')(parent, {verbose: true});
+
 	logger.info("Bon in a box - Frontend: initial configuration loaded.");
 };
 
