@@ -4,6 +4,7 @@
 var debug = require('debug')('bon-in-a-box-frontend:setup');
 var util = require('util');
 var url = require('url');
+var colors = require('colors');
 
 // express dependencies
 var express = require('express');
@@ -80,6 +81,12 @@ module.exports.createExpressApp = function(options) {
 
 	app.use(favicon(options.dir + options.favicon));
 
+	var logger = new(winston.Logger)({
+		transports: [
+			new(winston.transports.Console)()
+		]
+	});
+
 	// express dev and production config
 	if ('development' === options.env) {
 		app.use(errorHandler());
@@ -108,8 +115,6 @@ module.exports.createExpressApp = function(options) {
 		});
 	}
 
-	console.log(options.locales);
-
 	// Initialize app local variables
 	app.use(function(req, res, next) {
 		if ((typeof req.cookies.locale) === 'undefined') {
@@ -120,6 +125,18 @@ module.exports.createExpressApp = function(options) {
 		res.locals.locales = options.locales;
 		next();
 	});
+
+	i18n.configure({
+		// setup some locales - other locales default to en silently
+		locales: options.locales,
+		// sets a custom cookie name to parse locale settings from
+		cookie: options.cookieName,
+		// where to store json files - defaults to './locales'
+		directory: options.translationDir,
+		defaultLocale: options.defaultLocale
+	});
+
+	app.use(i18n.init);
 
 	logger.info("Bon in a box - Frontend: initial configuration loaded.");
 	return app;

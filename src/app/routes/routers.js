@@ -1,7 +1,9 @@
 'use strict';
 
+// dependencies
+var logger = require('winston');
 var express = require('express'),
-    fs = require('fs');
+		fs = require('fs');
 
 module.exports = function(parent, options) {
 	var verbose = options.verbose;

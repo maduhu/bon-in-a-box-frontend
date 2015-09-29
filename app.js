@@ -30,9 +30,9 @@ var app = setup.createExpressApp({
 	port: config.get('server.port'),
 	viewEngine: 'jade',
 	dir: __dirname,
-	publicLocation: './../../src/public',
-	favicon: '/../../src/public/images/favicon.ico',
-	stylesLocation: '/../../src/public/stylesheets',
+	publicLocation: '/src/public',
+	favicon: '/src/public/images/favicon.ico',
+	stylesLocation: '/src/public/stylesheets',
 	cookieParser: cookieParser,
 	session: session,
 	sessionKey: config.get('session.key'),
@@ -40,7 +40,10 @@ var app = setup.createExpressApp({
 	store: sessionStore,
 	passport: passport,
 	locales: config.get('locales'),
-	logs: config.get('logs')
+	logs: config.get('logs'),
+	cookieName: 'locale',
+	translationDir: __dirname + '/src/app/resources/locales',
+	defaultLocale: config.get('initialeDefault')
 });
 
 // http and socket.io server(s)
@@ -55,26 +58,11 @@ setup.configureSockets(io, {
 	sessionSecret: config.get('server.secret'),
 });
 
+// load controllers
+require(__dirname+'/src/app/routes/routers')(app, { verbose: true });
+
 // express error handling
 setup.handleExpressError(app);
 
 // run application
 setup.run(server, config.get('server.port'));
-
-/*var express = require('express');
-
-var app = express();
-
-// Load app configuration
-require('./config/environments/all')(app);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
-app.listen(app.get('port'), function() {
-	console.log('Express server listening on port ' + app.get('port'));
-});*/
