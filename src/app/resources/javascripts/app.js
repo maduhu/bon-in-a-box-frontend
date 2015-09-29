@@ -58,5 +58,5 @@ $(function() {
 });
 
 $(document).ready(function() {
-  $('[data-toggle="tooltip"]').tooltip({'placement': 'bottom'});
+  $('[data-toggle="tooltip"]').tooltip({'placement': 'bottom', 'container': 'body' });
 });

@@ -19,512 +19,493 @@ block content
 						| a box
 					img(src='images/main1.png')
 					.divisor
-					h2 Herramientas de monitoreo para necesidades específicas
+					h2 !{__('mainbox.sub')}
 				.colordiv.cd1
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
-					b excellent tools, protocols and software
-					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+					| !{__('mainbox.text')}
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 ¿QUIÉN LO
-						br
-						| NECESITA?
+					h1 !{__('publicbox.h1')}
 					img(src='images/main2.png')
 					.divisor
-					h2.color2 Herramientas de monitoreo para necesidades específicas
+					h2.color2 !{__('publicbox.sub')}
 				.colordiv.cd2
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
-					b excellent tools, protocols and software
-					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+					| !{__('publicbox.text')}
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 ¿POR QUÉ
-						br
-						| SE CREA?
+					h1 !{__('whybox.h1')}
 					img(src='images/main3.png')
 					.divisor
-					h2.color3 Herramientas de monitoreo para necesidades específicas
+					h2.color3 !{__('whybox.sub')}
 				.colordiv.cd3
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
-					b excellent tools, protocols and software
-					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+					| !{__('whybox.text')}
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 ¿CÓMO
-						br
-						| SE USA?
+					h1 !{__('howbox.h1')}
 					img(src='images/main4.png')
 					.divisor
-					h2.color4 Herramientas de monitoreo para necesidades específicas
+					h2.color4 !{__('howbox.sub')}
 				.colordiv.cd4
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
-					b excellent tools, protocols and software
-					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+					| !{__('howbox.text')}
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 ¿QUÉ ES
-						br
-						| GEO BON?
+					h1 !{__('geobbox.h1')}
 					img(src='images/main5.png')
 					.divisor
-					h2.color5 Herramientas de monitoreo para necesidades específicas
+					h2.color5 !{__('geobbox.sub')}
 				.colordiv.cd5
 				.col_texto
-					| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many
-					b excellent tools, protocols and software
-					| in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+					| !{__('geobbox.text')}
 		.clearfix
 			ul.menu_about.right.Wallop-pagination
 				li
-					button(class="Wallop-dot Wallop-dot--current") LA CAJA
+					button(class="Wallop-dot Wallop-dot--current") !{__('homenav.box')}
 				li
-					button(class="Wallop-dot" ) PÚBLICO
+					button(class="Wallop-dot" ) !{__('homenav.public')}
 				li
-					button(class="Wallop-dot") MOTIVO
+					button(class="Wallop-dot") !{__('homenav.why')}
 				li
-					button(class="Wallop-dot") MANEJO
+					button(class="Wallop-dot") !{__('homenav.how')}
 				li
 					button(class="Wallop-dot") GEO BON
 				li
-					button(class="Wallop-dot") ALIADOS
+					button(class="Wallop-dot") !{__('homenav.allies')}
 	#section2
 	.contenido.componentes.Wallop--slide
 		.Wallop-list
 			.Wallop-item.Wallop-item--current
-				h1 COMPONENTES DEL MONITOREO
+				h1 !{__('components.title')}
 				.divisor
 				.col_iconos
 					ul.toggler
 						li.grande
-							button(class="icon-ico-01" id="a01" title="Bon in a Box" href="")
+							button(class="icon-ico-01" id="a01" data-toggle="tooltip" title="#{__('observation.title')}" href="")
 						li
-							button(class="icon-ico-02" id="a02" title="Bon in a Box" href="")
+							button(class="icon-ico-02" id="a02" data-toggle="tooltip" title="#{__('collection.title')}" href="")
 						li
-							button(class="icon-ico-03" id="a03" title="Bon in a Box" href="")
+							button(class="icon-ico-03" id="a03" data-toggle="tooltip" title="#{__('management.title')}" href="")
 						li
-							button(class="icon-ico-04" id="a04" title="Bon in a Box" href="")
+							button(class="icon-ico-04" id="a04" data-toggle="tooltip" title="#{__('analysis.title')}" href="")
 						li
-							button(class="icon-ico-05" id="a05" title="Bon in a Box" href="")
+							button(class="icon-ico-05" id="a05" data-toggle="tooltip" title="#{__('reporting.title')}" href="")
 				.toggled-a01
 					.col_titles
-						h2 OBSERVATION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('observation.title')}
+						h3 !{__('observation.sub')}
 					.colordiv
 					.col_texto
-						| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('observation.text')}
 				.toggled-a02.switch
 					.col_titles
-						h2 OBSERVATION
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('collection.title')}
+						h3 !{__('collection.sub')}
 					.colordiv
 					.col_texto
-						| on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('collection.text')}
 				.toggled-a03.switch
 					.col_titles
-						h2 OBSEN DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('management.title')}						
+						h3 !{__('management.sub')}
 					.colordiv
 					.col_texto
-						| information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('management.text')}
 				.toggled-a04.switch
 					.col_titles
-						h2 OBSERVATESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('analysis.title')}
+						h3 !{__('analysis.sub')}
 					.colordiv
 					.col_texto
-						| Better informationnds and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('analysis.text')}
 				.toggled-a05.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('reporting.title')}
+						h3 !{__('reporting.sub')}
 					.colordiv
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('reporting.text')}
 			.Wallop-item
-				h1 variables Esenciales de la Biodiversidad
+				h1 !{__('ebv.title')}
 				.divisor
 				.col_iconos
 					ul.toggler2
 						li.grande
-							button(class="icon-ico-06" id="b01" title="Bon in a Box" href="")
+							button(class="icon-ico-06" id="b01" data-toggle="tooltip" title="#{__('communities.title')}" href="")
 						li
-							button(class="icon-ico-07" id="b02" title="Bon in a Box" href="")
+							button(class="icon-ico-07" id="b02" data-toggle="tooltip" title="#{__('ecofunction.title')}" href="")
 						li
-							button(class="icon-ico-08" id="b03" title="Bon in a Box" href="")
+							button(class="icon-ico-08" id="b03" data-toggle="tooltip" title="#{__('ecostructure.title')}" href="")
 						li
-							button(class="icon-ico-09" id="b04" title="Bon in a Box" href="")
+							button(class="icon-ico-09" id="b04" data-toggle="tooltip" title="#{__('genetic.title')}" href="")
 						li
-							button(class="icon-ico-10" id="b05" title="Bon in a Box" href="")
+							button(class="icon-ico-10" id="b05" data-toggle="tooltip" title="#{__('population.title')}" href="")
 						li
-							button(class="icon-ico-11" id="b06" title="Bon in a Box" href="")
+							button(class="icon-ico-11" id="b06" data-toggle="tooltip" title="#{__('traits.title')}" href="")
 				.toggled-b01
 					.col_titles
-						h2 OBSERVATION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('communities.title')}
+						h3 !{__('communities.sub')}
 					.colordiv.cd2
 					.col_texto
-						| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('communities.text')}
 				.toggled-b02.switch
 					.col_titles
-						h2 OBSERVATION
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('ecofunction.title')}					
+						h3 !{__('ecofunction.sub')}
 					.colordiv.cd2
 					.col_texto
-						| on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('ecofunction.text')}
 				.toggled-b03.switch
 					.col_titles
-						h2 OBSEN DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('ecostructure.title')}						
+						h3 !{__('ecostructure.sub')}
 					.colordiv.cd2
 					.col_texto
-						| information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('ecostructure.text')}
 				.toggled-b04.switch
 					.col_titles
-						h2 OBSERVATESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('genetic.title')}
+						h3 !{__('genetic.sub')}
 					.colordiv.cd2
 					.col_texto
-						| Better informationnds and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('genetic.text')}
 				.toggled-b05.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('population.title')}
+						h3 !{__('population.sub')}
 					.colordiv.cd2
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('population.text')}
 				.toggled-b06.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('traits.title')}
+						h3 !{__('traits.sub')}
 					.colordiv.cd2
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('traits.text')}
 			.Wallop-item
-				h1 filtros
-					br
-					| por tipo
+				h1 !{__('type.title')}
 				.divisor
 				.col_iconos
 					ul.toggler3
 						li.grande
-							button(class="icon-ico-12" id="c01" title="Bon in a Box" href="")
+							button(class="icon-ico-12" id="c01" data-toggle="tooltip" title="#{__('ecosystem.title')}" href="")
 						li
-							button(class="icon-ico-13" id="c02" title="Bon in a Box" href="")
+							button(class="icon-ico-13" id="c02" data-toggle="tooltip" title="#{__('citizen.title')}" href="")
 						li
-							button(class="icon-ico-14" id="c03" title="Bon in a Box" href="")
+							button(class="icon-ico-14" id="c03" data-toggle="tooltip" title="#{__('traditional.title')}" href="")
 						li
-							button(class="icon-ico-15" id="c04" title="Bon in a Box" href="")
+							button(class="icon-ico-15" id="c04" data-toggle="tooltip" title="#{__('invasive.title')}" href="")
 						li
-							button(class="icon-ico-16" id="c05" title="Bon in a Box" href="")
+							button(class="icon-ico-16" id="c05" data-toggle="tooltip" title="#{__('cites.title')}" href="")
 						li
-							button(class="icon-ico-17" id="c06" title="Bon in a Box" href="")
+							button(class="icon-ico-17" id="c06" data-toggle="tooltip" title="#{__('migratory.title')}" href="")
 						li
-							button(class="icon-ico-18" id="c07" title="Bon in a Box" href="")
+							button(class="icon-ico-18" id="c07" data-toggle="tooltip" title="#{__('freshw.title')}" href="")
 						li
-							button(class="icon-ico-19" id="c08" title="Bon in a Box" href="")
+							button(class="icon-ico-19" id="c08" data-toggle="tooltip" title="#{__('marine.title')}" href="")
 						li
-							button(class="icon-ico-20" id="c09" title="Bon in a Box" href="")
+							button(class="icon-ico-20" id="c09" data-toggle="tooltip" title="#{__('terrestrial.title')}" href="")
 				.toggled-c01
 					.col_titles
-						h2 OBSERVATION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('ecosystem.title')}
+						h3 !{__('ecosystem.sub')}
 					.colordiv.cd3
 					.col_texto
-						| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('ecosystem.text')}
 				.toggled-c02.switch
 					.col_titles
-						h2 OBSERVATION
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('citizen.title')}					
+						h3 !{__('citizen.sub')}
 					.colordiv.cd3
 					.col_texto
-						| on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('citizen.text')}
 				.toggled-c03.switch
 					.col_titles
-						h2 OBSEN DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('traditional.title')}						
+						h3 !{__('traditional.sub')}
 					.colordiv.cd3
 					.col_texto
-						| information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('traditional.text')}
 				.toggled-c04.switch
 					.col_titles
-						h2 OBSERVATESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('invasive.title')}
+						h3 !{__('invasive.sub')}
 					.colordiv.cd3
 					.col_texto
-						| Better informationnds and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('invasive.text')}
 				.toggled-c05.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('cites.title')}
+						h3 !{__('cites.sub')}
 					.colordiv.cd3
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('cites.text')}
 				.toggled-c06.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('migratory.title')}
+						h3 !{__('migratory.sub')}
 					.colordiv.cd3
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('migratory.text')}
 				.toggled-c07.switch
 					.col_titles
-						h2 OBSERVATESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('freshw.title')}
+						h3 !{__('freshw.sub')}
 					.colordiv.cd3
 					.col_texto
-						| Better informationnds and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('freshw.text')}
 				.toggled-c08.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('marine.title')}
+						h3 !{__('marine.sub')}
 					.colordiv.cd3
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('marine.text')}
 				.toggled-c09.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('terrestrial.title')}
+						h3 !{__('terrestrial.sub')}
 					.colordiv.cd3
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('terrestrial.text')}
 			.Wallop-item
-				h1 filtros
-					br
-					| por función
+				h1 !{__('function.title')}
 				.divisor
 				.col_iconos
 					ul.toggler4
 						li.grande
-							button(class="icon-ico-21" id="d01" title="Bon in a Box" href="")
+							button(class="icon-ico-21" id="d01" data-toggle="tooltip" title="#{__('dataset.title')}" href="")
 						li
-							button(class="icon-ico-22" id="d02" title="Bon in a Box" href="")
+							button(class="icon-ico-22" id="d02" data-toggle="tooltip" title="#{__('software.title')}" href="")
 						li
-							button(class="icon-ico-23" id="d03" title="Bon in a Box" href="")
+							button(class="icon-ico-23" id="d03" data-toggle="tooltip" title="#{__('standard.title')}" href="")
 						li
-							button(class="icon-ico-24" id="d04" title="Bon in a Box" href="")
+							button(class="icon-ico-24" id="d04" data-toggle="tooltip" title="#{__('literature.title')}" href="")
 
 				.toggled-d01
 					.col_titles
-						h2 OBSERVATION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('dataset.title')}
+						h3 !{__('dataset.sub')}
 					.colordiv.cd4
 					.col_texto
-						| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('dataset.text')}
 				.toggled-d02.switch
 					.col_titles
-						h2 OBSERVATION
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('software.title')}					
+						h3 !{__('software.sub')}
 					.colordiv.cd4
 					.col_texto
-						| on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('software.text')}
 				.toggled-d03.switch
 					.col_titles
-						h2 OBSEN DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('standard.title')}						
+						h3 !{__('standard.sub')}
 					.colordiv.cd4
 					.col_texto
-						| information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('standard.text')}
 				.toggled-d04.switch
 					.col_titles
-						h2 OBSERVATESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('literature.title')}
+						h3 !{__('literature.sub')}
 					.colordiv.cd4
 					.col_texto
-						| Better informationnds and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('literature.text')}
 			.Wallop-item
-				h1 filtros por taxonomía
+				h1 !{__('taxonomy.title')}
 				.divisor
 				.col_iconos
 					ul.toggler5
 						li.grande
-							button(class="icon-ico-25" id="e01" title="Bon in a Box" href="")
+							button(class="icon-ico-25" id="e01" data-toggle="tooltip" title="#{__('amphibians.title')}" href="")
 						li
-							button(class="icon-ico-26" id="e02" title="Bon in a Box" href="")
+							button(class="icon-ico-26" id="e02" data-toggle="tooltip" title="#{__('birds.title')}" href="")
 						li
-							button(class="icon-ico-27" id="e03" title="Bon in a Box" href="")
+							button(class="icon-ico-27" id="e03" data-toggle="tooltip" title="#{__('invertebrates.title')}" href="")
 						li
-							button(class="icon-ico-28" id="e04" title="Bon in a Box" href="")
+							button(class="icon-ico-28" id="e04" data-toggle="tooltip" title="#{__('mammals.title')}" href="")
 						li
-							button(class="icon-ico-29" id="e05" title="Bon in a Box" href="")
+							button(class="icon-ico-29" id="e05" data-toggle="tooltip" title="#{__('fish.title')}" href="")
 						li
-							button(class="icon-ico-30" id="e06" title="Bon in a Box" href="")
+							button(class="icon-ico-30" id="e06" data-toggle="tooltip" title="#{__('reptiles.title')}" href="")
 						li
-							button(class="icon-ico-31" id="e07" title="Bon in a Box" href="")
+							button(class="icon-ico-31" id="e07" data-toggle="tooltip" title="#{__('plants.title')}" href="")
 				.toggled-e01
 					.col_titles
-						h2 OBSERVATION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('amphibians.title')}
+						h3 !{__('amphibians.sub')}
 					.colordiv.cd5
 					.col_texto
-						| Better information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('amphibians.text')}
 				.toggled-e02.switch
 					.col_titles
-						h2 OBSERVATION
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('birds.title')}					
+						h3 !{__('birds.sub')}
 					.colordiv.cd5
 					.col_texto
-						| on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('birds.text')}
 				.toggled-e03.switch
 					.col_titles
-						h2 OBSEN DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('invertebrates.title')}						
+						h3 !{__('invertebrates.sub')}
 					.colordiv.cd5
 					.col_texto
-						| information on the status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('invertebrates.text')}
 				.toggled-e04.switch
 					.col_titles
-						h2 OBSERVATESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('mammals.title')}
+						h3 !{__('mammals.sub')}
 					.colordiv.cd5
 					.col_texto
-						| Better informationnds and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('mammals.text')}
 				.toggled-e05.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('fish.title')}
+						h3 !{__('fish.sub')}
 					.colordiv.cd5
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('fish.text')}
 				.toggled-e06.switch
 					.col_titles
-						h2 OBSERION DESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('reptiles.title')}
+						h3 !{__('reptiles.sub')}
 					.colordiv.cd5
 					.col_texto
-						| Better inf status, trends and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('reptiles.text')}
 				.toggled-e07.switch
 					.col_titles
-						h2 OBSERVATESIGN
-						h3 Primeras preguntas claves en Monitoreo
+						h2 !{__('plants.title')}
+						h3 !{__('plants.sub')}
 					.colordiv.cd5
 					.col_texto
-						| Better informationnds and drivers of biodiversity change is needed to assist governments in developing more effective and timely policy responses. There are many excellent tools, protocols and software in use that facilitate effective biodiversity monitoring but these are not easily discoverable or available to all regions of the planet. As well, current efforts to monitor biodiversity are not interoperable, thereby limiting our ability to detect change and the underlying mechanisms driving change in biodiversity.
+						| !{__('plants.text')}
 		.col25
 			ul.hexicon.Wallop-pagination
 				li
-					button(class="smic bgic imageb1 Wallop-dot Wallop-dot--current")
+					button(class="smic bgic imageb1 Wallop-dot Wallop-dot--current" data-toggle="tooltip" title="#{__('filter.components')}")
 				li
-					button(class="smic imageb2 Wallop-dot")
+					button(class="smic imageb2 Wallop-dot" data-toggle="tooltip" title="#{__('filter.ebv')}")
 				li
-					button(class="smic imageb3 Wallop-dot")
+					button(class="smic imageb3 Wallop-dot" data-toggle="tooltip" title="#{__('filter.type')}")
 				li
-					button(class="smic imageb4 Wallop-dot")
+					button(class="smic imageb4 Wallop-dot" data-toggle="tooltip" title="#{__('filter.function')}")
 				li
-					button(class="smic imageb5 Wallop-dot")
+					button(class="smic imageb5 Wallop-dot" data-toggle="tooltip" title="#{__('filter.tax')}")
 	#section3
 	.contenidog.filter_ui
 		//- buscador necesita que .areaforstuff este visible en col_herramientas
 		.buscador.hidden
 			form(id="" method="" action="" class="")
-				input(type="search" name="question" placeholder="Busqueda por nombre o categoría")
-				button(type="submit") buscar
+				input(type="search" name="question" placeholder="#{__('placeholder.search')}")
+				button(type="submit") !{__('search.btn')}
 		.col_herramientas
-			h4 herramientas
-			button(class="proponer" title="new tools" href="") proponer
+			h4 !{__('tooldir.title')}
+				button(class="ojo" data-toggle="tooltip" title="#{__('show.directory')}" href="" id="ojo_her")
+					img(src='images/ojo_bl.png')
+			button(class="proponer" data-toggle="tooltip" title="#{__('new.tools')}" href="") !{__('propose.btn')}
 			.divisor
 			nav.categorias
 				ul
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.all')}" href="")
 							img(src='images/tools.png')
 					li
-						button(class="mic selected" href="")
+						button(class="mic selected" data-toggle="tooltip" title="#{__('filter.components')}" href="")
 							img(src='images/filt1m.png')
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.ebv')}" href="")
 							img(src='images/filt2m.png')
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.type')}" href="")
 							img(src='images/filt3m.png')
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.function')}" href="")
 							img(src='images/filt4m.png')
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.tax')}" href="")
 							img(src='images/filt5m.png')
+					li.divisor_sombra
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('search.btn')}" href="")
 							img(src='images/lupa.png')
 					li.right
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('PHtool.scountry')}" href="")
 							img(src='images/country.png')
 			.areaforstuff.hidden
 			.filtros
 				ul
 					li
-						button(class="fil_icon icon-ico-01" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-01" data-toggle="tooltip" title="#{__('observation.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-02" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-02" data-toggle="tooltip" title="#{__('collection.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-03" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-03" data-toggle="tooltip" title="#{__('management.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-04" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-04" data-toggle="tooltip" title="#{__('analysis.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-05" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-05" data-toggle="tooltip" title="#{__('reporting.title')}" href="")
 			.filtros.hidden
 				ul
 					li
-						button(class="fil_icon icon-ico-06" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-06" data-toggle="tooltip" title="#{__('communities.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-07" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-07" data-toggle="tooltip" title="#{__('ecofunction.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-08" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-08" data-toggle="tooltip" title="#{__('ecostructure.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-09" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-09" data-toggle="tooltip" title="#{__('genetic.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-10" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-10" data-toggle="tooltip" title="#{__('population.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-11" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-11" data-toggle="tooltip" title="#{__('traits.title')}" href="")
 			.filtros.hidden
 				ul
 					li
-						button(class="fil_icon icon-ico-12" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-12" data-toggle="tooltip" title="#{__('ecosystem.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-13" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-13" data-toggle="tooltip" title="#{__('citizen.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-14" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-14" data-toggle="tooltip" title="#{__('traditional.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-15" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-15" data-toggle="tooltip" title="#{__('invasive.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-16" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-16" data-toggle="tooltip" title="#{__('cites.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-17" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-17" data-toggle="tooltip" title="#{__('migratory.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-18" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-18" data-toggle="tooltip" title="#{__('freshw.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-19" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-19" data-toggle="tooltip" title="#{__('marine.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-20" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-20" data-toggle="tooltip" title="#{__('terrestrial.title')}" href="")
 			.filtros.hidden
 				ul
 					li
-						button(class="fil_icon icon-ico-21" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-21" data-toggle="tooltip" title="#{__('dataset.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-22" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-22" data-toggle="tooltip" title="#{__('software.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-23" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-23" data-toggle="tooltip" title="#{__('standard.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-24" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-24" data-toggle="tooltip" title="#{__('literature.title')}" href="")
 			.filtros.hidden
 				ul
 					li
-						button(class="fil_icon icon-ico-25" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-25" data-toggle="tooltip" title="#{__('amphibians.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-26" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-26" data-toggle="tooltip" title="#{__('birds.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-27" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-27" data-toggle="tooltip" title="#{__('invertebrates.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-28" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-28" data-toggle="tooltip" title="#{__('mammals.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-29" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-29" data-toggle="tooltip" title="#{__('fish.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-30" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-30" data-toggle="tooltip" title="#{__('reptiles.title')}" href="")
 					li
-						button(class="fil_icon icon-ico-31" title="Bon in a Box" href="")
+						button(class="fil_icon icon-ico-31" data-toggle="tooltip" title="#{__('plants.title')}" href="")
 			.resultados_wrapper.scrollp
 				.resultados
 					.card_herramienta
@@ -536,14 +517,14 @@ block content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						ul
 							li
-								a(class="icon-ico-06" title="Bon in a Box" href="")
+								a(class="icon-ico-06" href="")
 							li
-								a(class="icon-ico-07" title="Bon in a Box" href="")
+								a(class="icon-ico-07" href="")
 							li
-								a(class="icon-ico-08" title="Bon in a Box" href="")
+								a(class="icon-ico-08" href="")
 							li
-								a(class="icon-ico-09" title="Bon in a Box" href="")
-						button(class="ver_mas right" title="Bon in a Box" href="") +
+								a(class="icon-ico-09" href="")
+						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 
 					.card_herramienta
 						.crop4
@@ -554,14 +535,14 @@ block content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						ul
 							li
-								a(class="icon-ico-06" title="Bon in a Box" href="")
+								a(class="icon-ico-06" href="")
 							li
-								a(class="icon-ico-07" title="Bon in a Box" href="")
+								a(class="icon-ico-07" href="")
 							li
-								a(class="icon-ico-08" title="Bon in a Box" href="")
+								a(class="icon-ico-08" href="")
 							li
-								a(class="icon-ico-09" title="Bon in a Box" href="")
-						button(class="ver_mas right" title="Bon in a Box" href="") +
+								a(class="icon-ico-09" href="")
+						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 					.card_herramienta
 						.titulos_card
 							h3 BIOMODELOS
@@ -569,14 +550,14 @@ block content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						ul
 							li
-								a(class="icon-ico-06" title="Bon in a Box" href="")
+								a(class="icon-ico-06" href="")
 							li
-								a(class="icon-ico-07" title="Bon in a Box" href="")
+								a(class="icon-ico-07" href="")
 							li
-								a(class="icon-ico-08" title="Bon in a Box" href="")
+								a(class="icon-ico-08" href="")
 							li
-								a(class="icon-ico-09" title="Bon in a Box" href="")
-						button(class="ver_mas right" title="Bon in a Box" href="") +
+								a(class="icon-ico-09" href="")
+						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 					.card_herramienta
 						.titulos_card
 							h3 BIOMODELOS
@@ -584,14 +565,14 @@ block content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						ul
 							li
-								a(class="icon-ico-06" title="Bon in a Box" href="")
+								a(class="icon-ico-06" href="")
 							li
-								a(class="icon-ico-07" title="Bon in a Box" href="")
+								a(class="icon-ico-07" href="")
 							li
-								a(class="icon-ico-08" title="Bon in a Box" href="")
+								a(class="icon-ico-08" href="")
 							li
-								a(class="icon-ico-09" title="Bon in a Box" href="")
-						button(class="ver_mas right" title="Bon in a Box" href="") +
+								a(class="icon-ico-09" href="")
+						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 
 					.card_herramienta
 						.titulos_card
@@ -600,14 +581,14 @@ block content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						ul
 							li
-								a(class="icon-ico-06" title="Bon in a Box" href="")
+								a(class="icon-ico-06" href="")
 							li
-								a(class="icon-ico-07" title="Bon in a Box" href="")
+								a(class="icon-ico-07" href="")
 							li
-								a(class="icon-ico-08" title="Bon in a Box" href="")
+								a(class="icon-ico-08" href="")
 							li
-								a(class="icon-ico-09" title="Bon in a Box" href="")
-						button(class="ver_mas right" title="Bon in a Box" href="") +
+								a(class="icon-ico-09" href="")
+						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 					.card_herramienta
 						.titulos_card
 							h3 BIOMODELOS
@@ -615,34 +596,35 @@ block content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						ul
 							li
-								a(class="icon-ico-06" title="Bon in a Box" href="")
+								a(class="icon-ico-06" href="")
 							li
-								a(class="icon-ico-07" title="Bon in a Box" href="")
+								a(class="icon-ico-07" href="")
 							li
-								a(class="icon-ico-08" title="Bon in a Box" href="")
+								a(class="icon-ico-08" href="")
 							li
-								a(class="icon-ico-09" title="Bon in a Box" href="")
-						button(class="ver_mas right" title="Bon in a Box" href="") +
-
+								a(class="icon-ico-09" href="")
+						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 		.col_directorio
-			h4 directorio
+			h4 !{__('directory.title')}
+				button(class="ojo" data-toggle="tooltip" title="#{__('show.tools')}" href="" id="ojo_dir")
+					img(src='images/ojo.png')
 			.divisor
 			nav.categorias
 				ul
 					li
-						button(class="mic selected" href="")
+						button(class="mic selected" data-toggle="tooltip" title="#{__('filter.all')}" href="")
 							img(src='images/directory.png')
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.institution')}" href="")
 							img(src='images/inst.png')
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.initiative')}" href="")
 							img(src='images/inic.png')
 					li
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.investigator')}" href="")
 							img(src='images/inves.png')
 					li.right
-						button(class="mic" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('PHtool.scountry')}" href="")
 							img(src='images/country.png')
 			.areaforstuff
 			.resultados.scrollp
@@ -655,8 +637,8 @@ block content
 					h3 INSTITUTO DE INVESTIGACIÓN DE RECURSOS BIOLÓGICOS ALEXANDER VON HUMBOLDT
 					h5 colombia
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					a(href="") sitio web
-					a(href="") contacto
+					a(href="") !{__('PHtool.web')}
+					a(href="") !{__('contact.btn')}
 				.card_directory.clearfix
 					.visual.clearfix
 						.logo.left
@@ -666,8 +648,8 @@ block content
 					h3 INSTITUTO DE INVESTIGACIÓN DE RECURSOS BIOLÓGICOS ALEXANDER VON HUMBOLDT
 					h5 colombia
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					a(href="") sitio web
-					a(href="") contacto
+					a(href="") !{__('PHtool.web')}
+					a(href="") !{__('contact.btn')}
 				.card_directory.clearfix
 					.visual.clearfix
 						.logo.left
@@ -677,8 +659,8 @@ block content
 					h3 INSTITUTO DE INVESTIGACIÓN DE RECURSOS BIOLÓGICOS ALEXANDER VON HUMBOLDT
 					h5 colombia
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					a(href="") sitio web
-					a(href="") contacto
+					a(href="") !{__('PHtool.web')}
+					a(href="") !{__('contact.btn')}
 	.contenido.toolabst.clearfix.hidden
 		.smbox.clearfix
 			button(class="back2" href="")
@@ -688,13 +670,13 @@ block content
 			.divisor
 			ul
 				li
-					a(class="icon-ico-06" title="Bon in a Box" href="")
+					a(class="icon-ico-06" href="")
 				li
-					a(class="icon-ico-07" title="Bon in a Box" href="")
+					a(class="icon-ico-07" href="")
 				li
-					a(class="icon-ico-08" title="Bon in a Box" href="")
+					a(class="icon-ico-08" href="")
 				li
-					a(class="icon-ico-09" title="Bon in a Box" href="")
+					a(class="icon-ico-09" href="")
 			a(class="site" href="http://www.biodiversidad.co") www.biodiversidad.co
 			a(class="mail" href="mailto:sib@humboldt.org.co") sib@humboldt.org.co
 			.scrollarea.scrollp
@@ -703,8 +685,8 @@ block content
 				.paragcontainer
 					.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 				form(id="" method="" action="" class="clearfix")
-					textarea.input-forum(type="textarea" name="question" placeholder="Comentar sobre esta herramienta")
-					button(type="submit") comentar
+					textarea.input-forum(type="textarea" name="question" placeholder="#{__('PHtool.comment')}")
+					button(type="submit") !{__('comment.btn')}
 				.qcard2
 					.clearfix
 						.crop
@@ -712,12 +694,12 @@ block content
 						.name Cesar Gutierrez
 						.date 09 - 09 - 15
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-					a(class="ver_mas right" title="Reply" href="") comentar
-					a(class="ver_mas right" title="Edit" href="") editar
-					a(class="ver_mas right" title="Delete" href="") x
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('reply.btn')}" href="") !{__('reply.btn')}
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
 				form(id="" method="" action="" class="clearfix")
-					textarea.input-forum(type="textarea" name="question" placeholder="responder a este comentario")
-					button(type="submit") responder
+					textarea.input-forum(type="textarea" name="question" placeholder="#{__('PHtool.answer')}")
+					button(type="submit") !{__('reply.btn')}
 				.qcard2
 					.clearfix
 						.crop
@@ -725,9 +707,9 @@ block content
 						.name Cesar Gutierrez
 						.date 09 - 09 - 15
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-					a(class="ver_mas right" title="Reply" href="") comentar
-					a(class="ver_mas right" title="Edit" href="") editar
-					a(class="ver_mas right" title="Delete" href="") x
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('comment.btn')}" href="") !{__('comment.btn')}
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
 		.respinfo
 			h3 sib colombia
 			img(src='images/instsm.png')
@@ -749,7 +731,7 @@ block content
 				b Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 				|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
 			.calificacion 4.5
-			a(class="ver_mas right" title="Edit" href="") editar
+			a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
 
 	.contenido.formulario.clearfix.hidden
 		.smbox.clearfix
@@ -757,167 +739,167 @@ block content
 				img(src='images/xxx.png')
 		form(id="" method="" action="" class="clearfix")
 			.formtool
-				h3 formulario herramienta
+				h3 !{__('formtool.title')}
 				.columnaforma
 					ol
 						li
-							input(type="text" name="toolname" placeholder="NOMBRE DE LA HERRAMIENTA")
+							input(type="text" name="toolname" placeholder="#{__('PHtool.name')}")
 						li
-							h4 categorías de busqueda
+							h4 !{__('formtool.categories')}
 							.categorias.clearfix
 								ul
 									li
-										a(class="" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.components')}" href="")
 											img(src='images/filt1m.png')
 									li
-										a(class="selected" href="")
+										a(class="selected" data-toggle="tooltip" title="#{__('filter.ebv')}" href="")
 											img(src='images/filt2m.png')
 									li
-										a(class="" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.type')}" href="")
 											img(src='images/filt3m.png')
 									li
-										a(class="" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.function')}" href="")
 											img(src='images/filt4m.png')
 									li
-										a(class="" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.tax')}" href="")
 											img(src='images/filt5m.png')
 								h3 filtro por temática
 							.iconosformulario.hidden
 								ul
 									li
-										button(class="icon-ico-01" title="Bon in a Box" href="")
+										button(class="icon-ico-01" data-toggle="tooltip" title="#{__('observation.title')}" href="")
 									li
-										button(class="icon-ico-02" title="Bon in a Box" href="")
+										button(class="icon-ico-02" data-toggle="tooltip" title="#{__('collection.title')}" href="")
 									li
-										button(class="icon-ico-03" title="Bon in a Box" href="")
+										button(class="icon-ico-03" data-toggle="tooltip" title="#{__('management.title')}" href="")
 									li
-										button(class="icon-ico-04" title="Bon in a Box" href="")
+										button(class="icon-ico-04" data-toggle="tooltip" title="#{__('analysis.title')}" href="")
 									li
-										button(class="icon-ico-05" title="Bon in a Box" href="")
+										button(class="icon-ico-05" data-toggle="tooltip" title="#{__('reporting.title')}" href="")
 							.iconosformulario
 								ul
 									li
-										button(class="icon-ico-06" title="Bon in a Box" href="")
+										button(class="icon-ico-06" data-toggle="tooltip" title="#{__('communities.title')}" href="")
 									li
-										button(class="icon-ico-07" title="Bon in a Box" href="")
+										button(class="icon-ico-07" data-toggle="tooltip" title="#{__('ecofunction.title')}" href="")
 									li
-										button(class="icon-ico-08" title="Bon in a Box" href="")
+										button(class="icon-ico-08" data-toggle="tooltip" title="#{__('ecostructure.title')}" href="")
 									li
-										button(class="icon-ico-09" title="Bon in a Box" href="")
+										button(class="icon-ico-09" data-toggle="tooltip" title="#{__('genetic.title')}" href="")
 									li
-										button(class="icon-ico-10" title="Bon in a Box" href="")
+										button(class="icon-ico-10" data-toggle="tooltip" title="#{__('population.title')}" href="")
 									li
-										button(class="icon-ico-11" title="Bon in a Box" href="")
+										button(class="icon-ico-11" data-toggle="tooltip" title="#{__('traits.title')}" href="")
 							.iconosformulario.hidden
 								ul
 									li
-										button(class="icon-ico-12" title="Bon in a Box" href="")
+										button(class="icon-ico-12" data-toggle="tooltip" title="#{__('ecosystem.title')}" href="")
 									li
-										button(class="icon-ico-13" title="Bon in a Box" href="")
+										button(class="icon-ico-13" data-toggle="tooltip" title="#{__('citizen.title')}" href="")
 									li
-										button(class="icon-ico-14" title="Bon in a Box" href="")
+										button(class="icon-ico-14" data-toggle="tooltip" title="#{__('traditional.title')}" href="")
 									li
-										button(class="icon-ico-15" title="Bon in a Box" href="")
+										button(class="icon-ico-15" data-toggle="tooltip" title="#{__('invasive.title')}" href="")
 									li
-										button(class="icon-ico-16" title="Bon in a Box" href="")
+										button(class="icon-ico-16" data-toggle="tooltip" title="#{__('cites.title')}" href="")
 									li
-										button(class="icon-ico-17" title="Bon in a Box" href="")
+										button(class="icon-ico-17" data-toggle="tooltip" title="#{__('migratory.title')}" href="")
 									li
-										button(class="icon-ico-18" title="Bon in a Box" href="")
+										button(class="icon-ico-18" data-toggle="tooltip" title="#{__('freshw.title')}" href="")
 									li
-										button(class="icon-ico-19" title="Bon in a Box" href="")
+										button(class="icon-ico-19" data-toggle="tooltip" title="#{__('marine.title')}" href="")
 									li
-										button(class="icon-ico-20" title="Bon in a Box" href="")
+										button(class="icon-ico-20" data-toggle="tooltip" title="#{__('terrestrial.title')}" href="")
 							.iconosformulario.hidden
 								ul
 									li
-										button(class="icon-ico-21" title="Bon in a Box" href="")
+										button(class="icon-ico-21" data-toggle="tooltip" title="#{__('dataset.title')}" href="")
 									li
-										button(class="icon-ico-22" title="Bon in a Box" href="")
+										button(class="icon-ico-22" data-toggle="tooltip" title="#{__('software.title')}" href="")
 									li
-										button(class="icon-ico-23" title="Bon in a Box" href="")
+										button(class="icon-ico-23" data-toggle="tooltip" title="#{__('standard.title')}" href="")
 									li
-										button(class="icon-ico-24" title="Bon in a Box" href="")
+										button(class="icon-ico-24" data-toggle="tooltip" title="#{__('literature.title')}" href="")
 							.iconosformulario.hidden
 								ul
 									li
-										button(class="icon-ico-25" title="Bon in a Box" href="")
+										button(class="icon-ico-25" data-toggle="tooltip" title="#{__('amphibians.title')}" href="")
 									li
-										button(class="icon-ico-26" title="Bon in a Box" href="")
+										button(class="icon-ico-26" data-toggle="tooltip" title="#{__('birds.title')}" href="")
 									li
-										button(class="icon-ico-27" title="Bon in a Box" href="")
+										button(class="icon-ico-27" data-toggle="tooltip" title="#{__('invertebrates.title')}" href="")
 									li
-										button(class="icon-ico-28" title="Bon in a Box" href="")
+										button(class="icon-ico-28" data-toggle="tooltip" title="#{__('mammals.title')}" href="")
 									li
-										button(class="icon-ico-29" title="Bon in a Box" href="")
+										button(class="icon-ico-29" data-toggle="tooltip" title="#{__('fish.title')}" href="")
 									li
-										button(class="icon-ico-30" title="Bon in a Box" href="")
+										button(class="icon-ico-30" data-toggle="tooltip" title="#{__('reptiles.title')}" href="")
 									li
-										button(class="icon-ico-31" title="Bon in a Box" href="")
+										button(class="icon-ico-31" data-toggle="tooltip" title="#{__('plants.title')}" href="")
 						li
-							textarea.input-forum(type="textarea" name="descrip1" placeholder="texto corto descriptivo (250 caracteres)")
+							textarea.input-forum(type="textarea" name="descrip1" placeholder="#{__('PHtool.shorttext')}")
 						li
-							textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="texto completo (1800 caracteres)")
+							textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="#{__('PHtool.longtext')}")
 						li
-							h4 IMAGEN DE THUMBNAIL ( 300px de ancho )
-							h5 Esta imagen aparece en el directorio de busqueda, aunque no es requerimiento.
-							button.btn.left(type="") cargar
+							h4 !{__('formtool.thumbtitle')}
+							h5 !{__('formtool.thumbsubtitle')}
+							button.btn.left(type="") !{__('formtool.load')}
 							button.btn.left(type="") X
 						.clearfix
 						li
-							h4.pt10 IMAGEN QUE MUESTRE LA HERRAMIENTA ( 600px de ancho )
-							button.btn.left(type="") cargar
+							h4.pt10 !{__('formtool.imgtitle')}
+							button.btn.left(type="") !{__('formtool.load')}
 							button.btn.left(type="") X
 						.clearfix
 						li
-							input(type="text" name="toolname" placeholder="sitio web")
+							input(type="text" name="toolname" placeholder="#{__('PHtool.web')}")
 						li
-							input(type="text" name="toolname" placeholder="mail de contacto")
+							input(type="text" name="toolname" placeholder="#{__('PHtool.mail')}")
 						li
-							input(type="text" name="toolname" placeholder="país que cubre")
+							input(type="text" name="toolname" placeholder="#{__('PHtool.country')}")
 			.formtool2
-				h3 formulario directorio
+				h3 !{__('formtool.dirtitle')}
 				.columnaforma
 					ol
 						li
-							input(type="text" name="toolname" placeholder="NOMBRE responsable")
+							input(type="text" name="toolname" placeholder="#{__('PHresp.name')}")
 						li
-							input(type="text" name="toolname" placeholder="SUBTÍTULO / CARGO / EMPRESA")
+							input(type="text" name="toolname" placeholder="#{__('PHresp.sub')}")
 						li
-							h4 categorías de busqueda
+							h4 !{__('formtool.categories')}
 							.categorias.clearfix
 								ul
 									li
-										a(class="selected" href="")
+										a(class="selected" data-toggle="tooltip" title="#{__('filter.institution')}" href="")
 											img(src='images/inst.png')
 									li
-										a(class="" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.initiative')}" href="")
 											img(src='images/inic.png')
 									li
-										a(class="" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.investigator')}" href="")
 											img(src='images/inves.png')
 						li
-							textarea.input-forum.h180(type="textarea" name="descripr" placeholder="TEXTO CORTO DESCRIPTIVO (300 caracteres)")
+							textarea.input-forum.h180(type="textarea" name="descripr" placeholder="#{__('PHresp.shorttext')}")
 						li
-							h4 IMAGEN DE THUMBNAIL
-							h5 ( 300px de ancho )
-							button.btn.left(type="") cargar
+							h4 !{__('formtool.thumbtitle2')}
+							h5 !{__('formtool.thumbsubtitle2')}
+							button.btn.left(type="") !{__('formtool.load')}
 							button.btn.left(type="") X
 						.clearfix
 						li
-							input(type="text" name="toolname" placeholder="sitio web")
+							input(type="text" name="toolname" placeholder="#{__('PHtool.web')}")
 						li
-							input(type="text" name="toolname" placeholder="mail de contacto")
+							input(type="text" name="toolname" placeholder="#{__('PHtool.mail')}")
 						li
-							input(type="text" name="toolname" placeholder="país")
-					button(type="submit") enviar
+							input(type="text" name="toolname" placeholder="#{__('PHtool.scountry')}")
+					button(type="submit") !{__('formtool.send')}
 	#section4
 	.contenido.forum
-		h4 preguntas comunidad
+		h4 !{__('forum.title')}
 		.icon-ico-33.bigico
 		.divisor
 		.cajaf1
-			h5 Preguntas Populares
+			h5 !{__('forum.popular')}
 			.qcard
 				.clearfix
 					.crop
@@ -925,15 +907,14 @@ block content
 					.name Cesar Gutierrez
 					.date 09 - 09 - 15
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-				a(class="ver_mas right" title="Ir" href="") +
+				a(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
 		.cajaf2.scrollp
-			.state1.hidden
-				h5 Consulta con la red
-					b Bon in a Box
+			.state1
+				h5 !{__('forum.consult')}
 				form(id="" method="" action="" class="clearfix")
-					textarea.input-forum(type="textarea" name="question" placeholder="Pregunta sobre herramientas y monitoreo")
-					button(type="submit") preguntar
-				h5 Últimas Preguntas
+					textarea.input-forum(type="textarea" name="question" placeholder="#{__('PHforum.ask')}")
+					button(type="submit") !{__('ask.btn')}
+				h5 !{__('forum.latest')}
 				.qcard2
 					.clearfix
 						.crop
@@ -941,8 +922,8 @@ block content
 						.name Cesar Gutierrez
 						.date 09 - 09 - 15
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-					a(class="ver_mas right" title="Reply" href="") responder
-			.state2
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('reply.btn')}" href="") !{__('reply.btn')}
+			.state2.hidden
 				.qcard3
 					.clearfix
 						.crop
@@ -950,12 +931,12 @@ block content
 						.name Cesar Gutierrez
 						.date 09 - 09 - 15
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-					a(class="ver_mas right" title="Reply" href="") responder
-					a(class="ver_mas right" title="Edit" href="") editar
-					a(class="ver_mas right" title="Delete" href="") x
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('reply.btn')}" href="") !{__('reply.btn')}
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
+					a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
 				form(id="" method="" action="" class="clearfix hidden")
-					textarea.input-forum(type="textarea" name="answer" placeholder="Responder a esta pregunta")
-					button(type="submit") responder
+					textarea.input-forum(type="textarea" name="answer" placeholder="#{__('PHforum.answer')}")
+					button(type="submit") !{__('reply.btn')}
 				.qcard2
 					.qualifier
 						.arrow-up
@@ -964,19 +945,19 @@ block content
 					.answer
 						.clearfix
 							.bestansw
-								p mejor respuesta
+								p !{__('best.answer')}
 								img(src='images/chulo.png')
 							.crop
 								img(src='images/c2.jpg')
 							.name Cesar Gutierrez
 							.date 09 - 09 - 15
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-						a(class="ver_mas right" title="Reply" href="") comentar
-						a(class="ver_mas right" title="Edit" href="") editar
-						a(class="ver_mas right" title="Delete" href="") x
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('comment.btn')}" href="") !{__('comment.btn')}
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
 					form(id="" method="" action="" class="tacomment hidden")
-						textarea.input-forum(type="textarea" name="comment" placeholder="comentar a esta respuesta")
-						button(type="submit") comentar
+						textarea.input-forum(type="textarea" name="comment" placeholder="#{__('PHforum.comment')}")
+						button(type="submit") !{__('comment.btn')}
 					.answcomment
 						.clearfix
 							.crop
@@ -984,9 +965,9 @@ block content
 							.name Cesar Gutierrez
 							.date 09 - 09 - 15
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-						a(class="ver_mas right" title="Reply" href="") comentar
-						a(class="ver_mas right" title="Edit" href="") editar
-						a(class="ver_mas right" title="Delete" href="") x
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('comment.btn')}" href="") !{__('comment.btn')}
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
 				.qcard2
 					.qualifier
 						.arrow-up
@@ -999,9 +980,9 @@ block content
 							.name Cesar Gutierrez
 							.date 09 - 09 - 15
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-						a(class="ver_mas right" title="Reply" href="") comentar
-						a(class="ver_mas right" title="Edit" href="") editar
-						a(class="ver_mas right" title="Delete" href="") x
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('comment.btn')}" href="") !{__('comment.btn')}
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
+						a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
 
 block scripts
 	script(src="/javascripts/local/home.js")
