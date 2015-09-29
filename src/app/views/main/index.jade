@@ -402,7 +402,7 @@ block content
 				button(type="submit") !{__('search.btn')}
 		.col_herramientas
 			h4 !{__('tooldir.title')}
-				button(class="ojo" href="" id="ojo_her")
+				button(class="ojo" data-toggle="tooltip" title="#{__('show.directory')}" href="" id="ojo_her")
 					img(src='images/ojo_bl.png')
 			button(class="proponer" data-toggle="tooltip" title="#{__('new.tools')}" href="") !{__('propose.btn')}
 			.divisor
@@ -604,15 +604,10 @@ block content
 							li
 								a(class="icon-ico-09" href="")
 						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
-
 		.col_directorio
-<<<<<<< HEAD
 			h4 !{__('directory.title')}
-=======
-			h4 directorio
-				button(class="ojo" href="" id="ojo_dir")
+				button(class="ojo" data-toggle="tooltip" title="#{__('show.tools')}" href="" id="ojo_dir")
 					img(src='images/ojo.png')
->>>>>>> 08b90e5de5b493e5e2f350150dd1790aeef709e9
 			.divisor
 			nav.categorias
 				ul

@@ -186,5 +186,7 @@
 	"filter.all": "Todos los filtros",
 	"filter.institution": "Institución",
 	"filter.initiative": "Iniciativa",
-	"filter.investigator": "Investigador"
+	"filter.investigator": "Investigador",
+	"show.directory": "Mostrar Directorio",
+	"show.tools": "Mostrar Herramientas"
 }
