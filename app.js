@@ -1,5 +1,8 @@
 'use strict';
 
+// simplify modules location
+require('app-module-path').addPath(__dirname + '/src/app');
+
 // dependencies
 var cookieParser = require('cookie-parser');
 var passport = require('passport');
@@ -7,6 +10,7 @@ var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
 var http = require('http');
 var socketio = require('socket.io')();
+var mongoose = require('mongoose');
 
 // config and setup helpers
 var config = require('./config/application-config');
@@ -46,6 +50,15 @@ var app = setup.createExpressApp({
 	defaultLocale: config.get('initialeDefault')
 });
 
+// mail module
+var mailer = require('modules/mailer')({
+	env: config.get('env'),
+	serviceName: config.get('service.name'),
+	apiKey: config.get('mandrill.api.key'),
+	senderAddress: config.get('mandrill.sender'),
+	verificationRoute: config.get('email.verification.route')
+});
+
 // http and socket.io server(s)
 var server = http.createServer(app);
 var io = socketio.attach(server);
@@ -58,8 +71,22 @@ setup.configureSockets(io, {
 	sessionSecret: config.get('server.secret'),
 });
 
+// app dependencies (app specific)
+var ipc = require('./src/app/modules/ipc')(0);
+var models = require('./src/app/models')(mongoose);
+var services = require('./src/app/services')(models);
+var authentication = require('modules/authentication')(models, mailer);
+
+// setup application
+setup.connectToDatabase(mongoose, config.get('database.mongo.url'));
+
+// app specific modules
+require('modules/passport')(passport, authentication, models);
+
 // load controllers
-require(__dirname+'/src/app/routes/routers')(app, { verbose: true });
+require(__dirname + '/src/app/routes/routers')(app, {
+	verbose: true
+});
 
 // express error handling
 setup.handleExpressError(app);

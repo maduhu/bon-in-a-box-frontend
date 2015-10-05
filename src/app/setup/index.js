@@ -185,6 +185,52 @@ module.exports.configureSockets = function(io, options) {
 	}));
 };
 
+// connect to backend store (db)
+module.exports.connectToDatabase = function(mongoose, urlString) {
+	function connect() {
+		mongoose.connect(urlString);
+	}
+
+	// connection is open and ready
+	mongoose.connection.on('open', function(ref) {
+		debug('Open connection to mongo server.');
+	});
+
+	// mongoose is connected to server
+	mongoose.connection.on('connected', function(ref) {
+		debug('Connected to mongo server.');
+	});
+
+	// mongoose has disconnected
+	mongoose.connection.on('disconnected', function(ref) {
+		debug('Disconnected from mongo server.');
+
+		debug('Retrying connection in 2 seconds..');
+		setTimeout(function() {
+			connect();
+		}.bind(this), 2000);
+	});
+
+	// mongoose connection has closed
+	mongoose.connection.on('close', function(ref) {
+		debug('Closed connection to mongo server');
+	});
+
+	// error has occured for mongoose connection
+	mongoose.connection.on('error', function(err) {
+		debug('Error connecting to mongo server!');
+		debug(err);
+	});
+
+	// mongoose is reconnecting
+	mongoose.connection.on('reconnect', function(ref) {
+		debug('Reconnecting to mongo server.');
+	});
+
+	// initial connect
+	connect();
+};
+
 // run application
 module.exports.run = function(server, port) {
 	server.listen(port, function() {

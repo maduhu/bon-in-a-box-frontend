@@ -5,6 +5,7 @@ config/application-config.js
 .idea/
 .tmp/
 .DS_Store
+dump.rdb
 dist/
 src/public/bower_components
 src/public/javascripts
