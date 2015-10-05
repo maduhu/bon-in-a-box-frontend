@@ -2,6 +2,7 @@
 
 // simplify modules location
 require('app-module-path').addPath(__dirname + '/src/app');
+require('app-module-path').addPath(__dirname + '/config');
 
 // dependencies
 var cookieParser = require('cookie-parser');
@@ -13,7 +14,7 @@ var socketio = require('socket.io')();
 var mongoose = require('mongoose');
 
 // config and setup helpers
-var config = require('./config/application-config');
+var config = require('application-config');
 var setup = require('./src/app/setup');
 
 // setup session store

@@ -4,7 +4,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var LinkedinStrategy = require('passport-linkedin-oauth2').Strategy;
-var config = require('config');
+var config = require('application-config');
 
 exports = module.exports = function(passport, authentication, models) {
 	passport.serializeUser(function(user, done) {
@@ -44,9 +44,9 @@ exports = module.exports = function(passport, authentication, models) {
 	}, authentication.google.auth));
 
 	passport.use(new LinkedinStrategy({
-		clientID: config.get('instagram.client.id'),
-		clientSecret: config.get('instagram.client.secret'),
-		callbackURL: config.get('instagram.callback.url'),
+		clientID: config.get('linkedin.client.id'),
+		clientSecret: config.get('linkedin.client.secret'),
+		callbackURL: config.get('linkedin.callback.url'),
 		passReqToCallback: true
 	}, authentication.linkedin.auth));
 };
