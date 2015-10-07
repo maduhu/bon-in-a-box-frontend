@@ -11,7 +11,7 @@
 	"login.remember_me": "remember me",
 	"login.sign_in": "sign in",
 	"login.sign_up": "sign up",
-	"login.forgot_password": "forgot password",
+	"login.forgot_password": "forgot password?",
 	"login.or": "OR",
 	"homenav.box": "The Box",
 	"homenav.public": "target",
@@ -189,5 +189,11 @@
 	"filter.initiative": "Initiative",
 	"filter.investigator": "Investigator",
 	"show.directory": "Show Directory",
-	"show.tools": "Show Tools"
+	"show.tools": "Show Tools",
+	"signup.full_name_placeholder": "Full name",
+	"signup.email_address_placeholder": "Email",
+	"signup.password_placeholder": "Password",
+	"signup.register": "Sign up",
+	"signup.login": "Log in",
+	"signup.title": "Sign Up"
 }

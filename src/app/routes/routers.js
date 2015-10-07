@@ -45,6 +45,20 @@ module.exports = function(parent, options) {
 			});
 		});
 
+		app.use('/auth', function(req, res, next) {
+			if (req.isAuthenticated()) {
+				return res.redirect('/');
+			}
+			return next();
+		});
+
+		app.use('/', function(req, res, next) {
+			if (req.isAuthenticated()) {
+				res.locals.username = req.user.fullname;
+			}
+			return next();
+		});
+
 		// before middleware support
 		if (obj.before) {
 			path = '/' + name + '/:' + name + '_id';
@@ -59,7 +73,9 @@ module.exports = function(parent, options) {
 		// on the exported methods
 		for (var key in obj) {
 			// "reserved" exports
-			if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) continue;
+			if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) {
+				continue;
+			}
 			// route exports
 			switch (key) {
 				case 'index':
@@ -68,7 +84,19 @@ module.exports = function(parent, options) {
 					break;
 				case 'login':
 					method = 'get';
-					path = '/login';
+					path = '/auth/local/login';
+					break;
+				case 'loginSubmit':
+					method = 'post';
+					path = '/auth/local/login';
+					break;
+				case 'signup':
+					method = 'get';
+					path = '/auth/local/signup';
+					break;
+				case 'signupSubmit':
+					method = 'post';
+					path = '/auth/local/signup';
 					break;
 				case 'changeLanguage':
 					method = 'get';

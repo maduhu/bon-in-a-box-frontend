@@ -9,7 +9,7 @@
 	"login.email_address_placeholder": "correo electrónico",
 	"login.password_placeholder": "contraseña",
 	"login.remember_me": "recordarme",
-	"login.sign_in": "iniciar sesion",
+	"login.sign_in": "iniciar sesión",
 	"login.forgot_password": "olvidé la contraseña",
 	"login.sign_up": "registrarme",
 	"login.or": "Ó",
@@ -189,5 +189,11 @@
 	"filter.initiative": "Iniciativa",
 	"filter.investigator": "Investigador",
 	"show.directory": "Mostrar Directorio",
-	"show.tools": "Mostrar Herramientas"
+	"show.tools": "Mostrar Herramientas",
+	"signup.title": "Registro",
+	"signup.full_name_placeholder": "Nombre completo",
+	"signup.email_address_placeholder": "Correo electrónico",
+	"signup.password_placeholder": "Contraseña",
+	"signup.register": "Registrarse",
+	"signup.login": "Iniciar sesión"
 }

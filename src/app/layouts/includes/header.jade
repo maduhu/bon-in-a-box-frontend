@@ -5,11 +5,13 @@ block header
 				h3
 					a(class="left" title="GEO BON" href="http://geobon.org" target="_blank") GEO BON
 				h3 #{__("header.title")}
+					if username
+						|  - #{username}
 		nav#mainnav
 			.contenedor.clearfix
 				ul.menu_principal
 					li.left
-						a(class="icon icon-ico-32" href="/login" data-toggle="tooltip" title="#{__('nav.login')}")
+						a(class="icon icon-ico-32" href="/auth/local/login" data-toggle="tooltip" title="#{__('nav.login')}")
 					li.left
 						a(class="icon icon-ico-33" href="/#section4" data-toggle="tooltip" title="#{__('nav.forum')}")
 					li.right

@@ -1,0 +1,22 @@
+extends ../../layouts/final/layout
+
+block header
+	include ../../layouts/includes/header_login
+
+block footer
+	include ../../layouts/includes/footer_login
+
+block content
+	.backg.blur-effect
+		img(id="foto" src='/images/bg1.jpg')
+	.contenido.login
+		.icon-ico-32
+		h3 #{__("signup.title")}
+		.divisor
+		form(id="", method="post", action="/auth/local/signup")
+			input.input-login(type="text" name="fullname" placeholder="#{__('signup.full_name_placeholder')}")
+			input.input-login(type="text" name="email" placeholder="#{__('signup.email_address_placeholder')}")
+			input.input-login(type="password" name="password" placeholder="#{__('signup.password_placeholder')}")
+			button.btn(type="submit") #{__('signup.register')}
+		.clearfix
+		a(class="linkslog" href="/auth/local/login") #{__('signup.login')}
