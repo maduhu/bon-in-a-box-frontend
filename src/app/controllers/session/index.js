@@ -1,7 +1,5 @@
 'use strict';
 
-var debug = require('debug')('bon-in-a-box-frontend:controllers');
-
 // Dependencies
 var passport = require('passport');
 
