@@ -1,5 +1,7 @@
 'use strict';
 
+var debug = require('debug')('bon-in-a-box-frontend:controllers');
+
 // Dependencies
 var passport = require('passport');
 
@@ -50,3 +52,15 @@ exports.signupSubmit = function(req, res, next) {
 		failureFlash: true // allow flash messages
 	})(req, res, next);
 };
+
+/**
+ * Resolves URL /auth/logout
+ * method  get
+ * @param  {Object} Request params
+ * @param  {Object} Response params
+ */
+exports.logout = function(req, res) {
+	req.logout();
+	res.redirect('/');
+};
+

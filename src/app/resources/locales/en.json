@@ -195,5 +195,6 @@
 	"signup.password_placeholder": "Password",
 	"signup.register": "Sign up",
 	"signup.login": "Log in",
-	"signup.title": "Sign Up"
+	"signup.title": "Sign Up",
+	"nav.logout": "Logout"
 }

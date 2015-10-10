@@ -1,0 +1,59 @@
+header
+	z-index 1000
+	nav
+		z-index 0
+	.titlebar
+		z-index 1
+		.nav-tabs
+			border-bottom 0px
+			font-size 1em
+			font-weight 400
+			li
+				a:hover
+				a:focus
+					border-color #2a2a2a
+					background-color #2a2a2a
+					color #FFEB3B
+			.open
+				a
+				a:hover
+				a:focus
+					background-color #2a2a2a
+					border-color #2a2a2a
+				.user-icon-container
+					border-color #FFEB3B
+					.user-icon
+						fill #FFEB3B
+			.caret
+				margin-left 5px
+				margin-right 5px
+			.user-icon-container
+				border-color #2ebd59
+				width 35px
+				height 35px
+				display inline-block
+				margin -10px 5px -10px 0
+				vertical-align middle
+				border 1px solid #fff
+				-webkit-transition border-color .2s
+				-o-transition border-color .2s
+				transition border-color .2s
+				.user-icon
+					fill #fff
+					padding 7px
+					width 100%
+					height 100%
+					-webkit-transition fill .2s
+					-o-transition fill .2s
+					transition fill .2s
+			.dropdown-menu
+				background-color #2a2a2a
+				right 0
+				left initial
+				li
+					a
+						color white
+						&:hover
+							color #FFEB3B
+				.divider
+					background-color #545454

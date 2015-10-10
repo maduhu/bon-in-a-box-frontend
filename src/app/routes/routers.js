@@ -98,6 +98,10 @@ module.exports = function(parent, options) {
 					method = 'post';
 					path = '/auth/local/signup';
 					break;
+				case 'logout':
+					method = 'get';
+					path = '/logout';
+					break;
 				case 'changeLanguage':
 					method = 'get';
 					path = '/language/:' + '_newlanguage';
