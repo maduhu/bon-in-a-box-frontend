@@ -4,8 +4,8 @@ var async = require('async');
 
 exports = module.exports = function(models) {
 	return function(req, callback) {
-		if (!req.query) return callback('no request query');
-		if (!req.query.token) return callback('verification token missing! try again with a valid token (see e-mail)');
+		if (!req.query) return callback(req.__('signup_verification_token_no_query'));
+		if (!req.query.token) return callback(req.__('signup_verification_token_missing'));
 
 		var uid, user;
 
@@ -16,7 +16,7 @@ exports = module.exports = function(models) {
 					token: req.query.token
 				}, function(err, tokenEntry) {
 					if (err) return callback(err);
-					if (!tokenEntry) return callback('invalid token');
+					if (!tokenEntry) return callback(req.__('signup_verification_token_invalid'));
 
 					uid = tokenEntry.uid;
 
@@ -26,11 +26,11 @@ exports = module.exports = function(models) {
 				});
 			},
 			verifyUser: function(callback) {
-				if (!uid) return callback('invalid verification token!');
+				if (!uid) return callback(req.__('signup_verification_token_invalid'));
 
 				models.User.findById(uid, function(err, userEntry) {
 					if (err) return callback(err);
-					if (!userEntry) return callback('no user entry for supplied token');
+					if (!userEntry) return callback(req.__('signup_verification_token_no_user'));
 
 					user = userEntry;
 					userEntry.verified = true;
@@ -42,7 +42,7 @@ exports = module.exports = function(models) {
 
 			},
 			logInUser: function(callback) {
-				if (!uid) return callback('invalid verification token! no login performed');
+				if (!uid) return callback(req.__('signup_verification_token_invalid_no_login'));
 
 				req.logIn(user, function(err) {
 					callback(err);

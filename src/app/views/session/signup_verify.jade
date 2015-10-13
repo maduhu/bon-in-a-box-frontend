@@ -1,0 +1,28 @@
+extends ../../layouts/final/layout
+
+block header
+	include ../../layouts/includes/header_login
+
+block footer
+	include ../../layouts/includes/footer_login
+
+block content
+	.backg.blur-effect
+		img(id="foto" src='/images/bg1.jpg')
+	.contenido.login
+		.icon-ico-32
+		if messages.verificationMessage
+			h3 #{__("signup.thanks_you")}
+			h4 #{__("signup.verify_subtitle")}
+		else
+			h3 Error
+			h4 #{__("signup.verify_error_subtitle")}
+		.divisor
+		if messages.verificationMessage
+			p !{messages.verificationMessage}
+		else
+			p #{messages.errorMessage}
+		.clearfix
+		a(class="linkslog" href="/")
+			span.glyphicon.glyphicon-ok(aria-hidden="true")
+			| #{__('signup.confirm_finish')}

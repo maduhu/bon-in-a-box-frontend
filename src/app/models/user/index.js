@@ -19,6 +19,11 @@ exports = module.exports = function(collection, mongoose) {
 			type: String, // this needs verification/escape/cleaning
 			required: true
 		},
+		role: {
+			type: String, // user role, default: standard
+			required: true,
+			default: 'standard'
+		},
 		verified: {
 			type: Boolean,
 			default: false // this is automatically set true for both facebook and google, but must be verified for local

@@ -1,0 +1,21 @@
+extends ../../layouts/final/layout
+
+block header
+	include ../../layouts/includes/header_login
+
+block footer
+	include ../../layouts/includes/footer_login
+
+block content
+	.backg.blur-effect
+		img(id="foto" src='/images/bg1.jpg')
+	.contenido.login
+		.icon-ico-32
+		h3 #{__("signup.thanks_you")}
+		h4 #{__("signup.thanks_you_subtitle")}
+		.divisor
+		p !{__("signup.thanks_you_content")}
+		.clearfix
+		a(class="linkslog" href="/")
+			span.glyphicon.glyphicon-ok(aria-hidden="true")
+			| #{__('signup.confirm_finish')}

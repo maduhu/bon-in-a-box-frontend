@@ -5,6 +5,8 @@ var debug = require('debug')('bon-in-a-box-frontend:setup');
 var util = require('util');
 var url = require('url');
 var colors = require('colors');
+var path = require('path');
+var winston = require('winston');
 
 // express dependencies
 var express = require('express');
@@ -19,8 +21,6 @@ var serveStatic = require('serve-static');
 
 // internationalization dependencies
 var i18n = require('i18n');
-var path = require('path');
-var winston = require('winston');
 
 // socket.io dependecies
 var socketHandshake = require('socket.io-handshake');

@@ -85,7 +85,7 @@ setup.connectToDatabase(mongoose, config.get('database.mongo.url'));
 require('modules/passport')(passport, authentication, models);
 
 // load controllers
-require(__dirname + '/src/app/routes/routers')(app, {
+require(__dirname + '/src/app/routes/routers')(app, services, {
 	verbose: true
 });
 

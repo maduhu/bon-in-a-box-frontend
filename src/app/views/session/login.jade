@@ -21,6 +21,11 @@ block content
 			a(class="" href="/auth/facebook/login")
 				img(src='/images/facebook.png')
 		h4 #{__("login.or")}
+		each message in messages
+			.alert.alert-danger.alert-dismissible.fade.in(role="alert")
+				button.close(type="button" data-dismiss="alert" aria-label="Close")
+					span(aria-hidden="true") ×
+				span !{message}
 		form(id="", method="post", action="/auth/local/login")
 			input.input-login(type="text" name="email" placeholder="#{__('login.email_address_placeholder')}")
 			input.input-login(type="password" name="password" placeholder="#{__('login.password_placeholder')}")

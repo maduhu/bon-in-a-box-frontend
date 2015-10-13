@@ -13,7 +13,7 @@ header
 				a:focus
 					border-color #2a2a2a
 					background-color #2a2a2a
-					color #FFEB3B
+					color white
 			.open
 				a
 				a:hover
@@ -21,9 +21,9 @@ header
 					background-color #2a2a2a
 					border-color #2a2a2a
 				.user-icon-container
-					border-color #FFEB3B
+					border-color white
 					.user-icon
-						fill #FFEB3B
+						fill white
 			.caret
 				margin-left 5px
 				margin-right 5px
@@ -50,10 +50,36 @@ header
 				background-color #2a2a2a
 				right 0
 				left initial
+				.divider
+					margin 0px
 				li
 					a
+						padding-top 8px
+						padding-bottom 8px
 						color white
+						background-color #2a2a2a
+						border-color #2a2a2a
 						&:hover
-							color #FFEB3B
+							color white
+							background-color #f2a034
+						.glyphicon
+							padding-right 5px
 				.divider
 					background-color #545454
+.login
+	h4
+		display inline-block
+		text-transform uppercase
+		vertical-align middle
+		font-weight 300
+		line-height 0
+		color #007675
+		font-family 'Oswald', sans-serif
+	p
+		text-align left
+		padding-left 20px
+		padding-right 20px
+		font-size 1.1em
+	a
+		.glyphicon
+			padding-right 5px

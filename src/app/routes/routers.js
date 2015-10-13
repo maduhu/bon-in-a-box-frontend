@@ -5,7 +5,7 @@ var logger = require('winston');
 var express = require('express'),
 		fs = require('fs');
 
-module.exports = function(parent, options) {
+module.exports = function(parent, services, options) {
 	var verbose = options.verbose;
 	fs.readdirSync(__dirname + '/../controllers').forEach(function(name) {
 		verbose && logger.info('\n %s:', name);
@@ -17,7 +17,9 @@ module.exports = function(parent, options) {
 			path;
 
 		// allow specifying the view engine
-		if (obj.engine) app.set('view engine', obj.engine);
+		if (obj.engine) {
+			app.set('view engine', obj.engine);
+		}
 		app.set('views', __dirname + '/../views/' + name);
 
 		// error handlers
@@ -46,15 +48,22 @@ module.exports = function(parent, options) {
 		});
 
 		app.use('/auth', function(req, res, next) {
-			if (req.isAuthenticated()) {
+			if (req.isAuthenticated() && req.user.verified) {
 				return res.redirect('/');
+			} else {
+				req.logout();
 			}
 			return next();
 		});
 
 		app.use('/', function(req, res, next) {
-			if (req.isAuthenticated()) {
+			if (req.isAuthenticated() && req.user.verified) {
+				if(req.user.role === 'administrator') {
+					res.locals.admin = true;
+				}
 				res.locals.username = req.user.fullname;
+			} else {
+				req.logout();
 			}
 			return next();
 		});
@@ -98,6 +107,14 @@ module.exports = function(parent, options) {
 					method = 'post';
 					path = '/auth/local/signup';
 					break;
+				case 'signupConfirm':
+					method = 'get';
+					path = '/auth/local/confirm';
+					break;
+				case 'signupVerify':
+					method = 'get';
+					path = '/auth/local/verify';
+					break;
 				case 'logout':
 					method = 'get';
 					path = '/logout';
@@ -110,7 +127,7 @@ module.exports = function(parent, options) {
 					throw new Error('unrecognized route: ' + name + '.' + key);
 			}
 			path = prefix + path;
-			app[method](path, obj[key]);
+			app[method](path, obj[key](services));
 			verbose && console.log(' %s %s -> %s', method.toUpperCase(), path, key);
 		}
 		// mount the app

@@ -6,6 +6,7 @@ config/application-config.js
 .tmp/
 .DS_Store
 dump.rdb
+run.sh
 dist/
 src/public/bower_components
 src/public/javascripts

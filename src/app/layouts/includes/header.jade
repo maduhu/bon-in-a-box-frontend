@@ -14,11 +14,16 @@ block header
 								| #{username}
 								span.caret
 							ul.dropdown-menu
-								li
-									a(href="#") Action
+								if admin
+									li
+										a(href="#")
+											span.glyphicon.glyphicon-cog(aria-hidden="true")
+											| #{__('nav.admin')}
 								li.divider(role="separator")
 								li
-									a(href="/logout") #{__('nav.logout')}
+									a(href="/logout")
+										span.glyphicon.glyphicon-log-out(aria-hidden="true")
+										| #{__('nav.logout')}
 				h3.pull-right #{__("header.title")}
 		nav#mainnav
 			.contenedor.clearfix

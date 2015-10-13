@@ -1,5 +1,6 @@
 'use strict';
 
+// Dependencies
 var async = require('async');
 
 exports = module.exports = function(User, VerificationToken, mailer) {
@@ -11,10 +12,10 @@ exports = module.exports = function(User, VerificationToken, mailer) {
 				return done(err);
 			}
 			if (user) {
-				return done(null, false, req.flash('signupMessage', 'This email is already in use.'));
+				return done(null, false, req.flash('signupMessage', req.__('signup.email_already_used')));
 			}
 			if (!req.body.fullname) {
-				return done(null, false, req.flash('signupMessage', 'Please provide your full name.'));
+				return done(null, false, req.flash('signupMessage', req.__('signup.full_name_required')));
 			}
 
 			var newUser = new User();
@@ -50,9 +51,9 @@ exports = module.exports = function(User, VerificationToken, mailer) {
 				}
 			}, function(err, results) {
 				if (err) {
-					return done(null, false, req.flash('signupMessage', 'An error occured! - ' + err));
+					return done(null, false, req.flash('signupMessage', req.__('signup.user_account_create_error') + ' - ' + err));
 				}
-				return done(null, newUser, req.flash('signupMessage', 'You registered through local sign-up!'));
+				return done(null, newUser, req.flash('signupMessage', req.__('signup.success')));
 			});
 		});
 	};
