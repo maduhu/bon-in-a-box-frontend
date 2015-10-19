@@ -115,6 +115,7 @@ exports.signupVerify = function(services) {
  */
 exports.logout = function() {
 	return function(req, res) {
+		res.clearCookie('remember_me');
 		req.logout();
 		res.redirect('/');
 	};
