@@ -13,3 +13,5 @@ src/public/javascripts
 src/public/stylesheets
 !src/public/stylesheets/fonts
 src/app/layouts/final
+src/public/template
+src/public/views

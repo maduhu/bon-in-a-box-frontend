@@ -1,7 +1,7 @@
 'use strict';
 
-var configConsole = angular.module('configConsole', ['adminConsole'], function(adminConsole) {
-	adminConsole.config(function($stateProvider, $urlRouterProvider) {
+angular.module('adminConsole')
+	.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/home");
 
 		$stateProvider
@@ -12,7 +12,6 @@ var configConsole = angular.module('configConsole', ['adminConsole'], function(a
 
 		.state('home', {
 			url: '/home',
-			templateUrl: 'views/home.html'
+			templateUrl: '/views/home.html'
 		});
 	});
-});
