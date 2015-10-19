@@ -14,7 +14,8 @@ module.exports = function(parent, services, options) {
 			prefix = obj.prefix || '',
 			app = express(),
 			method,
-			path;
+			path,
+			callCallback;
 
 		// allow specifying the view engine
 		if (obj.engine) {
@@ -50,10 +51,15 @@ module.exports = function(parent, services, options) {
 		app.use('/auth', function(req, res, next) {
 			if (req.isAuthenticated() && req.user.verified) {
 				return res.redirect('/');
-			} else {
-				req.logout();
 			}
 			return next();
+		});
+
+		app.use('/account', function(req, res, next) {
+			if (req.isAuthenticated() && req.user.verified) {
+				return next();
+			}
+			return res.redirect('/');
 		});
 
 		app.use('/', function(req, res, next) {
@@ -62,8 +68,6 @@ module.exports = function(parent, services, options) {
 					res.locals.admin = true;
 				}
 				res.locals.username = req.user.fullname;
-			} else {
-				req.logout();
 			}
 			return next();
 		});
@@ -81,8 +85,9 @@ module.exports = function(parent, services, options) {
 		// generate routes based
 		// on the exported methods
 		for (var key in obj) {
+			callCallback = false;
 			// "reserved" exports
-			if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) {
+			if (~['name', 'prefix', 'engine', 'before'].indexOf(key) || ~key.indexOf('Callback')) {
 				continue;
 			}
 			// route exports
@@ -98,6 +103,7 @@ module.exports = function(parent, services, options) {
 				case 'loginSubmit':
 					method = 'post';
 					path = '/auth/local/login';
+					callCallback = true;
 					break;
 				case 'signup':
 					method = 'get';
@@ -119,6 +125,10 @@ module.exports = function(parent, services, options) {
 					method = 'get';
 					path = '/logout';
 					break;
+				case 'profile':
+					method = 'get';
+					path = '/account/profile';
+					break;
 				case 'changeLanguage':
 					method = 'get';
 					path = '/language/:' + '_newlanguage';
@@ -127,7 +137,11 @@ module.exports = function(parent, services, options) {
 					throw new Error('unrecognized route: ' + name + '.' + key);
 			}
 			path = prefix + path;
-			app[method](path, obj[key](services));
+			if (callCallback === true) {
+				app[method](path, obj[key](services), obj[key+'Callback'](services));
+			} else {
+				app[method](path, obj[key](services));
+			}
 			verbose && console.log(' %s %s -> %s', method.toUpperCase(), path, key);
 		}
 		// mount the app

@@ -10,5 +10,6 @@ run.sh
 dist/
 src/public/bower_components
 src/public/javascripts
-src/public/stylesheets/style.css
+src/public/stylesheets
+!src/public/stylesheets/fonts
 src/app/layouts/final

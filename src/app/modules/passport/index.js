@@ -4,7 +4,10 @@ var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var LinkedinStrategy = require('passport-linkedin-oauth2').Strategy;
+var RememberMeStrategy = require('passport-remember-me').Strategy;
 var config = require('application-config');
+
+var debug = require('debug')('bon-in-a-box-frontend:passport');
 
 exports = module.exports = function(passport, authentication, models) {
 	passport.serializeUser(function(user, done) {
@@ -49,4 +52,16 @@ exports = module.exports = function(passport, authentication, models) {
 		callbackURL: config.get('linkedin.callback.url'),
 		passReqToCallback: true
 	}, authentication.linkedin.auth));
+
+	passport.use(new RememberMeStrategy(function(token, done) {
+		models.User.findOne({accesstoken: token}, function(err, user) {
+			if (err) {
+				return done(err);
+			}
+			if (user === null) {
+				return done(null, false);
+			}
+			return done(null, user);
+		});
+	}, authentication.local.rememberme));
 };

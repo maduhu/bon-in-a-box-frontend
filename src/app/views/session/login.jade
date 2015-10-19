@@ -30,7 +30,7 @@ block content
 			input.input-login(type="text" name="email" placeholder="#{__('login.email_address_placeholder')}")
 			input.input-login(type="password" name="password" placeholder="#{__('login.password_placeholder')}")
 			label.checkbox
-				<input type="checkbox" value="remember-me" /> #{__('login.remember_me')}
+				<input type="checkbox" name="remember_me" value="yes" /> #{__('login.remember_me')}
 			button.btn(type="submit") #{__('login.sign_in')}
 		.clearfix
 		a(class="linkslog" href="") #{__('login.forgot_password')}

@@ -3,6 +3,8 @@
 // Dependencies
 var passport = require('passport');
 
+var debug = require('debug')('bon-in-a-box-frontend:session');
+
 /**
  * Resolves URL /auth/local/login
  * method  get
@@ -22,12 +24,26 @@ exports.login = function() {
  * @param  {Object} Response params
  */
 exports.loginSubmit = function() {
-	return function(req, res, next) {
+	return (function(req, res, next) {
 		passport.authenticate('local-login', {
-			successRedirect: '/', // redirect to the secure profile section
 			failureRedirect: '/auth/local/login', // redirect back to the signup page if there is an error
 			failureFlash: true // allow flash messages
-		})(req, res, next);
+		})(req,res,next);
+	});
+};
+
+exports.loginSubmitCallback = function(services) {
+	return function(req, res) {
+		if(! req.body.remember_me) {
+			return res.redirect('/');
+		}
+		services.profile.saveRememberMeToken(req, function(err, token) {
+			if(err) {
+				return res.redirect('/');
+			}
+			res.cookie('remember_me', token, { path: '/', httpOnly: true, maxAge: 604800000 });
+			return res.redirect('/');
+		});
 	};
 };
 
@@ -55,7 +71,7 @@ exports.signupSubmit = function() {
 			successRedirect: '/auth/local/confirm', // redirect to the secure profile section
 			failureRedirect: '/auth/local/signup', // redirect back to the signup page if there is an error
 			failureFlash: true // allow flash messages
-		})(req, res, next);
+		})(req,res,next);
 	};
 };
 

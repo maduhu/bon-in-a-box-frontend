@@ -28,6 +28,9 @@ exports = module.exports = function(collection, mongoose) {
 			type: Boolean,
 			default: false // this is automatically set true for both facebook and google, but must be verified for local
 		},
+		accesstoken: {
+			type: String
+		},
 		facebook: {
 			id: {
 				type: String,
@@ -66,5 +69,21 @@ exports = module.exports = function(collection, mongoose) {
 		return bcrypt.compareSync(password, this.password); // this is syncronous (future: async)
 	};
 
+	schema.methods.generateRememberMeToken = function(len) {
+		var buf = [],
+				chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+				charlen = chars.length;
+
+		for (var i = 0; i < len; ++i) {
+			buf.push(chars[getRandomInt(0, charlen - 1)]);
+		}
+
+		return buf.join('');
+	};
+
 	return mongoose.model(collection, schema);
 };
+
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}

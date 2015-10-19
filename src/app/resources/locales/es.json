@@ -215,5 +215,7 @@
 	"signup_verification_token_successful": "Su cuenta de correo ha sido confirmada exitosamente.<br><br>Puede cerrar esta ventana haciendo click en finalizar.",
 	"signup.verify_subtitle": "Cuenta de usuario verificada exitosamente",
 	"login.welcome": "login.welcome",
-	"nav.admin": "Tablero de administración"
+	"nav.admin": "Tablero de administración",
+	"nav.profile_account": "Cuenta",
+	"nav.profile_home": "Inicio"
 }

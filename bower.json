@@ -8,7 +8,19 @@
     "lodash": "~3.10.1",
     "wallop": "~2.2.1",
     "masonry": "~3.3.2",
-    "perfect-scrollbar": "~0.6.5"
+    "perfect-scrollbar": "~0.6.5",
+    "angular": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-bootstrap": "~0.14.2",
+    "angular-resource": "~1.4.7",
+    "angular-ui": "~0.4.0",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap-sweetalert": "~0.4.5",
+    "material-design-iconic-font": "~2.1.2",
+    "Waves": "waves#~0.7.2",
+    "angular-sanitize": "~1.4.7",
+    "angular-loading-bar": "~0.8.0",
+    "ng-table": "~0.8.3"
   },
   "overrides": {
     "masonry": {

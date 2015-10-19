@@ -76,6 +76,7 @@ module.exports.createExpressApp = function(options) {
 	}));
 	app.use(options.passport.initialize());
 	app.use(options.passport.session());
+	app.use(options.passport.authenticate('remember-me'));
 	app.use(flash());
 	app.use(require('stylus').middleware(options.dir + options.stylesLocation));
 

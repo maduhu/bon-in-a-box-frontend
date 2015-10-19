@@ -216,5 +216,7 @@
 	"signup_verification_token_no_query": "No request query.",
 	"signup_verification_token_successful": "Your email has been successfully verified.<br><br>You can now close this window by clicking finish.",
 	"signup.verify_subtitle": "User account successfully verified",
-	"nav.admin": "Dashboard"
+	"nav.admin": "Dashboard",
+	"nav.profile_account": "Profile",
+	"nav.profile_home": "Home"
 }

@@ -1,5 +1,5 @@
 doctype html
-html
+html(data-ng-app="adminConsole" data-ng-controller="adminConsoleCtrl as adminctrl")
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -15,7 +15,7 @@ html
 		<!-- endbuild -->
 
 		<!-- build:css(src/public) stylesheets/final/app.css -->
-		//- home:css
+		//- admin:css
 		//- css files will be automatically insert here
 		//- endinject
 		<!-- endbuild -->
@@ -41,9 +41,7 @@ html
 		<!-- endbuild -->
 
 		<!-- build:js(src/public) javascripts/final/app.js -->
-		//- home:js
+		//- admin:js
 		//- js files will be automatically insert here
 		//- endinject
 		<!-- endbuild -->
-
-		block scripts

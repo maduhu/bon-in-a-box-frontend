@@ -14,11 +14,15 @@ block header
 								| #{username}
 								span.caret
 							ul.dropdown-menu
+								li
+									a(href="/account/profile")
+										span.glyphicon.glyphicon-user(aria-hidden="true")
+										| #{__('nav.profile_account')}
 								if admin
 									li
-										a(href="#")
-											span.glyphicon.glyphicon-cog(aria-hidden="true")
-											| #{__('nav.admin')}
+											a(href="#")
+												span.glyphicon.glyphicon-cog(aria-hidden="true")
+												| #{__('nav.admin')}
 								li.divider(role="separator")
 								li
 									a(href="/logout")
@@ -31,7 +35,7 @@ block header
 					li.left
 						a(class="icon icon-ico-32" href="/auth/local/login" data-toggle="tooltip" title="#{__('nav.login')}")
 					li.left
-						a(class="icon icon-ico-33" href="/#section4" data-toggle="tooltip" title="#{__('nav.forum')}")
+						a(class="icon icon-ico-33" href="#section4" data-toggle="tooltip" title="#{__('nav.forum')}")
 					li.right
 						ul.navlang
 							each language in locales
@@ -44,8 +48,8 @@ block header
 					li.right
 						a(class="icon icon-ico-37" href="mailto:info@geobon.org" data-toggle="tooltip" title="#{__('nav.contact')}")
 					li.right
-						a(class="icon icon-ico-36" href="/#section3" data-toggle="tooltip" title="#{__('nav.tools')}")
+						a(class="icon icon-ico-36" href="#section3" data-toggle="tooltip" title="#{__('nav.tools')}")
 					li.right
-						a(class="icon icon-ico-35" href="/#section2" data-toggle="tooltip" title="#{__('nav.filters')}")
+						a(class="icon icon-ico-35" href="#section2" data-toggle="tooltip" title="#{__('nav.filters')}")
 					li.right
-						a(class="icon icon-ico-34" href="/#section1" data-toggle="tooltip" title="#{__('nav.main')}")
+						a(class="icon icon-ico-34" href="#section1" data-toggle="tooltip" title="#{__('nav.main')}")
