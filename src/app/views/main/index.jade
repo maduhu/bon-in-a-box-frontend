@@ -52,13 +52,11 @@ block content
 					| !{__('howbox.text')}
 			.intro.clearfix.Wallop-item
 				.col50
-					h1 !{__('geobbox.h1')}
-					img(src='images/main5.png')
+					h1 !{__('allies.h1')}
 					.divisor
-					h2.color5 !{__('geobbox.sub')}
 				.colordiv.cd5
 				.col_texto
-					| !{__('geobbox.text')}
+					| !{__('allies.text')}
 		.clearfix
 			ul.menu_about.right.Wallop-pagination
 				li
@@ -69,8 +67,6 @@ block content
 					button(class="Wallop-dot") !{__('homenav.why')}
 				li
 					button(class="Wallop-dot") !{__('homenav.how')}
-				li
-					button(class="Wallop-dot") GEO BON
 				li
 					button(class="Wallop-dot") !{__('homenav.allies')}
 	#section2
@@ -186,7 +182,7 @@ block content
 					.col_texto
 						| !{__('traits.text')}
 			.Wallop-item
-				h1 !{__('type.title')}
+				h1 !{__('theme.title')}
 				.divisor
 				.col_iconos
 					ul.toggler3
@@ -272,7 +268,7 @@ block content
 					.col_texto
 						| !{__('terrestrial.text')}
 			.Wallop-item
-				h1 !{__('function.title')}
+				h1 !{__('type.title')}
 				.divisor
 				.col_iconos
 					ul.toggler4
@@ -317,70 +313,28 @@ block content
 				h1 !{__('taxonomy.title')}
 				.divisor
 				.col_iconos
-					ul.toggler5
-						li.grande
-							button(class="icon-ico-25" id="e01" data-toggle="tooltip" title="#{__('amphibians.title')}" href="")
+					ul
 						li
-							button(class="icon-ico-26" id="e02" data-toggle="tooltip" title="#{__('birds.title')}" href="")
+							.difcase.icon-ico-25(data-toggle="tooltip" title="#{__('amphibians.title')}")
 						li
-							button(class="icon-ico-27" id="e03" data-toggle="tooltip" title="#{__('invertebrates.title')}" href="")
+							.difcase.icon-ico-26(data-toggle="tooltip" title="#{__('birds.title')}")
 						li
-							button(class="icon-ico-28" id="e04" data-toggle="tooltip" title="#{__('mammals.title')}" href="")
+							.difcase.icon-ico-27(data-toggle="tooltip" title="#{__('invertebrates.title')}")
 						li
-							button(class="icon-ico-29" id="e05" data-toggle="tooltip" title="#{__('fish.title')}" href="")
+							.difcase.icon-ico-28(data-toggle="tooltip" title="#{__('mammals.title')}")
 						li
-							button(class="icon-ico-30" id="e06" data-toggle="tooltip" title="#{__('reptiles.title')}" href="")
+							.difcase.icon-ico-29(data-toggle="tooltip" title="#{__('fish.title')}")
 						li
-							button(class="icon-ico-31" id="e07" data-toggle="tooltip" title="#{__('plants.title')}" href="")
+							.difcase.icon-ico-30(data-toggle="tooltip" title="#{__('reptiles.title')}")
+						li
+							.difcase.icon-ico-31(data-toggle="tooltip" title="#{__('plants.title')}")
 				.toggled-e01
 					.col_titles
-						h2 !{__('amphibians.title')}
-						h3 !{__('amphibians.sub')}
+						h2 !{__('taxo.title')}
+						h3 !{__('taxo.sub')}
 					.colordiv.cd5
 					.col_texto
-						| !{__('amphibians.text')}
-				.toggled-e02.switch
-					.col_titles
-						h2 !{__('birds.title')}
-						h3 !{__('birds.sub')}
-					.colordiv.cd5
-					.col_texto
-						| !{__('birds.text')}
-				.toggled-e03.switch
-					.col_titles
-						h2 !{__('invertebrates.title')}
-						h3 !{__('invertebrates.sub')}
-					.colordiv.cd5
-					.col_texto
-						| !{__('invertebrates.text')}
-				.toggled-e04.switch
-					.col_titles
-						h2 !{__('mammals.title')}
-						h3 !{__('mammals.sub')}
-					.colordiv.cd5
-					.col_texto
-						| !{__('mammals.text')}
-				.toggled-e05.switch
-					.col_titles
-						h2 !{__('fish.title')}
-						h3 !{__('fish.sub')}
-					.colordiv.cd5
-					.col_texto
-						| !{__('fish.text')}
-				.toggled-e06.switch
-					.col_titles
-						h2 !{__('reptiles.title')}
-						h3 !{__('reptiles.sub')}
-					.colordiv.cd5
-					.col_texto
-						| !{__('reptiles.text')}
-				.toggled-e07.switch
-					.col_titles
-						h2 !{__('plants.title')}
-						h3 !{__('plants.sub')}
-					.colordiv.cd5
-					.col_texto
-						| !{__('plants.text')}
+						| !{__('taxo.text')}
 		.col25
 			ul.hexicon.Wallop-pagination
 				li
@@ -388,9 +342,9 @@ block content
 				li
 					button(class="smic imageb2 Wallop-dot" data-toggle="tooltip" title="#{__('filter.ebv')}")
 				li
-					button(class="smic imageb3 Wallop-dot" data-toggle="tooltip" title="#{__('filter.type')}")
+					button(class="smic imageb3 Wallop-dot" data-toggle="tooltip" title="#{__('filter.theme')}")
 				li
-					button(class="smic imageb4 Wallop-dot" data-toggle="tooltip" title="#{__('filter.function')}")
+					button(class="smic imageb4 Wallop-dot" data-toggle="tooltip" title="#{__('filter.type')}")
 				li
 					button(class="smic imageb5 Wallop-dot" data-toggle="tooltip" title="#{__('filter.tax')}")
 	#section3
@@ -418,10 +372,10 @@ block content
 						button(class="mic" data-toggle="tooltip" title="#{__('filter.ebv')}" href="")
 							img(src='images/filt2m.png')
 					li
-						button(class="mic" data-toggle="tooltip" title="#{__('filter.type')}" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.theme')}" href="")
 							img(src='images/filt3m.png')
 					li
-						button(class="mic" data-toggle="tooltip" title="#{__('filter.function')}" href="")
+						button(class="mic" data-toggle="tooltip" title="#{__('filter.type')}" href="")
 							img(src='images/filt4m.png')
 					li
 						button(class="mic" data-toggle="tooltip" title="#{__('filter.tax')}" href="")
@@ -755,10 +709,10 @@ block content
 										a(class="selected" data-toggle="tooltip" title="#{__('filter.ebv')}" href="")
 											img(src='images/filt2m.png')
 									li
-										a(class="" data-toggle="tooltip" title="#{__('filter.type')}" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.theme')}" href="")
 											img(src='images/filt3m.png')
 									li
-										a(class="" data-toggle="tooltip" title="#{__('filter.function')}" href="")
+										a(class="" data-toggle="tooltip" title="#{__('filter.type')}" href="")
 											img(src='images/filt4m.png')
 									li
 										a(class="" data-toggle="tooltip" title="#{__('filter.tax')}" href="")
