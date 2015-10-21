@@ -171,10 +171,11 @@
 	"delete.btn": "Eliminar",
 	"new.tools": "Nuevas Herramientas",
 	"go.btn": "Ver Más",
-	"filter.all": "Todos los filtros",
+	"filter.all": "Sin filtro",
 	"filter.institution": "Institución",
 	"filter.initiative": "Iniciativa",
 	"filter.investigator": "Investigador",
 	"show.directory": "Mostrar Directorio",
-	"show.tools": "Mostrar Herramientas"
+	"show.tools": "Mostrar Herramientas",
+	"photo.credits": "Créditos Fotográficos"
 }

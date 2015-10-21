@@ -7,6 +7,11 @@ $('.resultados_wrapper .resultados').masonry({
   gutter: 15
 });
 
+$('.photocr').on('click',function(e){
+  e.preventDefault();
+  $('.credits').slideToggle('slow');
+});
+
 /*wallop*/
 
 var wallopEl = document.querySelector('.Wallop--slide');
