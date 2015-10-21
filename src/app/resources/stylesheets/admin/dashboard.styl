@@ -35,6 +35,12 @@
 		& > li
 			&:not(#toggle-width)
 				position relative
+@media (max-width: 350px)
+	#header
+		.header-inner
+			.logo
+				a
+					font-size 13px !important
 ul
 ol
 	margin-top 0
@@ -284,6 +290,34 @@ ul ul, ol ul, ul ol, ol ol
 	transition all
 	-webkit-transition-duration 300ms
 	transition-duration 300ms
+	.main-menu
+		list-style none
+		padding-left 0
+		margin 20px 0 0
+		& > li
+			&.active
+				& > a
+					color #262626
+					background-color #F4F4F4
+			& > a
+				padding 14px 20px 14px 52px
+				display block
+				color #4C4C4C
+				font-weight 500
+				position relative
+				& > i
+					position absolute
+					left 16px
+					font-size 20px
+					top 0
+					width 25px
+					text-align center
+					padding 13px 0
+					&.glyphicon
+						font-size 14px
+				&:hover
+					color #262626
+					background-color #f7f7f7
 	&.toggled
 		-webkit-transform translate3d(0,0,0)
 		transform translate3d(0,0,0)
@@ -294,6 +328,12 @@ ul ul, ol ul, ul ol, ol ol
 		overflow-y auto
 		width 268px
 	.profile-menu
+		&.toggled
+			.profile-info > i
+				-webkit-transform rotate(180deg)
+				-ms-transform rotate(180deg)
+				-o-transform rotate(180deg)
+				transform rotate(180deg)
 		& > a
 			display block
 			height 129px
@@ -326,3 +366,12 @@ ul ul, ol ul, ul ol, ol ol
 					transition all
 					-webkit-transition-duration 300ms
 					transition-duration 300ms
+		.main-menu
+			display none
+			margin 0
+			border-bottom 1px solid #E6E6E6
+			& > li
+				& > a
+					&:hover
+						color #262626
+						background-color #f7f7f7

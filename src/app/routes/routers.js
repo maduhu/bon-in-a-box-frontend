@@ -55,6 +55,13 @@ module.exports = function(parent, services, options) {
 			return next();
 		});
 
+		app.use('/account/dashboard', function(req, res, next) {
+			if (req.isAuthenticated() && req.user.verified && (req.user.role === 'administrator')) {
+				return next();
+			}
+			return res.redirect('/');
+		});
+
 		app.use('/account', function(req, res, next) {
 			if (req.isAuthenticated() && req.user.verified) {
 				return next();
@@ -128,6 +135,10 @@ module.exports = function(parent, services, options) {
 				case 'profile':
 					method = 'get';
 					path = '/account/profile';
+					break;
+				case 'dashboard':
+					method = 'get';
+					path = '/account/dashboard';
 					break;
 				case 'changeLanguage':
 					method = 'get';
