@@ -40,9 +40,11 @@ gulp.task('fonts', function () {
 gulp.task('clean', function (done) {
 	$.del([path.join(conf.paths.tmp, '/')], done);
 	$.del([path.join(conf.paths.src, '/public/fonts')], done);
-	$.del([path.join(conf.paths.src, '/public/javascripts/final')], done);
-	$.del([path.join(conf.paths.src, '/public/stylesheets/final')], done);
+	$.del([path.join(conf.paths.src, '/public/javascripts')], done);
+	$.del([path.join(conf.paths.src, '/public/stylesheets/style.css')], done);
 	$.del([path.join(conf.paths.src, '/app/layouts/final')], done);
+	$.del([path.join(conf.paths.src, '/public/views')], done);
+	$.del([path.join(conf.paths.src, '/public/template')], done);
 });
 
 gulp.task('build', ['clean', 'html', 'fonts']);
