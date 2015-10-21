@@ -7,136 +7,33 @@
 			.profile-info
 				| Valentina Grajales
 				i.zmdi.zmdi-caret-down
-		//-ul.main-menu
+		ul.main-menu
 			li
-				a(data-ui-sref='pages.profile.profile-about', data-ng-click='mactrl.sidebarStat($event)')
+				a(data-ui-sref='pages.profile.profile-about', data-ng-click='adminctrl.sidebarStat($event)')
 					i.zmdi.zmdi-account
 					| View Profile
 			li
-				a(href='')
-					i.zmdi.zmdi-input-antenna
-					| Privacy Settings
-			li
-				a(href='')
-					i.zmdi.zmdi-settings
-					| Settings
-			li
-				a(href='')
-					i.zmdi.zmdi-time-restore
+				a(href="/logout")
+					i.glyphicon.glyphicon-log-out
 					| Logout
-	//-ul.main-menu
+	ul.main-menu
 		li(data-ui-sref-active='active')
-			a(data-ui-sref='home', data-ng-click='mactrl.sidebarStat($event)')
+			a(data-ui-sref='home', data-ng-click='adminctrl.sidebarStat($event)')
 				i.zmdi.zmdi-home
 				| Home
 		li(data-ui-sref-active='active')
-			a(data-ui-sref='typography', data-ng-click='mactrl.sidebarStat($event)')
-				i.zmdi.zmdi-format-underlined
-				| Typography
-		li.sub-menu(data-ng-class="{ 'active toggled': mactrl.$state.includes('widgets') }")
-			a(href='', toggle-submenu='')
-				i.zmdi.zmdi-widgets
-				| Widgets
-			ul
-				li
-					a(data-ui-sref-active='active', data-ui-sref='widgets.widget-templates', data-ng-click='mactrl.sidebarStat($event)') Templates
-				li
-					a(data-ui-sref-active='active', data-ui-sref='widgets.widgets', data-ng-click='mactrl.sidebarStat($event)') Widgets
-		li.sub-menu(data-ng-class="{ 'active toggled': mactrl.$state.includes('tables') }")
-			a(href='', toggle-submenu='')
-				i.zmdi.zmdi.zmdi-view-list
-				| Tables
-			ul
-				li
-					a(data-ui-sref-active='active', data-ui-sref='tables.tables', data-ng-click='mactrl.sidebarStat($event)') Tables
-				li
-					a(data-ui-sref-active='active', data-ui-sref='tables.data-table', data-ng-click='mactrl.sidebarStat($event)') Data Tables
-		li.sub-menu(data-ng-class="{ 'active toggled': mactrl.$state.includes('form') }")
-			a(href='', toggle-submenu='')
-				i.zmdi.zmdi-collection-text
-				| Forms
-			ul
-				li
-					a(data-ui-sref-active='active', data-ui-sref='form.basic-form-elements', data-ng-click='mactrl.sidebarStat($event)') Basic Form Elements
-				li
-					a(data-ui-sref-active='active', data-ui-sref='form.form-components', data-ng-click='mactrl.sidebarStat($event)') Form Components
-				li
-					a(data-ui-sref-active='active', data-ui-sref='form.form-examples', data-ng-click='mactrl.sidebarStat($event)') Form Examples
-				li
-					a(data-ui-sref-active='active', data-ui-sref='form.form-validations', data-ng-click='mactrl.sidebarStat($event)') Form Validation
-		li.sub-menu(data-ng-class="{ 'active toggled': mactrl.$state.includes('user-interface') }")
-			a(href='', toggle-submenu='')
-				i.zmdi.zmdi-swap-alt
-				| User Interface
-			ul
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.ui-bootstrap', data-ng-click='mactrl.sidebarStat($event)') UI Bootstrap
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.colors', data-ng-click='mactrl.sidebarStat($event)') Colors
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.animations', data-ng-click='mactrl.sidebarStat($event)') Animations
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.box-shadow', data-ng-click='mactrl.sidebarStat($event)') Box Shadow
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.buttons', data-ng-click='mactrl.sidebarStat($event)') Buttons
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.icons', data-ng-click='mactrl.sidebarStat($event)') Icons
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.alerts', data-ng-click='mactrl.sidebarStat($event)') Alerts
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.notifications-dialogs', data-ng-click='mactrl.sidebarStat($event)') Notifications & Dialogs
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.media', data-ng-click='mactrl.sidebarStat($event)') Media
-				li
-					a(data-ui-sref-active='active', data-ui-sref='user-interface.other-components', data-ng-click='mactrl.sidebarStat($event)') Others
-		li.sub-menu(data-ng-class="{ 'active toggled': mactrl.$state.includes('charts') }")
-			a(href='', toggle-submenu='')
-				i.zmdi.zmdi-trending-up
-				| Charts
-			ul
-				li
-					a(data-ui-sref-active='active', data-ui-sref='charts.flot-charts', data-ng-click='mactrl.sidebarStat($event)') Flot Charts
-				li
-					a(data-ui-sref-active='active', data-ui-sref='charts.other-charts', data-ng-click='mactrl.sidebarStat($event)') Other Charts
+			a(data-ui-sref='users', data-ng-click='adminctrl.sidebarStat($event)')
+				i.zmdi.zmdi-accounts-alt
+				| Users
 		li(data-ui-sref-active='active')
-			a(data-ui-sref='calendar', data-ng-click='mactrl.sidebarStat($event)')
-				i.zmdi.zmdi-calendar
-				| Calendar
-		li.sub-menu(data-ng-class="{ 'active toggled': mactrl.$state.includes('photo-gallery') }")
-			a(href='', toggle-submenu='')
-				i.zmdi.zmdi-image
-				| Photo Gallery
-			ul
-				li
-					a(data-ui-sref-active='active', data-ui-sref='photo-gallery.photos', data-ng-click='mactrl.sidebarStat($event)') Default
-				li
-					a(data-ui-sref-active='active', data-ui-sref='photo-gallery.timeline', data-ng-click='mactrl.sidebarStat($event)') Timeline
+			a(data-ui-sref='tools', data-ng-click='adminctrl.sidebarStat($event)')
+				i.zmdi.zmdi-case
+				| Tools
 		li(data-ui-sref-active='active')
-			a(data-ui-sref='generic-classes', data-ng-click='mactrl.sidebarStat($event)')
-				i.zmdi.zmdi-layers
-				| Generic Classes
-		li.sub-menu(data-ng-class="{ 'active toggled': mactrl.$state.includes('pages') }")
-			a(href='', toggle-submenu='')
-				i.zmdi.zmdi-collection-item
-				| Sample Pages
-			ul
-				li
-					a(data-ui-sref-active='active', data-ui-sref='pages.profile.profile-about', data-ng-click='mactrl.sidebarStat($event)') Profile
-				li
-					a(data-ui-sref-active='active', data-ui-sref='pages.listview', data-ng-click='mactrl.sidebarStat($event)') List View
-				li
-					a(data-ui-sref-active='active', data-ui-sref='pages.messages', data-ng-click='mactrl.sidebarStat($event)') Messages
-				li
-					a(data-ui-sref-active='active', data-ui-sref='pages.pricing-table', data-ng-click='mactrl.sidebarStat($event)') Pricing Table
-				li
-					a(data-ui-sref-active='active', data-ui-sref='pages.contacts', data-ng-click='mactrl.sidebarStat($event)') Contacts
-				li
-					a(data-ui-sref-active='active', data-ui-sref='pages.invoice', data-ng-click='mactrl.sidebarStat($event)') Invoice
-				li
-					a(data-ui-sref-active='active', data-ui-sref='pages.wall', data-ng-click='mactrl.sidebarStat($event)') Wall
-				li
-					a(href='login.html') Login and Sign Up
-				li
-					a(href='lockscreen.html') Lockscreen
-				li
-					a(href='404.html') Error 404
+			a(data-ui-sref='directory', data-ng-click='adminctrl.sidebarStat($event)')
+				i.zmdi.zmdi-library
+				| Directory
+		li(data-ui-sref-active='active')
+			a(data-ui-sref='forums', data-ng-click='adminctrl.sidebarStat($event)')
+				i.zmdi.zmdi-comments
+				| Forums
