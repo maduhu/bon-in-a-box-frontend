@@ -4,8 +4,13 @@ bower_components/
 .idea/
 .tmp/
 .DS_Store
+dump.rdb
+run.sh
 dist/
 src/public/bower_components
 src/public/javascripts
-src/public/stylesheets/style.css
+src/public/stylesheets
+!src/public/stylesheets/fonts
 src/app/layouts/final
+src/public/template
+src/public/views

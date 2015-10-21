@@ -1,0 +1,3 @@
+header#header(data-ng-include="'/template/header.html'" data-ng-controller="headerCtrl as hctrl")
+section#main
+	aside#sidebar(data-ng-include="'/template/sidebar-left.html'" data-ng-class="{ 'toggled': adminctrl.sidebarToggle.left === true }")

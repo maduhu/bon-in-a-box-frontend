@@ -8,25 +8,30 @@ block footer
 
 block content
 	.backg.blur-effect
-		img(id="foto" src='images/bg1.jpg')
+		img(id="foto" src='/images/bg1.jpg')
 	.contenido.login
 		.icon-ico-32
 		h3 #{__("login.title")}
 		.divisor
 		.logop
-			a(class="" href="")
-				img(src='images/google.png')
-			a(class="" href="")
-				img(src='images/linkedin.png')
-			a(class="" href="")
-				img(src='images/facebook.png')
-		h4 Ó
-		form(id="", method="", action="")
-			input.input-login(type="text" name="username" placeholder="#{__('login.email_address_placeholder')}")
+			a(class="" href="/auth/google/login")
+				img(src='/images/google.png')
+			a(class="" href="/auth/linkedin/login")
+				img(src='/images/linkedin.png')
+			a(class="" href="/auth/facebook/login")
+				img(src='/images/facebook.png')
+		h4 #{__("login.or")}
+		each message in messages
+			.alert.alert-danger.alert-dismissible.fade.in(role="alert")
+				button.close(type="button" data-dismiss="alert" aria-label="Close")
+					span(aria-hidden="true") ×
+				span !{message}
+		form(id="", method="post", action="/auth/local/login")
+			input.input-login(type="text" name="email" placeholder="#{__('login.email_address_placeholder')}")
 			input.input-login(type="password" name="password" placeholder="#{__('login.password_placeholder')}")
 			label.checkbox
-				<input type="checkbox" value="remember-me" /> #{__('login.remember_me')}
+				<input type="checkbox" name="remember_me" value="yes" /> #{__('login.remember_me')}
 			button.btn(type="submit") #{__('login.sign_in')}
 		.clearfix
 		a(class="linkslog" href="") #{__('login.forgot_password')}
-		a(class="linkslog" href="") #{__('login.sign_up')}
+		a(class="linkslog" href="/auth/local/signup") #{__('login.sign_up')}

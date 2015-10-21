@@ -10,7 +10,7 @@ function isOnlyChange(event) {
 	return event.type === 'changed';
 }
 
-gulp.task('watch', ['inject'], function () {
+gulp.task('watch', ['inject', 'jadetohtml'], function () {
 	gulp.watch([path.join(conf.paths.src, '/app/layouts/layout.jade'), 'bower.json'], ['inject']);
 
 	gulp.watch([
@@ -30,6 +30,10 @@ gulp.task('watch', ['inject'], function () {
 		} else {
 			gulp.start('inject');
 		}
+	});
+
+	gulp.watch([path.join(conf.paths.src, '/app/views/dashboard/template/*.jade'), path.join(conf.paths.src, '/app/views/dashboard/angular_partials/*.jade')], function(event) {
+		gulp.start('jadetohtml');
 	});
 
 	//gulp.watch(path.join(conf.paths.src, '/app/resources/locales/*.json'), function(event) {

@@ -1,9 +1,11 @@
 'use strict';
 
+// dependencies
+var logger = require('winston');
 var express = require('express'),
-    fs = require('fs');
+		fs = require('fs');
 
-module.exports = function(parent, options) {
+module.exports = function(parent, services, options) {
 	var verbose = options.verbose;
 	fs.readdirSync(__dirname + '/../controllers').forEach(function(name) {
 		verbose && logger.info('\n %s:', name);
@@ -12,10 +14,13 @@ module.exports = function(parent, options) {
 			prefix = obj.prefix || '',
 			app = express(),
 			method,
-			path;
+			path,
+			callCallback;
 
 		// allow specifying the view engine
-		if (obj.engine) app.set('view engine', obj.engine);
+		if (obj.engine) {
+			app.set('view engine', obj.engine);
+		}
 		app.set('views', __dirname + '/../views/' + name);
 
 		// error handlers
@@ -43,6 +48,30 @@ module.exports = function(parent, options) {
 			});
 		});
 
+		app.use('/auth', function(req, res, next) {
+			if (req.isAuthenticated() && req.user.verified) {
+				return res.redirect('/');
+			}
+			return next();
+		});
+
+		app.use('/account', function(req, res, next) {
+			if (req.isAuthenticated() && req.user.verified) {
+				return next();
+			}
+			return res.redirect('/');
+		});
+
+		app.use('/', function(req, res, next) {
+			if (req.isAuthenticated() && req.user.verified) {
+				if(req.user.role === 'administrator') {
+					res.locals.admin = true;
+				}
+				res.locals.username = req.user.fullname;
+			}
+			return next();
+		});
+
 		// before middleware support
 		if (obj.before) {
 			path = '/' + name + '/:' + name + '_id';
@@ -56,8 +85,11 @@ module.exports = function(parent, options) {
 		// generate routes based
 		// on the exported methods
 		for (var key in obj) {
+			callCallback = false;
 			// "reserved" exports
-			if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) continue;
+			if (~['name', 'prefix', 'engine', 'before'].indexOf(key) || ~key.indexOf('Callback')) {
+				continue;
+			}
 			// route exports
 			switch (key) {
 				case 'index':
@@ -66,7 +98,36 @@ module.exports = function(parent, options) {
 					break;
 				case 'login':
 					method = 'get';
-					path = '/login';
+					path = '/auth/local/login';
+					break;
+				case 'loginSubmit':
+					method = 'post';
+					path = '/auth/local/login';
+					callCallback = true;
+					break;
+				case 'signup':
+					method = 'get';
+					path = '/auth/local/signup';
+					break;
+				case 'signupSubmit':
+					method = 'post';
+					path = '/auth/local/signup';
+					break;
+				case 'signupConfirm':
+					method = 'get';
+					path = '/auth/local/confirm';
+					break;
+				case 'signupVerify':
+					method = 'get';
+					path = '/auth/local/verify';
+					break;
+				case 'logout':
+					method = 'get';
+					path = '/logout';
+					break;
+				case 'profile':
+					method = 'get';
+					path = '/account/profile';
 					break;
 				case 'changeLanguage':
 					method = 'get';
@@ -76,7 +137,11 @@ module.exports = function(parent, options) {
 					throw new Error('unrecognized route: ' + name + '.' + key);
 			}
 			path = prefix + path;
-			app[method](path, obj[key]);
+			if (callCallback === true) {
+				app[method](path, obj[key](services), obj[key+'Callback'](services));
+			} else {
+				app[method](path, obj[key](services));
+			}
 			verbose && console.log(' %s %s -> %s', method.toUpperCase(), path, key);
 		}
 		// mount the app
