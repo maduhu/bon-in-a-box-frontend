@@ -1,2 +1,328 @@
-head
-	color black
+@font-face
+	font-family 'Glyphicons Halflings'
+	src url('../../bower_components/bootstrap-stylus/fonts/glyphicons-halflings-regular.eot')
+	src url('../../bower_components/bootstrap-stylus/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../bower_components/bootstrap-stylus/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../bower_components/bootstrap-stylus/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../bower_components/bootstrap-stylus/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg')
+.glyphicon
+	position relative
+	top 1px
+	display inline-block
+	font-family 'Glyphicons Halflings'
+	font-style normal
+	font-weight normal
+	line-height 1
+.glyphicon-log-out:before
+	content "\e163"
+*
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+@media (min-width: 1200px)
+	.sw-toggled
+		#header
+			padding-left 15px
+		#menu-trigger
+			display none
+		#sidebar
+			-webkit-transform translate3d(0,0,0) !important
+			transform translate3d(0,0,0) !important
+			opacity 1 !important
+			filter: unquote("alpha(opacity=100)") !important
+			box-shadow 0 1px 1px rgba(0,0,0,0.15)
+@media (min-width: 768px)
+	.top-menu
+		& > li
+			&:not(#toggle-width)
+				position relative
+ul
+ol
+	margin-top 0
+	margin-bottom 9px
+body
+	font-weight 400
+	padding-top 65px
+	padding-bottom 110px
+	position relative
+	font-family roboto
+	font-size 13px
+	line-height 1.42857143
+	color #5e5e5e
+	background-color #edecec
+	margin 0px
+a
+	color #49aeb7
+	text-decoration none
+	&:hover
+		color #007675
+#header
+	background #2a2a2a
+	box-shadow 0 1px 4px rgba(0,0,0,0.3)
+	height 65px
+	position fixed
+	z-index 11
+	width 100%
+	left 0
+	padding-right: 10px
+	top 0
+	-webkit-transition all
+	-o-transition all
+	transition all
+	-webkit-transition-duration: 200ms
+	transition-duration 200ms
+	-webkit-touch-callout none
+	-webkit-user-select none
+	-khtml-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	.header-inner
+		list-style none
+		padding 15px 0
+		& > li
+			&:not(.pull-right)
+				float left
+			&:not(:last-child)
+				margin-right -2px
+		#menu-trigger
+			width 65px
+			height 35px
+			cursor pointer
+			.line-wrap
+				.line
+					background-color #fff
+		.logo
+			a
+				color #fff
+				text-transform uppercase
+				padding 6px 10px
+				display block
+				font-size 16px
+				&:hover
+					color #007675
+.line-wrap
+	width 18px
+	height 12px
+	-webkit-transition all
+	-o-transition all
+	transition all
+	-webkit-transition-duration 300ms
+	transition-duration 300ms
+	margin 10px 20px
+	.line
+		width 18px
+		height 2px
+		-webkit-transition all
+		-o-transition all
+		transition all
+		-webkit-transition-duration 300ms
+		transition-duration 300ms
+	.line.center
+		margin 3px 0
+
+.pull-right
+	float right !important
+.top-menu
+	list-style none
+	padding 0
+	& > li
+		display inline-block
+		margin 0 1px
+		& > a
+			height 35px
+			min-width 50px
+			display inline-block
+			background-position center
+			background-repeat no-repeat
+			position relative
+			z-index 1
+			&.tm-settings
+				background-image url(/images/icons/ellipsis.png)
+
+.dropdown:not([data-animation]) .dropdown-menu
+	-webkit-transform scale(0)
+	-ms-transform scale(0)
+	-o-transform scale(0)
+	transform scale(0)
+	opacity 0
+	filter: unquote("alpha(opacity=0)")
+	display block
+
+.dropdown:not([data-animation]) .uib-dropdown-menu.pull-right
+	-webkit-transform-origin top right
+	-moz-transform-origin top right
+	-ms-transform-origin top right
+	transform-origin top right
+
+.dropdown:not([data-animation]).open .dropdown-menu
+	-webkit-transform scale(1)
+	-ms-transform scale(1)
+	-o-transform scale(1)
+	transform scale(1)
+	opacity 1
+	filter: unquote("alpha(opacity=100)")
+
+.dropdown-menu
+	position absolute
+	top 100%
+	left 0
+	z-index 9
+	display none
+	float left
+	min-width 160px
+	padding 5px 0
+	margin 2px 0 0
+	list-style none
+	font-size 13px
+	text-align left
+	background-color #fff
+	border 1px solid transparent
+	border-radius 2px
+	-webkit-box-shadow 0 6px 12px rgba(0,0,0,0.175)
+	box-shadow 0 6px 12px rgba(0,0,0,0.175)
+	background-clip padding-box
+	& > li
+		& > a
+			display block
+			padding 3px 20px
+			clear both
+			font-weight 400
+			line-height 1.42857143
+			color #333
+			white-space nowrap
+
+.dropdown-menu
+	box-shadow 0 2px 10px rgba(0,0,0,0.2)
+	-webkit-transition all
+	-o-transition all
+	transition all
+	-webkit-transition-duration 250ms
+	transition-duration 250ms
+	-webkit-backface-visibility hidden
+	-moz-backface-visibility hidden
+	backface-visibility hidden
+	margin-top 1px
+	&.pull-right
+		right 0
+		left auto
+	& > li
+		& > a
+			padding 8px 17px
+			-webkit-transition background-color
+			-o-transition background-color
+			transition background-color
+			-webkit-transition-duration 300ms
+			transition-duration 300ms
+			font-family roboto
+	&.dm-icon
+		& > li
+			& > a
+				& > .zmdi
+					line-height 100%
+					vertical-align top
+					font-size 18px
+					width 20px
+					text-align center
+					margin-right 10px
+				& > .glyphicon
+					line-height 100%
+					vertical-align top
+					width 20px
+					text-align center
+					margin-right 10px
+	&:not([class*="bgm-"])
+		& > li
+			& > a
+				&:hover
+					color #000
+					background-color rgba(0,0,0,0.15)
+					text-decoration none
+
+.open
+	& > a
+		outline 0
+	.line-wrap
+		-webkit-transform rotate(180deg)
+		-ms-transform rotate(180deg)
+		-o-transform rotate(180deg)
+		transform rotate(180deg)
+		.line.top
+			width 12px
+			transform translateX(8px) translateY(1px) rotate(45deg)
+			-webkit-transform translateX(8px) translateY(1px) rotate(45deg)
+		.line.bottom
+			width 12px
+			transform translateX(8px) translateY(-1px) rotate(-45deg)
+			-webkit-transform translateX(8px) translateY(-1px) rotate(-45deg)
+
+ul ul, ol ul, ul ol, ol ol
+	margin-bottom 0
+
+.zmdi
+	display inline-block
+	font normal normal normal 14px/1 'Material-Design-Iconic-Font'
+	font-size inherit
+	text-rendering auto
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+#sidebar
+	position fixed
+	background #fff
+	box-shadow 0 0 10px rgba(51,51,51,0.38)
+	top 65px
+	height calc(100% - 65px)
+	-webkit-transform translate3d(-268px,0,0)
+	transform translate3d(-268px,0,0)
+	z-index 5
+	width 268px
+	overflow hidden
+	opacity 0
+	filter: unquote("alpha(opacity=0)")
+	-webkit-transition all
+	-o-transition all
+	transition all
+	-webkit-transition-duration 300ms
+	transition-duration 300ms
+	&.toggled
+		-webkit-transform translate3d(0,0,0)
+		transform translate3d(0,0,0)
+		opacity 1
+		filter: unquote("alpha(opacity=100)")
+	.sidebar-inner
+		height 100%
+		overflow-y auto
+		width 268px
+	.profile-menu
+		& > a
+			display block
+			height 129px
+			margin-bottom 5px
+			width 100%
+			background url(/images/bg2.jpg) no-repeat left top
+			background-size 100%
+			.profile-pic
+				padding 12px
+				& > svg
+					width 47px
+					height 47px
+					border-radius 50%
+					border 3px solid rgba(0,0,0,0.14)
+					box-sizing content-box
+			.profile-info
+				background rgba(0,0,0,0.37)
+				padding 7px 14px
+				color #fff
+				margin-top 20px
+				position relative
+				& > i
+					font-size 19px
+					line-height 100%
+					position absolute
+					right 15px
+					top 7px
+					-webkit-transition all
+					-o-transition all
+					transition all
+					-webkit-transition-duration 300ms
+					transition-duration 300ms

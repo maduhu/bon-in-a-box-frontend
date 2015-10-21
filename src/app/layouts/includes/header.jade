@@ -32,9 +32,8 @@ block header
 		nav#mainnav
 			.contenedor.clearfix
 				ul.menu_principal
-					if !username
-						li.left
-							a(class="icon icon-ico-32" href="/auth/local/login" data-toggle="tooltip" title="#{__('nav.login')}")
+					li.left
+						a(class="icon icon-ico-32" href="/auth/local/login" data-toggle="tooltip" title="#{__('nav.login')}")
 					li.left
 						a(class="icon icon-ico-33" href="#section4" data-toggle="tooltip" title="#{__('nav.forum')}")
 					li.right
