@@ -180,10 +180,7 @@
 	"filter.investigator": "Investigator",
 	"show.directory": "Show Directory",
 	"show.tools": "Show Tools",
-<<<<<<< HEAD
-	"function.title": "function.title"
-}
-=======
+	"function.title": "function.title",
 	"signup.full_name_placeholder": "Full name",
 	"signup.email_address_placeholder": "Email",
 	"signup.password_placeholder": "Password",
@@ -211,5 +208,3 @@
 	"nav.admin": "Dashboard",
 	"nav.profile_account": "Profile",
 	"nav.profile_home": "Home"
-}
->>>>>>> a41e74b194f5138af540d3001eae29f6e916edb8
