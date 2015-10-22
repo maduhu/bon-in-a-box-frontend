@@ -14,6 +14,7 @@ a
 	-o-transition all 0.5s ease-in-out
 	transition all 0.5s ease-in-out
 	color #49aeb7
+	cursor pointer !important
 	text-decoration none !important
 	&:hover
 		color #007675
@@ -132,10 +133,29 @@ footer
 	font-size 40px
 	line-height 10px
 	padding 5px
+.hamburguesa
+		color white
+		font-size 2em !important
+		font-weight 700
+		background rgba(17,26,29,0.8)
+		display block
+		width 100%
+		padding 5px
+		margin 0px
+		display none
 .menu_principal
-	li:nth-child(3)
-	li:nth-child(4)
-		margin-right 35px
+	position relative
+	margin-bottom 0px
+	li
+		display inline-block
+	.spacer
+		margin-right 45px
+	label
+		display none
+		color white
+		margin-left 10px
+		letter-spacing 0px
+		font-size 0.37em
 .hexicon
 	.smic
 		margin 117px 0 0 10px
@@ -175,8 +195,11 @@ footer
 .navlang
 	font-size 20px
 	margin-top 5px
+	right 0px
 	width 41px
 	position absolute
+	a
+		display block
 	li
 		padding 5px 8px
 		font-weight 400
@@ -238,7 +261,7 @@ header
 .col_directorio
 .col_herramientas
 .intro
-	min-width 320px
+	min-width 300px
 .menu_about
 	padding-right 45px
 	li
@@ -307,7 +330,7 @@ header
 		width 192px
 		position absolute
 		top 25px
-		right 0
+		right 40px
 		z-index 30
 input[type=text]
 input[type=password]
@@ -324,6 +347,8 @@ label
 	vertical-align bottom
 	font-weight 300
 	line-height 1.8
+.login_menu
+		display block
 .login
 	width 320px
 	background-color #FFF
@@ -516,7 +541,7 @@ label
 		background-color #F26334
 .col_titles
 	display inline-block
-	width 57%
+	width 50%
 	h2
 		text-transform uppercase
 .col_iconos
@@ -643,7 +668,8 @@ label
 				line-height 0
 				vertical-align middle
 .contenidog
-	width 1100px
+	width 100%
+	max-width 1100px
 	margin 0 auto
 .filter_ui
 	position relative
@@ -789,6 +815,8 @@ label
 			display inline-block
 		button
 			padding 0
+		img
+			margin-right 5px
 	.areaforstuff
 		background-color rgba(28,42,44,0.8)
 		height 104px
@@ -1353,35 +1381,71 @@ button
 	.loading
 		bottom 136px
 @media (min-width:761px) and (max-width:1199px)
-	.loading
-		bottom 136px
+	footer
+		padding 0 15px
+	.contenidog
+		width 83%
+	.col_herramientas
+		width 60%
+	.componentes
+		padding 0 40px
 @media (min-width:768px) and (max-width:995px)
-	.loading
-		bottom 136px
-@media (min-width:360px) and (max-width:760px)
+	.col_texto
+		width 40%
+@media (min-width:481px) and (max-width:760px)
 	.loading
 		bottom 0px
-@media (max-width:320px)
+@media (max-width:480px)
 	header
 		font-size 130%
+		nav
+			padding 0px
+			.icon
+				font-size 35px
 		h3
-			width 100%
+			width 50%
 			&:nth-child(1)
 				padding-bottom 0px
+	#mainnav
+		.contenedor
+			display none
+	.hamburguesa
+		display block
+		padding 5px 10px
 	.menu_principal
-		padding 0 5px
+		font-size 120%
+		padding 0 10px
+		>li
+			width 100%
+			border-bottom 1px white solid
+			float none !important
+			display block
+			padding 2px
+		:last-child
+			border-bottom none 0px
+		label
+			display inline-block
 	.navlang
 		margin-top 0px
 		font-size 125%
+		position relative
+		width 100%
+		li
+			width 40px
+			display block
+			margin 3px
+			background rgba(17,26,29,0)
+		.active
+			background rgba(17,26,29,0.8)
 	.intro
-		width 320px
+		width 100%
 		padding 0 15px 10px 10px
 		margin-top 130px !important
 		img
 			margin-top 0px
 			position absolute
 			top 10px
-			right 10px
+			right 30px
 		.col50
 			width 100%
 			height auto
@@ -1402,7 +1466,7 @@ button
 		-webkit-box-sizing content-box
 		box-sizing content-box
 		margin 0 auto
-		width 315px !important
+		width 100% !important
 		overflow hidden
 		box-sizing border-box
 		nth-child(1)
@@ -1414,7 +1478,7 @@ button
 			height 216px
 		.col_texto
 			padding 15px
-			width 280px
+			width 96%
 			font-size 1.2em
 			height auto
 			float left
@@ -1446,10 +1510,8 @@ button
 			margin 1px
 			font-size 1em
 			button
-				padding 14px 28px
+				padding 14px 27px
 				line-height 5px
-	.contenidog
-		width 320px !important
 	.backg
 		visibility hidden
 	.difcase
@@ -1496,6 +1558,7 @@ button
 		margin-top 20px
 	.col_titles
 		width auto
+		display block
 	footer
 		padding 10px
 		font-size 130%
@@ -1507,6 +1570,9 @@ button
 			float none
 			text-align center
 			width 100%
+			li
+				width 30%
+				display inline-block
 		small
 			margin -10px
 	.toolabst
@@ -1525,6 +1591,7 @@ button
 	.ojo
 		display block
 	.col_herramientas
+		width 100%
 		.resultados_wrapper
 			height auto
 		h4
@@ -1541,32 +1608,35 @@ button
 				margin 0px
 			.divisor_sombra
 				height 12px
-				width 320px
+				width 100%
 				display block
 				position relative
 				overflow hidden
-				margin 15px 0 0 -15px
+				margin 15px 0 0 0px
 				&::after
 					content ""
 					-webkit-box-shadow inset 0 0 10px 0 rgba(0,0,0,0.5)
 					box-shadow inset 0 0 10px 0 rgba(0,0,0,0.5)
-					width 350px
+					width 500px
 					height 45px
 					position absolute
 					left -15px
 			li
-				width 48px
+				width 45px
 				img
 					width 40px
 	nav
 		.icon
-			font-size 30px !important
+			font-size 30px
 	.resultados
 		height auto
 		.card_herramienta
 			width 275px
-			font-size 140%
+			font-size 150%
+			.crop4
+				width 100%
 	.col_directorio
+		width 100%
 		h4
 			margin 0px
 			width 100%
@@ -1579,11 +1649,41 @@ button
 			display none
 			height auto
 	.forum
+		margin-top 30px
 		h4
 			margin 0px
+			max-width 75%
+		h5
+			font-size 200% !important
+		.ver_mas
+			font-size 150%
+		.cajaf1
+		.cajaf2
+			width 100%
+			height auto
+			p
+				font-size 120%
+		.qcard
+		.qcard2
+			.crop
+				width 80px
+				height 80px
+				margin-left 0px
+			>div
+				font-size 130%
+			img
+				width 80px
+	.login_menu
+		display none
+	.login
+		background white none
+		margin-top 25px
+	textarea
+	input
+		font-size 140%
 	body
 		font-size 10px
-		max-width 320px
+		max-width 480px
 
 
 /* Estilos de apoyo */

@@ -1,17 +1,33 @@
 block header
 	header
 		.titlebar#titlebar
-			.contenedor.clearfix
+			.contenedor.clearfix.login_menu
 				h3
 					a(class="left" title="GEO BON" href="http://geobon.org" target="_blank") GEO BON
 				h3 #{__("header.title")}
 		nav#mainnav
+			a.hamburguesa &#9776
 			.contenedor.clearfix
 				ul.menu_principal
-					li.left.hidden
-						a(class="icon icon-ico-32" title="Login" href="/auth/local/login")
-					li.left.hidden
-						a(class="icon icon-ico-33" title="Forum" href="/#section4")
+					li.hidden
+						a(class="icon icon-ico-32" href="/auth/local/login" data-toggle="tooltip" title="#{__('nav.login')}")
+							label #{__('nav.login')}
+					li.hidden
+						a(class="icon icon-ico-33" href="/#section4" data-toggle="tooltip" title="#{__('nav.forum')}")
+							label #{__('nav.forum')}
+					
+					li.right.spacer
+						a(class="icon icon-ico-37" href="mailto:info@geobon.org" data-toggle="tooltip" title="#{__('nav.contact')}")
+							label #{__('nav.contact')}
+					li.right
+						a(class="icon icon-ico-48" href="/#section3" data-toggle="tooltip" title="#{__('nav.tools')}")
+							label #{__('nav.tools')}
+					li.right
+						a(class="icon icon-ico-35" href="/#section2" data-toggle="tooltip" title="#{__('nav.filters')}")
+							label #{__('nav.filters')}
+					li.right
+						a(class="icon icon-ico-34" href="/#section1" data-toggle="tooltip" title="#{__('nav.main')}")
+							label #{__('nav.main')}
 					li.right
 						ul.navlang
 							each language in locales
@@ -21,11 +37,4 @@ block header
 								else
 									li.right
 										a(title="#{language}" href="/language/#{language}") #{language}
-					li.right
-						a(class="icon icon-ico-37" title="Contact" href="mailto:info@geobon.org")
-					li.right
-						a(class="icon icon-ico-48" title="Tools" href="/#section3")
-					li.right
-						a(class="icon icon-ico-35" title="Search Filters" href="/#section2")
-					li.right
-						a(class="icon icon-ico-34" title="Bon in a Box" href="/#section1")
+
