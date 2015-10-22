@@ -1,0 +1,28 @@
+header#header(data-ng-include="'/template/header.html'" data-ng-controller="headerCtrl as hctrl")
+section#main
+	aside#sidebar(data-ng-include="'/template/sidebar-left.html'" data-ng-class="{ 'toggled': adminctrl.sidebarToggle.left === true }")
+	section#content
+		.container
+			.block-header
+				h2 Dashboard
+			.card
+				.card-header
+					h2 Tools
+					ul.actions
+						li
+							a(href="")
+								i.zmdi.zmdi-refresh-alt
+						li
+							a(href="")
+								i.zmdi.zmdi-download
+				.card-body
+					table.sopas(ng-table='adminctrl.tableParams')
+						tr(ng-repeat='row in $data track by row.id')
+							td(data-title="'Name'", filter="{name: 'text'}", sortable="'name'", show="false") {{row.name}}
+							td(data-title="'Responsible'", filter="{responsible: 'text'}", sortable="'responsible'") {{row.responsible}}
+							td(data-title="'State'", filter="{state: 'text'}", sortable="'state'") {{row.state}}
+							td
+								a(href="")
+									span Edit
+
+footer#footer(data-ng-include="'/template/footer.html'")
