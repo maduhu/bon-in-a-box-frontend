@@ -11,13 +11,12 @@ block header
 								.user-icon-container.img-circle
 									svg.user-icon
 										use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user-icon")
-								| #{username}
 								span.caret
 							ul.dropdown-menu
 								li
 									a(href="/account/profile")
 										span.glyphicon.glyphicon-user(aria-hidden="true")
-										| #{__('nav.profile_account')}
+										| #{username}
 								if admin
 									li
 											a(href="/account/dashboard")
