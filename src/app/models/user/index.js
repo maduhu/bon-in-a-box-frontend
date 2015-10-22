@@ -19,6 +19,14 @@ exports = module.exports = function(collection, mongoose) {
 			type: String, // this needs verification/escape/cleaning
 			required: true
 		},
+		title: {
+			type: String,
+			requered: false
+		},
+		photo: {
+			type: String,
+			required: false
+		},
 		role: {
 			type: String, // user role, default: standard
 			required: true,
