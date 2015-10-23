@@ -177,5 +177,7 @@
 	"filter.investigator": "Investigador",
 	"show.directory": "Mostrar Directorio",
 	"show.tools": "Mostrar Herramientas",
-	"photo.credits": "photo.credits"
+	"photo.credits": "photo.credits",
+	"nav.admin": "nav.admin",
+	"nav.logout": "nav.logout"
 }

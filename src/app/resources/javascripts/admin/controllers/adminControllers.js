@@ -3,7 +3,7 @@
 angular.module('adminConsole')
 	.controller('adminConsoleCtrl', ["$timeout", "$state", "growlService", "NgTableParams", "$resource", function($timeout, $state, growlService, NgTableParams, $resource){
 		//Welcome Message
-		growlService.growl('Welcome to box in a box admin dashboard!', 'inverse');
+		growlService.growl('Welcome to Box in a Box admin dashboard!', 'inverse');
 
 		// By default Sidbars are hidden in boxed layout and in wide layout only the right sidebar is hidden.
 		this.sidebarToggle = {
@@ -66,8 +66,8 @@ angular.module('adminConsole')
 								{ id: 16, name: 'Tool P', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
 								{ id: 17, name: 'Tool Q', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
 								{ id: 18, name: 'Tool R', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 19, name: 'Tool S', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 20, name: 'Tool T', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
+								{ id: 19, name: 'Tool S', shortDescription: 'Short description', responsible: 'Responsable b', state: 'Activa' },
+								{ id: 20, name: 'Tool T', shortDescription: 'Short description', responsible: 'Responsable b', state: 'Sugerida' },
 								{ id: 21, name: 'Tool U', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
 								{ id: 22, name: 'Tool V', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
 								{ id: 23, name: 'Tool W', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
