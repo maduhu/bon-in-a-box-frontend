@@ -11,9 +11,9 @@ angular.module('adminConsole')
 			$.notify({
 				message: message
 			},{
-				type: type,
+				type: 'pastel',
 				allow_dismiss: false,
-				className: 'btn-xs btn-inverse',
+				newest_on_top: true,
 				placement: {
 					from: 'top',
 					align: 'right'
@@ -24,9 +24,13 @@ angular.module('adminConsole')
 					exit: 'animated bounceOut'
 				},
 				offset: {
-					x: 20,
+					x: 15,
 					y: 85
-				}
+				},
+				template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+									'<span data-notify="title">{1}</span>' +
+									'<span data-notify="message">{2}</span>' +
+									'</div>'
 			});
 		};
 

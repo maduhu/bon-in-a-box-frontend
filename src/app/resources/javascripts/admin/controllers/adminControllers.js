@@ -2,6 +2,12 @@
 
 angular.module('adminConsole')
 	.controller('adminConsoleCtrl', ["$timeout", "$state", "growlService", "NgTableParams", "$resource", function($timeout, $state, growlService, NgTableParams, $resource){
+
+		this.init = function(data) {
+			// Current user full name
+			this.username = data;
+		};
+
 		//Welcome Message
 		growlService.growl('Welcome to box in a box admin dashboard!', 'inverse');
 

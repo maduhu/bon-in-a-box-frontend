@@ -1,5 +1,5 @@
 doctype html
-html(data-ng-app="adminConsole" data-ng-controller="adminConsoleCtrl as adminctrl")
+html(data-ng-app="adminConsole" data-ng-controller="adminConsoleCtrl as adminctrl" data-ng-init="adminctrl.init('#{username}')")
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
