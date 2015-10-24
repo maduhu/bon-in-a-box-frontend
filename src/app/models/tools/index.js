@@ -2,19 +2,19 @@
 
 exports = module.exports = function(collection, mongoose) {
 	var schema = mongoose.Schema({
-		responsibleName: {
+		name: {
 			type: String,
 			required: true
 		},
-		subtitle: {
-			type: String,
-			required: false
+		categories: {
+			type: [String],
+			required: true
 		},
-		category: {
+		shortDescrition: {
 			type: String,
 			required: true
 		},
-		shortDescription: {
+		longDescription: {
 			type: String,
 			required: true
 		},
@@ -22,7 +22,15 @@ exports = module.exports = function(collection, mongoose) {
 			type: String,
 			required: true
 		},
+		descriptiveImage: {
+			type: String,
+			required: true
+		},
 		urlWebsite: {
+			type: String,
+			required: false
+		},
+		contactEmail: {
 			type: String,
 			required: false
 		},
@@ -46,6 +54,10 @@ exports = module.exports = function(collection, mongoose) {
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User'
+		},
+		directory: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Directory'
 		}
 	});
 
