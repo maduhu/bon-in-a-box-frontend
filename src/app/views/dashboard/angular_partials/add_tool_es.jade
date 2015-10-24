@@ -1,0 +1,45 @@
+header#header(data-ng-include="'/template/header.html'" data-ng-controller="headerCtrl as hctrl")
+section#main
+	aside#sidebar(data-ng-include="'/template/sidebar-left.html'" data-ng-class="{ 'toggled': adminctrl.sidebarToggle.left === true }")
+	section#content
+		.container
+			.block-header
+				h2 Dashboard
+			.card
+				.card-header
+					h2 Add tools
+					ul.actions
+						li(data-ui-sref-active='active')
+							a(data-ui-sref='add_tool', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") EN
+						li(data-ui-sref-active='active')
+							a(data-ui-sref='add_tool_pt', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") PT
+						li(data-ui-sref-active='active')
+							a(data-ui-sref='tool_comment', data-ng-click='adminctrl.sidebarStat($event)')
+								i.zmdi.zmdi-comment-edit
+						li
+							a(href="")
+								i.zmdi.zmdi-refresh-alt
+				.card-body
+					form(id="" method="" action="" class="clearfix")
+						.formtool
+							h3 Spanish tool data
+							.columnaforma
+								ol
+									li
+										input(type="text" name="toolname" placeholder="Tool Name")
+									li
+										textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+									li
+										textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="Full text (1800 characters)")
+							h3 spanish directory data
+							.columnaforma
+								ol
+									li
+										input(type="text" name="toolname" placeholder="responsible name")
+									li
+										input(type="text" name="toolname" placeholder="SUBTITLE / TITLE / COMPANY")
+									li
+										textarea.input-forum.h180(type="textarea" name="descripr" placeholder="Short descriptive text (300 characters)")
+								button(type="submit") Send
+								.clearfix
+footer#footer(data-ng-include="'/template/footer.html'")

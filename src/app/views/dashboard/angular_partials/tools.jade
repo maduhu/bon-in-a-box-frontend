@@ -9,12 +9,13 @@ section#main
 				.card-header
 					h2 Tools
 					ul.actions
+						li(data-ui-sref-active='active')
+							a(data-ui-sref='add_tool', data-ng-click='adminctrl.sidebarStat($event)')
+								i.zmdi.zmdi-file-plus
 						li
 							a(href="")
 								i.zmdi.zmdi-refresh-alt
-						li
-							a(href="")
-								i.zmdi.zmdi-download
+						
 				.card-body
 					table.sopas(ng-table='adminctrl.tableParams')
 						tr(ng-repeat='row in $data track by row.id')

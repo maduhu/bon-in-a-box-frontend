@@ -23,5 +23,21 @@ angular.module('adminConsole')
 		.state('directory', {
 			url: '/directory',
 			templateUrl: '/views/directory.html'
+		})
+		.state('add_tool', {
+			url: '/add_tool',
+			templateUrl: '/views/add_tool.html'
+		})
+		.state('add_tool_es', {
+			url: '/add_tool_es',
+			templateUrl: '/views/add_tool_es.html'
+		})
+		.state('add_tool_pt', {
+			url: '/add_tool_pt',
+			templateUrl: '/views/add_tool_pt.html'
+		})
+		.state('tool_comment', {
+			url: '/tool_comment',
+			templateUrl: '/views/tool_comment.html'
 		});
 	});
