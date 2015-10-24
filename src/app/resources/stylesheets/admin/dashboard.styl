@@ -164,6 +164,177 @@ table.sopas
 		span
 			text-transform uppercase
 			font-family 'Oswald', sans-serif
+.clearfix
+	clear both
+.left
+	float left
+.right
+	float right
+input[type=text]
+input[type=password]
+	width 99%
+	border none
+	border-bottom solid 1px #2a2a2a
+	padding 5px
+input[type=text]
+	margin-bottom 15px
+label
+	color #5d5e5e
+	font-size 12px
+	letter-spacing 2px
+	vertical-align bottom
+	font-weight 300
+	line-height 1.8
+textarea
+	width 100%
+	border none
+	border-bottom 1px solid #2a2a2a
+	padding 7px
+	height 70px
+::-webkit-input-placeholder
+	color #5d5e5e
+	text-transform uppercase
+	font-size 0.786em
+	letter-spacing 1px
+:-moz-placeholder  /* Firefox 18- */
+	color #000
+	text-transform uppercase
+	font-size 0.786em
+	letter-spacing 1px
+::-moz-placeholder   /* Firefox 19+ */
+	color #000
+	text-transform uppercase
+	font-size 0.786em
+	letter-spacing 1px
+:-ms-input-placeholder
+	color #5d5e5e
+	text-transform uppercase
+	font-size 0.786em
+	letter-spacing 1px
+form
+	width 100%
+	max-width 750px
+	button
+		background none
+		border none
+		float right
+		text-transform uppercase
+		color #49aeb7
+		font-family 'Oswald', sans-serif
+		font-size 17px
+		font-weight 300
+		padding 10px 15px
+		&:hover
+			color #007675
+	h3
+		font-size 1.286em
+		margin-top 10px
+		text-transform uppercase
+		vertical-align top
+		display block
+		min-height 0
+		font-weight 400
+		font-family 'Oswald', sans-serif
+	h5
+		font-weight 300
+		color #6d6d6d
+		font-size 0.786em
+		line-height 0
+		margin-left 5px
+	.formtool
+		width 100%
+		text-shadow rgba(0,0,0,.01) 0 0 1px
+		ol
+			padding 10px
+			>li
+				counter-increment customlistcounter
+				margin 0 0 0 10px
+				list-style none
+				&:before
+					content counter(customlistcounter) " "
+					font-weight 300
+					color #49aeb7
+					float left
+					width 2em
+					margin 0px 0px 11px -33px
+					text-align center
+					letter-spacing -1px
+					position absolute
+		.columnaforma
+			vertical-align top
+			margin-top 5px
+			.categorias
+				margin-left  10px
+				margin-bottom 15px
+				h3
+					float right
+					margin-top 20px
+					margin-right 15px
+					font-weight 300
+				ul
+					margin 0
+					padding 0
+					display inline-block
+					li
+						display inline-block
+						button
+							padding 0
+			.iconosformulario
+				padding-left 10px
+				margin 0
+				margin-bottom 5px
+				li
+					width 30px
+					height 30px
+					-webkit-border-radius 3px
+					-moz-border-radius 3px
+					border-radius 3px
+					background-color #04adac
+					padding 3px 2px 0
+					margin-right 5px
+					display inline-block
+					button
+						color #1c2a2c
+						font-size 27px
+						padding 0 !important
+						line-height 0
+						vertical-align middle
+	input
+	textarea
+		width 98%
+		color #424242
+	textarea
+		vertical-align super
+		margin-bottom 10px
+	input[type=text]
+		background none
+	.h105
+		height 100px
+		margin-bottom 15px
+	.h180
+		height 170px
+		margin-bottom 15px
+	h4
+		color #5d5e5e
+		text-transform uppercase
+		font-size 0.786em
+		letter-spacing 1px
+		font-weight 300
+		margin 0 0 10px 5px
+		&:nth-child(1)
+			margin-top 10px
+	.formtool2
+		width 31%
+		margin -14px 35px 7px 0
+		vertical-align top
+		float right
+		h3
+			margin-left 10px
+.hidden
+	display none
+.langbar
+	padding 0
+	vertical-align bottom
 ul
 ol
 	margin-top 0
@@ -248,7 +419,6 @@ a
 		transition-duration 300ms
 	.line.center
 		margin 3px 0
-
 .pull-right
 	float right !important
 .top-menu
