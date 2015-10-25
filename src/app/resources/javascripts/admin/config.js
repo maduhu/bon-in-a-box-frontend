@@ -39,5 +39,41 @@ angular.module('adminConsole')
 		.state('tool_comment', {
 			url: '/tool_comment',
 			templateUrl: '/views/tool_comment.html'
+		})
+		.state('edit_tool_comment', {
+			url: '/edit_tool_comment',
+			templateUrl: '/views/edit_tool_comment.html'
+		})
+		.state('tool_review', {
+			url: '/tool_review',
+			templateUrl: '/views/tool_review.html'
+		})
+		.state('directory_review', {
+			url: '/directory_review',
+			templateUrl: '/views/directory_review.html'
+		})
+		.state('tool_edit', {
+			url: '/tool_edit',
+			templateUrl: '/views/tool_edit.html'
+		})
+		.state('directory_edit', {
+			url: '/directory_edit',
+			templateUrl: '/views/directory_edit.html'
+		})
+		.state('edit_tool_es', {
+			url: '/edit_tool_es',
+			templateUrl: '/views/edit_tool_es.html'
+		})
+		.state('edit_directory_es', {
+			url: '/edit_directory_es',
+			templateUrl: '/views/edit_directory_es.html'
+		})
+		.state('edit_tool_pt', {
+			url: '/edit_tool_pt',
+			templateUrl: '/views/edit_tool_pt.html'
+		})
+		.state('edit_directory_pt', {
+			url: '/edit_directory_pt',
+			templateUrl: '/views/edit_directory_pt.html'
 		});
 	});

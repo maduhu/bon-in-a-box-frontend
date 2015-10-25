@@ -7,14 +7,14 @@ section#main
 				h2 Dashboard
 			.card
 				.card-header
-					h2 Add tools
+					h2 edit tool
 					ul.actions
 						li(data-ui-sref-active='active')
-							a(data-ui-sref='add_tool_es', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") ES
+							a(data-ui-sref='edit_tool_es', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") ES
 						li(data-ui-sref-active='active')
-							a(data-ui-sref='add_tool_pt', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") PT
+							a(data-ui-sref='edit_tool_pt', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") PT
 						li(data-ui-sref-active='active')
-							a(data-ui-sref='tool_comment', data-ng-click='adminctrl.sidebarStat($event)')
+							a(data-ui-sref='edit_tool_comment', data-ng-click='adminctrl.sidebarStat($event)')
 								i.zmdi.zmdi-comment-edit
 						li(data-ui-sref-active='active')
 							a(data-ui-sref='tools', data-ng-click='adminctrl.sidebarStat($event)')
@@ -22,7 +22,6 @@ section#main
 				.card-body
 					form(id="" method="" action="" class="clearfix")
 						.formtool
-							h3 English tool Form
 							.columnaforma
 								ol
 									li
@@ -140,40 +139,7 @@ section#main
 										input(type="text" name="toolname" placeholder="Contact email")
 									li
 										input(type="text" name="toolname" placeholder="Country covering")
-							h3 english directory form
-							.columnaforma
-								ol
-									li
-										input(type="text" name="toolname" placeholder="responsible name")
-									li
-										input(type="text" name="toolname" placeholder="SUBTITLE / TITLE / COMPANY")
-									li
-										h4 search categories
-										.categorias.clearfix
-											ul
-												li
-													a(class="selected" data-toggle="tooltip" title="Institution" href="")
-														img(src='../images/inst.png')
-												li
-													a(class="" data-toggle="tooltip" title="Initiative" href="")
-														img(src='../images/inic.png')
-												li
-													a(class="" data-toggle="tooltip" title="Investigator" href="")
-														img(src='../images/inves.png')
-									li
-										textarea.input-forum.h180(type="textarea" name="descripr" placeholder="Short descriptive text (300 characters)")
-									li
-										h4 THUMBNAIL IMAGE
-										h5 ( 300PX WIDTH )
-										button.btn.left(type="") upload
-										button.btn.left(type="") X
-									.clearfix
-									li
-										input(type="text" name="toolname" placeholder="Web Site")
-									li
-										input(type="text" name="toolname" placeholder="Contact Email")
-									li
-										input(type="text" name="toolname" placeholder="Country")
 								button(type="submit") Send
+								button(type="delete") delete
 								.clearfix
 footer#footer(data-ng-include="'/template/footer.html'")
