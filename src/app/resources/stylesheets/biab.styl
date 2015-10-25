@@ -261,7 +261,7 @@ header
 .col_directorio
 .col_herramientas
 .intro
-	min-width 300px
+	min-width 270px
 .menu_about
 	padding-right 45px
 	li
@@ -305,6 +305,7 @@ header
 		background rgba(255,255,255,0.9)
 		padding 30px 35px 20px 55px
 		max-width 380px
+		width 48%
 		float right
 		height 520px
 		margin-top 0
@@ -442,7 +443,7 @@ label
 		margin-top -40px
 		margin-right -2px
 	.col50
-		width 50%
+		width 47%
 		height 520px
 		float left
 		margin-right 20px
@@ -541,7 +542,7 @@ label
 		background-color #F26334
 .col_titles
 	display inline-block
-	width 50%
+	width 45%
 	h2
 		text-transform uppercase
 .col_iconos
@@ -679,7 +680,7 @@ label
 .ojo
 	display none
 .col_herramientas
-	width 70%
+	width 68%
 	display inline-block
 	h4
 		display inline-block
@@ -1368,25 +1369,57 @@ button
 	.Wallop-item--current
 		.switch
 			display none
-
-@media (min-width:1200px)
-	.loading
-		bottom 136px
-	.visible-large-screen
-		display inline-block !important
+			
+/****************************************************************************************************/
+@media (min-width:481px) and (max-width:890px)
+	.col_herramientas
+	.col_directorio
+		width 100%
+	.contenidog
+		width 90%
 @media (min-width:481px) and (max-width:780px)
 	footer
 		padding 0 15px
-	.contenidog
-		width 83%
 	.col_herramientas
 		width 60%
 	.componentes
 		padding 0 40px
-	.col_texto
-		width 40%
-	.col50
+	.contenido
+		.col_texto
+			width 98%
+			max-width 98%
+	.intro
+		.col50
+			width 100%
+			height 460px
+	.componentes
+		.colordiv
+			margin-right 0px
+			height 170px
+		.col_texto
+			height 220px
+		.col_titles
+			display block
+			width 70%
+		h1
+			font-size 4.3em
+			width 75%
+			margin-bottom 50px
+		.col_iconos
+			width 100%
+			height 200px
+			position relative
+			ul
+				top 20px
+				position relative
+	.col_herramientas
+	.col_directorio
 		width 100%
+	.col_directorio
+		margin-top 30px
+	.forum
+		max-width 90%
+
 @media (max-width:480px)
 	header
 		font-size 130%
@@ -1395,8 +1428,9 @@ button
 			.icon
 				font-size 35px
 		h3
-			width 50%
+			width 48%
 			&:nth-child(1)
+				width 25%
 				padding-bottom 0px
 	#mainnav
 		.contenedor
@@ -1452,19 +1486,31 @@ button
 	#section3
 	#section4
 		margin 0px
+	.contenidog
+		background-origin border-box
+		background url('/images/bg3_s.jpg') no-repeat left bottom
 	.contenido
 		padding 10px 10px 200px 10px
-		-moz-box-sizing content-box
-		-webkit-box-sizing content-box
-		box-sizing content-box
+		-moz-box-sizing border-box
+		-webkit-box-sizing border-box
+		box-sizing border-box
 		margin 0 auto
 		width 100% !important
 		overflow hidden
-		box-sizing border-box
-		nth-child(1)
-		background url("/images/bg1_s.jpg") no-repeat left bottom
-		nth-child(2)
-		background url("/images/bg2_s.jpg") no-repeat left bottom
+		background-origin border-box
+		background url('/images/bg1_s.jpg') no-repeat left bottom
+		&:first-child
+			background url('/images/bg1_s.jpg') no-repeat left bottom
+			border red solid 1px
+		&:nth-child(2)
+			background url('/images/bg2_s.jpg') no-repeat left bottom
+			border blue solid 1px
+		&:nth-child(3)
+			background url('/images/bg3_s.jpg') no-repeat left bottom
+			border green solid 1px
+		&:nth-child(4)
+			background url('/images/bg4_s.jpg') no-repeat left bottom
+			border black solid 1px
 		.colordiv
 			margin 0 !important
 			height 216px
