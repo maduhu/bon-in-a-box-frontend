@@ -7,28 +7,18 @@ section#main
 				h2 Dashboard
 			.card
 				.card-header
-					h2 Add tools
+					h2 Edit responsible spanish
 					ul.actions
 						li(data-ui-sref-active='active')
-							a(data-ui-sref='add_tool', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") EN
+							a(data-ui-sref='directory_edit', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") EN
 						li(data-ui-sref-active='active')
-							a(data-ui-sref='add_tool_es', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") ES
+							a(data-ui-sref='edit_directory_pt', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") PT
 						li(data-ui-sref-active='active')
-							a(data-ui-sref='tool_comment', data-ng-click='adminctrl.sidebarStat($event)')
-								i.zmdi.zmdi-comment-edit
+							a(data-ui-sref='directory', data-ng-click='adminctrl.sidebarStat($event)')
+								i.zmdi.zmdi-long-arrow-left
 				.card-body
 					form(id="" method="" action="" class="clearfix")
 						.formtool
-							h3 portuguese tool data
-							.columnaforma
-								ol
-									li
-										input(type="text" name="toolname" placeholder="Tool Name")
-									li
-										textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
-									li
-										textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="Full text (1800 characters)")
-							h3 portugues directory data
 							.columnaforma
 								ol
 									li
