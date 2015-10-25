@@ -3,20 +3,59 @@
 exports = module.exports = function(collection, mongoose) {
 	var schema = mongoose.Schema({
 		responsibleName: {
-			type: String,
-			required: true
+			english: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			spanish: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			potuguese: {
+				type: String,
+				required: false,
+				trim: true
+			}
 		},
 		subtitle: {
-			type: String,
-			required: false
+			english: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			spanish: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			potuguese: {
+				type: String,
+				required: false,
+				trim: true
+			}
 		},
 		category: {
 			type: String,
 			required: true
 		},
 		shortDescription: {
-			type: String,
-			required: true
+			english: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			spanish: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			potuguese: {
+				type: String,
+				required: false,
+				trim: true
+			}
 		},
 		thumbnailImage: {
 			type: String,

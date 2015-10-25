@@ -3,20 +3,59 @@
 exports = module.exports = function(collection, mongoose) {
 	var schema = mongoose.Schema({
 		name: {
-			type: String,
-			required: true
+			english: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			spanish: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			potuguese: {
+				type: String,
+				required: false,
+				trim: true
+			}
 		},
 		categories: {
 			type: [String],
 			required: true
 		},
 		shortDescrition: {
-			type: String,
-			required: true
+			english: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			spanish: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			potuguese: {
+				type: String,
+				required: false,
+				trim: true
+			}
 		},
 		longDescription: {
-			type: String,
-			required: true
+			english: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			spanish: {
+				type: String,
+				required: false,
+				trim: true
+			},
+			potuguese: {
+				type: String,
+				required: false,
+				trim: true
+			}
 		},
 		thumbnailImage: {
 			type: String,
@@ -58,7 +97,19 @@ exports = module.exports = function(collection, mongoose) {
 		directory: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'Directory'
-		}
+		},
+		expertReview: [
+			{
+				textReview: {
+					type: String,
+					required: true
+				},
+				rating: {
+					type: Number,
+					required: true
+				}
+			}
+		]
 	});
 
 	return mongoose.model(collection, schema);
