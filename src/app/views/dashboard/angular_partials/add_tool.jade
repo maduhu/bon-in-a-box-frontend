@@ -129,7 +129,8 @@ section#main
 									li
 										h4 THUMBNAIL IMAGE ( 300px Width )
 										h5 This image appears in the search directory
-										input(type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-min-width="100" ngf-resize="{width: 300, height: 250}")
+										.btn_file load file
+											input( class="nobtnfile" type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-min-width="100" ngf-resize="{width: 300, height: 250}")
 										i(ng-show="formToolUpload.file.$error.required")
 										br
 										i(ng-show="formToolUpload.file.$error.maxSize") File too large {{picFile.size / 1000000|number:1}}MB: max 2M
