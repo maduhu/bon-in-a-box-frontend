@@ -5,22 +5,22 @@ section#main
 		.container
 			.block-header
 				h2 Dashboard
-			.card
-				.card-header
-					h2 Add tools
-					ul.actions
-						li(data-ui-sref-active='active')
-							a(data-ui-sref='add_tool_es', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") ES
-						li(data-ui-sref-active='active')
-							a(data-ui-sref='add_tool_pt', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") PT
-						li(data-ui-sref-active='active')
-							a(data-ui-sref='tool_comment', data-ng-click='adminctrl.sidebarStat($event)')
-								i.zmdi.zmdi-comment-edit
-						li(data-ui-sref-active='active')
-							a(data-ui-sref='tools', data-ng-click='adminctrl.sidebarStat($event)')
-								i.zmdi.zmdi-long-arrow-left
-				.card-body
-					form(id="" method="" action="" class="clearfix" ng-controller="formToolUploadCtrl" name="formToolUpload")
+			form(id="" method="" action="" class="clearfix" ng-controller="formToolUploadCtrl" name="formToolUpload")
+				.card.add_en
+					.card-header
+						h2 Add tools
+						ul.actions
+							li
+								a(href="" class="langbar btn_add_es") ES
+							li
+								a(href="" class="langbar btn_add_pt") PT
+							li
+								a(href="" class="btn_add_comm")
+									i.zmdi.zmdi-comment-edit
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='tools', data-ng-click='adminctrl.sidebarStat($event)')
+									i.zmdi.zmdi-long-arrow-left
+					.card-body
 						.formtool
 							h3 English tool Form
 							.columnaforma
@@ -187,6 +187,90 @@ section#main
 									li
 										input.country-select(country-select name="responsibleCountry" data-ng-model="responsibleCountry" placeholder="Country" required)
 										uib-alert(ng-show="formToolUpload.responsibleCountry.$invalid && !formToolUpload.responsibleCountry.$pristine" type="warning") Country is required.
-								button(type="submit" ng-disabled="formToolUpload.$invalid") Send
-								.clearfix
+				.card.hidden
+					.card-header
+						h2 Add tools
+						ul.actions
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='add_tool', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") EN
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='add_tool_pt', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") PT
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='tool_comment', data-ng-click='adminctrl.sidebarStat($event)')
+									i.zmdi.zmdi-comment-edit
+					.card-body
+							.formtool
+								h3 Spanish tool data
+								.columnaforma
+									ol
+										li
+											input(type="text" name="toolname" placeholder="Tool Name")
+										li
+											textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+										li
+											textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="Full text (1800 characters)")
+								h3 spanish directory data
+								.columnaforma
+									ol
+										li
+											input(type="text" name="toolname" placeholder="responsible name")
+										li
+											input(type="text" name="toolname" placeholder="SUBTITLE / TITLE / COMPANY")
+										li
+											textarea.input-forum.h180(type="textarea" name="descripr" placeholder="Short descriptive text (300 characters)")
+				.card.hidden
+					.card-header
+						h2 Add tools
+						ul.actions
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='add_tool', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") EN
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='add_tool_es', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") ES
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='tool_comment', data-ng-click='adminctrl.sidebarStat($event)')
+									i.zmdi.zmdi-comment-edit
+					.card-body
+							.formtool
+								h3 portuguese tool data
+								.columnaforma
+									ol
+										li
+											input(type="text" name="toolname" placeholder="Tool Name")
+										li
+											textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+										li
+											textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="Full text (1800 characters)")
+								h3 portugues directory data
+								.columnaforma
+									ol
+										li
+											input(type="text" name="toolname" placeholder="responsible name")
+										li
+											input(type="text" name="toolname" placeholder="SUBTITLE / TITLE / COMPANY")
+										li
+											textarea.input-forum.h180(type="textarea" name="descripr" placeholder="Short descriptive text (300 characters)")
+				.card.hidden
+					.card-header
+						h2 Add tools
+						ul.actions
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='add_tool', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") EN
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='add_tool_es', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") ES
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='add_tool_pt', data-ng-click='adminctrl.sidebarStat($event)' class="langbar") PT
+							li(data-ui-sref-active='active')
+								a(data-ui-sref='tools', data-ng-click='adminctrl.sidebarStat($event)' class="langbar")
+									i.zmdi.zmdi-long-arrow-left
+					.card-body
+							.formtool
+								h3 expert qualification
+								.columnaforma
+									ol
+										li
+											textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+										li
+											input(type="text" name="qualify" placeholder="Add a score")
+				button(type="submit" ng-disabled="formToolUpload.$invalid") Send
+			.clearfix
 footer#footer(data-ng-include="'/template/footer.html'")
