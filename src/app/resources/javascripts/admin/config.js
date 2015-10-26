@@ -20,6 +20,11 @@ angular.module('adminConsole')
 			templateUrl: '/views/tools.html'
 		})
 
+		.state('users', {
+			url: '/users',
+			templateUrl: '/views/users.html'
+		})
+
 		.state('directory', {
 			url: '/directory',
 			templateUrl: '/views/directory.html'
