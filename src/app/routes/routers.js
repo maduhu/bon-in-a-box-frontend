@@ -144,6 +144,10 @@ module.exports = function(parent, services, options) {
 					method = 'get';
 					path = '/language/:' + '_newlanguage';
 					break;
+				case 'addNewTool':
+					method = 'post';
+					path = '/api/tools';
+					break;
 				default:
 					throw new Error('unrecognized route: ' + name + '.' + key);
 			}

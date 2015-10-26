@@ -20,114 +20,121 @@ section#main
 							a(data-ui-sref='tools', data-ng-click='adminctrl.sidebarStat($event)')
 								i.zmdi.zmdi-long-arrow-left
 				.card-body
-					form(id="" method="" action="" class="clearfix")
+					form(id="" method="" action="" class="clearfix" ng-controller="formToolUploadCtrl" name="formToolUpload")
 						.formtool
 							h3 English tool Form
 							.columnaforma
 								ol
 									li
-										input(type="text" name="toolname" placeholder="Tool Name")
+										input(type="text" name="toolname" ng-model="toolname" placeholder="Tool Name" required)
+										uib-alert(ng-show="formToolUpload.toolname.$invalid && !formToolUpload.toolname.$pristine" type="warning") Tool name is required.
 									li
 										h4 search categories
 										.categorias.clearfix
 											ul
 												li
-													a(class="" data-toggle="tooltip" title="Monitoring Components" href="")
+													button(class="" data-toggle="tooltip" title="Monitoring Components" uib-tooltip="Monitoring Components" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt1m.png')
 												li
-													a(class="selected" data-toggle="tooltip" title="EBV" href="")
+													button(class="selected" data-toggle="tooltip" title="EBV" uib-tooltip="EBV" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt2m.png')
 												li
-													a(class="" data-toggle="tooltip" title="By Theme" href="")
+													button(class="" data-toggle="tooltip" title="By Theme" uib-tooltip="By Theme" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt3m.png')
 												li
-													a(class="" data-toggle="tooltip" title="By Kind" href="")
+													button(class="" data-toggle="tooltip" title="By Kind" uib-tooltip="By Kind" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt4m.png')
 												li
-													a(class="" data-toggle="tooltip" title="By Taxonomy" href="")
+													button(class="" data-toggle="tooltip" title="By Taxonomy" uib-tooltip="By Taxonomy" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt5m.png')
 											h3 filtro por temática
-										.iconosformulario.hidden
-											ul
-												li
-													button(class="icon-ico-01" data-toggle="tooltip" title="Observation Design" href="")
-												li
-													button(class="icon-ico-02" data-toggle="tooltip" title="Data collection" href="")
-												li
-													button(class="icon-ico-03" data-toggle="tooltip" title="Data Management" href="")
-												li
-													button(class="icon-ico-04" data-toggle="tooltip" title="Data analysis" href="")
-												li
-													button(class="icon-ico-05" data-toggle="tooltip" title="Report results" href="")
 										.iconosformulario
 											ul
 												li
-													button(class="icon-ico-06" data-toggle="tooltip" title="Communities composition" href="")
+													button(class="icon-ico-01" data-toggle="tooltip" title="Observation Design" uib-tooltip="Observation Design" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-07" data-toggle="tooltip" title="Ecosystem function" href="")
+													button(class="icon-ico-02" data-toggle="tooltip" title="Data collection" uib-tooltip="Data collection" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-08" data-toggle="tooltip" title="Ecosystem structure" href="")
+													button(class="icon-ico-03" data-toggle="tooltip" title="Data Management" uib-tooltip="Data Management" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-09" data-toggle="tooltip" title="Genetic composition" href="")
+													button(class="icon-ico-04" data-toggle="tooltip" title="Data analysis" uib-tooltip="Data analysis" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-10" data-toggle="tooltip" title="Species populations" href="")
-												li
-													button(class="icon-ico-11" data-toggle="tooltip" title="Species traits" href="")
+													button(class="icon-ico-05" data-toggle="tooltip" title="Report results" uib-tooltip="Report results" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										.iconosformulario.hidden
 											ul
 												li
-													button(class="icon-ico-12" data-toggle="tooltip" title="Ecosystem services" href="")
+													button(class="icon-ico-06" data-toggle="tooltip" title="Communities composition" uib-tooltip="Communities composition" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-13" data-toggle="tooltip" title="Citizen science" href="")
+													button(class="icon-ico-07" data-toggle="tooltip" title="Ecosystem function" uib-tooltip="Ecosystem function" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-14" data-toggle="tooltip" title="Traditional knowledge" href="")
+													button(class="icon-ico-08" data-toggle="tooltip" title="Ecosystem structure" uib-tooltip="Ecosystem structure" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-15" data-toggle="tooltip" title="Invasive species" href="")
+													button(class="icon-ico-09" data-toggle="tooltip" title="Genetic composition" uib-tooltip="Genetic composition" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-16" data-toggle="tooltip" title="CITES" href="")
+													button(class="icon-ico-10" data-toggle="tooltip" title="Species populations" uib-tooltip="Species populations" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-17" data-toggle="tooltip" title="Migratory" href="")
-												li
-													button(class="icon-ico-18" data-toggle="tooltip" title="Fresh water" href="")
-												li
-													button(class="icon-ico-19" data-toggle="tooltip" title="Marine" href="")
-												li
-													button(class="icon-ico-20" data-toggle="tooltip" title="Terrestrial" href="")
+													button(class="icon-ico-11" data-toggle="tooltip" title="Species traits" uib-tooltip="Species traits" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										.iconosformulario.hidden
 											ul
 												li
-													button(class="icon-ico-21" data-toggle="tooltip" title="Dataset" href="")
+													button(class="icon-ico-12" data-toggle="tooltip" title="Ecosystem services" uib-tooltip="Ecosystem services" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-22" data-toggle="tooltip" title="Software" href="")
+													button(class="icon-ico-13" data-toggle="tooltip" title="Citizen science" uib-tooltip="Citizen science" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-23" data-toggle="tooltip" title="Data standards" href="")
+													button(class="icon-ico-14" data-toggle="tooltip" title="Traditional knowledge" uib-tooltip="Traditional knowledge" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-24" data-toggle="tooltip" title="Literature" href="")
+													button(class="icon-ico-15" data-toggle="tooltip" title="Invasive species" uib-tooltip="Invasive species" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-16" data-toggle="tooltip" title="CITES" uib-tooltip="CITES" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-17" data-toggle="tooltip" title="Migratory" uib-tooltip="Migratory" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-18" data-toggle="tooltip" title="Fresh water" uib-tooltip="Fresh water" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-19" data-toggle="tooltip" title="Marine" uib-tooltip="Marine" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-20" data-toggle="tooltip" title="Terrestrial" uib-tooltip="Terrestrial" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										.iconosformulario.hidden
 											ul
 												li
-													button(class="icon-ico-25" data-toggle="tooltip" title="Amphibians" href="")
+													button(class="icon-ico-21" data-toggle="tooltip" title="Dataset" uib-tooltip="Dataset" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-26" data-toggle="tooltip" title="Birds" href="")
+													button(class="icon-ico-22" data-toggle="tooltip" title="Software" uib-tooltip="Software" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-27" data-toggle="tooltip" title="Invertebrates" href="")
+													button(class="icon-ico-23" data-toggle="tooltip" title="Data standards" uib-tooltip="Data standards" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-28" data-toggle="tooltip" title="Mammals" href="")
+													button(class="icon-ico-24" data-toggle="tooltip" title="Literature" uib-tooltip="Literature" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+										.iconosformulario.hidden
+											ul
 												li
-													button(class="icon-ico-29" data-toggle="tooltip" title="Fish" href="")
+													button(class="icon-ico-25" data-toggle="tooltip" title="Amphibians" uib-tooltip="Amphibians" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-30" data-toggle="tooltip" title="Reptiles" href="")
+													button(class="icon-ico-26" data-toggle="tooltip" title="Birds" uib-tooltip="Birds" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-31" data-toggle="tooltip" title="Plants" href="")
+													button(class="icon-ico-27" data-toggle="tooltip" title="Invertebrates" uib-tooltip="Invertebrates" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-28" data-toggle="tooltip" title="Mammals" uib-tooltip="Mammals" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-29" data-toggle="tooltip" title="Fish" uib-tooltip="Fish" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-30" data-toggle="tooltip" title="Reptiles" uib-tooltip="Reptiles" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+												li
+													button(class="icon-ico-31" data-toggle="tooltip" title="Plants" uib-tooltip="Plants" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 									li
-										textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+										textarea.input-forum(type="textarea" name="shortDescription" ng-model="shortDescription" placeholder="Short descriptive text (250 characters)" required)
+										uib-alert(ng-show="formToolUpload.shortDescription.$invalid && !formToolUpload.shortDescription.$pristine" type="warning") Short descriptive text is required.
 									li
-										textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="Full text (1800 characters)")
+										textarea.input-forum.h105(type="textarea" name="longDescription" ng-model="longDescription" placeholder="Full text (1800 characters)" required)
+										uib-alert(ng-show="formToolUpload.longDescription.$invalid && !formToolUpload.longDescription.$pristine" type="warning") Full text is required.
 									li
 										h4 THUMBNAIL IMAGE ( 300px Width )
-										h5 This image appears in the search directory, but is not required.
-										button.btn.left(type="") upload
-										button.btn.left(type="") X
+										h5 This image appears in the search directory
+										input(type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-min-width="100" ngf-resize="{width: 300, height: 250}" required)
+										i(ng-show="formToolUpload.file.$error.required") *required
+										br
+										i(ng-show="formToolUpload.file.$error.maxSize") File too large {{picFile.size / 1000000|number:1}}MB: max 2M
+										img(ng-show="formToolUpload.file.$valid" ngf-thumbnail="picFile" class="thumb")
+										button(ng-click="picFile = null" ng-show="picFile") Remove
 									.clearfix
 									li
 										h4.pt10 tool descriptive image ( 600px Width )
@@ -135,33 +142,37 @@ section#main
 										button.btn.left(type="") X
 									.clearfix
 									li
-										input(type="text" name="toolname" placeholder="Web Site")
+										input(type="text" name="webSiteURL" ng-model="webSiteURL" placeholder="Web Site")
 									li
-										input(type="text" name="toolname" placeholder="Contact email")
+										input(type="text" name="contactEmail" ng-model="contactEmail" placeholder="Contact email" required)
+										uib-alert(ng-show="formToolUpload.contactEmail.$invalid && !formToolUpload.contactEmail.$pristine" type="warning") Contact email is required.
 									li
-										input(type="text" name="toolname" placeholder="Country covering")
+										input.country-select(country-select name="country" data-ng-model="country" placeholder="Country covering" required)
+										uib-alert(ng-show="formToolUpload.country.$invalid && !formToolUpload.country.$pristine" type="warning") Country is required.
 							h3 english directory form
 							.columnaforma
 								ol
 									li
-										input(type="text" name="toolname" placeholder="responsible name")
+										input(type="text" name="responsibleName" data-ng-model="responsibleName" placeholder="responsible name" required)
+										uib-alert(ng-show="formToolUpload.responsibleName.$invalid && !formToolUpload.responsibleName.$pristine" type="warning") Responsible name is required.
 									li
-										input(type="text" name="toolname" placeholder="SUBTITLE / TITLE / COMPANY")
+										input(type="text" name="subtitle" data-ng-model="country" placeholder="SUBTITLE / TITLE / COMPANY")
 									li
 										h4 search categories
 										.categorias.clearfix
 											ul
 												li
-													a(class="selected" data-toggle="tooltip" title="Institution" href="")
+													button(class="selected" data-toggle="tooltip" title="Institution" uib-tooltip="Institution" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inst.png')
 												li
-													a(class="" data-toggle="tooltip" title="Initiative" href="")
+													button(data-toggle="tooltip" title="Initiative" uib-tooltip="Initiative" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inic.png')
 												li
-													a(class="" data-toggle="tooltip" title="Investigator" href="")
+													button(data-toggle="tooltip" title="Investigator" uib-tooltip="Investigator" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inves.png')
 									li
-										textarea.input-forum.h180(type="textarea" name="descripr" placeholder="Short descriptive text (300 characters)")
+										textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="directoryShortDescription" placeholder="Short descriptive text (300 characters)" required)
+										uib-alert(ng-show="formToolUpload.directoryShortDescription.$invalid && !formToolUpload.directoryShortDescription.$pristine" type="warning") Responsible short description is required.
 									li
 										h4 THUMBNAIL IMAGE
 										h5 ( 300PX WIDTH )
@@ -169,11 +180,13 @@ section#main
 										button.btn.left(type="") X
 									.clearfix
 									li
-										input(type="text" name="toolname" placeholder="Web Site")
+										input(type="text" name="directoryWebSite" data-ng-model="directoryWebSite" placeholder="Web Site")
 									li
-										input(type="text" name="toolname" placeholder="Contact Email")
+										input(type="text" name="directoryEmail" data-ng-model="directoryEmail" placeholder="Contact Email" required)
+										uib-alert(ng-show="formToolUpload.directoryEmail.$invalid && !formToolUpload.directoryEmail.$pristine" type="warning") Responsible contact email is required.
 									li
-										input(type="text" name="toolname" placeholder="Country")
-								button(type="submit") Send
+										input.country-select(country-select name="responsibleCountry" data-ng-model="responsibleCountry" placeholder="Country" required)
+										uib-alert(ng-show="formToolUpload.responsibleCountry.$invalid && !formToolUpload.responsibleCountry.$pristine" type="warning") Country is required.
+								button(type="submit" ng-disabled="formToolUpload.$invalid") Send
 								.clearfix
 footer#footer(data-ng-include="'/template/footer.html'")

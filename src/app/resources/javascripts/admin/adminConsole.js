@@ -5,5 +5,7 @@ angular.module('adminConsole', ['ngAnimate',
 		'ui.router',
 		'ui.bootstrap',
 		'angular-loading-bar',
-		'ngTable'
+		'ngTable',
+		'ngFileUpload',
+		'angular-country-select'
 ]);

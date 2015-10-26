@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adminConsole')
-	.controller('adminConsoleCtrl', ["$timeout", "$state", "growlService", "NgTableParams", "$resource", function($timeout, $state, growlService, NgTableParams, $resource){
+	.controller('adminConsoleCtrl', ["$timeout", "$state", "growlService", "NgTableParams", function($timeout, $state, growlService, NgTableParams){
 
 		this.init = function(data) {
 			// Current user full name
@@ -143,6 +143,13 @@ angular.module('adminConsole')
 				});
 			}
 		});*/
+	}])
+
+	// =========================================================================
+	// Upload tool files
+	// =========================================================================
+	.controller('formToolUploadCtrl', ['Upload', function(Upload){
+
 	}])
 
 	// =========================================================================
