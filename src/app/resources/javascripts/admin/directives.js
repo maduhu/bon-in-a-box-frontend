@@ -72,19 +72,17 @@ angular.module('adminConsole')
 	.directive('toggleSubcategory', function(){
 		return {
 			restrict: 'A',
-			controller: function($scope) {
-				$scope.categories = [];
+			scope: {
+				taggedCategories: '='
 			},
 			link: function(scope, element, attrs) {
 				element.click(function() {
-					console.log(attrs.title);
 					element.toggleClass('selected');
 					if(element.hasClass('selected')) {
-						scope.categories.push(element.attr('title'));
+						scope.taggedCategories.push(attrs.title);
 					} else {
-						scope.categories.splice(scope.categories.indexOf(element.attr('title')), 1);
+						scope.taggedCategories.splice(scope.taggedCategories.indexOf(attrs.title), 1);
 					}
-					console.log(scope.categories);
 				});
 			}
 		};

@@ -149,15 +149,19 @@ angular.module('adminConsole')
 	// Upload tool
 	// =========================================================================
 	.controller('formToolUploadCtrl', ['Upload', function(Upload){
-		//this.categories = [];
-		//this.categories.push("sopas");
-		console.log(this.categories);
-		this.submit = function() {
+		// Tagged categories
+		this.categories = [];
+
+		this.chiliSpicy = function() {
+			console.log(this.categories);
+		};
+		/*this.submit = function() {
 			console.log(this.categories);
 			if (form.file.$valid && $scope.file) {
+				console.log(this.categories);
 				$scope.upload($scope.file);
 			}
-		};
+		};*/
 	}])
 
 	// =========================================================================

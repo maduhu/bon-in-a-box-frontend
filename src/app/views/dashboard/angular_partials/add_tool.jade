@@ -5,10 +5,11 @@ section#main
 		.container
 			.block-header
 				h2 Dashboard
-			form(id="" method="" action="" class="clearfix" ng-controller="formToolUploadCtrl" name="formToolUpload")
+			form(class="clearfix" ng-controller="formToolUploadCtrl as formCtrl" name="formToolUpload")
 				.card.add_en
 					.card-header
-						h2 Add tools
+						h2 Add tool
+						button(data-ng-click="formCtrl.chiliSpicy()") Soooopas
 						ul.actions
 							li
 								a(href="" class="langbar btn_add_es") ES
@@ -26,7 +27,7 @@ section#main
 							.columnaforma
 								ol
 									li
-										input(type="text" name="toolname" ng-model="toolname" placeholder="Tool Name" required)
+										input(type="text" name="toolname" ng-model="toolname" placeholder="Tool Name")
 										uib-alert(ng-show="formToolUpload.toolname.$invalid && !formToolUpload.toolname.$pristine" type="warning") Tool name is required.
 									li
 										h4 clasification categories
@@ -51,80 +52,80 @@ section#main
 										#subCat1.iconosformulario
 											ul
 												li
-													button(class="icon-ico-01" data-toggle-subcategory title="Observation Design" uib-tooltip="Observation Design" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-01" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Observation Design" uib-tooltip="Observation Design" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-02" data-toggle-subcategory title="Data collection" uib-tooltip="Data collection" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-02" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Data collection" uib-tooltip="Data collection" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-03" data-toggle-subcategory title="Data Management" uib-tooltip="Data Management" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-03" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Data Management" uib-tooltip="Data Management" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-04" data-toggle-subcategory title="Data analysis" uib-tooltip="Data analysis" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-04" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Data analysis" uib-tooltip="Data analysis" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-05" data-toggle-subcategory title="Report results" uib-tooltip="Report results" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-05" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Report results" uib-tooltip="Report results" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										#subCat2.iconosformulario.hidden
 											ul
 												li
-													button(class="icon-ico-06" data-toggle-subcategory title="Communities composition" uib-tooltip="Communities composition" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-06" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Communities composition" uib-tooltip="Communities composition" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-07" data-toggle-subcategory title="Ecosystem function" uib-tooltip="Ecosystem function" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-07" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Ecosystem function" uib-tooltip="Ecosystem function" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-08" data-toggle-subcategory title="Ecosystem structure" uib-tooltip="Ecosystem structure" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-08" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Ecosystem structure" uib-tooltip="Ecosystem structure" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-09" data-toggle-subcategory title="Genetic composition" uib-tooltip="Genetic composition" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-09" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Genetic composition" uib-tooltip="Genetic composition" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-10" data-toggle-subcategory title="Species populations" uib-tooltip="Species populations" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-10" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Species populations" uib-tooltip="Species populations" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-11" data-toggle-subcategory title="Species traits" uib-tooltip="Species traits" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-11" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Species traits" uib-tooltip="Species traits" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										#subCat3.iconosformulario.hidden
 											ul
 												li
-													button(class="icon-ico-12" data-toggle-subcategory title="Ecosystem services" uib-tooltip="Ecosystem services" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-12" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Ecosystem services" uib-tooltip="Ecosystem services" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-13" data-toggle-subcategory title="Citizen science" uib-tooltip="Citizen science" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-13" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Citizen science" uib-tooltip="Citizen science" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-14" data-toggle-subcategory title="Traditional knowledge" uib-tooltip="Traditional knowledge" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-14" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Traditional knowledge" uib-tooltip="Traditional knowledge" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-15" data-toggle-subcategory title="Invasive species" uib-tooltip="Invasive species" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-15" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Invasive species" uib-tooltip="Invasive species" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-16" data-toggle-subcategory title="CITES" uib-tooltip="CITES" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-16" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="CITES" uib-tooltip="CITES" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-17" data-toggle-subcategory title="Migratory" uib-tooltip="Migratory" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-17" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Migratory" uib-tooltip="Migratory" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-18" data-toggle-subcategory title="Fresh water" uib-tooltip="Fresh water" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-18" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Fresh water" uib-tooltip="Fresh water" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-19" data-toggle-subcategory title="Marine" uib-tooltip="Marine" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-19" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Marine" uib-tooltip="Marine" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-20" data-toggle-subcategory title="Terrestrial" uib-tooltip="Terrestrial" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-20" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Terrestrial" uib-tooltip="Terrestrial" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										#subCat4.iconosformulario.hidden
 											ul
 												li
-													button(class="icon-ico-21" data-toggle-subcategory title="Dataset" uib-tooltip="Dataset" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-21" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Dataset" uib-tooltip="Dataset" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-22" data-toggle-subcategory title="Software" uib-tooltip="Software" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-22" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Software" uib-tooltip="Software" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-23" data-toggle-subcategory title="Data standards" uib-tooltip="Data standards" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-23" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Data standards" uib-tooltip="Data standards" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-24" data-toggle-subcategory title="Literature" uib-tooltip="Literature" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-24" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Literature" uib-tooltip="Literature" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										#subCat5.iconosformulario.hidden
 											ul
 												li
-													button(class="icon-ico-25" data-toggle-subcategory title="Amphibians" uib-tooltip="Amphibians" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-25" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Amphibians" uib-tooltip="Amphibians" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-26" data-toggle-subcategory title="Birds" uib-tooltip="Birds" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-26" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Birds" uib-tooltip="Birds" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-27" data-toggle-subcategory title="Invertebrates" uib-tooltip="Invertebrates" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-27" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Invertebrates" uib-tooltip="Invertebrates" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-28" data-toggle-subcategory title="Mammals" uib-tooltip="Mammals" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-28" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Mammals" uib-tooltip="Mammals" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-29" data-toggle-subcategory title="Fish" uib-tooltip="Fish" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-29" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Fish" uib-tooltip="Fish" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-30" data-toggle-subcategory title="Reptiles" uib-tooltip="Reptiles" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-30" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Reptiles" uib-tooltip="Reptiles" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
-													button(class="icon-ico-31" data-toggle-subcategory title="Plants" uib-tooltip="Plants" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(class="icon-ico-31" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Plants" uib-tooltip="Plants" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 									li
-										textarea.input-forum(type="textarea" name="shortDescription" ng-model="shortDescription" placeholder="Short descriptive text (250 characters)" required)
+										textarea.input-forum(type="textarea" name="shortDescription" ng-model="shortDescription" placeholder="Short descriptive text (250 characters)")
 										uib-alert(ng-show="formToolUpload.shortDescription.$invalid && !formToolUpload.shortDescription.$pristine" type="warning") Short descriptive text is required.
 									li
-										textarea.input-forum.h105(type="textarea" name="longDescription" ng-model="longDescription" placeholder="Full text (1800 characters)" required)
+										textarea.input-forum.h105(type="textarea" name="longDescription" ng-model="longDescription" placeholder="Full text (1800 characters)")
 										uib-alert(ng-show="formToolUpload.longDescription.$invalid && !formToolUpload.longDescription.$pristine" type="warning") Full text is required.
 									li
 										h4 THUMBNAIL IMAGE ( 300px Width )
@@ -145,7 +146,7 @@ section#main
 									li
 										input(type="text" name="webSiteURL" ng-model="webSiteURL" placeholder="Web Site")
 									li
-										input(type="text" name="contactEmail" ng-model="contactEmail" placeholder="Contact email" required)
+										input(type="text" name="contactEmail" ng-model="contactEmail" placeholder="Contact email")
 										uib-alert(ng-show="formToolUpload.contactEmail.$invalid && !formToolUpload.contactEmail.$pristine" type="warning") Contact email is required.
 									li
 										input.country-select(country-select name="country" data-ng-model="country" placeholder="Country covering")
@@ -154,7 +155,7 @@ section#main
 							.columnaforma
 								ol
 									li
-										input(type="text" name="responsibleName" data-ng-model="responsibleName" placeholder="responsible name" required)
+										input(type="text" name="responsibleName" data-ng-model="responsibleName" placeholder="responsible name")
 										uib-alert(ng-show="formToolUpload.responsibleName.$invalid && !formToolUpload.responsibleName.$pristine" type="warning") Responsible name is required.
 									li
 										input(type="text" name="subtitle" data-ng-model="country" placeholder="SUBTITLE / TITLE / COMPANY")
@@ -172,7 +173,7 @@ section#main
 													button(data-toggle="tooltip" title="Investigator" uib-tooltip="Investigator" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inves.png')
 									li
-										textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="directoryShortDescription" placeholder="Short descriptive text (300 characters)" required)
+										textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="directoryShortDescription" placeholder="Short descriptive text (300 characters)")
 										uib-alert(ng-show="formToolUpload.directoryShortDescription.$invalid && !formToolUpload.directoryShortDescription.$pristine" type="warning") Responsible short description is required.
 									li
 										h4 THUMBNAIL IMAGE
@@ -183,7 +184,7 @@ section#main
 									li
 										input(type="text" name="directoryWebSite" data-ng-model="directoryWebSite" placeholder="Web Site")
 									li
-										input(type="text" name="directoryEmail" data-ng-model="directoryEmail" placeholder="Contact Email" required)
+										input(type="text" name="directoryEmail" data-ng-model="directoryEmail" placeholder="Contact Email")
 										uib-alert(ng-show="formToolUpload.directoryEmail.$invalid && !formToolUpload.directoryEmail.$pristine" type="warning") Responsible contact email is required.
 									li
 										input.country-select(country-select name="responsibleCountry" data-ng-model="responsibleCountry" placeholder="Country")
