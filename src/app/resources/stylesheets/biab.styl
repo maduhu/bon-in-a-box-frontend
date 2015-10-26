@@ -1,7 +1,8 @@
 *
 	margin 0
 	padding 0
-
+	:focus
+		outline 0
 body
 	background #d0d3d4
 	font-family 'Roboto', Helvetica, sans-serif
@@ -641,37 +642,22 @@ label
 			color #fff
 			line-height 45px
 			vertical-align middle
-			&:hover
-				color #1c2a2c
-				background-color #f1b25e
 .filtros.cd2
 	li
 		.selected
 			background-color #04adac
-		button
-			&:hover
-				background-color #5bc5c8
 .filtros.cd3
 	li
 		.selected
 			background-color #858c36
-		button
-			&:hover
-				background-color #a4aa57
 .filtros.cd4
 	li
 		.selected
 			background-color #b872b0
-		button
-			&:hover
-				background-color #cb9ac6
 .filtros.cd5
 	li
 		.selected
 			background-color #f26334
-		button
-			&:hover
-				background-color #f28e6d
 .card_herramienta
 	button
 		color #5d5d5d
@@ -1095,6 +1081,8 @@ label
 			font-size 0.786em
 			line-height 0
 			margin-left 5px
+		.formtool
+			position relative	
 		.formtool2
 		.formtool
 			width 64%
