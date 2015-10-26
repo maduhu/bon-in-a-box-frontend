@@ -13,7 +13,7 @@ angular.module('adminConsole')
 				modelRight: '='
 			},
 
-			link: function(scope, element, attr) {
+			link: function(scope, element) {
 				element.on('click', function(){
 					if (element.data('target') === 'mainmenu') {
 						if (scope.modelLeft === false) {
@@ -32,13 +32,13 @@ angular.module('adminConsole')
 	})
 
 	// =========================================================================
-	// SUBMENU TOGGLE
+	// CATEGORY TOGGLE
 	// =========================================================================
 
 	.directive('toggleCategory', function(){
 		return {
 			restrict: 'A',
-			link: function(scope, element, attrs) {
+			link: function(scope, element) {
 				element.click(function(){
 					element.parent().parent().find('button.selected').removeClass('selected');
 					element.toggleClass('selected');
@@ -66,13 +66,38 @@ angular.module('adminConsole')
 	})
 
 	// =========================================================================
+	// SUBCATEGORY TOGGLE
+	// =========================================================================
+
+	.directive('toggleSubcategory', function(){
+		return {
+			restrict: 'A',
+			controller: function($scope) {
+				$scope.categories = [];
+			},
+			link: function(scope, element, attrs) {
+				element.click(function() {
+					console.log(attrs.title);
+					element.toggleClass('selected');
+					if(element.hasClass('selected')) {
+						scope.categories.push(element.attr('title'));
+					} else {
+						scope.categories.splice(scope.categories.indexOf(element.attr('title')), 1);
+					}
+					console.log(scope.categories);
+				});
+			}
+		};
+	})
+
+	// =========================================================================
 	// CATEGORY TOGGLE
 	// =========================================================================
 
 	.directive('toggleSubmenu', function(){
 		return {
 			restrict: 'A',
-			link: function(scope, element, attrs) {
+			link: function(scope, element) {
 				element.click(function(){
 					element.parent().toggleClass('toggled');
 					element.parent().find('ul').stop(true, false).slideToggle(200);

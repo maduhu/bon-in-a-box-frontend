@@ -28,6 +28,8 @@
 	box-sizing border-box
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
+	:focus
+		outline 0
 body
 	#content
 		padding 30px 0
@@ -82,7 +84,7 @@ body
 	filter: unquote("alpha(opacity=1)")
 	opacity 1
 	line-break auto
-	border-radius 10px
+	border-radius 3px
 	box-shadow 0px 0px 5px rgba(51, 51, 51, 0.3)
 	&.bottom
 		padding 2px 5px 2px 5px
@@ -361,19 +363,34 @@ form
 						margin-right 5px !important
 						display inline-block
 						margin-bottom 10px
+						.selected
+							background-color #F2A034
+							color #1c2a2c
 						button
 							-webkit-border-radius 3px
 							-moz-border-radius 3px
 							border-radius 3px
-							background-color #04adac
+							background-color #1c2a2c
 							padding 3px
-							color #1c2a2c
+							color #fff
 							font-size 27px
 							line-height 0
-							opacity 1
-							&:hover
-								opacity 1
-								background-color #A6A333
+				.cd2
+					li
+						.selected
+							background-color #04adac
+				.cd3
+					li
+						.selected
+							background-color #858c36
+				.cd4
+					li
+						.selected
+							background-color #b872b0
+				.cd5
+					li
+						.selected
+							background-color #f26334
 	input
 	textarea
 		width 98%
@@ -407,7 +424,7 @@ form
 		float right
 		h3
 			margin-left 10px
-.btn_file p
+.btn_file
 		position relative
 		overflow hidden
 		text-transform uppercase
