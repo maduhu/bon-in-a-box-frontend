@@ -133,30 +133,6 @@ angular.module('adminConsole')
 		};
 		this.tableParamsDirectory = new NgTableParams(initialParams, initialSettings2);
 
-		var data3 = [	{ id: 1, user: 'user A', email: 'email A', role: 'general' },
-									{ id: 2, user: 'user B', email: 'email B', role: 'general' },
-									{ id: 3, user: 'user C', email: 'email B', role: 'general' },
-									{ id: 4, user: 'user D', email: 'email B', role: 'general' },
-									{ id: 5, user: 'user E', email: 'email A', role: 'general' },
-									{ id: 6, user: 'user F', email: 'email B', role: 'admin' },
-									{ id: 7, user: 'user G', email: 'email A', role: 'admin' },
-									{ id: 8, user: 'user H', email: 'email B', role: 'admin' },
-									{ id: 9, user: 'user I', email: 'email B', role: 'general' },
-									{ id: 10, user: 'user J', email: 'email A', role: 'general' },
-									{ id: 11, user: 'user K', email: 'email B', role: 'general' },
-									{ id: 12, user: 'user L', email: 'email B', role: 'general' }
-								];
-
-		var initialSettings3 = {
-			// page size buttons (right set of buttons in demo)
-			counts: [5, 10, 25, 50],
-			// determines the pager buttons (left set of buttons in demo)
-			paginationMaxBlocks: 5,
-			paginationMinBlocks: 2,
-			data: data3
-		};
-		this.tableParamsUsers = new NgTableParams(initialParams, initialSettings3);
-
 		/*var Api = $resource("/data");
 		this.tableParams = new NgTableParams({}, {
 			getData: function(params) {
@@ -170,10 +146,18 @@ angular.module('adminConsole')
 	}])
 
 	// =========================================================================
-	// Upload tool files
+	// Upload tool
 	// =========================================================================
 	.controller('formToolUploadCtrl', ['Upload', function(Upload){
-
+		//this.categories = [];
+		//this.categories.push("sopas");
+		console.log(this.categories);
+		this.submit = function() {
+			console.log(this.categories);
+			if (form.file.$valid && $scope.file) {
+				$scope.upload($scope.file);
+			}
+		};
 	}])
 
 	// =========================================================================
