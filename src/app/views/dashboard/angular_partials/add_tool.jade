@@ -29,25 +29,25 @@ section#main
 										input(type="text" name="toolname" ng-model="toolname" placeholder="Tool Name" required)
 										uib-alert(ng-show="formToolUpload.toolname.$invalid && !formToolUpload.toolname.$pristine" type="warning") Tool name is required.
 									li
-										h4 search categories
+										h4 clasification categories
 										.categorias.clearfix
 											ul
 												li
-													button(class="" data-toggle="tooltip" title="Monitoring Components" uib-tooltip="Monitoring Components" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button.selected(data-toggle="tooltip" title="Monitoring Components" uib-tooltip="Monitoring Components" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt1m.png')
 												li
-													button(class="selected" data-toggle="tooltip" title="EBV" uib-tooltip="EBV" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle="tooltip" title="EBV" uib-tooltip="EBV" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt2m.png')
 												li
-													button(class="" data-toggle="tooltip" title="By Theme" uib-tooltip="By Theme" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle="tooltip" title="By Theme" uib-tooltip="By Theme" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt3m.png')
 												li
-													button(class="" data-toggle="tooltip" title="By Kind" uib-tooltip="By Kind" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle="tooltip" title="By Kind" uib-tooltip="By Kind" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt4m.png')
 												li
-													button(class="" data-toggle="tooltip" title="By Taxonomy" uib-tooltip="By Taxonomy" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle="tooltip" title="By Taxonomy" uib-tooltip="By Taxonomy" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt5m.png')
-											h3 filtro por temática
+										h3 subject categories
 										.iconosformulario
 											ul
 												li
