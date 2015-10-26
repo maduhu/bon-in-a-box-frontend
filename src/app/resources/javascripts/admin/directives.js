@@ -35,6 +35,40 @@ angular.module('adminConsole')
 	// SUBMENU TOGGLE
 	// =========================================================================
 
+	.directive('toggleCategory', function(){
+		return {
+			restrict: 'A',
+			link: function(scope, element, attrs) {
+				element.click(function(){
+					element.parent().parent().find('button.selected').removeClass('selected');
+					element.toggleClass('selected');
+					element.parent().parent().parent().parent().find('div.iconosformulario').addClass('hidden');
+					switch(element.attr('title')) {
+						case "Monitoring Components":
+							element.parent().parent().parent().parent().find('div#subCat1').removeClass('hidden');
+							break;
+						case "EBV":
+							element.parent().parent().parent().parent().find('div#subCat2').removeClass('hidden');
+							break;
+						case "By Theme":
+							element.parent().parent().parent().parent().find('div#subCat3').removeClass('hidden');
+							break;
+						case "By Kind":
+							element.parent().parent().parent().parent().find('div#subCat4').removeClass('hidden');
+							break;
+						case "By Taxonomy":
+							element.parent().parent().parent().parent().find('div#subCat5').removeClass('hidden');
+							break;
+					}
+				});
+			}
+		};
+	})
+
+	// =========================================================================
+	// CATEGORY TOGGLE
+	// =========================================================================
+
 	.directive('toggleSubmenu', function(){
 		return {
 			restrict: 'A',
@@ -52,7 +86,7 @@ angular.module('adminConsole')
 	// =========================================================================
 
 	// For .btn classes
-	.directive('btn', function(){
+	/*.directive('btn', function(){
 		return {
 			restrict: 'C',
 			link: function(scope, element) {
@@ -67,4 +101,4 @@ angular.module('adminConsole')
 				Waves.init();
 			}
 		}
-	});
+	})*/;

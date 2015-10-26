@@ -33,22 +33,22 @@ section#main
 										.categorias.clearfix
 											ul
 												li
-													button.selected(data-toggle="tooltip" title="Monitoring Components" uib-tooltip="Monitoring Components" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button.selected(data-toggle-category title="Monitoring Components" uib-tooltip="Monitoring Components" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt1m.png')
 												li
-													button(data-toggle="tooltip" title="EBV" uib-tooltip="EBV" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle-category title="EBV" uib-tooltip="EBV" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt2m.png')
 												li
-													button(data-toggle="tooltip" title="By Theme" uib-tooltip="By Theme" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle-category title="By Theme" uib-tooltip="By Theme" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt3m.png')
 												li
-													button(data-toggle="tooltip" title="By Kind" uib-tooltip="By Kind" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle-category title="By Kind" uib-tooltip="By Kind" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt4m.png')
 												li
-													button(data-toggle="tooltip" title="By Taxonomy" uib-tooltip="By Taxonomy" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle-category title="By Taxonomy" uib-tooltip="By Taxonomy" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/filt5m.png')
 										h3 subject categories
-										.iconosformulario
+										#subCat1.iconosformulario
 											ul
 												li
 													button(class="icon-ico-01" data-toggle="tooltip" title="Observation Design" uib-tooltip="Observation Design" tooltip-placement="bottom" tooltip-trigger="mouseenter")
@@ -60,7 +60,7 @@ section#main
 													button(class="icon-ico-04" data-toggle="tooltip" title="Data analysis" uib-tooltip="Data analysis" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
 													button(class="icon-ico-05" data-toggle="tooltip" title="Report results" uib-tooltip="Report results" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-										.iconosformulario.hidden
+										#subCat2.iconosformulario.hidden
 											ul
 												li
 													button(class="icon-ico-06" data-toggle="tooltip" title="Communities composition" uib-tooltip="Communities composition" tooltip-placement="bottom" tooltip-trigger="mouseenter")
@@ -74,7 +74,7 @@ section#main
 													button(class="icon-ico-10" data-toggle="tooltip" title="Species populations" uib-tooltip="Species populations" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
 													button(class="icon-ico-11" data-toggle="tooltip" title="Species traits" uib-tooltip="Species traits" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-										.iconosformulario.hidden
+										#subCat3.iconosformulario.hidden
 											ul
 												li
 													button(class="icon-ico-12" data-toggle="tooltip" title="Ecosystem services" uib-tooltip="Ecosystem services" tooltip-placement="bottom" tooltip-trigger="mouseenter")
@@ -94,7 +94,7 @@ section#main
 													button(class="icon-ico-19" data-toggle="tooltip" title="Marine" uib-tooltip="Marine" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
 													button(class="icon-ico-20" data-toggle="tooltip" title="Terrestrial" uib-tooltip="Terrestrial" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-										.iconosformulario.hidden
+										#subCat4.iconosformulario.hidden
 											ul
 												li
 													button(class="icon-ico-21" data-toggle="tooltip" title="Dataset" uib-tooltip="Dataset" tooltip-placement="bottom" tooltip-trigger="mouseenter")
@@ -104,7 +104,7 @@ section#main
 													button(class="icon-ico-23" data-toggle="tooltip" title="Data standards" uib-tooltip="Data standards" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
 													button(class="icon-ico-24" data-toggle="tooltip" title="Literature" uib-tooltip="Literature" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-										.iconosformulario.hidden
+										#subCat5.iconosformulario.hidden
 											ul
 												li
 													button(class="icon-ico-25" data-toggle="tooltip" title="Amphibians" uib-tooltip="Amphibians" tooltip-placement="bottom" tooltip-trigger="mouseenter")
@@ -147,7 +147,7 @@ section#main
 										input(type="text" name="contactEmail" ng-model="contactEmail" placeholder="Contact email" required)
 										uib-alert(ng-show="formToolUpload.contactEmail.$invalid && !formToolUpload.contactEmail.$pristine" type="warning") Contact email is required.
 									li
-										input.country-select(country-select name="country" data-ng-model="country" placeholder="Country covering" required)
+										input.country-select(country-select name="country" data-ng-model="country" placeholder="Country covering")
 										uib-alert(ng-show="formToolUpload.country.$invalid && !formToolUpload.country.$pristine" type="warning") Country is required.
 							h3 english directory form
 							.columnaforma
@@ -185,7 +185,7 @@ section#main
 										input(type="text" name="directoryEmail" data-ng-model="directoryEmail" placeholder="Contact Email" required)
 										uib-alert(ng-show="formToolUpload.directoryEmail.$invalid && !formToolUpload.directoryEmail.$pristine" type="warning") Responsible contact email is required.
 									li
-										input.country-select(country-select name="responsibleCountry" data-ng-model="responsibleCountry" placeholder="Country" required)
+										input.country-select(country-select name="responsibleCountry" data-ng-model="responsibleCountry" placeholder="Country")
 										uib-alert(ng-show="formToolUpload.responsibleCountry.$invalid && !formToolUpload.responsibleCountry.$pristine" type="warning") Country is required.
 				.card.hidden
 					.card-header
