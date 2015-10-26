@@ -33,21 +33,14 @@ angular.module('adminConsole')
 			url: '/add_tool',
 			templateUrl: '/views/add_tool.html'
 		})
-		.state('add_tool_es', {
-			url: '/add_tool_es',
-			templateUrl: '/views/add_tool_es.html'
-		})
-		.state('add_tool_pt', {
-			url: '/add_tool_pt',
-			templateUrl: '/views/add_tool_pt.html'
-		})
-		.state('tool_comment', {
-			url: '/tool_comment',
-			templateUrl: '/views/tool_comment.html'
-		})
+
 		.state('edit_tool_comment', {
 			url: '/edit_tool_comment',
 			templateUrl: '/views/edit_tool_comment.html'
+		})
+		.state('user_review', {
+			url: '/user_review',
+			templateUrl: '/views/user_review.html'
 		})
 		.state('tool_review', {
 			url: '/tool_review',
@@ -76,6 +69,10 @@ angular.module('adminConsole')
 		.state('edit_tool_pt', {
 			url: '/edit_tool_pt',
 			templateUrl: '/views/edit_tool_pt.html'
+		})
+		.state('user_edit', {
+			url: '/user_edit',
+			templateUrl: '/views/user_edit.html'
 		})
 		.state('edit_directory_pt', {
 			url: '/edit_directory_pt',
