@@ -5,7 +5,7 @@ section#main
 		.container
 			.block-header
 				h2 Dashboard
-			form(class="clearfix" ng-controller="formToolUploadCtrl as formCtrl" name="formToolUpload")
+			form(class="clearfix" ng-controller="formToolUploadCtrl as formCtrl" name="formToolUpload" novalidate)
 				.card.add_en
 					.card-header
 						h2 Add tool
@@ -27,7 +27,7 @@ section#main
 							.columnaforma
 								ol
 									li
-										input(type="text" name="toolname" ng-model="toolname" placeholder="Tool Name")
+										input(type="text" name="toolname" ng-model="formCtrl.toolName" placeholder="Tool Name" aria-describedby="Tool name" required)
 										uib-alert(ng-show="formToolUpload.toolname.$invalid && !formToolUpload.toolname.$pristine" type="warning") Tool name is required.
 									li
 										h4 clasification categories
@@ -123,11 +123,11 @@ section#main
 													button(class="icon-ico-31" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Plants" uib-tooltip="Plants" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 										selected-categories.tagsinput(data-tagged-categories='formCtrl.categories')
 									li
-										textarea.input-forum(type="textarea" name="shortDescription" ng-model="shortDescription" placeholder="Short descriptive text (250 characters)")
+										textarea.input-forum(type="textarea" name="shortDescription" ng-model="formCtrl.shortDescription" placeholder="Short descriptive text (250 characters)" required)
 										uib-alert(ng-show="formToolUpload.shortDescription.$invalid && !formToolUpload.shortDescription.$pristine" type="warning") Short descriptive text is required.
 									li
-										textarea.input-forum.h105(type="textarea" name="longDescription" ng-model="longDescription" placeholder="Full text (1800 characters)")
-										uib-alert(ng-show="formToolUpload.longDescription.$invalid && !formToolUpload.longDescription.$pristine" type="warning") Full text is required.
+										textarea.input-forum.h105(type="textarea" name="longDescription" ng-model="formCtrl.longDescription" placeholder="Full text (1800 characters)" required)
+										uib-alert(ng-show="formToolUpload.longDescription.$invalid && !formToolUpload.longDescription.$pristine" type="warning") Full tool description is required.
 									li
 										h4 THUMBNAIL IMAGE ( 300px Width )
 										h5 This image appears in the search directory
@@ -145,12 +145,12 @@ section#main
 										button.btn.left(type="") X
 									.clearfix
 									li
-										input(type="text" name="webSiteURL" ng-model="webSiteURL" placeholder="Web Site")
+										input(type="text" name="webSiteURL" ng-model="formCtrl.webSiteURL" placeholder="Web Site")
 									li
-										input(type="text" name="contactEmail" ng-model="contactEmail" placeholder="Contact email")
+										input(type="email" name="contactEmail" ng-model="formCtrl.contactEmail" placeholder="Contact email" required)
 										uib-alert(ng-show="formToolUpload.contactEmail.$invalid && !formToolUpload.contactEmail.$pristine" type="warning") Contact email is required.
 									li
-										input.country-select(country-select name="country" data-ng-model="country" placeholder="Country covering")
+										input.country-select(country-select name="country" data-ng-model="formCtrl.country" placeholder="Country covering")
 										uib-alert(ng-show="formToolUpload.country.$invalid && !formToolUpload.country.$pristine" type="warning") Country is required.
 							h3 english directory form
 							.columnaforma
@@ -165,13 +165,13 @@ section#main
 										.categorias.clearfix
 											ul
 												li
-													button(class="selected" data-toggle="tooltip" title="Institution" uib-tooltip="Institution" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle-directory-type class="selected" data-directory-type='formCtrl.selectedDirectoryType' title="Institution" uib-tooltip="Institution" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inst.png')
 												li
-													button(data-toggle="tooltip" title="Initiative" uib-tooltip="Initiative" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle-directory-type data-directory-type='formCtrl.selectedDirectoryType' title="Initiative" uib-tooltip="Initiative" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inic.png')
 												li
-													button(data-toggle="tooltip" title="Investigator" uib-tooltip="Investigator" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+													button(data-toggle-directory-type data-directory-type='formCtrl.selectedDirectoryType' title="Investigator" uib-tooltip="Investigator" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inves.png')
 									li
 										textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="directoryShortDescription" placeholder="Short descriptive text (300 characters)")
@@ -185,7 +185,7 @@ section#main
 									li
 										input(type="text" name="directoryWebSite" data-ng-model="directoryWebSite" placeholder="Web Site")
 									li
-										input(type="text" name="directoryEmail" data-ng-model="directoryEmail" placeholder="Contact Email")
+										input(type="email" name="directoryEmail" data-ng-model="directoryEmail" placeholder="Contact Email")
 										uib-alert(ng-show="formToolUpload.directoryEmail.$invalid && !formToolUpload.directoryEmail.$pristine" type="warning") Responsible contact email is required.
 									li
 										input.country-select(country-select name="responsibleCountry" data-ng-model="responsibleCountry" placeholder="Country")
@@ -274,6 +274,6 @@ section#main
 											textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
 										li
 											input(type="text" name="qualify" placeholder="Add a score")
-				button(type="submit" ng-disabled="formToolUpload.$invalid") Send
+				button(type="submit" ng-disabled="formCtrl.$invalid") Send
 			.clearfix
 footer#footer(data-ng-include="'/template/footer.html'")

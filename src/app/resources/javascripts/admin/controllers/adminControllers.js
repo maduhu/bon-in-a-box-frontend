@@ -152,9 +152,40 @@ angular.module('adminConsole')
 		// Tagged categories
 		this.categories = [];
 
+		// Tool form data
+		this.toolName;
+		this.shortDescription;
+		this.longDescription;
+		this.webSiteURL;
+		this.contactEmail;
+		this.country;
+
+		// Selected directory type
+		this.selectedDirectoryType;
+
 		this.chiliSpicy = function() {
-			console.log(this.categories);
+			this.data = {
+				toolName: this.toolName,
+				categories: this.categories,
+				shortDescription: this.shortDescription,
+				longDescription: this.longDescription,
+				webSiteURL: this.webSiteURL,
+				contactEmail: this.contactEmail,
+				country: this.country,
+				directory: {
+					directoryType: this.selectedDirectoryType
+				}
+			};
+
+			console.log(this.data);
 		};
+
+		this.submitForm = function(isValid) {
+			if (isValid) {
+				console.log("valida");
+			}
+		};
+
 		/*this.submit = function() {
 			console.log(this.categories);
 			if (form.file.$valid && $scope.file) {

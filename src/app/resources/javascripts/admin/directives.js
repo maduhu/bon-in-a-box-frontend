@@ -68,7 +68,6 @@ angular.module('adminConsole')
 	// =========================================================================
 	// SUBCATEGORY TOGGLE
 	// =========================================================================
-
 	.directive('toggleSubcategory', function(){
 		return {
 			restrict: 'A',
@@ -89,9 +88,27 @@ angular.module('adminConsole')
 	})
 
 	// =========================================================================
+	// DIRECTORY TYPE TOGGLE
+	// =========================================================================
+	.directive('toggleDirectoryType', function(){
+		return {
+			restrict: 'A',
+			scope: {
+				directoryType: '='
+			},
+			link: function(scope, element, attrs) {
+				element.click(function() {
+					element.parent().parent().find('button.selected').removeClass('selected');
+					element.toggleClass('selected');
+					scope.directoryType = attrs.title;
+				});
+			}
+		};
+	})
+
+	// =========================================================================
 	// CATEGORY TOGGLE
 	// =========================================================================
-
 	.directive('toggleSubmenu', function(){
 		return {
 			restrict: 'A',
