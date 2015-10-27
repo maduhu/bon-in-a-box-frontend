@@ -121,6 +121,7 @@ section#main
 													button(class="icon-ico-30" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Reptiles" uib-tooltip="Reptiles" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 												li
 													button(class="icon-ico-31" data-toggle-subcategory data-tagged-categories='formCtrl.categories' title="Plants" uib-tooltip="Plants" tooltip-placement="bottom" tooltip-trigger="mouseenter")
+										selected-categories.tagsinput(data-tagged-categories='formCtrl.categories')
 									li
 										textarea.input-forum(type="textarea" name="shortDescription" ng-model="shortDescription" placeholder="Short descriptive text (250 characters)")
 										uib-alert(ng-show="formToolUpload.shortDescription.$invalid && !formToolUpload.shortDescription.$pristine" type="warning") Short descriptive text is required.

@@ -105,6 +105,20 @@ angular.module('adminConsole')
 	})
 
 	// =========================================================================
+	// SHOW SELECTED CATEGORIES
+	// =========================================================================
+	.directive('selectedCategories', function() {
+		return {
+			restrict: 'E',
+			replace: false,
+			scope: {
+				taggedCategories: '='
+			},
+			template: '<h4 ng-show="taggedCategories.length">Current selected categories</h4><div class="tagsinput"><span class="tag label label-info" ng-repeat="categorie in taggedCategories">{{categorie}}</span></div>'
+		};
+	})
+
+	// =========================================================================
 	// WAVES
 	// =========================================================================
 
