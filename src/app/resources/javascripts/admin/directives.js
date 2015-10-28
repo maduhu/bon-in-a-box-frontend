@@ -136,6 +136,37 @@ angular.module('adminConsole')
 	})
 
 	// =========================================================================
+	// TOGGLE BETWEEN LANGUAGE DATA VERSIONS
+	// =========================================================================
+	.directive('toggleSections', function() {
+		return {
+			restrict: 'A',
+			link: function(scope, element) {
+				element.click(function(){
+					angular.element('#english').addClass('hidden');
+					angular.element('#spanish').addClass('hidden');
+					angular.element('#portuguese').addClass('hidden');
+					angular.element('#comments').addClass('hidden');
+					switch(element.attr('title')) {
+						case 'English':
+							angular.element('#english').removeClass('hidden');
+							break;
+						case 'Spanish':
+							angular.element('#spanish').removeClass('hidden');
+							break;
+						case 'Portuguese':
+							angular.element('#portuguese').removeClass('hidden');
+							break;
+						case 'Comment':
+							angular.element('#comments').removeClass('hidden');
+							break;
+					}
+				});
+			}
+		};
+	})
+
+	// =========================================================================
 	// WAVES
 	// =========================================================================
 
