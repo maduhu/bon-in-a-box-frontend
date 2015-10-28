@@ -74,6 +74,10 @@ exports = module.exports = function(collection, mongoose) {
 			required: true,
 			default: 'pending'
 		},
+		email: {
+			type: String,
+			required: true
+		},
 		createdAt: {
 			type: Date,
 			required: true

@@ -9,6 +9,7 @@ section#main
 				.card.add_en#english
 					.card-header
 						h2 Add tool
+						button(data-ng-click='formCtrl.chiliSpicy()') Test
 						ul.actions
 							li
 								a(data-toggle-sections title="Spanish" class="langbar btn_add_es") ES
@@ -141,7 +142,7 @@ section#main
 										button.btn.left(type="") X
 									.clearfix
 									li
-										input(type="text" name="webSiteURL" ng-model="formCtrl.webSiteURL" placeholder="Web Site")
+										input(type="text" name="urlWebsite" ng-model="formCtrl.urlWebsite" placeholder="Web Site")
 									li
 										input(type="email" name="contactEmail" ng-model="formCtrl.contactEmail" placeholder="Contact email" required)
 										uib-alert(ng-show="formToolUpload.contactEmail.$invalid && !formToolUpload.contactEmail.$pristine" type="warning") Contact email is required.
@@ -152,10 +153,10 @@ section#main
 							.columnaforma
 								ol
 									li
-										input(type="text" name="responsibleName" data-ng-model="responsibleName" placeholder="responsible name")
+										input(type="text" name="responsibleName" data-ng-model="formCtrl.responsibleName" placeholder="responsible name" required)
 										uib-alert(ng-show="formToolUpload.responsibleName.$invalid && !formToolUpload.responsibleName.$pristine" type="warning") Responsible name is required.
 									li
-										input(type="text" name="subtitle" data-ng-model="country" placeholder="SUBTITLE / TITLE / COMPANY")
+										input(type="text" name="subtitle" data-ng-model="formCtrl.directorySubtitle" placeholder="SUBTITLE / TITLE / COMPANY")
 									li
 										h4 search categories
 										.categorias.clearfix
@@ -170,7 +171,7 @@ section#main
 													button(data-toggle-directory-type data-directory-type='formCtrl.selectedDirectoryType' title="Investigator" uib-tooltip="Investigator" tooltip-placement="bottom" tooltip-trigger="mouseenter")
 														img(src='../images/inves.png')
 									li
-										textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="directoryShortDescription" placeholder="Short descriptive text (300 characters)")
+										textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="formCtrl.directoryShortDescription" placeholder="Short descriptive text (300 characters)" required)
 										uib-alert(ng-show="formToolUpload.directoryShortDescription.$invalid && !formToolUpload.directoryShortDescription.$pristine" type="warning") Responsible short description is required.
 									li
 										h4 THUMBNAIL IMAGE
@@ -179,12 +180,12 @@ section#main
 										button.btn.left(type="") X
 									.clearfix
 									li
-										input(type="text" name="directoryWebSite" data-ng-model="directoryWebSite" placeholder="Web Site")
+										input(type="text" name="directoryWebSite" data-ng-model="formCtrl.directoryWebSite" placeholder="Web Site")
 									li
-										input(type="email" name="directoryEmail" data-ng-model="directoryEmail" placeholder="Contact Email")
+										input(type="email" name="directoryEmail" data-ng-model="formCtrl.directoryEmail" placeholder="Contact Email" required)
 										uib-alert(ng-show="formToolUpload.directoryEmail.$invalid && !formToolUpload.directoryEmail.$pristine" type="warning") Responsible contact email is required.
 									li
-										input.country-select(country-select name="responsibleCountry" data-ng-model="responsibleCountry" placeholder="Country")
+										input.country-select(country-select name="responsibleCountry" data-ng-model="formCtrl.responsibleCountry" placeholder="Country")
 										uib-alert(ng-show="formToolUpload.responsibleCountry.$invalid && !formToolUpload.responsibleCountry.$pristine" type="warning") Country is required.
 				.card.hidden#spanish
 					.card-header
@@ -195,7 +196,7 @@ section#main
 							li
 								a(data-toggle-sections title="Portuguese" class="langbar") PT
 							li
-								a(data-toggle-sections title="Comments" class="btn_add_comm")
+								a(data-toggle-sections title="Comment" class="btn_add_comm")
 									i.zmdi.zmdi-comment-edit
 					.card-body
 							.formtool
@@ -203,20 +204,20 @@ section#main
 								.columnaforma
 									ol
 										li
-											input(type="text" name="toolname" placeholder="Tool Name")
+											input(type="text" name="toolname" data-ng-model="formCtrl.toolNameSpanish" placeholder="Spanish Tool Name")
 										li
-											textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+											textarea.input-forum(type="textarea" data-ng-model="formCtrl.shortDescriptionSpanish" name="descrip1" placeholder="Spanish short descriptive text (250 characters)")
 										li
-											textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="Full text (1800 characters)")
+											textarea.input-forum.h105(type="textarea" data-ng-model="formCtrl.longDescriptionSpanish" name="descrip2" placeholder="Spanish full text (1800 characters)")
 								h3 spanish directory data
 								.columnaforma
 									ol
 										li
-											input(type="text" name="toolname" placeholder="responsible name")
+											input(type="text" name="toolname" data-ng-model="formCtrl.responsibleNameSpanish" placeholder="Spanish responsible name")
 										li
-											input(type="text" name="toolname" placeholder="SUBTITLE / TITLE / COMPANY")
+											input(type="text" name="toolname" data-ng-model="formCtrl.directorySubtitleSpanish" placeholder="SPANISH SUBTITLE / TITLE / COMPANY")
 										li
-											textarea.input-forum.h180(type="textarea" name="descripr" placeholder="Short descriptive text (300 characters)")
+											textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.directoryShortDescriptionSpanish" name="descripr" placeholder="Spanish short descriptive text (300 characters)")
 				.card.hidden#portuguese
 					.card-header
 						h2 Add tools
@@ -226,7 +227,7 @@ section#main
 							li
 								a(data-toggle-sections title="Spanish" class="langbar") ES
 							li
-								a(data-toggle-sections title="Comments" class="btn_add_comm")
+								a(data-toggle-sections title="Comment" class="btn_add_comm")
 									i.zmdi.zmdi-comment-edit
 					.card-body
 							.formtool
@@ -234,20 +235,20 @@ section#main
 								.columnaforma
 									ol
 										li
-											input(type="text" name="toolname" placeholder="Tool Name")
+											input(type="text" name="toolname" data-ng-model="formCtrl.toolNamePortuguese" placeholder="Portuguese Tool Name")
 										li
-											textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+											textarea.input-forum(type="textarea" data-ng-model="formCtrl.shortDescriptionPortuguese" name="descrip1" placeholder="Portuguese short descriptive text (250 characters)")
 										li
-											textarea.input-forum.h105(type="textarea" name="descrip2" placeholder="Full text (1800 characters)")
+											textarea.input-forum.h105(type="textarea" data-ng-model="formCtrl.longDescriptionPortuguese" name="descrip2" placeholder="Portuguese full text (1800 characters)")
 								h3 portugues directory data
 								.columnaforma
 									ol
 										li
-											input(type="text" name="toolname" placeholder="responsible name")
+											input(type="text" name="toolname" data-ng-model="formCtrl.responsibleNamePortuguese" placeholder="Portuguese responsible name")
 										li
-											input(type="text" name="toolname" placeholder="SUBTITLE / TITLE / COMPANY")
+											input(type="text" name="toolname" data-ng-model="formCtrl.directorySubtitlePortuguese" placeholder="PORTUGUESE SUBTITLE / TITLE / COMPANY")
 										li
-											textarea.input-forum.h180(type="textarea" name="descripr" placeholder="Short descriptive text (300 characters)")
+											textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.directoryShortDescriptionPortuguese" name="descripr" placeholder="Portuguese short descriptive text (300 characters)")
 				.card.hidden#comments
 					.card-header
 						h2 Add tools

@@ -152,28 +152,50 @@ angular.module('adminConsole')
 		// Tagged categories
 		this.categories = [];
 
-		// Tool form data
-		this.toolName;
-		this.shortDescription;
-		this.longDescription;
-		this.webSiteURL;
-		this.contactEmail;
-		this.country;
-
 		// Selected directory type
-		this.selectedDirectoryType;
+		this.selectedDirectoryType = "Institution";
 
 		this.chiliSpicy = function() {
 			this.data = {
-				toolName: this.toolName,
+				name: {
+					english: this.toolName,
+					spanish: this.toolNameSpanish,
+					portuguese: this.toolNamePortuguese
+				},
 				categories: this.categories,
-				shortDescription: this.shortDescription,
-				longDescription: this.longDescription,
-				webSiteURL: this.webSiteURL,
+				shortDescription: {
+					english: this.shortDescription,
+					spanish: this.shortDescriptionSpanish,
+					portuguese: this.shortDescriptionPortuguese
+				},
+				longDescription: {
+					english: this.longDescription,
+					spanish: this.longDescriptionSpanish,
+					portuguese: this.longDescriptionPortuguese
+				},
+				urlWebsite: this.urlWebsite,
 				contactEmail: this.contactEmail,
 				country: this.country,
 				directory: {
-					directoryType: this.selectedDirectoryType
+					responsibleName: {
+						english: this.responsibleName,
+						spanish: this.responsibleNameSpanish,
+						portuguese: this.responsibleNamePortuguese
+					},
+					subtitle: {
+						english: this.directorySubtitle,
+						spanish: this.directorySubtitleSpanish,
+						portuguese: this.directorySubtitlePortuguese
+					},
+					shortDescription: {
+						english: this.directoryShortDescription,
+						spanish: this.directoryShortDescriptionSpanish,
+						portuguese: this.directoryShortDescriptionPortuguese
+					},
+					urlWebsite: this.directoryWebSite,
+					email: this.directoryEmail,
+					country: this.responsibleCountry,
+					category: this.selectedDirectoryType
 				}
 			};
 

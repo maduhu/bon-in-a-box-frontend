@@ -23,7 +23,7 @@ exports = module.exports = function(collection, mongoose) {
 			type: [String],
 			required: true
 		},
-		shortDescrition: {
+		shortDescription: {
 			english: {
 				type: String,
 				required: false,
