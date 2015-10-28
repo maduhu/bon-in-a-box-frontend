@@ -265,9 +265,10 @@ section#main
 								.columnaforma
 									ol
 										li
-											textarea.input-forum(type="textarea" name="descrip1" placeholder="Short descriptive text (250 characters)")
+											textarea.input-forum(type="textarea" data-ng-model="formCtrl.toolComment" name="descrip1" placeholder="Short descriptive text (250 characters)")
 										li
-											input(type="text" name="qualify" placeholder="Add a score")
+											h4 Add a score
+											rate-yo(on-set="set" on-change="change" data-ng-model="formCtrl.toolRating" read-only="options.readOnly" options="formCtrl.ratingOptions")
 				button(type="submit" ng-disabled="formCtrl.$invalid") Send
 			.clearfix
 footer#footer(data-ng-include="'/template/footer.html'")

@@ -7,5 +7,6 @@ angular.module('adminConsole', ['ngAnimate',
 		'angular-loading-bar',
 		'ngTable',
 		'ngFileUpload',
-		'angular-country-select'
+		'angular-country-select',
+		'rateYo'
 ]);

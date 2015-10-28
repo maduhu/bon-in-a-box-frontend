@@ -27,7 +27,8 @@
     "ng-file-upload": "~9.1.1",
     "bower": "*",
     "install": "~1.0.4",
-    "select2": "~3.5.2"
+    "select2": "~3.5.2",
+    "angular-rating-yo": "~1.0.0"
   },
   "overrides": {
     "masonry": {

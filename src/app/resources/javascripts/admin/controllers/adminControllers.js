@@ -148,12 +148,23 @@ angular.module('adminConsole')
 	// =========================================================================
 	// Upload tool
 	// =========================================================================
-	.controller('formToolUploadCtrl', ['Upload', function(Upload){
+	.controller('formToolUploadCtrl', ['$scope', 'Upload', function($scope, Upload){
 		// Tagged categories
 		this.categories = [];
 
+		this.ratingOptions = {
+			ratedFill: "#F39C12",
+			normalFill: "#A0A0A0",
+			numStars: 5,
+			readOnly: false,
+			halfStar: true,
+			fullStar: false
+		};
+
 		// Selected directory type
 		this.selectedDirectoryType = "Institution";
+
+		this.toolRating = undefined;
 
 		this.chiliSpicy = function() {
 			this.data = {
@@ -196,6 +207,10 @@ angular.module('adminConsole')
 					email: this.directoryEmail,
 					country: this.responsibleCountry,
 					category: this.selectedDirectoryType
+				},
+				expertReview: {
+					textReview: this.toolComment,
+					rating: $scope.toolRating
 				}
 			};
 
@@ -206,6 +221,14 @@ angular.module('adminConsole')
 			if (isValid) {
 				console.log("valida");
 			}
+		};
+
+		$scope.change = function(event, data) {
+			//console.log(data.rating);
+		};
+
+		$scope.set = function(event, data) {
+			this.toolRating = data.rating;
 		};
 
 		/*this.submit = function() {
