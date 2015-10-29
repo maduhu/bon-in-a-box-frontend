@@ -23,8 +23,8 @@ section#main
 							.columnaforma
 								ol
 									li
-										input(type="text" name="toolname" ng-model="formCtrl.toolName" placeholder="Tool Name" aria-describedby="Tool name" required)
-										uib-alert(ng-show="formToolUpload.toolname.$invalid && !formToolUpload.toolname.$pristine" type="warning") Tool name is required.
+										input(type="text" name="toolName" ng-model="formCtrl.toolName" placeholder="Tool Name" aria-describedby="Tool name" required)
+										uib-alert(ng-show="formToolUpload.toolName.$invalid && !formToolUpload.toolName.$pristine" type="danger") Tool name is required.
 									li
 										h4 clasification categories
 										.categorias.clearfix
@@ -120,20 +120,20 @@ section#main
 										selected-categories.tagsinput(data-tagged-categories='formCtrl.categories')
 									li
 										textarea.input-forum(type="textarea" name="shortDescription" ng-model="formCtrl.shortDescription" placeholder="Short descriptive text (250 characters)" required)
-										uib-alert(ng-show="formToolUpload.shortDescription.$invalid && !formToolUpload.shortDescription.$pristine" type="warning") Short descriptive text is required.
+										uib-alert(ng-show="formToolUpload.shortDescription.$invalid && !formToolUpload.shortDescription.$pristine" type="danger") Short descriptive text is required.
 									li
 										textarea.input-forum.h105(type="textarea" name="longDescription" ng-model="formCtrl.longDescription" placeholder="Full text (1800 characters)" required)
-										uib-alert(ng-show="formToolUpload.longDescription.$invalid && !formToolUpload.longDescription.$pristine" type="warning") Full tool description is required.
+										uib-alert(ng-show="formToolUpload.longDescription.$invalid && !formToolUpload.longDescription.$pristine" type="danger") Full tool description is required.
 									li
 										h4 THUMBNAIL IMAGE ( 300px Width )
 										h5 This image appears in the search directory
 										.btn_file load file
-											input( class="nobtnfile" type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-min-width="100" ngf-resize="{width: 300, height: 250}")
-										i(ng-show="formToolUpload.file.$error.required")
+											input( class="nobtnfile" type="file" ngf-select ng-model="formCtrl.thumbnailToolFile" name="fileThumbnail" accept="image/*" ngf-max-size="2MB" ngf-min-width="100" ngf-resize="{width: 300, height: 250}")
+										i(ng-show="formToolUpload.fileThumbnail.$error.required")
 										br
-										i(ng-show="formToolUpload.file.$error.maxSize") File too large {{picFile.size / 1000000|number:1}}MB: max 2M
-										img(ng-show="formToolUpload.file.$valid" ngf-thumbnail="picFile" class="thumb")
-										button(ng-click="picFile = null" ng-show="picFile") Remove
+										i(ng-show="formToolUpload.fileThumbnail.$error.maxSize") File too large {{formCtrl.thumbnailToolFile.size / 1000000|number:1}}MB: max 2M
+										img(ng-show="formToolUpload.fileThumbnail.$valid" ngf-thumbnail="formCtrl.thumbnailToolFile" class="thumb")
+										button(ng-click="formCtrl.thumbnailToolFile = null" ng-show="formCtrl.thumbnailToolFile") Remove
 									.clearfix
 									li
 										h4.pt10 tool descriptive image ( 600px Width )
@@ -144,16 +144,16 @@ section#main
 										input(type="text" name="urlWebsite" ng-model="formCtrl.urlWebsite" placeholder="Web Site")
 									li
 										input(type="email" name="contactEmail" ng-model="formCtrl.contactEmail" placeholder="Contact email" required)
-										uib-alert(ng-show="formToolUpload.contactEmail.$invalid && !formToolUpload.contactEmail.$pristine" type="warning") Contact email is required.
+										uib-alert(ng-show="formToolUpload.contactEmail.$invalid && !formToolUpload.contactEmail.$pristine" type="danger") Contact email is required.
 									li
 										input.country-select(country-select name="country" data-ng-model="formCtrl.country" placeholder="Country covering")
-										uib-alert(ng-show="formToolUpload.country.$invalid && !formToolUpload.country.$pristine" type="warning") Country is required.
+										uib-alert(ng-show="formToolUpload.country.$invalid && !formToolUpload.country.$pristine" type="danger") Country is required.
 							h3 english directory form
 							.columnaforma
 								ol
 									li
 										input(type="text" name="responsibleName" data-ng-model="formCtrl.responsibleName" placeholder="responsible name" required)
-										uib-alert(ng-show="formToolUpload.responsibleName.$invalid && !formToolUpload.responsibleName.$pristine" type="warning") Responsible name is required.
+										uib-alert(ng-show="formToolUpload.responsibleName.$invalid && !formToolUpload.responsibleName.$pristine" type="danger") Responsible name is required.
 									li
 										input(type="text" name="subtitle" data-ng-model="formCtrl.directorySubtitle" placeholder="SUBTITLE / TITLE / COMPANY")
 									li
@@ -171,7 +171,7 @@ section#main
 														img(src='../images/inves.png')
 									li
 										textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="formCtrl.directoryShortDescription" placeholder="Short descriptive text (300 characters)" required)
-										uib-alert(ng-show="formToolUpload.directoryShortDescription.$invalid && !formToolUpload.directoryShortDescription.$pristine" type="warning") Responsible short description is required.
+										uib-alert(ng-show="formToolUpload.directoryShortDescription.$invalid && !formToolUpload.directoryShortDescription.$pristine" type="danger") Responsible short description is required.
 									li
 										h4 THUMBNAIL IMAGE
 										h5 ( 300PX WIDTH )
@@ -182,10 +182,10 @@ section#main
 										input(type="text" name="directoryWebSite" data-ng-model="formCtrl.directoryWebSite" placeholder="Web Site")
 									li
 										input(type="email" name="directoryEmail" data-ng-model="formCtrl.directoryEmail" placeholder="Contact Email" required)
-										uib-alert(ng-show="formToolUpload.directoryEmail.$invalid && !formToolUpload.directoryEmail.$pristine" type="warning") Responsible contact email is required.
+										uib-alert(ng-show="formToolUpload.directoryEmail.$invalid && !formToolUpload.directoryEmail.$pristine" type="danger") Responsible contact email is required.
 									li
 										input.country-select(country-select name="responsibleCountry" data-ng-model="formCtrl.responsibleCountry" placeholder="Country")
-										uib-alert(ng-show="formToolUpload.responsibleCountry.$invalid && !formToolUpload.responsibleCountry.$pristine" type="warning") Country is required.
+										uib-alert(ng-show="formToolUpload.responsibleCountry.$invalid && !formToolUpload.responsibleCountry.$pristine" type="danger") Country is required.
 				.card.hidden#spanish
 					.card-header
 						h2 Add tools
@@ -268,6 +268,6 @@ section#main
 										li
 											h4 Add a score
 											rate-yo(on-set="set" on-change="change" data-ng-model="formCtrl.toolRating" read-only="options.readOnly" options="formCtrl.ratingOptions")
-				button(type="submit" ng-disabled="formCtrl.$invalid") Send
+				button(type="submit" ng-disabled="formToolUploadA.$invalid" data-ng-click="formCtrl.submit(formToolUpload)") Send
 			.clearfix
 footer#footer(data-ng-include="'/template/footer.html'")

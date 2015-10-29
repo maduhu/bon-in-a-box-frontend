@@ -29,9 +29,13 @@ exports.dashboard = function() {
  */
 exports.addNewTool = function(services) {
 	return function(req, res) {
-		if (req.isAuthenticated() && req.user.verified && (req.user.role === 'administrator')) {
+		console.log(req.files);
+		console.log(req.body.name.english);
+		res.json({message: 'Tool added successfully'});
+
+		/*if (req.isAuthenticated() && req.user.verified && (req.user.role === 'administrator')) {
 			res.json({message: 'Tool added successfully'});
 		}
-		return res.redirect('/');
+		return res.redirect('/');*/
 	};
 };

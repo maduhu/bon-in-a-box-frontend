@@ -2,8 +2,26 @@
 
 // dependencies
 var logger = require('winston');
+var path = require('path');
+var crypto = require('crypto');
 var express = require('express'),
 		fs = require('fs');
+var multer  = require('multer');
+
+// Storage strategy to localdisk with file rename (includes extension)
+var storage = multer.diskStorage({
+	destination: 'src/public/uploads/',
+	filename: function (req, file, cb) {
+		crypto.pseudoRandomBytes(16, function (err, raw) {
+			if (err) {
+				return cb(err);
+			}
+			cb(null, raw.toString('hex') + path.extname(file.originalname));
+		});
+	}
+});
+
+var upload = multer({ storage: storage });
 
 module.exports = function(parent, services, options) {
 	var verbose = options.verbose;
@@ -93,6 +111,7 @@ module.exports = function(parent, services, options) {
 		// on the exported methods
 		for (var key in obj) {
 			callCallback = false;
+			var multipartImageLoad = undefined;
 			// "reserved" exports
 			if (~['name', 'prefix', 'engine', 'before'].indexOf(key) || ~key.indexOf('Callback')) {
 				continue;
@@ -147,6 +166,7 @@ module.exports = function(parent, services, options) {
 				case 'addNewTool':
 					method = 'post';
 					path = '/api/tools';
+					multipartImageLoad = upload.fields([{ name: 'file', maxCount: 1 }]);
 					break;
 				default:
 					throw new Error('unrecognized route: ' + name + '.' + key);
@@ -155,7 +175,12 @@ module.exports = function(parent, services, options) {
 			if (callCallback === true) {
 				app[method](path, obj[key](services), obj[key+'Callback'](services));
 			} else {
-				app[method](path, obj[key](services));
+				if((typeof multipartImageLoad) !== 'undefined') {
+					console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+					app[method](path, multipartImageLoad, obj[key](services));
+				} else {
+					app[method](path, obj[key](services));
+				}
 			}
 			verbose && console.log(' %s %s -> %s', method.toUpperCase(), path, key);
 		}

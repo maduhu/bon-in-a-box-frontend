@@ -166,7 +166,7 @@ angular.module('adminConsole')
 
 		this.toolRating = undefined;
 
-		this.chiliSpicy = function() {
+		this.submit = function(form) {
 			this.data = {
 				name: {
 					english: this.toolName,
@@ -187,6 +187,7 @@ angular.module('adminConsole')
 				urlWebsite: this.urlWebsite,
 				contactEmail: this.contactEmail,
 				country: this.country,
+				file:this.thumbnailToolFile,
 				directory: {
 					responsibleName: {
 						english: this.responsibleName,
@@ -214,13 +215,22 @@ angular.module('adminConsole')
 				}
 			};
 
-			console.log(this.data);
-		};
-
-		this.submitForm = function(isValid) {
-			if (isValid) {
-				console.log("valida");
-			}
+			/*if (form.$valid && this.thumbnailToolFile) {
+				console.log("exito");
+				console.log(this.thumbnailToolFile);
+				console.log(this.data);
+			}*/
+			Upload.upload({
+				url: '/api/tools',
+				data: this.data
+			}).then(function (resp) {
+				console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+			}, function (resp) {
+				console.log('Error status: ' + resp.status);
+			}, function (evt) {
+				var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+				console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+			});
 		};
 
 		$scope.change = function(event, data) {
@@ -231,13 +241,6 @@ angular.module('adminConsole')
 			this.toolRating = data.rating;
 		};
 
-		/*this.submit = function() {
-			console.log(this.categories);
-			if (form.file.$valid && $scope.file) {
-				console.log(this.categories);
-				$scope.upload($scope.file);
-			}
-		};*/
 	}])
 
 	// =========================================================================
