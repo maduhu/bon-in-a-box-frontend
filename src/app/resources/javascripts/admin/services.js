@@ -50,4 +50,17 @@ angular.module('adminConsole')
 				text: text
 			});
 		};
-	}]);
+	}])
+
+	/*// =========================================================================
+	// Header Messages and Notifications list Data
+	// =========================================================================
+
+	.service('getDirectoriesService', ['$resource', function($resource){
+		this.getMessage = function(callback) {
+			return $resource("/api/directories/:id");
+			directoriesList.get({}, function(result){
+				callback(result);
+			});
+		};
+	}]);*/

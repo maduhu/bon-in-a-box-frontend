@@ -8,5 +8,6 @@ angular.module('adminConsole', ['ngAnimate',
 		'ngTable',
 		'ngFileUpload',
 		'angular-country-select',
-		'rateYo'
+		'rateYo',
+		'sweetalert'
 ]);

@@ -128,7 +128,7 @@ section#main
 										h4 THUMBNAIL IMAGE ( 300px Width )
 										h5 This image appears in the search directory
 										.btn_file load file
-											input( class="nobtnfile" type="file" ngf-select ng-model="formCtrl.thumbnailToolFile" name="fileThumbnail" accept="image/*" ngf-max-size="2MB" ngf-min-width="100" ngf-resize="{width: 300, height: 250}")
+											input( class="nobtnfile" type="file" ngf-select ng-model="formCtrl.thumbnailToolFile" name="fileThumbnail" accept="image/*" ngf-max-size="2MB" ngf-min-width="200" ngf-resize="{width: 300, height: 250}")
 										i(ng-show="formToolUpload.fileThumbnail.$error.required")
 										br
 										i(ng-show="formToolUpload.fileThumbnail.$error.maxSize") File too large {{formCtrl.thumbnailToolFile.size / 1000000|number:1}}MB: max 2M
@@ -137,8 +137,13 @@ section#main
 									.clearfix
 									li
 										h4.pt10 tool descriptive image ( 600px Width )
-										button.btn.left(type="") upload
-										button.btn.left(type="") X
+										.btn_file load file
+											input( class="nobtnfile" type="file" ngf-select ng-model="formCtrl.descriptiveToolFile" name="fileDescriptive" accept="image/*" ngf-max-size="2MB" ngf-min-width="500" ngf-resize="{width: 600, height: 500}")
+										i(ng-show="formToolUpload.fileDescriptive.$error.required")
+										br
+										i(ng-show="formToolUpload.fileDescriptive.$error.maxSize") File too large {{formCtrl.descriptiveToolFile.size / 1000000|number:1}}MB: max 2M
+										img(ng-show="formToolUpload.fileDescriptive.$valid" ngf-thumbnail="formCtrl.descriptiveToolFile" class="thumb")
+										button(ng-click="formCtrl.descriptiveToolFile = null" ng-show="formCtrl.descriptiveToolFile") Remove
 									.clearfix
 									li
 										input(type="text" name="urlWebsite" ng-model="formCtrl.urlWebsite" placeholder="Web Site")
@@ -175,8 +180,13 @@ section#main
 									li
 										h4 THUMBNAIL IMAGE
 										h5 ( 300PX WIDTH )
-										button.btn.left(type="") upload
-										button.btn.left(type="") X
+										.btn_file load file
+											input( class="nobtnfile" type="file" ngf-select ng-model="formCtrl.directoryFile" name="fileDirectory" accept="image/*" ngf-max-size="2MB" ngf-min-width="200" ngf-resize="{width: 300, height: 250}")
+										i(ng-show="formToolUpload.fileDirectory.$error.required")
+										br
+										i(ng-show="formToolUpload.fileDirectory.$error.maxSize") File too large {{formCtrl.directoryFile.size / 1000000|number:1}}MB: max 2M
+										img(ng-show="formToolUpload.fileDirectory.$valid" ngf-thumbnail="formCtrl.directoryFile" class="thumb")
+										button(ng-click="formCtrl.directoryFile = null" ng-show="formCtrl.directoryFile") Remove
 									.clearfix
 									li
 										input(type="text" name="directoryWebSite" data-ng-model="formCtrl.directoryWebSite" placeholder="Web Site")

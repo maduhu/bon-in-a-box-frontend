@@ -59,7 +59,7 @@ exports = module.exports = function(collection, mongoose) {
 		},
 		thumbnailImage: {
 			type: String,
-			required: true
+			required: false
 		},
 		descriptiveImage: {
 			type: String,
@@ -71,7 +71,7 @@ exports = module.exports = function(collection, mongoose) {
 		},
 		contactEmail: {
 			type: String,
-			required: false
+			required: true
 		},
 		country: {
 			type: String,
@@ -88,25 +88,33 @@ exports = module.exports = function(collection, mongoose) {
 		},
 		suggestedBy: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User'
+			ref: 'User',
+			required: true
 		},
-		createdBy: {
+		approvedBy: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User'
+			ref: 'User',
+			required: true
 		},
 		directory: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Directory'
+			ref: 'Directory',
+			required: true
 		},
 		expertReview: [
 			{
+				expert: {
+					type: mongoose.Schema.Types.ObjectId,
+					ref: 'User',
+					required: false
+				},
 				textReview: {
 					type: String,
-					required: true
+					required: false
 				},
 				rating: {
 					type: Number,
-					required: true
+					required: false
 				}
 			}
 		]

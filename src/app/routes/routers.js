@@ -166,7 +166,11 @@ module.exports = function(parent, services, options) {
 				case 'addNewTool':
 					method = 'post';
 					path = '/api/tools';
-					multipartImageLoad = upload.fields([{ name: 'file', maxCount: 1 }]);
+					multipartImageLoad = upload.fields([{ name: 'file', maxCount: 1 }, { name: 'fileDescriptive', maxCount: 1 }, { name: 'directoryFile', maxCount: 1 }]);
+					break;
+				case 'getAllDirectories':
+					method = 'get';
+					path = '/api/directories';
 					break;
 				default:
 					throw new Error('unrecognized route: ' + name + '.' + key);
@@ -176,7 +180,6 @@ module.exports = function(parent, services, options) {
 				app[method](path, obj[key](services), obj[key+'Callback'](services));
 			} else {
 				if((typeof multipartImageLoad) !== 'undefined') {
-					console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 					app[method](path, multipartImageLoad, obj[key](services));
 				} else {
 					app[method](path, obj[key](services));

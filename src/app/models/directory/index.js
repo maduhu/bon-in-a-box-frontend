@@ -84,11 +84,13 @@ exports = module.exports = function(collection, mongoose) {
 		},
 		suggestedBy: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User'
+			ref: 'User',
+			required: true
 		},
-		createdBy: {
+		approvedBy: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User'
+			ref: 'User',
+			required: true
 		}
 	});
 

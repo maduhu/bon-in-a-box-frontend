@@ -108,47 +108,12 @@ angular.module('adminConsole')
 			data: data
 		};
 		this.tableParams = new NgTableParams(initialParams, initialSettings);
-
-		var data2 = [	{ id: 1, nameResponsible: 'Responsible A', category: 'Categoria A' },
-									{ id: 2, nameResponsible: 'Responsible B', category: 'Categoria B' },
-									{ id: 3, nameResponsible: 'Responsible C', category: 'Categoria B' },
-									{ id: 4, nameResponsible: 'Responsible D', category: 'Categoria B' },
-									{ id: 5, nameResponsible: 'Responsible E', category: 'Categoria A' },
-									{ id: 6, nameResponsible: 'Responsible F', category: 'Categoria B' },
-									{ id: 7, nameResponsible: 'Responsible G', category: 'Categoria A' },
-									{ id: 8, nameResponsible: 'Responsible H', category: 'Categoria B' },
-									{ id: 9, nameResponsible: 'Responsible I', category: 'Categoria B' },
-									{ id: 10, nameResponsible: 'Responsible J', category: 'Categoria A' },
-									{ id: 11, nameResponsible: 'Responsible K', category: 'Categoria B' },
-									{ id: 12, nameResponsible: 'Responsible L', category: 'Categoria B' }
-								];
-
-		var initialSettings2 = {
-			// page size buttons (right set of buttons in demo)
-			counts: [5, 10, 25, 50],
-			// determines the pager buttons (left set of buttons in demo)
-			paginationMaxBlocks: 5,
-			paginationMinBlocks: 2,
-			data: data2
-		};
-		this.tableParamsDirectory = new NgTableParams(initialParams, initialSettings2);
-
-		/*var Api = $resource("/data");
-		this.tableParams = new NgTableParams({}, {
-			getData: function(params) {
-				// ajax request to api
-				return Api.get(params.url()).$promise.then(function(data) {
-					params.total(data.inlineCount); // recal. page nav controls
-					return data.results;
-				});
-			}
-		});*/
 	}])
 
 	// =========================================================================
 	// Upload tool
 	// =========================================================================
-	.controller('formToolUploadCtrl', ['$scope', 'Upload', function($scope, Upload){
+	.controller('formToolUploadCtrl', ['$scope', 'Upload', 'swal', '$location', function($scope, Upload, swal, $location){
 		// Tagged categories
 		this.categories = [];
 
@@ -187,7 +152,9 @@ angular.module('adminConsole')
 				urlWebsite: this.urlWebsite,
 				contactEmail: this.contactEmail,
 				country: this.country,
-				file:this.thumbnailToolFile,
+				file: this.thumbnailToolFile,
+				fileDescriptive: this.descriptiveToolFile,
+				fileDirectory: this.directoryFile,
 				directory: {
 					responsibleName: {
 						english: this.responsibleName,
@@ -215,6 +182,8 @@ angular.module('adminConsole')
 				}
 			};
 
+			//console.log(this.data);
+
 			/*if (form.$valid && this.thumbnailToolFile) {
 				console.log("exito");
 				console.log(this.thumbnailToolFile);
@@ -224,12 +193,26 @@ angular.module('adminConsole')
 				url: '/api/tools',
 				data: this.data
 			}).then(function (resp) {
-				console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+				$location.path("/tools");
+				swal({
+					title: "Successfull",
+					text: "Tool data has been saved successfully",
+					type: "success",
+					showCancelButton: false,
+					confirmButtonClass: "btn-success",
+					confirmButtonText: "Close",
+					closeOnConfirm: true
+				});
 			}, function (resp) {
-				console.log('Error status: ' + resp.status);
-			}, function (evt) {
-				var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-				console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+				swal({
+					title: "Error",
+					text: "Error saving tool to database",
+					type: "error",
+					showCancelButton: false,
+					confirmButtonClass: "btn-danger",
+					confirmButtonText: "Close",
+					closeOnConfirm: true
+				});
 			});
 		};
 
@@ -286,4 +269,40 @@ angular.module('adminConsole')
 				launchIntoFullscreen(document.documentElement);
 			}
 		};
-	});
+	})
+
+	// =========================================================================
+	// Directory list Controller
+	// =========================================================================
+	.controller('directoryCtrl', ['$filter', 'NgTableParams', 'DirectoryFactory', function($filter, NgTableParams, DirectoryFactory){
+		this.tableParamsDirectory = new NgTableParams({
+			page: 1, // show first page
+			count: 10, // initial page size
+			sorting: {
+				responsibleName : 'asc' // initial sorting
+			}
+		}, {
+			// page size buttons (right set of buttons in demo)
+			counts: [5, 10, 25, 50],
+			// determines the pager buttons (left set of buttons in demo)
+			paginationMaxBlocks: 5,
+			paginationMinBlocks: 2,
+			getData: function($defer, params) {
+				DirectoryFactory.query(function(directories) {
+					var orderedRecentDirectory = params.sorting() ?
+																			$filter('orderBy')(directories, params.orderBy()):
+																			'responsibleName';
+					var filter = params.filter();
+					if(filter.responsibleName && filter.responsibleName !== "") {
+						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, { responsibleName: { english: params.filter().responsibleName } }) : orderedRecentDirectory;
+					} else {
+						delete filter.responsibleName;
+						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, filter) : orderedRecentDirectory;
+					}
+					orderedRecentDirectory = orderedRecentDirectory.slice((params.page() - 1) * params.count(), params.page() * params.count());
+					params.total(orderedRecentDirectory.length);
+					$defer.resolve(orderedRecentDirectory);
+				});
+			}
+		});
+	}]);
