@@ -8,7 +8,7 @@ section#main
 			.card
 				.card-header
 					h2 Directories
-				.card-body(data-ng-controller="directoryCtrl as dirCtrl")
+				.card-body(data-ng-controller="directoryTableCtrl as dirCtrl")
 					table.sopas(ng-table='dirCtrl.tableParamsDirectory')
 						tr(ng-repeat='row in $data track by row._id')
 							td(data-title="'Responsible name'", filter="{'responsibleName': 'text'}", sortable="'responsibleName'") {{row.responsibleName.english}}

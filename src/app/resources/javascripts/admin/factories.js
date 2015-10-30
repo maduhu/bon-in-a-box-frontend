@@ -3,9 +3,15 @@
 angular.module('adminConsole')
 
 	// =========================================================================
-	// Header Messages and Notifications list Data
+	// Acces to directories api
 	// =========================================================================
-
-	.service('DirectoryFactory', ['$resource', function($resource){
+	.factory('DirectoryFactory', ['$resource', function($resource){
 		return $resource("/api/directories/:id");
+	}])
+
+	// =========================================================================
+	// Acces to tools api
+	// =========================================================================
+	.factory('ToolFactory', ['$resource', function($resource){
+		return $resource("/api/tools/:id");
 	}]);

@@ -48,7 +48,7 @@ angular.module('adminConsole')
 		this.wallVideo = false;
 		this.wallLink = false;
 
-		this.cols = [
+		/*this.cols = [
 			{ field: "name", title: "Name", filter: { name: "text" }, sortable: "name", show: true },
 			{ field: "responsible", title: "Responsible", filter: { responsible: "text" }, sortable: "responsible", show: true },
 			{ field: "state", title: "State", filter: { state: "text" }, sortable: "state", show: true }
@@ -107,7 +107,7 @@ angular.module('adminConsole')
 			paginationMinBlocks: 2,
 			data: data
 		};
-		this.tableParams = new NgTableParams(initialParams, initialSettings);
+		this.tableParams = new NgTableParams(initialParams, initialSettings);*/
 	}])
 
 	// =========================================================================
@@ -274,7 +274,7 @@ angular.module('adminConsole')
 	// =========================================================================
 	// Directory list Controller
 	// =========================================================================
-	.controller('directoryCtrl', ['$filter', 'NgTableParams', 'DirectoryFactory', function($filter, NgTableParams, DirectoryFactory){
+	.controller('directoryTableCtrl', ['$filter', 'NgTableParams', 'DirectoryFactory', function($filter, NgTableParams, DirectoryFactory){
 		this.tableParamsDirectory = new NgTableParams({
 			page: 1, // show first page
 			count: 10, // initial page size
@@ -297,6 +297,42 @@ angular.module('adminConsole')
 						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, { responsibleName: { english: params.filter().responsibleName } }) : orderedRecentDirectory;
 					} else {
 						delete filter.responsibleName;
+						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, filter) : orderedRecentDirectory;
+					}
+					orderedRecentDirectory = orderedRecentDirectory.slice((params.page() - 1) * params.count(), params.page() * params.count());
+					params.total(orderedRecentDirectory.length);
+					$defer.resolve(orderedRecentDirectory);
+				});
+			}
+		});
+	}])
+
+	// =========================================================================
+	// Tool list Controller
+	// =========================================================================
+	.controller('toolTableCtrl', ['$filter', 'NgTableParams', 'ToolFactory', function($filter, NgTableParams, ToolFactory){
+		this.tableParams = new NgTableParams({
+			page: 1, // show first page
+			count: 10, // initial page size
+			sorting: {
+				name : 'asc' // initial sorting
+			}
+		}, {
+			// page size buttons (right set of buttons in demo)
+			counts: [5, 10, 25, 50],
+			// determines the pager buttons (left set of buttons in demo)
+			paginationMaxBlocks: 5,
+			paginationMinBlocks: 2,
+			getData: function($defer, params) {
+				ToolFactory.query(function(directories) {
+					var orderedRecentDirectory = params.sorting() ?
+																			$filter('orderBy')(directories, params.orderBy()):
+																			'name';
+					var filter = params.filter();
+					if(filter.name && filter.name !== "") {
+						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, { name: { english: params.filter().responsibleName } }) : orderedRecentDirectory;
+					} else {
+						delete filter.name;
 						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, filter) : orderedRecentDirectory;
 					}
 					orderedRecentDirectory = orderedRecentDirectory.slice((params.page() - 1) * params.count(), params.page() * params.count());

@@ -43,24 +43,11 @@ angular.module('adminConsole')
 
 	.service('messageService', ['$resource', function($resource){
 		this.getMessage = function(img, user, text) {
-			var gmList = $resource("/data/messages-notifications.json");
+			/*var gmList = $resource("/data/messages-notifications.json");
 			return gmList.get({
 				img: img,
 				user: user,
 				text: text
-			});
+			});*/
 		};
-	}])
-
-	/*// =========================================================================
-	// Header Messages and Notifications list Data
-	// =========================================================================
-
-	.service('getDirectoriesService', ['$resource', function($resource){
-		this.getMessage = function(callback) {
-			return $resource("/api/directories/:id");
-			directoriesList.get({}, function(result){
-				callback(result);
-			});
-		};
-	}]);*/
+	}]);

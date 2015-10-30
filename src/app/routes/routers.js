@@ -172,6 +172,10 @@ module.exports = function(parent, services, options) {
 					method = 'get';
 					path = '/api/directories';
 					break;
+				case 'getAllTools':
+					method = 'get';
+					path = '/api/tools';
+					break;
 				default:
 					throw new Error('unrecognized route: ' + name + '.' + key);
 			}

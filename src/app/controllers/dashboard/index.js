@@ -39,9 +39,7 @@ exports.addNewTool = function(services) {
 				res.send('Error saving tool');
 				//res.render('signup_verify');
 			} else {
-				console.log(newtool);
-				req.flash('verificationMessage', req.__('signup_verification_token_successful'));
-				console.log("Successfull save");
+				req.flash('verificationMessage', 'Tool added successfully');
 				res.json({message: 'Tool added successfully'});
 				//res.render('signup_verify');
 			}
@@ -68,6 +66,20 @@ exports.addNewTool = function(services) {
 exports.getAllDirectories = function(services) {
 	return function(req, res) {
 		services.directory.getAll(req, function(err, data) {
+			res.json(data);
+		});
+	};
+};
+
+/**
+ * Resolves URL /api/tools
+ * Method GET
+ * @param  {Object} Request params
+ * @param  {Object} Response params
+ */
+exports.getAllTools = function(services) {
+	return function(req, res) {
+		services.tool.getAll(req, function(err, data) {
 			res.json(data);
 		});
 	};

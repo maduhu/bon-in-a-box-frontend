@@ -88,24 +88,24 @@ exports = module.exports = function(collection, mongoose) {
 		},
 		suggestedBy: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
+			ref: 'user',
 			required: true
 		},
 		approvedBy: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
+			ref: 'user',
 			required: true
 		},
 		directory: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Directory',
+			ref: 'directory',
 			required: true
 		},
 		expertReview: [
 			{
 				expert: {
 					type: mongoose.Schema.Types.ObjectId,
-					ref: 'User',
+					ref: 'user',
 					required: false
 				},
 				textReview: {
