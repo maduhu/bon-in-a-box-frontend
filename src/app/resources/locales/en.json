@@ -208,5 +208,9 @@
 	"signup.verify_subtitle": "User account successfully verified",
 	"nav.admin": "Dashboard",
 	"nav.profile_account": "Profile",
-	"nav.profile_home": "Home"
+	"nav.profile_home": "Home",
+	"maindir.title": "directory section",
+	"dircaution.title": "<b> please review the current list of responsibles in the directory.</b> In case the responsible you are looking for is not currently in our database, proceed to <b>add a new entry.</b>",
+	"dirselector.title": "current responsibles list",
+	"new.entry": "new entry"
 }

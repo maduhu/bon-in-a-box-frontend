@@ -828,41 +828,48 @@ block content
 						li
 							input(type="text" name="toolname" placeholder="#{__('PHtool.country')}")
 			.formtool2
-				h3 !{__('formtool.dirtitle')}
-				.columnaforma
-					ol
-						li
-							input(type="text" name="toolname" placeholder="#{__('PHresp.name')}")
-						li
-							input(type="text" name="toolname" placeholder="#{__('PHresp.sub')}")
-						li
-							h4 !{__('formtool.categories')}
-							.categorias.clearfix
-								ul
-									li
-										a(class="selected" data-toggle="tooltip" title="#{__('filter.institution')}" href="")
-											img(src='images/inst.png')
-									li
-										a(class="" data-toggle="tooltip" title="#{__('filter.initiative')}" href="")
-											img(src='images/inic.png')
-									li
-										a(class="" data-toggle="tooltip" title="#{__('filter.investigator')}" href="")
-											img(src='images/inves.png')
-						li
-							textarea.input-forum.h180(type="textarea" name="descripr" placeholder="#{__('PHresp.shorttext')}")
-						li
-							h4 !{__('formtool.thumbtitle2')}
-							h5 !{__('formtool.thumbsubtitle2')}
-							button.btn.left(type="") !{__('formtool.load')}
-							button.btn.left(type="") X
-						.clearfix
-						li
-							input(type="text" name="toolname" placeholder="#{__('PHtool.web')}")
-						li
-							input(type="text" name="toolname" placeholder="#{__('PHtool.mail')}")
-						li
-							input(type="text" name="toolname" placeholder="#{__('PHtool.scountry')}")
-					button(type="submit") !{__('formtool.send')}
+				.newresphide
+					h3 !{__('maindir.title')}
+					h4 !{__('dircaution.title')}
+					h3.grayc !{__('dirselector.title')}
+					input.country-select(country-select name="country" data-ng-model="formCtrl.country" placeholder="Responsibles in database")
+					button(class="clearbtn") !{__('new.entry')}
+				.newresp
+					h3.grayc !{__('formtool.dirtitle')}
+					.columnaforma
+						ol
+							li
+								input(type="text" name="toolname" placeholder="#{__('PHresp.name')}")
+							li
+								input(type="text" name="toolname" placeholder="#{__('PHresp.sub')}")
+							li
+								h4 !{__('formtool.categories')}
+								.categorias.clearfix
+									ul
+										li
+											a(class="selected" data-toggle="tooltip" title="#{__('filter.institution')}" href="")
+												img(src='images/inst.png')
+										li
+											a(class="" data-toggle="tooltip" title="#{__('filter.initiative')}" href="")
+												img(src='images/inic.png')
+										li
+											a(class="" data-toggle="tooltip" title="#{__('filter.investigator')}" href="")
+												img(src='images/inves.png')
+							li
+								textarea.input-forum.h180(type="textarea" name="descripr" placeholder="#{__('PHresp.shorttext')}")
+							li
+								h4 !{__('formtool.thumbtitle2')}
+								h5 !{__('formtool.thumbsubtitle2')}
+								button.btn.left(type="") !{__('formtool.load')}
+								button.btn.left(type="") X
+							.clearfix
+							li
+								input(type="text" name="toolname" placeholder="#{__('PHtool.web')}")
+							li
+								input(type="text" name="toolname" placeholder="#{__('PHtool.mail')}")
+							li
+								input(type="text" name="toolname" placeholder="#{__('PHtool.scountry')}")
+		button(type="submit" class="bottom") !{__('formtool.send')}
 	#section4
 	.contenido.forum
 		h4 !{__('forum.title')}
