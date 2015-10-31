@@ -206,5 +206,10 @@
 	"login.welcome": "login.welcome",
 	"nav.admin": "Tablero de administración",
 	"nav.profile_account": "Cuenta",
-	"nav.profile_home": "Inicio"
+	"nav.profile_home": "Inicio",
+	"maindir.title": "Sección de directorio",
+	"dircaution.title": "<b>Por favor revisar la lista actual de directorio de responsables.</b> Si el responsable que busca no está en nuestra base de datos, proceda a <b> agregar nueva entrada.</b>",
+	"dirselector.title": "lista actual de responsables",
+	"new.entry": "nueva entrada",
+	"PHlist.responsibles": "Lista de responsables"
 }

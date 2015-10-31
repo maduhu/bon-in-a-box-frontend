@@ -1087,8 +1087,6 @@ label
 			font-size 0.786em
 			line-height 0
 			margin-left 5px
-		.formtool
-			position relative
 		.formtool2
 		.formtool
 			width 64%
@@ -1100,14 +1098,15 @@ label
 			border-bottom-right-radius 10px
 			margin -14px 0 0 8px
 			float left
-			padding 10px 0 14px 20px
+			padding 10px 0 14px 15px
 			overflow auto
 			text-shadow rgba(0,0,0,.01) 0 0 1px
+			position relative
 			ol
 				padding 10px
 				>li
 					counter-increment customlistcounter
-					margin 0 0 0 10px
+					margin 0 0 0 15px
 					list-style none
 					&:before
 						content counter(customlistcounter) " "
@@ -1122,6 +1121,8 @@ label
 			.columnaforma
 				vertical-align top
 				margin-top 5px
+				position relative
+				overflow auto
 				.categorias
 					margin-left  10px
 					margin-bottom 15px
@@ -1195,6 +1196,7 @@ label
 			margin -14px 35px 7px 0
 			vertical-align top
 			float right
+			padding 10px 12px 14px
 			h3
 				margin-left 10px
 .pt10

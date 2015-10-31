@@ -708,9 +708,9 @@ block content
 			button(class="back")
 				img(src='images/xxx.png')
 		form(id="" method="" action="" class="clearfix")
-			.formtool
+			.formtool.scrollp
 				h3 !{__('formtool.title')}
-				.columnaforma.scrollp
+				.columnaforma
 					ol
 						li
 							input(type="text" name="toolname" placeholder="#{__('PHtool.name')}")
@@ -832,7 +832,7 @@ block content
 					h3 !{__('maindir.title')}
 					h4 !{__('dircaution.title')}
 					h3.grayc !{__('dirselector.title')}
-					input.country-select(country-select name="country" data-ng-model="formCtrl.country" placeholder="Responsibles in database")
+					input.country-select(country-select name="country" data-ng-model="formCtrl.country" placeholder="#{__('PHlist.responsibles')}")
 					button(class="clearbtn") !{__('new.entry')}
 				.newresp
 					h3.grayc !{__('formtool.dirtitle')}
