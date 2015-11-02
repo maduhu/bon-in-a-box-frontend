@@ -3,11 +3,17 @@
 exports = module.exports = function(collection, mongoose) {
 	var schema = mongoose.Schema({
 		author: {
-			type: String,
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'user',
+			required: true
 		},
 		text: {
 			type: String,
 			required: true
+		},
+		score: {
+			type: Number,
+			required: false
 		}
 	});
 

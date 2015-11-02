@@ -166,6 +166,27 @@ angular.module('adminConsole')
 		};
 	})
 
+	.directive('directoriesSelect', ['DirectoryFactory', function(DirectoryFactory) {
+		return {
+			restrict: 'A',
+			require:'ngModel',
+			link: function(scope, elem, attrs, ngModelCtrl) {
+				// Get list of directories data for select
+				DirectoryFactory.query({fields: '_id,responsibleName.english'}, function(directories) {
+					var directoryList = directories.map(function(val) {
+						return {
+							id: val._id,
+							text: val.responsibleName.english
+						};
+					});
+					elem.select2({
+						data: directoryList
+					});
+				});
+			}
+		};
+	}])
+
 	// =========================================================================
 	// WAVES
 	// =========================================================================

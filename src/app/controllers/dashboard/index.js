@@ -30,30 +30,30 @@ exports.dashboard = function() {
  */
 exports.addNewTool = function(services) {
 	return function(req, res) {
-		console.log(req.files);
-		console.log(req.body);
-		services.tool.new(req, function(err, newtool) {
-			if (err) {
-				req.flash('errorMessage', err);
-				res.status(400);
-				res.send('Error saving tool');
-				//res.render('signup_verify');
-			} else {
-				req.flash('verificationMessage', 'Tool added successfully');
-				res.json({message: 'Tool added successfully'});
-				//res.render('signup_verify');
-			}
-		});
 		/*console.log(req.files);
 		if (req.body.name) {
 			console.log(req.body.name.english);
 		}
 		res.json({message: 'Tool added successfully'});*/
 
-		/*if (req.isAuthenticated() && req.user.verified && (req.user.role === 'administrator')) {
-			res.json({message: 'Tool added successfully'});
+		if (req.isAuthenticated() && req.user.verified && (req.user.role === 'administrator')) {
+			console.log(req.files);
+			console.log(req.body);
+			services.tool.new(req, function(err, newtool) {
+				if (err) {
+					req.flash('errorMessage', err);
+					res.status(400);
+					res.send('Error saving tool');
+					//res.render('signup_verify');
+				} else {
+					req.flash('verificationMessage', 'Tool added successfully');
+					res.json({message: 'Tool added successfully'});
+					//res.render('signup_verify');
+				}
+			});
+		} else  {
+			return res.redirect('/');
 		}
-		return res.redirect('/');*/
 	};
 };
 

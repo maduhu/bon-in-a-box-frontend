@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adminConsole')
-	.controller('adminConsoleCtrl', ["$timeout", "$state", "growlService", "NgTableParams", function($timeout, $state, growlService, NgTableParams){
+	.controller('adminConsoleCtrl', ["$timeout", "$state", "growlService", function($timeout, $state, growlService){
 
 		this.init = function(data) {
 			// Current user full name
@@ -47,73 +47,12 @@ angular.module('adminConsole')
 		this.wallImage = false;
 		this.wallVideo = false;
 		this.wallLink = false;
-
-		/*this.cols = [
-			{ field: "name", title: "Name", filter: { name: "text" }, sortable: "name", show: true },
-			{ field: "responsible", title: "Responsible", filter: { responsible: "text" }, sortable: "responsible", show: true },
-			{ field: "state", title: "State", filter: { state: "text" }, sortable: "state", show: true }
-		];
-
-		var data = [{ id: 1, name: 'Tool A', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 2, name: 'Tool B', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 3, name: 'Tool C', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 4, name: 'Tool D', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 5, name: 'Tool E', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 6, name: 'Tool F', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 7, name: 'Tool G', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 8, name: 'Tool H', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 9, name: 'Tool I', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 10, name: 'Tool J', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 11, name: 'Tool K', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 12, name: 'Tool L', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 13, name: 'Tool M', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 14, name: 'Tool N', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 15, name: 'Tool O', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 16, name: 'Tool P', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 17, name: 'Tool Q', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 18, name: 'Tool R', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 19, name: 'Tool S', shortDescription: 'Short description', responsible: 'Responsable b', state: 'Activa' },
-								{ id: 20, name: 'Tool T', shortDescription: 'Short description', responsible: 'Responsable b', state: 'Sugerida' },
-								{ id: 21, name: 'Tool U', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 22, name: 'Tool V', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 23, name: 'Tool W', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 24, name: 'Tool X', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 25, name: 'Tool Y', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 26, name: 'Tool Z', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 27, name: 'Tool AA', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 28, name: 'Tool AB', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 29, name: 'Tool AC', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 30, name: 'Tool AD', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 31, name: 'Tool AE', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 32, name: 'Tool AF', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 33, name: 'Tool AG', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 34, name: 'Tool AH', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 35, name: 'Tool AI', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 36, name: 'Tool AJ', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 37, name: 'Tool AK', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 38, name: 'Tool AL', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 39, name: 'Tool AM', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 40, name: 'Tool AN', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' },
-								{ id: 41, name: 'Tool AO', shortDescription: 'Short description', responsible: 'Responsable A', state: 'Activa' }];
-
-		var initialParams = {
-			count: 10 // initial page size
-		};
-		var initialSettings = {
-			// page size buttons (right set of buttons in demo)
-			counts: [5, 10, 25, 50],
-			// determines the pager buttons (left set of buttons in demo)
-			paginationMaxBlocks: 5,
-			paginationMinBlocks: 2,
-			data: data
-		};
-		this.tableParams = new NgTableParams(initialParams, initialSettings);*/
 	}])
 
 	// =========================================================================
 	// Upload tool
 	// =========================================================================
-	.controller('formToolUploadCtrl', ['$scope', 'Upload', 'swal', '$location', function($scope, Upload, swal, $location){
+	.controller('formToolUploadCtrl', ['$scope', 'Upload', 'swal', '$location', 'DirectoryFactory', function($scope, Upload, swal, $location, DirectoryFactory){
 		// Tagged categories
 		this.categories = [];
 
@@ -131,7 +70,7 @@ angular.module('adminConsole')
 
 		this.toolRating = undefined;
 
-		this.submit = function(form) {
+		this.submit = function() {
 			this.data = {
 				name: {
 					english: this.toolName,
