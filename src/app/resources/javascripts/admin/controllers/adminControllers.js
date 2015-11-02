@@ -292,13 +292,16 @@ angular.module('adminConsole')
 					var orderedRecentDirectory = params.sorting() ?
 																			$filter('orderBy')(directories, params.orderBy()):
 																			'responsibleName';
-					var filter = params.filter();
-					if(filter.responsibleName && filter.responsibleName !== "") {
-						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, { responsibleName: { english: params.filter().responsibleName } }) : orderedRecentDirectory;
-					} else {
-						delete filter.responsibleName;
-						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, filter) : orderedRecentDirectory;
+					var newFilter = {};
+					if(params.filter().responsibleName && params.filter().responsibleName !== "") {
+						newFilter.responsibleName = {
+							english: params.filter().responsibleName
+						};
 					}
+					if(params.filter().category && params.filter().category !== "") {
+						newFilter.category = params.filter().category;
+					}
+					orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, newFilter) : orderedRecentDirectory;
 					orderedRecentDirectory = orderedRecentDirectory.slice((params.page() - 1) * params.count(), params.page() * params.count());
 					params.total(orderedRecentDirectory.length);
 					$defer.resolve(orderedRecentDirectory);
@@ -324,20 +327,30 @@ angular.module('adminConsole')
 			paginationMaxBlocks: 5,
 			paginationMinBlocks: 2,
 			getData: function($defer, params) {
-				ToolFactory.query(function(directories) {
-					var orderedRecentDirectory = params.sorting() ?
-																			$filter('orderBy')(directories, params.orderBy()):
+				ToolFactory.query(function(tools) {
+					var orderedRecentTool = params.sorting() ?
+																			$filter('orderBy')(tools, params.orderBy()):
 																			'name';
-					var filter = params.filter();
-					if(filter.name && filter.name !== "") {
-						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, { name: { english: params.filter().responsibleName } }) : orderedRecentDirectory;
-					} else {
-						delete filter.name;
-						orderedRecentDirectory = params.filter ? $filter('filter')(orderedRecentDirectory, filter) : orderedRecentDirectory;
+					var newFilter = {};
+					if(params.filter().name && params.filter().name !== "") {
+						newFilter.name = {
+							english: params.filter().name
+						};
 					}
-					orderedRecentDirectory = orderedRecentDirectory.slice((params.page() - 1) * params.count(), params.page() * params.count());
-					params.total(orderedRecentDirectory.length);
-					$defer.resolve(orderedRecentDirectory);
+					if(params.filter().responsibleName && params.filter().responsibleName !== "") {
+						newFilter.directory = {
+							responsibleName: {
+								english: params.filter().responsibleName
+							}
+						};
+					}
+					if(params.filter().state && params.filter().state !== "") {
+						newFilter.state = params.filter().state;
+					}
+					orderedRecentTool = params.filter ? $filter('filter')(orderedRecentTool, newFilter) : orderedRecentTool;
+					orderedRecentTool = orderedRecentTool.slice((params.page() - 1) * params.count(), params.page() * params.count());
+					params.total(orderedRecentTool.length);
+					$defer.resolve(orderedRecentTool);
 				});
 			}
 		});
