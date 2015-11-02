@@ -84,7 +84,7 @@ footer
 	color #999999
 	vertical-align top
 	.contenedor
-		padding 30px 0 50px
+		padding 30px 15px 50px
 	.colft
 		width 20%
 		display inline-block
@@ -118,12 +118,11 @@ footer
 	img
 		float right
 		margin 10px 0 0 10px
-footer
 	small
 		background-color #FFF
 		text-align center
 		display block
-		padding-bottom 12px
+		padding 0 15px 12px 15px
 		.contenedorsm
 			padding-top 12px
 			margin 0 auto
@@ -1894,8 +1893,6 @@ html[dir="rtl"]
 	.contenidog
 		width 90%
 @media (min-width:481px) and (max-width:780px)
-	footer
-		padding 0 15px
 	.col_herramientas
 		width 60%
 	.componentes
@@ -1983,11 +1980,11 @@ html[dir="rtl"]
 		width 100%
 		padding 0 15px 10px 10px
 		margin-top 130px !important
-		img
+		+img
 			margin-top 0px
 			position absolute
 			top 10px
-			right 30px
+			right 0px
 		.col50
 			width 100%
 			height auto
@@ -2118,7 +2115,7 @@ html[dir="rtl"]
 		font-size 130%
 		.colft
 			line-height 1.3em
-			width 45%
+			width 100%
 			margin-right 13px
 		ul
 			float none
@@ -2129,6 +2126,9 @@ html[dir="rtl"]
 				display inline-block
 		small
 			margin -10px
+		.langft
+			>a
+				display inline-block
 	.toolabst
 		>div
 			width 100% !important
