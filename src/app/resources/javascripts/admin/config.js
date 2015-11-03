@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('adminConsole')
-	.config(function($stateProvider, $urlRouterProvider) {
+	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 		$urlRouterProvider.otherwise("/home");
+
+		$locationProvider.html5Mode(true).hashPrefix('!');
 
 		$stateProvider
 
@@ -78,4 +80,4 @@ angular.module('adminConsole')
 			url: '/edit_directory_pt',
 			templateUrl: '/views/edit_directory_pt.html'
 		});
-	});
+	}]);

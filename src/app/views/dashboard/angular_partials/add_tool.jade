@@ -34,19 +34,19 @@ section#main
 											ul
 												li
 													button.selected(data-toggle-category title="Monitoring Components" uib-tooltip="Monitoring Components" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-														img(src='../images/filt1m.png')
+														img(src='/images/filt1m.png')
 												li
 													button(data-toggle-category title="EBV" uib-tooltip="EBV" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-														img(src='../images/filt2m.png')
+														img(src='/images/filt2m.png')
 												li
 													button(data-toggle-category title="By Theme" uib-tooltip="By Theme" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-														img(src='../images/filt3m.png')
+														img(src='/images/filt3m.png')
 												li
 													button(data-toggle-category title="By Kind" uib-tooltip="By Kind" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-														img(src='../images/filt4m.png')
+														img(src='/images/filt4m.png')
 												li
 													button(data-toggle-category title="By Taxonomy" uib-tooltip="By Taxonomy" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-														img(src='../images/filt5m.png')
+														img(src='/images/filt5m.png')
 										h3 subject categories
 										#subCat1.iconosformulario
 											ul
@@ -186,13 +186,13 @@ section#main
 												ul
 													li
 														button(data-toggle-directory-type class="selected" data-directory-type='formCtrl.selectedDirectoryType' title="Institution" uib-tooltip="Institution" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-															img(src='../images/inst.png')
+															img(src='/images/inst.png')
 													li
 														button(data-toggle-directory-type data-directory-type='formCtrl.selectedDirectoryType' title="Initiative" uib-tooltip="Initiative" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-															img(src='../images/inic.png')
+															img(src='/images/inic.png')
 													li
 														button(data-toggle-directory-type data-directory-type='formCtrl.selectedDirectoryType' title="Investigator" uib-tooltip="Investigator" tooltip-placement="bottom" tooltip-trigger="mouseenter")
-															img(src='../images/inves.png')
+															img(src='/images/inves.png')
 										li
 											textarea.input-forum.h180(type="textarea" name="directoryShortDescription" data-ng-model="formCtrl.directoryShortDescription" placeholder="Short descriptive text (300 characters)" required)
 											uib-alert(ng-show="formToolUpload.directoryShortDescription.$invalid && !formToolUpload.directoryShortDescription.$pristine" type="danger") Responsible short description is required.
