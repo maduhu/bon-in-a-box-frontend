@@ -187,6 +187,31 @@ angular.module('adminConsole')
 		};
 	}])
 
+	.directive('toggleNewOldDirectory', function() {
+		return {
+			restrict: 'A',
+			scope: {
+				selectedDirectory: '='
+			},
+			link: function(scope, element) {
+				element.click(function(){
+					if(angular.element('#newDirectoryForm').attr('class') === 'hidden') {
+						scope.selectedDirectory = undefined;
+						angular.element('#oldDirectoryForm').addClass('hidden');
+						angular.element('#newDirectoryForm').removeClass('hidden');
+						angular.element('#newDirectoryFormSpanish').removeClass('hidden');
+						angular.element('#newDirectoryFormPortuguese').removeClass('hidden');
+					} else {
+						angular.element('#oldDirectoryForm').removeClass('hidden');
+						angular.element('#newDirectoryForm').addClass('hidden');
+						angular.element('#newDirectoryFormSpanish').addClass('hidden');
+						angular.element('#newDirectoryFormPortuguese').addClass('hidden');
+					}
+				});
+			}
+		};
+	})
+
 	// =========================================================================
 	// WAVES
 	// =========================================================================

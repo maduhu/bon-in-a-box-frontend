@@ -13,7 +13,7 @@ exports = module.exports = function(collection, mongoose) {
 				required: false,
 				trim: true
 			},
-			potuguese: {
+			portuguese: {
 				type: String,
 				required: false,
 				trim: true
@@ -34,7 +34,7 @@ exports = module.exports = function(collection, mongoose) {
 				required: false,
 				trim: true
 			},
-			potuguese: {
+			portuguese: {
 				type: String,
 				required: false,
 				trim: true
@@ -51,7 +51,7 @@ exports = module.exports = function(collection, mongoose) {
 				required: false,
 				trim: true
 			},
-			potuguese: {
+			portuguese: {
 				type: String,
 				required: false,
 				trim: true

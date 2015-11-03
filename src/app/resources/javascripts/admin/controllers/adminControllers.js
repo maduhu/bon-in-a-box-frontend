@@ -94,6 +94,7 @@ angular.module('adminConsole')
 				file: this.thumbnailToolFile,
 				fileDescriptive: this.descriptiveToolFile,
 				fileDirectory: this.directoryFile,
+				selectedDirectory: this.selectedDirectory,
 				directory: {
 					responsibleName: {
 						english: this.responsibleName,
@@ -121,13 +122,8 @@ angular.module('adminConsole')
 				}
 			};
 
-			//console.log(this.data);
+			console.log(this.data);
 
-			/*if (form.$valid && this.thumbnailToolFile) {
-				console.log("exito");
-				console.log(this.thumbnailToolFile);
-				console.log(this.data);
-			}*/
 			Upload.upload({
 				url: '/api/tools',
 				data: this.data

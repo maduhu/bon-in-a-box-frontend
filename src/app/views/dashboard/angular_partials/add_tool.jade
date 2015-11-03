@@ -157,15 +157,21 @@ section#main
 										input.country-select(country-select name="country" data-ng-model="formCtrl.country" placeholder="Country covering")
 										uib-alert(ng-show="formToolUpload.country.$invalid && !formToolUpload.country.$pristine" type="danger") Country is required.
 							h3 directory section
-							h4
-								b please review the current list of responsibles in the directory.
-								| In case the responsible you are looking for is not currently in our database, proceed to
-								b add a new entry.
-							h3.grayc current responsibles list
-							input.country-select(directories-select name="availableDirectories" data-ng-model="formCtrl.selectedDirectory" placeholder="Select a directory")
-							uib-alert(ng-show="formToolUpload.country.$invalid && !formToolUpload.country.$pristine" type="danger") Country is required.
-							button(class="clearbtn") new entry
-							.newresp
+							#oldDirectoryForm
+								h4
+									b please review the current list of responsibles in the directory.
+									| In case the responsible you are looking for is not currently in our database, proceed to
+									b  add a new entry.
+								h3.grayc current responsibles list
+								input.country-select(directories-select name="availableDirectories" data-ng-model="formCtrl.selectedDirectory" placeholder="Select a directory")
+								uib-alert(ng-show="formToolUpload.selectedDirectory.$invalid && !formToolUpload.selectedDirectory.$pristine" type="danger") Directory from list is required.
+								button(data-toggle-new-old-directory data-selected-directory="formCtrl.selectedDirectory" class="clearbtn") new entry
+							#newDirectoryForm.hidden
+								h4
+									b please review the current list of responsibles in the directory.
+									| In case the responsible you are looking for is stored in the database, click on
+									b  old entry button.
+								button(data-toggle-new-old-directory data-selected-directory="formCtrl.selectedDirectory" class="clearbtn") old entry
 								h3.grayc english directory form
 								.columnaforma
 									ol
@@ -231,17 +237,18 @@ section#main
 											textarea.input-forum(type="textarea" data-ng-model="formCtrl.shortDescriptionSpanish" name="descrip1" placeholder="Spanish short descriptive text (250 characters)")
 										li
 											textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.longDescriptionSpanish" name="descrip2" placeholder="Spanish full text (1800 characters)")
-								h3 spanish directory data
-								h4 only fill this section if you are
-									b adding a new responsible entry
-								.columnaforma
-									ol
-										li
-											input(type="text" name="toolname" data-ng-model="formCtrl.responsibleNameSpanish" placeholder="Spanish responsible name")
-										li
-											input(type="text" name="toolname" data-ng-model="formCtrl.directorySubtitleSpanish" placeholder="SPANISH SUBTITLE / TITLE / COMPANY")
-										li
-											textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.directoryShortDescriptionSpanish" name="descripr" placeholder="Spanish short descriptive text (300 characters)")
+								#newDirectoryFormSpanish.hidden
+									h3 spanish directory data
+									h4 only fill this section if you are
+										b adding a new responsible entry
+									.columnaforma
+										ol
+											li
+												input(type="text" name="toolname" data-ng-model="formCtrl.responsibleNameSpanish" placeholder="Spanish responsible name")
+											li
+												input(type="text" name="toolname" data-ng-model="formCtrl.directorySubtitleSpanish" placeholder="SPANISH SUBTITLE / TITLE / COMPANY")
+											li
+												textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.directoryShortDescriptionSpanish" name="descripr" placeholder="Spanish short descriptive text (300 characters)")
 				.card.hidden#portuguese
 					.card-header
 						h2 Add tools
@@ -264,17 +271,18 @@ section#main
 											textarea.input-forum(type="textarea" data-ng-model="formCtrl.shortDescriptionPortuguese" name="descrip1" placeholder="Portuguese short descriptive text (250 characters)")
 										li
 											textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.longDescriptionPortuguese" name="descrip2" placeholder="Portuguese full text (1800 characters)")
-								h3 portuguese directory data
-								h4 only fill this section if you are
-									b adding a new responsible entry
-								.columnaforma
-									ol
-										li
-											input(type="text" name="toolname" data-ng-model="formCtrl.responsibleNamePortuguese" placeholder="Portuguese responsible name")
-										li
-											input(type="text" name="toolname" data-ng-model="formCtrl.directorySubtitlePortuguese" placeholder="PORTUGUESE SUBTITLE / TITLE / COMPANY")
-										li
-											textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.directoryShortDescriptionPortuguese" name="descripr" placeholder="Portuguese short descriptive text (300 characters)")
+								#newDirectoryFormPortuguese.hidden
+									h3 portuguese directory data
+									h4 only fill this section if you are
+										b adding a new responsible entry
+									.columnaforma
+										ol
+											li
+												input(type="text" name="toolname" data-ng-model="formCtrl.responsibleNamePortuguese" placeholder="Portuguese responsible name")
+											li
+												input(type="text" name="toolname" data-ng-model="formCtrl.directorySubtitlePortuguese" placeholder="PORTUGUESE SUBTITLE / TITLE / COMPANY")
+											li
+												textarea.input-forum.h180(type="textarea" data-ng-model="formCtrl.directoryShortDescriptionPortuguese" name="descripr" placeholder="Portuguese short descriptive text (300 characters)")
 				.card.hidden#comments
 					.card-header
 						h2 Add tools
