@@ -24,7 +24,6 @@ gulp.task('nodemon', function() {
 		script: 'app.js',
 		ext: 'json',
 		env: {
-			'NODE_ENV': 'development',
 			'DEBUG': 'bon-in-a-box-frontend:*'
 		}
 	})

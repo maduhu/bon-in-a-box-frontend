@@ -91,7 +91,7 @@ var config = module.exports = convict({
 		},
 		sender: {
 			doc: 'The "from" field for the verification emails',
-			default: 'Some User <someuser@company.com>',
+			default: 'Bon in a box administrator <someuser@company.com>',
 			env: 'MANDRILL_SENDER'
 		}
 	},
