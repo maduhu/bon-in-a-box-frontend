@@ -4,12 +4,12 @@ var height = document.getElementById('titlebar').offsetHeight;
 var bheight = 500;
 var current = 1;
 
-$('.resultados_wrapper .resultados').masonry({
+/*$('.resultados_wrapper .resultados').masonry({
   // options
   itemSelector: '.card_herramienta',
   columnWidth: 230,
   gutter: 15
-});
+});*/
 
 $(window).scroll(function(){
   var top = $(document).scrollTop();

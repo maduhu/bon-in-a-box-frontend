@@ -4,7 +4,7 @@ angular.module('adminConsole')
 	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 		$urlRouterProvider.otherwise("/home");
 
-		$locationProvider.html5Mode(true).hashPrefix('!');
+		//$locationProvider.html5Mode(true).hashPrefix('!');
 
 		$stateProvider
 

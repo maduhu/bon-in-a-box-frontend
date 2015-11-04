@@ -1,11 +1,11 @@
 'use strict';
 
-$('.resultados_wrapper .resultados').masonry({
+/*$('.resultados_wrapper .resultados').masonry({
 	// options
 	itemSelector: '.card_herramienta',
 	columnWidth: 230,
 	gutter: 15
-});
+});*/
 
 $('.photocr').on('click',function(e){
   e.preventDefault();

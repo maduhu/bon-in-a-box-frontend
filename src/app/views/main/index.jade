@@ -375,7 +375,8 @@ block content
 			h4 !{__('tooldir.title')}
 				button(class="ojo" data-toggle="tooltip" title="#{__('show.tools')}" href="" id="ojo_her")
 					img(src='images/ojo_bl.png')
-			button(class="proponer" data-toggle="tooltip" title="#{__('new.tools')}" href="") !{__('propose.btn')}
+			if username
+				button(class="proponer" data-toggle="tooltip" title="#{__('new.tools')}" href="") !{__('propose.btn')}
 			.divisor
 			nav.categorias
 				ul
@@ -478,7 +479,8 @@ block content
 					li
 						button(class="fil_icon icon-ico-31" data-toggle="tooltip" title="#{__('plants.title')}" href="")
 			.resultados_wrapper.scrollp
-				.resultados
+				list-tools(data-available-tools='bonCtrl.searchTools')
+				//-.resultados
 					.card_herramienta
 						.crop4
 							img(src='images/fox.jpg')
@@ -574,6 +576,7 @@ block content
 							li
 								.icon-ico-09
 						button(class="ver_mas right" data-toggle="tooltip" title="#{__('go.btn')}" href="") +
+
 		.col_directorio
 			h4 !{__('directory.title')}
 				button(class="ojo" data-toggle="tooltip" title="#{__('show.directory')}" href="" id="ojo_dir")
@@ -597,7 +600,7 @@ block content
 						button(class="mic" data-toggle="tooltip" title="#{__('PHtool.scountry')}" href="")
 							img(src='images/country.png')
 			.areaforstuff
-			.resultados.scrollp
+			//-.resultados.scrollp
 				.card_directory.clearfix
 					.visual.clearfix
 						.logo.left
@@ -635,7 +638,7 @@ block content
 		.smbox.clearfix
 			button(class="back2" href="")
 				img(src='images/xxx.png')
-		.toolinfo
+		//-.toolinfo
 			h3 CATALOGO DE LA BIODIVERSIDAD
 			.divisor
 			ul
@@ -680,7 +683,7 @@ block content
 					a(class="ver_mas right" data-toggle="tooltip" title="#{__('comment.btn')}" href="") !{__('comment.btn')}
 					a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
 					a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
-		.respinfo
+		//-.respinfo
 			h3 sib colombia
 			img(src='images/instsm.png')
 			.divisor
@@ -689,7 +692,7 @@ block content
 			.logoent
 				img(src='images/sib.png')
 			p Laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		.usercomment
+		//-.usercomment
 			.clearfix
 				.crop3
 					img(src='images/c2.jpg')
@@ -703,7 +706,7 @@ block content
 			.calificacion 4.5
 			a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
 
-	.contenido.formulario.clearfix.hidden
+	//-.contenido.formulario.clearfix.hidden
 		.smbox.clearfix
 			button(class="back")
 				img(src='images/xxx.png')
