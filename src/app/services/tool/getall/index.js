@@ -9,37 +9,37 @@ exports = module.exports = function(models) {
 			query = {
 				$or: [
 					{
-						'name.english': new RegExp(''+req.query.query+'$', "i")
+						'name.english': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'name.spanish': new RegExp(''+req.query.query+'$', "i")
+						'name.spanish': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'name.portuguese': new RegExp(''+req.query.query+'$', "i")
+						'name.portuguese': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'shortDescription.english': new RegExp(''+req.query.query+'$', "i")
+						'shortDescription.english': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'shortDescription.spanish': new RegExp(''+req.query.query+'$', "i")
+						'shortDescription.spanish': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'shortDescription.portuguese': new RegExp(''+req.query.query+'$', "i")
+						'shortDescription.portuguese': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'longDescription.english': new RegExp(''+req.query.query+'$', "i")
+						'longDescription.english': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'longDescription.spanish': new RegExp(''+req.query.query+'$', "i")
+						'longDescription.spanish': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'longDescription.portuguese': new RegExp(''+req.query.query+'$', "i")
+						'longDescription.portuguese': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'country': new RegExp(''+req.query.query+'$', "i")
+						'country': new RegExp('.*'+req.query.query+'.*$', "i")
 					},
 					{
-						'categories': new RegExp(''+req.query.query+'$', "i")
+						'categories': new RegExp('.*'+req.query.query+'.*$', "i")
 					}
 				]
 			};
