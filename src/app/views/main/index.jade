@@ -496,7 +496,7 @@ block content
 							li
 								.icon-ico-09
 						button(class="ver_mas right" data-toggle="tooltip" title="More" href="") +
-				list-tools(data-available-tools='bonCtrl.searchTools')
+				list-tools(data-available-tools='bonCtrl.searchTools' callback-fn="bonCtrl.showToolDetail(id)")
 		.col_directorio
 			h4 !{__('directory.title')}
 				button(class="ojo" data-toggle="tooltip" title="#{__('show.directory')}" href="" id="ojo_dir")
@@ -525,8 +525,8 @@ block content
 		.smbox.clearfix
 			button(class="back2" href="")
 				img(src='images/xxx.png')
-		//-.toolinfo
-			h3 CATALOGO DE LA BIODIVERSIDAD
+		.toolinfo
+			h3 {{bonCtrl.currentTool[0].name.english}}
 			.divisor
 			ul
 				li
@@ -537,39 +537,13 @@ block content
 					.icon-ico-08
 				li
 					.icon-ico-09
-			a(class="site" href="http://www.biodiversidad.co") www.biodiversidad.co
-			a(class="mail" href="mailto:sib@humboldt.org.co") sib@humboldt.org.co
+			a(class="site" data-ng-href="bonCtrl.currentTool[0].urlWebsite") {{bonCtrl.currentTool[0].urlWebsite}}
+			a(class="mail" data-ng-href="mailto:bonCtrl.currentTool[0].contactEmail") {{bonCtrl.currentTool[0].contactEmail}}
 			.scrollarea.scrollp
-				.crop2
-					img(src="images/catalogo.png", alt="")
+				.crop2(data-ng-show="bonCtrl.currentTool[0].descriptiveImage")
+					img(src="/uploads/{{bonCtrl.currentTool[0].descriptiveImage}}")
 				.paragcontainer
-					.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-				form(id="" method="" action="" class="clearfix")
-					textarea.input-forum(type="textarea" name="question" placeholder="#{__('PHtool.comment')}")
-					button(type="submit") !{__('comment.btn')}
-				.qcard2
-					.clearfix
-						.crop
-							img(src='images/c2.jpg')
-						.name Cesar Gutierrez
-						.date 09 - 09 - 15
-					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-					a(class="ver_mas right" data-toggle="tooltip" title="#{__('reply.btn')}" href="") !{__('reply.btn')}
-					a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
-					a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
-				form(id="" method="" action="" class="clearfix")
-					textarea.input-forum(type="textarea" name="question" placeholder="#{__('PHtool.answer')}")
-					button(type="submit") !{__('reply.btn')}
-				.qcard2
-					.clearfix
-						.crop
-							img(src='images/c2.jpg')
-						.name Cesar Gutierrez
-						.date 09 - 09 - 15
-					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-					a(class="ver_mas right" data-toggle="tooltip" title="#{__('comment.btn')}" href="") !{__('comment.btn')}
-					a(class="ver_mas right" data-toggle="tooltip" title="#{__('edit.btn')}" href="") !{__('edit.btn')}
-					a(class="ver_mas right" data-toggle="tooltip" title="#{__('delete.btn')}" href="") x
+					.paragraph {{bonCtrl.currentTool[0].longDescription.english}}
 		//-.respinfo
 			h3 sib colombia
 			img(src='images/instsm.png')

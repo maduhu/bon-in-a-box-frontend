@@ -84,3 +84,17 @@ exports.getAllTools = function(services) {
 		});
 	};
 };
+
+/**
+ * Resolves URL /api/tools/_id
+ * Method GET
+ * @param  {Object} Request params
+ * @param  {Object} Response params
+ */
+exports.getTool = function(services) {
+	return function(req, res) {
+		services.tool.getTool(req, function(err, data) {
+			res.json(data);
+		});
+	};
+};

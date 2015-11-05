@@ -9,7 +9,8 @@ angular.module('bonInABoxHome')
 			restrict: 'E',
 			replace: false,
 			scope: {
-				availableTools: '='
+				availableTools: '=',
+				someCtrlFn: '&callbackFn'
 			},
 			link: function(scope, elem, attrs) {
 				console.log(scope.availableTools);
@@ -61,7 +62,7 @@ angular.module('bonInABoxHome')
 									'<div class="icon-ico-31" data-ng-show="category === \'Plants\'" title="Plants" data-toggle="tooltip"></div>' +
 								'</li>' +
 							'</ul>' +
-							'<button class="ver_mas right" data-toggle="tooltip" title="more" href="")>+</button>' +
+							'<button class="ver_mas right" data-toggle="tooltip" title="more" data-ng-click="someCtrlFn({id: tool._id})")>+</button>' +
 						'</div>' +
 					'</div>';
 				return result;

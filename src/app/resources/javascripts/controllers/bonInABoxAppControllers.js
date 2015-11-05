@@ -9,6 +9,7 @@ angular.module('bonInABoxHome')
 		};
 
 		this.searchTools = ToolFactory.query();
+		this.currentTool = {};
 
 		//this.searchTextCondition
 		//
@@ -21,6 +22,13 @@ angular.module('bonInABoxHome')
 				$('.resultados_wrapper .resultados').masonry('reloadItems');
 				$('.resultados_wrapper .resultados').masonry('layout');
 			}, 3000 );
+		};
+
+		this.showToolDetail = function(toolId) {
+			this.currentTool = ToolFactory.query({id:toolId, status: 'approved'});
+			angular.element('.filter_ui').addClass('hidden');
+			angular.element('.toolabst').removeClass('hidden');
+			console.log(this.currentTool);
 		};
 
 	}]);
