@@ -570,7 +570,9 @@ block content
 					.paragraph {{bonCtrl.currentTool[0].longDescription.english}}
 		.respinfo
 			h3 {{bonCtrl.currentTool[0].directory.responsibleName.english}}
-			img(src='images/instsm.png')
+			img(src="/images/instsm.png" data-ng-show="bonCtrl.currentTool[0].directory.category === \'Institution\'")
+			img(src="/images/inicsm.png" data-ng-show="bonCtrl.currentTool[0].directory.category === \'Initiative\'")
+			img(src="/images/invessm.png" data-ng-show="bonCtrl.currentTool[0].directory.category === \'Investigator\'")
 			.divisor
 			a(class="site" data-ng-href="{{bonCtrl.currentTool[0].directory.urlWebsite}}") {{bonCtrl.currentTool[0].directory.urlWebsite}}
 			a(class="mail" data-ng-href="mailto:{{bonCtrl.currentTool[0].directory.email}}") {{bonCtrl.currentTool[0].directory.email}}
