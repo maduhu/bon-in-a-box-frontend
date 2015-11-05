@@ -11,6 +11,16 @@ var current = 1;
   gutter: 15
 });*/
 
+setTimeout( function(){
+	// Do something after 1 second
+	$('.resultados_wrapper .resultados').masonry({
+		// options
+		itemSelector: '.card_herramienta',
+		columnWidth: 230,
+		gutter: 15
+	});
+}, 5000 );
+
 $(window).scroll(function(){
   var top = $(document).scrollTop();
   if( $(this).scrollTop() > height ) {

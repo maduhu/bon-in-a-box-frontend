@@ -478,6 +478,24 @@ block content
 					li
 						button(class="fil_icon icon-ico-31" data-toggle="tooltip" title="#{__('plants.title')}" href="")
 			.resultados_wrapper.scrollp
+				//-masonry.resultados(style="width: 748px" item-selector=".card_herramienta" column-width="230" reload-on-resize reload-on-show masonry-options="{ transitionDuration: '0.4s' }")
+					.card_herramienta(masonry-brick ng-repeat="tool in bonCtrl.searchTools")
+						.crop4(data-ng-show="tool.thumbnailImage")
+							img(ng-src="/uploads/{{tool.thumbnailImage}}")
+						.titulos_card
+							h3 {{tool.name.english}}
+							h5 {{tool.directory.subtitle.english}}
+						p {{tool.shortDescription.english}}
+						ul
+							li
+								.icon-ico-06
+							li
+								.icon-ico-07
+							li
+								.icon-ico-08
+							li
+								.icon-ico-09
+						button(class="ver_mas right" data-toggle="tooltip" title="More" href="") +
 				list-tools(data-available-tools='bonCtrl.searchTools')
 				//-.resultados
 					.card_herramienta

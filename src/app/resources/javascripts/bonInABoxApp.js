@@ -9,5 +9,6 @@ angular.module('bonInABoxHome', ['ngAnimate',
 		'ngFileUpload',
 		'angular-country-select',
 		'rateYo',
-		'sweetalert'
+		'sweetalert',
+		'wu.masonry'
 ]);
