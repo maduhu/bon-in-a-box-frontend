@@ -529,14 +529,38 @@ block content
 			h3 {{bonCtrl.currentTool[0].name.english}}
 			.divisor
 			ul
-				li
-					.icon-ico-06
-				li
-					.icon-ico-07
-				li
-					.icon-ico-08
-				li
-					.icon-ico-09
+				li(data-ng-repeat="category in bonCtrl.currentTool[0].categories")
+					.icon-ico-01(data-ng-show="category === \'Observation Design\'" title="Observation Design" data-toggle="tooltip")
+					.icon-ico-02(data-ng-show="category === \'Data collection\'" title="Data collection" data-toggle="tooltip")
+					.icon-ico-03(data-ng-show="category === \'Data Management\'" title="Data Management" data-toggle="tooltip")
+					.icon-ico-04(data-ng-show="category === \'Data analysis\'" title="Data analysis" data-toggle="tooltip")
+					.icon-ico-05(data-ng-show="category === \'Report results\'" title="Report results" data-toggle="tooltip")
+					.icon-ico-06(data-ng-show="category === \'Communities composition\'" title="Communities composition" data-toggle="tooltip")
+					.icon-ico-07(data-ng-show="category === \'Ecosystem function\'" title="Ecosystem function" data-toggle="tooltip")
+					.icon-ico-08(data-ng-show="category === \'Ecosystem structure\'" title="Ecosystem structure" data-toggle="tooltip")
+					.icon-ico-09(data-ng-show="category === \'Genetic composition\'" title="Genetic composition" data-toggle="tooltip")
+					.icon-ico-10(data-ng-show="category === \'Species populations\'" title="Species populations" data-toggle="tooltip")
+					.icon-ico-11(data-ng-show="category === \'Species traits\'" title="Species traits" data-toggle="tooltip")
+					.icon-ico-12(data-ng-show="category === \'Ecosystem services\'" title="Ecosystem services" data-toggle="tooltip")
+					.icon-ico-13(data-ng-show="category === \'Citizen science\'" title="Citizen science" data-toggle="tooltip")
+					.icon-ico-14(data-ng-show="category === \'Traditional knowledge\'" title="Traditional knowledge" data-toggle="tooltip")
+					.icon-ico-15(data-ng-show="category === \'Invasive species\'" title="Invasive species" data-toggle="tooltip")
+					.icon-ico-16(data-ng-show="category === \'CITES\'" title="CITES" data-toggle="tooltip")
+					.icon-ico-17(data-ng-show="category === \'Migratory\'" title="Migratory" data-toggle="tooltip")
+					.icon-ico-18(data-ng-show="category === \'Fresh water\'" title="Fresh water" data-toggle="tooltip")
+					.icon-ico-19(data-ng-show="category === \'Marine\'" title="Marine" data-toggle="tooltip")
+					.icon-ico-20(data-ng-show="category === \'Terrestrial\'" title="Terrestrial" data-toggle="tooltip")
+					.icon-ico-21(data-ng-show="category === \'Dataset\'" title="Dataset" data-toggle="tooltip")
+					.icon-ico-22(data-ng-show="category === \'Software\'" title="Software" data-toggle="tooltip")
+					.icon-ico-23(data-ng-show="category === \'Data standards\'" title="Data standards" data-toggle="tooltip")
+					.icon-ico-24(data-ng-show="category === \'Literature\'" title="Literature" data-toggle="tooltip")
+					.icon-ico-25(data-ng-show="category === \'Amphibians\'" title="Amphibians" data-toggle="tooltip")
+					.icon-ico-26(data-ng-show="category === \'Birds\'" title="Birds" data-toggle="tooltip")
+					.icon-ico-27(data-ng-show="category === \'Invertebrates\'" title="Invertebrates" data-toggle="tooltip")
+					.icon-ico-28(data-ng-show="category === \'Mammals\'" title="Mammals" data-toggle="tooltip")
+					.icon-ico-29(data-ng-show="category === \'Fish\'" title="Fish" data-toggle="tooltip")
+					.icon-ico-30(data-ng-show="category === \'Reptiles\'" title="Reptiles" data-toggle="tooltip")
+					.icon-ico-31(data-ng-show="category === \'Plants\'" title="Plants" data-toggle="tooltip")
 			a(class="site" data-ng-href="{{bonCtrl.currentTool[0].urlWebsite}}") {{bonCtrl.currentTool[0].urlWebsite}}
 			a(class="mail" data-ng-href="mailto:{{bonCtrl.currentTool[0].contactEmail}}") {{bonCtrl.currentTool[0].contactEmail}}
 			.scrollarea.scrollp
