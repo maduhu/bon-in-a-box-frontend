@@ -568,15 +568,15 @@ block content
 					img(src="/uploads/{{bonCtrl.currentTool[0].descriptiveImage}}")
 				.paragcontainer
 					.paragraph {{bonCtrl.currentTool[0].longDescription.english}}
-		//-.respinfo
-			h3 sib colombia
+		.respinfo
+			h3 {{bonCtrl.currentTool[0].directory.responsibleName.english}}
 			img(src='images/instsm.png')
 			.divisor
-			a(class="site" href="http://www.biodiversidad.co") www.biodiversidad.co
-			a(class="mail" href="mailto:sib@humboldt.org.co") sib@humboldt.org.co
-			.logoent
-				img(src='images/sib.png')
-			p Laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			a(class="site" data-ng-href="{{bonCtrl.currentTool[0].directory.urlWebsite}}") {{bonCtrl.currentTool[0].directory.urlWebsite}}
+			a(class="mail" data-ng-href="mailto:{{bonCtrl.currentTool[0].directory.email}}") {{bonCtrl.currentTool[0].directory.email}}
+			.logoent(data-ng-show="bonCtrl.currentTool[0].directory.thumbnailImage")
+				img(src="/uploads/{{bonCtrl.currentTool[0].directory.thumbnailImage}}")
+			p {{bonCtrl.currentTool[0].directory.shortDescription.english}}
 		//-.usercomment
 			.clearfix
 				.crop3
