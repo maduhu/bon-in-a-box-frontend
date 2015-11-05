@@ -15,6 +15,12 @@ angular.module('bonInABoxHome')
 		this.startSearch = function() {
 			console.log(this.searchTextCondition);
 			this.searchTools = ToolFactory.query({query:this.searchTextCondition, status: 'approved'});
+
+			setTimeout( function(){
+				// Do something after 1 second
+				$('.resultados_wrapper .resultados').masonry('reloadItems');
+				$('.resultados_wrapper .resultados').masonry('layout');
+			}, 3000 );
 		};
 
 	}]);
