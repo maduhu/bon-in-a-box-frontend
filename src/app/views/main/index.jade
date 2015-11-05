@@ -537,8 +537,8 @@ block content
 					.icon-ico-08
 				li
 					.icon-ico-09
-			a(class="site" data-ng-href="bonCtrl.currentTool[0].urlWebsite") {{bonCtrl.currentTool[0].urlWebsite}}
-			a(class="mail" data-ng-href="mailto:bonCtrl.currentTool[0].contactEmail") {{bonCtrl.currentTool[0].contactEmail}}
+			a(class="site" data-ng-href="{{bonCtrl.currentTool[0].urlWebsite}}") {{bonCtrl.currentTool[0].urlWebsite}}
+			a(class="mail" data-ng-href="mailto:{{bonCtrl.currentTool[0].contactEmail}}") {{bonCtrl.currentTool[0].contactEmail}}
 			.scrollarea.scrollp
 				.crop2(data-ng-show="bonCtrl.currentTool[0].descriptiveImage")
 					img(src="/uploads/{{bonCtrl.currentTool[0].descriptiveImage}}")
