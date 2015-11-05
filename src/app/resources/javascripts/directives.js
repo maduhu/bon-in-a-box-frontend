@@ -13,6 +13,19 @@ angular.module('bonInABoxHome')
 			},
 			link: function(scope, elem, attrs) {
 				console.log(scope.availableTools);
+				$('.resultados_wrapper .resultados').masonry({
+					// options
+					itemSelector: '.card_herramienta',
+					columnWidth: 230,
+					gutter: 15
+				});
+
+				scope.$watch('$index',function(v){
+					elem.children('.masonry').masonry('reload');
+					/*elem.imagesLoaded(function () {
+						elem.parents('.masonry').masonry('reload');
+					});*/
+				});
 			},
 			template: function(elem, attr) {
 				var result = '' +
