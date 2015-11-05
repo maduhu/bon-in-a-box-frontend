@@ -367,9 +367,9 @@ block content
 	#section3
 	.contenidog.filter_ui
 		.buscador.hidden
-			form(id="" method="" action="" class="")
-				input(type="search" name="question" placeholder="#{__('placeholder.search')}")
-				button(type="submit") !{__('search.btn')}
+			form
+				input(data-ng-model="bonCtrl.searchTextCondition" type="search" name="question" placeholder="#{__('placeholder.search')}")
+				button(data-ng-click="bonCtrl.startSearch()") !{__('search.btn')}
 		.col_herramientas
 			h4 !{__('tooldir.title')}
 				button(class="ojo" data-toggle="tooltip" title="#{__('show.tools')}" href="" id="ojo_her")
@@ -399,9 +399,9 @@ block content
 							img(src='images/filt5m.png')
 					li.divisor_sombra
 					li
-						button(class="mic" data-toggle="tooltip" title="#{__('search.btn')}" href="")
+						button(data-toggle-search-input class="mic" data-toggle="tooltip" title="#{__('search.btn')}")
 							img(src='images/lupa.png')
-					li.right
+					//-li.right
 						button(class="mic" data-toggle="tooltip" title="#{__('PHtool.scountry')}" href="")
 							img(src='images/country.png')
 			.areaforstuff.hidden

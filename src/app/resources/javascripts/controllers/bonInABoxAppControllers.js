@@ -10,4 +10,11 @@ angular.module('bonInABoxHome')
 
 		this.searchTools = ToolFactory.query();
 
+		//this.searchTextCondition
+		//
+		this.startSearch = function() {
+			console.log(this.searchTextCondition);
+			this.searchTools = ToolFactory.query({query:this.searchTextCondition, status: 'approved'});
+		};
+
 	}]);

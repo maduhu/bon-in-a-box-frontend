@@ -101,4 +101,18 @@ angular.module('bonInABoxHome')
 				return result;
 			}
 		};
+	})
+
+	// =========================================================================
+	// TOGGLE SEARCH INPUT
+	// =========================================================================
+	.directive('toggleSearchInput', function(){
+		return {
+			restrict: 'A',
+			link: function(scope, element) {
+				element.click(function(){
+					angular.element('.buscador').toggleClass('hidden');
+				});
+			}
+		};
 	});
