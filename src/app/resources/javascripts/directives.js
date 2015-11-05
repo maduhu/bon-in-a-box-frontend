@@ -2,7 +2,7 @@
 
 angular.module('bonInABoxHome')
 	// =========================================================================
-	// SEARCHED CATEGORIES
+	// LIST RESULT TOOLS
 	// =========================================================================
 	.directive('listTools', function() {
 		return {
@@ -13,19 +13,6 @@ angular.module('bonInABoxHome')
 			},
 			link: function(scope, elem, attrs) {
 				console.log(scope.availableTools);
-				/*$('.resultados_wrapper .resultados').masonry({
-					// options
-					itemSelector: '.card_herramienta',
-					columnWidth: 230,
-					gutter: 15
-				});
-
-				scope.$watch('$index',function(v){
-					elem.children('.masonry').masonry('reload');
-					/*elem.imagesLoaded(function () {
-						elem.parents('.masonry').masonry('reload');
-					});
-				});*/
 			},
 			template: function(elem, attr) {
 				var result = '' +
@@ -76,6 +63,40 @@ angular.module('bonInABoxHome')
 							'</ul>' +
 							'<button class="ver_mas right" data-toggle="tooltip" title="more" href="")>+</button>' +
 						'</div>' +
+					'</div>';
+				return result;
+			}
+		};
+	})
+
+// =========================================================================
+	// LIST RESULT TOOLS
+	// =========================================================================
+	.directive('listDirectories', function() {
+		return {
+			restrict: 'E',
+			replace: false,
+			scope: {
+				availableTools: '='
+			},
+			template: function(elem, attr) {
+				var result = '' +
+					'<div class="card_directory clearfix" data-ng-repeat="tool in availableTools">' +
+						'<div class="visual clearfix">' +
+							'<div class="logo left">' +
+								'<img data-ng-show="tool.directory.thumbnailImage" src="/uploads/{{tool.directory.thumbnailImage}}">' +
+							'</div>' +
+							'<div class="dirlogo right">' +
+								'<img src="/images/instsm.png" data-ng-show="tool.directory.category === \'Institution\'">' +
+								'<img src="/images/inicsm.png" data-ng-show="tool.directory.category === \'Initiative\'">' +
+								'<img src="/images/invessm.png" data-ng-show="tool.directory.category === \'Investigator\'">' +
+							'</div>' +
+						'</div>' +
+						'<h3>{{tool.directory.responsibleName.english}}</h3>' +
+						'<h5>{{tool.directory.country}}</h5>' +
+						'<p>{{tool.directory.shortDescription.english}}</p>' +
+						'<a ng-href="{{tool.directory.urlWebsite}}">Web site</a>' +
+						'<a ng-href="mailto:{{tool.directory.email}}">Contact</a>' +
 					'</div>';
 				return result;
 			}
