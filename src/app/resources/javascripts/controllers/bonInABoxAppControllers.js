@@ -8,6 +8,9 @@ angular.module('bonInABoxHome')
 			this.username = data;
 		};
 
+		// Tagged categories
+		this.categories = [];
+
 		this.searchTools = ToolFactory.query();
 		this.currentTool = {};
 

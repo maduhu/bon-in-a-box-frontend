@@ -105,6 +105,69 @@ angular.module('bonInABoxHome')
 	})
 
 	// =========================================================================
+	// CATEGORY TOGGLE
+	// =========================================================================
+
+	.directive('toggleCategory', function(){
+		return {
+			restrict: 'A',
+			scope: {
+				categoryName: '='
+			},
+			link: function(scope, element, attrs) {
+				element.click(function(){
+					element.parent().parent().find('button.selected').removeClass('selected');
+					element.toggleClass('selected');
+					element.parent().parent().parent().parent().find('div.filtros').addClass('hidden');
+					switch(scope.categoryName) {
+						case "Monitoring Components":
+							element.parent().parent().parent().parent().find('.cd1').removeClass('hidden');
+							break;
+						case "EBV":
+							element.parent().parent().parent().parent().find('.cd2').removeClass('hidden');
+							break;
+						case "By Theme":
+							element.parent().parent().parent().parent().find('.cd3').removeClass('hidden');
+							break;
+						case "By Kind":
+							element.parent().parent().parent().parent().find('.cd4').removeClass('hidden');
+							break;
+						case "By Taxonomy":
+							element.parent().parent().parent().parent().find('.cd5').removeClass('hidden');
+							break;
+						case "All":
+							element.parent().parent().parent().parent().find('div.filtros button').removeClass('selected');
+							break;
+					}
+				});
+			}
+		};
+	})
+
+	// =========================================================================
+	// SUBCATEGORY TOGGLE
+	// =========================================================================
+	.directive('toggleSubcategory', function(){
+		return {
+			restrict: 'A',
+			scope: {
+				taggedCategories: '=',
+				subcategoryName: '='
+			},
+			link: function(scope, element, attrs) {
+				element.click(function() {
+					element.toggleClass('selected');
+					if(element.hasClass('selected')) {
+						scope.taggedCategories.push(scope.subcategoryName);
+					} else {
+						scope.taggedCategories.splice(scope.taggedCategories.indexOf(scope.subcategoryName), 1);
+					}
+				});
+			}
+		};
+	})
+
+	// =========================================================================
 	// TOGGLE SEARCH INPUT
 	// =========================================================================
 	.directive('toggleSearchInput', function(){
