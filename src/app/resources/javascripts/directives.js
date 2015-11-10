@@ -116,6 +116,7 @@ angular.module('bonInABoxHome')
 			},
 			link: function(scope, element, attrs) {
 				element.click(function(){
+					angular.element('.buscador').addClass('hidden');
 					element.parent().parent().find('button.selected').removeClass('selected');
 					element.toggleClass('selected');
 					element.parent().parent().parent().parent().find('div.filtros').addClass('hidden');

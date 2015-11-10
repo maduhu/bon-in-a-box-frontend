@@ -54,7 +54,6 @@ exports = module.exports = function(models) {
 		if(req.query.status) {
 			query.state = req.query.status;
 		}
-		console.log(query);
 		models.Tool
 			.find(query)
 			.populate('directory')

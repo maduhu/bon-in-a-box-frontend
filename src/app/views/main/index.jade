@@ -380,7 +380,7 @@ block content
 			nav.categorias
 				ul
 					li
-						button(data-category-name="'All'" data-toggle-category class="mic" data-toggle="tooltip" title="#{__('filter.all')}" href="")
+						button(data-category-name="'All'" data-toggle-category class="mic" data-toggle="tooltip" title="#{__('filter.all')}" data-ng-click='bonCtrl.clearSearch()')
 							img(src='images/tools.png')
 					li
 						button(data-category-name="'Monitoring Components'" data-toggle-category class="mic selected" data-toggle="tooltip" title="#{__('filter.components')}")

@@ -14,6 +14,13 @@ angular.module('bonInABoxHome')
 		this.searchTools = ToolFactory.query();
 		this.currentTool = {};
 
+		this.clearSearch = function() {
+			this.categories = [];
+			this.searchTextCondition = "";
+
+			this.startSearch();
+		};
+
 		//this.searchTextCondition
 		//
 		this.startSearch = function() {
