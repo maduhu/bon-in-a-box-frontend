@@ -13,7 +13,7 @@ angular.module('bonInABoxHome')
 				someCtrlFn: '&callbackFn'
 			},
 			link: function(scope, elem, attrs) {
-				console.log(scope.availableTools);
+
 			},
 			template: function(elem, attr) {
 				var result = '' +

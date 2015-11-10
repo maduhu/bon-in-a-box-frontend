@@ -37,16 +37,24 @@ exports = module.exports = function(models) {
 					},
 					{
 						'country': new RegExp('.*'+req.query.query+'.*$', "i")
-					},
-					{
-						'categories': new RegExp('.*'+req.query.query+'.*$', "i")
 					}
 				]
 			};
 		}
+		if(req.query.categories) {
+			query.$and = [];
+			if(Array.isArray(req.query.categories)) {
+				for(var i = 0; i < req.query.categories.length; i++) {
+					query.$and[i] = {'categories': req.query.categories[i]};
+				}
+			} else {
+				query.$and[0] = {'categories': req.query.categories};
+			}
+		}
 		if(req.query.status) {
 			query.state = req.query.status;
 		}
+		console.log(query);
 		models.Tool
 			.find(query)
 			.populate('directory')
